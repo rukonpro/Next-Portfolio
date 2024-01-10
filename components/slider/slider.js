@@ -37,7 +37,6 @@ const Slider = () => {
                     >
                         <Image
                             src={slide.content}
-                            placeholder="blur"
                             loading="eager"
                             className=" h-[40vh] md:w-[76vh] md:h-[76vh]"
                             alt="bannerphoto"

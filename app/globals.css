@@ -25,3 +25,186 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.customShadow {
+  box-shadow:
+          0 0 28px rgb(145, 1, 255), 0 0px 10px 5px rgba(140, 78, 179, 0.702), 0px 0px 10px 2px #3818622e, 0px 0px 20px 5px #dd7fff82
+}
+
+
+@keyframes example {
+  0% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(56, 3, 37), rgba(255, 47, 0, 0.529) 100%);
+    transition: 10s;
+    rotate: 15deg;
+    transform: rotateX(15deg);
+    left: -1000px;
+  }
+
+  10% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(255, 119, 0) 100%);
+    transition: 10s;
+    rotate: 30deg;
+    transform: rotateY(30deg);
+    left: 10px;
+  }
+
+  20% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(255, 174, 0) 100%);
+    transition: 10s;
+    rotate: 45deg;
+    transform: rotateZ(45deg);
+    left: 20px;
+  }
+
+  30% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(166, 0, 255) 100%);
+    transition: 10s;
+    rotate: 65deg;
+    transform: rotateX(65deg);
+    left: 30px;
+  }
+
+  40% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(0, 166, 8) 100%);
+    transition: 10s;
+    rotate: 85deg;
+    transform: rotateY(85deg);
+    left: 40px;
+  }
+
+  50% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(32, 32, 94) 35%, rgb(0, 242, 255) 100%);
+    transition: 10s;
+    rotate: 100deg;
+    transform: rotateZ(100deg);
+    left: 50px;
+  }
+
+  60% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(0, 170, 255) 100%);
+    transition: 10s;
+    rotate: 115deg;
+    transform: rotateY(115deg);
+    left: -40px;
+  }
+
+  70% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(123, 0, 255) 100%);
+    transition: 10s;
+    rotate: 130deg;
+    transform: rotateZ(130deg);
+    left: -30px;
+  }
+
+  80% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(0, 4, 255) 100%);
+    transition: 10s;
+    rotate: 145deg;
+    transform: rotateX(145deg);
+    left: -20px;
+  }
+
+  90% {
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(204, 0, 255) 100%);
+    transition: 10s;
+    rotate: 165deg;
+    transform: rotateY(165deg);
+    left: 50%;
+  }
+
+  100% {
+
+    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(0, 0, 0) 35%, rgb(255, 0, 123) 100%);
+    transition: 10s;
+    rotate: 190deg;
+    transform: rotateZ(190deg);
+    transition-timing-function: ease-in;
+    left: 200%;
+  }
+}
+
+.bgGradient {
+  background-image: linear-gradient(100deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgb(255, 0, 195) 100%);
+  animation-name: example;
+  animation-duration: 10s;
+  transition: 5s;
+  animation-iteration-count: infinite;
+  rotate: 0deg;
+  transition-timing-function: ease-in;
+  left: -100px;
+  position: relative;
+}
+
+
+
+.animated-button {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.animated-button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+
+  background-image: linear-gradient(100deg, rgb(115, 14, 239) 0%, rgb(239, 149, 14) 35%, rgb(115, 14, 239) 100%);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.animated-button:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+.mouseButton{
+  animation: animatedMouse 5s steps(5) ;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes animatedMouse {
+  0%   {
+    transform: rotate(45deg);
+    transition: 5s;
+  }
+  25%  {
+    transform: rotate(-45deg);
+    transition: 5s;
+  }
+  50%  {
+    transform: rotate(45deg)
+  }
+  75% {
+    transform: rotate(-45deg)
+  }
+  100% {
+    transform: rotate(45deg)
+  }
+}
+
+
+
+.radial-gradient{
+  background: radial-gradient(closest-corner, rgba(135, 0, 252, 0.55) 15.73%, rgba(221, 0, 255, 0.21) 15.74%, rgba(10, 30, 108, 0.42) 56.49%, rgb(24, 10, 52) 115.91%);
+  background: -moz-radial-gradient(circle at center, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%,rgba(79, 70, 229, 0.4) 115.91%);
+  background-attachment: fixed;
+  background-position: top;
+}
+.skillsCard{
+  transition: 0.5s ease-in-out;
+
+}
+.skillsCard:hover{
+  box-shadow:-3px 3px 3px 3px #df00ff14;
+  transform: rotate3d(45,50,5,-8deg) scale(1.1) scaleZ(-1.1);
+  transition: 0.5s ease-in;
+}

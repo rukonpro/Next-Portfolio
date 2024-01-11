@@ -52,12 +52,6 @@ const Counter = () => {
                     </div>
                 </div>
             </div>
-
-            <video className="blur-[1px] object-cover  w-full h-full fixed top-0 left-0 z-[-1] overflow-hidden"
-                   autoPlay={true} muted loop>
-                <source src="/music/codingVideo.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
         </div>
     );
 };

@@ -1,13 +1,12 @@
 "use client"
 
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import Image from "next/image";
-import MenuIcon from "@/public/images/menu-bar.png";
+import MenuIcon from "@/public/images/close.png";
 import CloseIcon from "@/public/images/close.png";
-import Link from "next/link";
+import LoginModal from "@/components/authentication/loginModal";
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [loginModal, setLoginModal] = useState(null);
     const navLinks = [
         {
             title: "Home",
@@ -44,14 +43,10 @@ const Navigation = () => {
         setMenuOpen(value => !value)
     };
 
-
-    useEffect(() => {
-        const loginModal= document.getElementById("login.js");
-        setLoginModal(loginModal)
-    }, []);
+        const loginModal=()=> document.getElementById("login").showModal();
 
     return (
-        <nav className="fixed z-50 top-0  w-screen" id="login">
+        <nav className="fixed z-50 top-0  w-screen">
 
             <div
                 className={`  ${menuOpen ? " m-3 rounded-xl bg-gradient-to-tr from-[#5e2594ec] to-[#270257fd]" +
@@ -92,9 +87,7 @@ const Navigation = () => {
                                             type="button"
                                             aria-label="Login"
                                             className=" bg-gradient-to-r from-[#5e2594ec] to-[#270257fd] px-5 py-1 rounded-lg  animated-button tracking-[3px]  text-[#fccdff]"
-                                            onClick={() => {
-                                                if (loginModal) loginModal.showModal()
-                                            }}><span
+                                            onClick={loginModal}><span
                                             className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Login</span>
                                         </button>
                                     </li>
@@ -140,9 +133,7 @@ const Navigation = () => {
                                 type="button"
                                 id="loginbuttion1"
                                 aria-label="Login"
-                                onClick={() =>{
-                                    if(loginModal)loginModal.showModal()
-                                }}
+                                onClick={loginModal}
                                 className="w-full tracking-[3px] "><span
                                 className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Login</span>
                             </button>
@@ -150,7 +141,7 @@ const Navigation = () => {
                     </ul>
                 </div>
             </div>
-
+                <LoginModal/>
         </nav>
     );
 };

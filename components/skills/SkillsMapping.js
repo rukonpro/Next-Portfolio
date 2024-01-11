@@ -27,7 +27,6 @@ const SkillsMapping = ({data}) => {
                 <div className="flex justify-center py-5">
                     <Link
                         href={`skills/${data?.title}`}
-                        replace={true}
                         passHref={true}
                         legacyBehavior={true}
                         data-aos="fade-up"

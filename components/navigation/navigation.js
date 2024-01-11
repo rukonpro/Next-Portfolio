@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import MenuIcon from "@/public/images/menu-bar.png";
 import CloseIcon from "@/public/images/close.png";
+import Link from "next/link";
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [loginModal, setLoginModal] = useState(null);
@@ -58,13 +59,13 @@ const Navigation = () => {
                 <div>
                     <div className="flex  justify-between items-center md:px-8 px-5 py-4   ">
                         <div>
-                            <a href="/#home">
+                            <Link href="/#home" replace={true}>
                                 <button
                                     type="button"
                                     aria-label="Rukon.Pro"
                                     className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold  tracking-[2px] ">Rukon.Pro
                                 </button>
-                            </a>
+                            </Link>
 
                         </div>
 
@@ -76,11 +77,12 @@ const Navigation = () => {
                                         navLinks?.map((nav, index) =>{
                                             return (
                                                 nav?.title ? <li className="animated-button" key={index}>
-                                                    <a href={nav?.path}
+                                                    <Link href={nav?.path}
+                                                          replace={true}
                                                           className="tracking-[2px] text-[#fccdff]"
                                                     >
                                                             {nav?.title}
-                                                    </a>
+                                                    </Link>
                                                 </li>:""
                                             )
                                             }
@@ -126,11 +128,12 @@ const Navigation = () => {
                         {
                             navLinks?.map((nav, index) =>
                                 <li key={index}>
-                                    <a
+                                    <Link
 
                                         href={nav?.path}
+                                        replace={true}
                                         onClick={()=>setMenuOpen(state=>!state)}
-                                             className="animated-button w-full rounded-l-full inline-block transition-opacity hover:bg-gradient-to-l hover:transition-opacity   from-[#9a4cd00d] to-[#270257fd] px-5 py-3 tracking-[2px] text-[#fccdff]">{nav?.title}</a>
+                                             className="animated-button w-full rounded-l-full inline-block transition-opacity hover:bg-gradient-to-l hover:transition-opacity   from-[#9a4cd00d] to-[#270257fd] px-5 py-3 tracking-[2px] text-[#fccdff]">{nav?.title}</Link>
                                 </li>
                             )
                         }

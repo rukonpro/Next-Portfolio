@@ -1,4 +1,3 @@
-import Link from "next/link";
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import PortfolioMapping from "@/components/portfolios/portfolioMapping";
 import {Suspense} from "react";
@@ -37,14 +36,14 @@ const Portfolios = () => {
                </Suspense>
 
                 <div className="flex justify-center">
-                    <Link href="/portfolios">
+                    <a href="/portfolios">
                         <button
                             aria-label="All Project"
                             type="button"
                             className="text-white text-lg font-bold  w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70] shadow-2xl shadow-fuchsia-300 active:shadow-md active:shadow-fuchsia-100/30">
                             All Project
                         </button>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </section>

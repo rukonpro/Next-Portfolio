@@ -31,31 +31,31 @@ const Footer = () => {
                         <div>
                             <ol className="text-[#fccdff] flex flex-wrap lg:flex-col justify-center items-center lg:items-start gap-1 lg:gap-0 pt-10 lg:pt-0">
                                 <li className="py-2 text-[14px] tracking-[2px]">
-                                    <Link href="/#home">Home</Link>
+                                    <a href="/#home">Home</a>
                                 </li>
                                 <li className="block lg:hidden">|</li>
                                 <li className="py-2 text-[14px] tracking-[2px]">
-                                    <Link href="/#about">About</Link>
+                                    <a href="/#about">About</a>
                                 </li>
                                 <li className="block lg:hidden">|</li>
                                 <li className="py-2 text-[14px] tracking-[2px]">
-                                    <Link href="/#services"> Services</Link>
+                                    <a href="/#services"> Services</a>
                                 </li>
                                 <li className="block lg:hidden">|</li>
                                 <li className="py-2 text-[14px] tracking-[2px]">
-                                    <Link href="/#portfolio">Portfolios</Link>
+                                    <a href="/#portfolio">Portfolios</a>
                                 </li>
                                 <li className="block lg:hidden">|</li>
                                 <li className="py-2 text-[14px] tracking-[2px]">
-                                    <Link href="/#blogs">Blogs</Link>
+                                    <a href="/#blogs">Blogs</a>
                                 </li>
                                 <li className="block lg:hidden ">|</li>
                                 <li className="py-2 text-[14px] tracking-[2px]">
-                                    <Link href="/#blogs">skills</Link>
+                                    <a href="/#blogs">skills</a>
                                 </li>
                                 <li className="block lg:hidden ">|</li>
                                 <li className="py-2 text-[14px] tracking-[2px]">
-                                    <Link href="/#contact">Contact</Link>
+                                    <a href="/#contact">Contact</a>
                                 </li>
                             </ol>
                         </div>

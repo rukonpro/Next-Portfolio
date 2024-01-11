@@ -1,5 +1,5 @@
-import Link from "next/link";
 import SkillsCard from "@/components/skills/SkillsCard";
+import Link from "next/link";
 
 const SkillsMapping = ({data}) => {
 

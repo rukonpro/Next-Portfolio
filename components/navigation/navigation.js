@@ -78,13 +78,10 @@ const Navigation = () => {
                                         navLinks?.map((nav, index) =>{
                                             return (
                                                 nav?.title ? <li className="animated-button" key={index}>
-                                                    <Link href={nav?.path}>
-                                                        <button
-                                                            type="button"
-                                                            aria-label={nav?.title}
-                                                            className="tracking-[2px] text-[#fccdff]">
+                                                    <Link href={nav?.path}
+                                                          className="tracking-[2px] text-[#fccdff]"
+                                                    >
                                                             {nav?.title}
-                                                        </button>
                                                     </Link>
                                                 </li>:""
                                             )

@@ -39,11 +39,8 @@ const Navigation = () => {
         },
     ];
 
-    const menuHandler = () => {
-        setMenuOpen(value => !value)
-    };
-
-        const loginModal=()=> document.getElementById("login").showModal();
+    const menuHandler = () =>setMenuOpen(value => !value);
+    const loginModal=()=> document.getElementById("login").showModal();
 
     return (
         <nav className="fixed z-50 top-0  w-screen">

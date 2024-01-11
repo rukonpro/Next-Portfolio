@@ -3,7 +3,6 @@ import Link from "next/link";
 
 const SkillsMapping = ({data}) => {
 
-
     return (
             <div>
                 <h1 className={`text-[#f8cafb] text-3xl  font-bold pt-15 pb-3`}>{data?.title}</h1>
@@ -28,6 +27,9 @@ const SkillsMapping = ({data}) => {
                 <div className="flex justify-center py-5">
                     <Link
                         href={`skills/${data?.title}`}
+                        replace={true}
+                        passHref={true}
+                        legacyBehavior={true}
                         data-aos="fade-up"
                         data-aos-anchor-placement="bottom-bottom"
                         data-aos-duration="1000"

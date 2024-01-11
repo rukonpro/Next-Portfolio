@@ -52,9 +52,14 @@ const Navigation = () => {
                 <div>
                     <div className="flex  justify-between items-center md:px-8 px-5 py-4   ">
                         <div>
-                            <Link href="/#home" >
+                            <Link
+                                href="/#home"
+                                passHref={true}
+                                legacyBehavior={true}
+                            >
                                 <button
                                     type="button"
+                                    onClick={()=>setMenuOpen(state=>!state)}
                                     aria-label="Rukon.Pro"
                                     className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold  tracking-[2px] ">Rukon.Pro
                                 </button>
@@ -70,12 +75,15 @@ const Navigation = () => {
                                         navLinks?.map((nav, index) =>{
                                             return (
                                                 nav?.title ? <li className="animated-button" key={index}>
-                                                    <Link href={nav?.path}
-                                                          className="tracking-[2px] text-[#fccdff]"
+                                                    <Link
+                                                        href={nav?.path}
+                                                        passHref={true}
+                                                        legacyBehavior={true}
+                                                        className="tracking-[2px] text-[#fccdff]"
                                                     >
                                                             {nav?.title}
                                                     </Link>
-                                                </li>:""
+                                                </li>:null
                                             )
                                             }
                                         )
@@ -119,10 +127,11 @@ const Navigation = () => {
                             navLinks?.map((nav, index) =>
                                 <li key={index}>
                                     <Link
-
                                         href={nav?.path}
                                         onClick={()=>setMenuOpen(state=>!state)}
-                                             className="animated-button w-full rounded-l-full inline-block transition-opacity hover:bg-gradient-to-l hover:transition-opacity   from-[#9a4cd00d] to-[#270257fd] px-5 py-3 tracking-[2px] text-[#fccdff]">{nav?.title}</Link>
+                                        passHref={true}
+                                        legacyBehavior={true}
+                                        className="animated-button w-full rounded-l-full inline-block transition-opacity hover:bg-gradient-to-l hover:transition-opacity   from-[#9a4cd00d] to-[#270257fd] px-5 py-3 tracking-[2px] text-[#fccdff]">{nav?.title}</Link>
                                 </li>
                             )
                         }

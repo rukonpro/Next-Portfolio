@@ -37,7 +37,11 @@ const Portfolios = () => {
                </Suspense>
 
                 <div className="flex justify-center">
-                    <Link href="/portfolios">
+                    <Link
+                        href="/portfolios"
+                        passHref={true}
+                        legacyBehavior={true}
+                    >
                         <button
                             aria-label="All Project"
                             type="button"

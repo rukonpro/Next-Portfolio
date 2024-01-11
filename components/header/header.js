@@ -20,7 +20,7 @@ const Header = () => {
                                     data-aos-offset="10"
                                     data-aos-duration="1000"
                                     data-aos-easing="ease-in-sine"
-                                    className="text-2xl font-bold bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text tracking-[5px]">
+                                    className="text-xl md:text-4xl font-bold bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text tracking-[5px]">
                                    {"Hello!, I'm"}
                                 </span>
                                 <h1
@@ -28,13 +28,13 @@ const Header = () => {
                                     data-aos-offset="10"
                                     data-aos-duration="1000"
                                     data-aos-easing="ease-in-sine"
-                                    className=" md:text-7xl text-4xl font-bold  pt-2  "><
+                                    className=" md:text-8xl text-5xl font-bold  pt-2  "><
                                     span
                                     className={`${chewy.className} font-bold bg-gradient-to-br from-[#816aff]  to-[#d066fd] text-transparent bg-clip-text tracking-[2px]`}>Rukon Uddin</span>
                                 </h1>
 
                                 <div
-                                    className=" md:text-xl text-base font-bold  mt-2 md:tracking-[3px] tracking-[1px] text-[#fccdff] flex gap-1 flex-wrap">
+                                    className=" md:text-xl text-lg font-bold  mt-2 md:tracking-[3px] tracking-[1px] text-[#fccdff] flex gap-1 flex-wrap">
                                     <p
                                         data-aos="fade-right"
                                         data-aos-offset="10"

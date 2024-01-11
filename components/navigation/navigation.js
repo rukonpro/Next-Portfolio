@@ -2,7 +2,7 @@
 
 import React, { useState} from "react";
 import Image from "next/image";
-import MenuIcon from "@/public/images/close.png";
+import MenuIcon from "@/public/images/menu-bar.png";
 import CloseIcon from "@/public/images/close.png";
 import LoginModal from "@/components/authentication/loginModal";
 const Navigation = () => {

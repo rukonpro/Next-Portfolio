@@ -94,7 +94,7 @@ const Navigation = () => {
                     </div>
 
                     <div
-                        className={`lg:hidden p-1 rounded-b-xl flex flex-col justify-between  duration-500 relative ${menuOpen ? "h-[88vh]" : " h-[0vh] overflow-hidden"}`}>
+                        className={`lg:hidden p-1 rounded-b-xl flex flex-col justify-between  duration-500 relative ${menuOpen ? "h-[85vh]" : " h-[0vh] overflow-hidden"}`}>
 
 
                         <ul className=" text-white font-bold  text-xl   ">

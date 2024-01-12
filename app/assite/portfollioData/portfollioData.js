@@ -73,13 +73,96 @@ import  Congratulation from "@/public/images/Congrates.png";
 import Banner1 from "@/public/images/header-laptop.svg";
 import Banner2 from "@/public/images/header-laptop-2.svg";
 import Banner3 from "@/public/images/header-laptop-3.svg";
+import GithubIcon from "@/public/images/github-icon-1.svg";
+import LinkdinIcon from "@/public/images/linkedin.png";
+import Facebook from "@/public/images/facebook.png";
+import EmailIcon from "@/public/images/gmail.png";
+import SkypeIcon from "@/public/images/skype.png";
+import Whatsapp from "@/public/images/whatsapp.png";
+import PhoneIcon from "@/public/images/phone-call.png";
 
 const portfolioData = {
+    navLinks : [
+        {
+            title: "Home",
+            path: "/#home",
+        },
+        {
+            title: "About",
+            path: "/#about",
+        },
+        {
+            title: "Skills",
+            path: "/#skills",
+        },
+        {
+            title: "Services",
+            path: "/#services",
+        },
+
+        {
+            title: "Portfolio",
+            path: "/#portfolios",
+        },
+        {
+            title: "Blogs",
+            path: "/#blogs",
+        },
+        {
+            title: "Contact",
+            path: "/#contact",
+        },
+    ],
     banner:[
         { id: 1, content: Banner1 },
         { id: 2, content:  Banner2 },
         { id: 3, content:  Banner3 },
         // Add more slides as needed
+    ],
+    followUs:[
+        {
+            title:"Github",
+            icon:GithubIcon,
+            link:"https://github.com/rukonpro",
+            color:'#eceff1'
+        },
+        {
+            title:"Linkdin",
+            icon:LinkdinIcon,
+            link:"https://www.linkedin.com/in/rukonpro/",
+            color:"#007ab9"
+        },
+        {
+            title:"Facebook",
+            icon:Facebook,
+            link:"https://www.facebook.com/rukonpro",
+            color:'#1476f2'
+        },
+        {
+            title:"Email",
+            icon:EmailIcon,
+            link:"mailto:rukon.js@gamil.com",
+            color:'#f44336'
+        },
+        {
+            title:"Skype",
+            icon:SkypeIcon,
+            link:"https://join.skype.com/invite/yXu1Kxuk8hZF?fbclid=IwAR18ICJ_AmaQUWEIsiIfd4XyikyYvhcEIrM5HLImwXXJc42KT6pwqWjDaC0",
+            color:"#00aff0"
+        },
+        {
+            title:"Whatsapp",
+            icon:Whatsapp,
+            link:"https://api.whatsapp.com/send?phone=1765459224",
+            color:"#4caf50"
+        },
+        {
+            title:"Tel",
+            icon:PhoneIcon,
+            link:"tel:+8801765459224",
+            color:'#3e9ddd'
+        },
+
     ],
     about:{
         name:"Rukon Uddin",

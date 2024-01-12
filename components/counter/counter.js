@@ -19,8 +19,9 @@ const Counter = () => {
         },
     ]
     return (
-        <div className="relative  overflow-hidden">
-            <div className="absolute -inset-full bg-[#0e0e36]/85 "></div>
+        <div className="relative bg-[#340846]  overflow-hidden">
+            <div className="absolute  inset-0  blur-[200px] radial-gradient"/>
+
             <div className="relative z-10">
                 <div className="w-full max-w-[1200px] mx-auto py-28  px-5">
                     <div className="grid grid-cols-3 gap-4 md:gap-5 items-center justify-center">

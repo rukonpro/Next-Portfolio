@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from "@/components/navigation/navigation";
 import PortfolioMapping from "@/components/portfolios/portfolioMapping";
 import BackButton from "@/components/backButton/backButton";
+import Footer from "@/components/footer/footer";
 
 const Portfolios = () => {
     return (
@@ -31,6 +32,7 @@ const Portfolios = () => {
             <div className="absolute custom-animate-pulse inset-0 blur-[118px] radial-gradient"></div>
 */}
 
+            <Footer/>
 
         </div>
     );

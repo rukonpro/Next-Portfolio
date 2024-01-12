@@ -3,6 +3,7 @@ import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import Navigation from "@/components/navigation/navigation";
 import BackButton from "@/components/backButton/backButton";
 import SkillsCard from "@/components/skills/SkillsCard";
+import Footer from "@/components/footer/footer";
 
 const Page = ({params}) => {
     
@@ -10,7 +11,7 @@ const Page = ({params}) => {
     return (
         <div className=" bg-[#0e0e36] min-h-screen overflow-hidden ">
             <Navigation/>
-            <div className="absolute custom-animate-pulse inset-0 blur-[118px] radial-gradient"></div>
+
 
             <div className="max-w-[1200px] relative  z-10 mx-auto px-5 py-20">
                 <div className="flex justify-between items-center py-3"
@@ -45,14 +46,16 @@ const Page = ({params}) => {
                 </div>
 
             </div>
+            <div className="absolute custom-animate-pulse inset-0 blur-[118px] radial-gradient"></div>
+            <Footer/>
         </div>
     );
 };
 
 export default Page;
 
-export  function generateStaticParams() {
-    return  portfolioData?.skills?.map((portfolio) => ({
+export function generateStaticParams() {
+    return portfolioData?.skills?.map((portfolio) => ({
         id: portfolio.title,
     }))
 }

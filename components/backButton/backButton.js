@@ -6,12 +6,12 @@ const BackButton = () => {
     return (
         <button
             type="button"
-            className="border-2 px-5 py-1 rounded"
+            className="border border-purple-500/70 hover:animate-pulse hover:shadow-fuchsia-300/20  shadow-xl px-5 py-1 rounded"
             onClick={() => {
                 window.history.back()
             }}
         >
-            <Image src={Arrow} className="h-8 w-8" alt="arrow"/>
+            <Image src={Arrow} className="h-5 w-6" alt="arrow"/>
         </button>
     );
 };

@@ -2,7 +2,6 @@ import React from 'react';
 import Image from "next/image";
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
 
-
 const FollowUs = () => {
     return (
         <ol className='flex flex-wrap gap-2 pt-5'>
@@ -30,8 +29,6 @@ const FollowUs = () => {
                     )
                 })
             }
-
-
         </ol>
     );
 };

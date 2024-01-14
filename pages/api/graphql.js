@@ -1,6 +1,7 @@
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import { ApolloServer } from "@apollo/server";
 import authenticateUser from "@/pages/jsonwebtoken/jsonwebtoken";
+import { ApolloServerPluginLandingPageLocalDefault, ApolloServerPluginLandingPageProductionDefault } from '@apollo/server/plugin/landingPage/default';
 import gql from "graphql-tag";
 
 const typeDefs =gql`
@@ -13,7 +14,7 @@ const typeDefs =gql`
 const resolvers = {
 
     Query: {
-        hello: (_,__,config) => {
+        hello: () => {
             return "world"
         },
     },
@@ -23,6 +24,23 @@ const resolvers = {
 const server = new ApolloServer({
     resolvers,
     typeDefs,
+    plugins: [
+
+        // Install a landing page plugin based on NODE_ENV
+
+        process.env.NODE_ENV === 'production'
+
+            ? ApolloServerPluginLandingPageProductionDefault({
+
+                graphRef: 'my-graph-id@my-graph-variant',
+
+                footer: false,
+
+            })
+
+            : ApolloServerPluginLandingPageLocalDefault({ footer: false }),
+
+    ],
 });
 
 

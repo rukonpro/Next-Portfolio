@@ -9,14 +9,15 @@ const SkillsCard = ({data}) => {
 
             <div className="grid grid-cols-6 items-center gap-2 ">
                 <div   className="col-span-3">
-                    <Image
-                        data-aos="zoom-out-right"
-                        data-aos-offset="10"
-                        data-aos-duration="1000"
-                        data-aos-easing="ease-in-sine"
-                        className="lg:h-[150px] lg:w-[150px] md:h-[125px] md:w-[125px] h-[100px] w-[100px]"
-                        src={data?.logo}
-                        alt={data?.title}/>
+                    {
+                        data?.logo?  <Image
+                            data-aos="zoom-out-right"
+                            data-aos-offset="10"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine"
+                            src={data?.logo}
+                            alt={data?.title}/>:''
+                    }
                 </div>
                 <div className="col-span-3">
                     <h1 className=" text-[20px] font-bold py-1 text-white">{data?.title}</h1>

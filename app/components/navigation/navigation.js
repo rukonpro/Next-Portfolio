@@ -1,11 +1,12 @@
 "use client"
 
 import React, { useState} from "react";
+import Link from "next/link";
 import Image from "next/image";
 import MenuIcon from "@/public/images/menu-bar.png";
 import CloseIcon from "@/public/images/close.png";
 import LoginModal from "@/app/components/authentication/loginModal";
-import Link from "next/link";
+
 import portfollioData from "@/app/assite/portfollioData/portfollioData";
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);

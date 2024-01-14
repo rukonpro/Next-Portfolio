@@ -1,4 +1,3 @@
-import React from 'react';
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import Navigation from "@/app/components/navigation/navigation";
 import BackButton from "@/app/components/backButton/backButton";

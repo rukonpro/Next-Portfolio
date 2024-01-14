@@ -1,8 +1,8 @@
 import React from 'react';
-import Navigation from "@/components/navigation/navigation";
-import PortfolioMapping from "@/components/portfolios/portfolioMapping";
-import BackButton from "@/components/backButton/backButton";
-import Footer from "@/components/footer/footer";
+import Navigation from "@/app/components/navigation/navigation";
+import PortfolioMapping from "@/app/components/portfolios/portfolioMapping";
+import BackButton from "@/app/components/backButton/backButton";
+import Footer from "@/app/components/footer/footer";
 
 const Portfolios = () => {
     return (

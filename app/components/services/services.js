@@ -2,7 +2,6 @@ import BlueBackCover from "@/public/images/BlueBackCover.webp";
 import IphonScreen from "@/public/images/MobileScreen.webp";
 import Icon from "@/public/images/fluent_design-ideas-20-regular.png";
 import Ellipse from "@/public/images/Ellipse 7.png";
-/*import ServiceIcon from "@/public/images/24-hour-clock.png";*/
 import Image from "next/image";
 
 const Services = () => {

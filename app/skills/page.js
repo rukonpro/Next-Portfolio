@@ -1,8 +1,7 @@
 import React, {Suspense} from 'react';
-import BackButton from "@/components/backButton/backButton";
-import  Navigation from "@/components/navigation/navigation"
-import Skills from "@/components/skills/skills";
-import Footer from "@/components/footer/footer";
+import  Navigation from "@/app/components/navigation/navigation"
+import Skills from "@/app/components/skills/skills";
+import Footer from "@/app/components/footer/footer";
 const SkillsAll = ({params}) => {
     return (
       <section>

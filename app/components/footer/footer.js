@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import FollowUs from "@/components/followUs/followUs";
+import FollowUs from "@/app/components/followUs/followUs";
 
 const Footer = () => {
     return (

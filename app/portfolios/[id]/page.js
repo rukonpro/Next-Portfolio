@@ -1,7 +1,7 @@
-import Portfolio from "@/components/portfolios/portfolio";
+import Portfolio from "@/app/components/portfolios/portfolio";
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
-import Navigation from "@/components/navigation/navigation";
-import Footer from "@/components/footer/footer";
+import Navigation from "@/app/components/navigation/navigation";
+import Footer from "@/app/components/footer/footer";
 
 const Page = ({params}) => {
     const portfolio= portfolioData?.portfolios?.future?.find(data=>data?.id===params?.id);

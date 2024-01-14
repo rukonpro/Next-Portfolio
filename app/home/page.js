@@ -1,16 +1,19 @@
 import React from "react";
-import About from "@/components/about/about";
-import Header from "@/components/header/header";
-import Counter from "@/components/counter/counter";
-import Navigation from "@/components/navigation/navigation";
-import Services from "@/components/services/services";
-import Footer from "@/components/footer/footer";
-import Skills from "@/components/skills/skills";
-import Portfolios from "@/components/portfolios/portfolios";
-import Certifications from "@/components/certifications/certifications";
-import Blogs from "@/components/blogs/blogs";
-import ContactLayout from "@/components/contact/ContactLayout";
+import About from "@/app/components/about/about";
+import Header from "@/app/components/header/header";
+import Counter from "@/app/components/counter/counter";
+import Navigation from "@/app/components/navigation/navigation";
+import Services from "@/app/components/services/services";
+import Footer from "@/app/components/footer/footer";
+import Skills from "@/app/components/skills/skills";
+import Portfolios from "@/app/components/portfolios/portfolios";
+import Certifications from "@/app/components/certifications/certifications";
+import Blogs from "@/app/components/blogs/blogs";
+import ContactLayout from "@/app/components/contact/ContactLayout";
+
 export default function Home() {
+
+
     return (
         <React.Fragment>
             <Navigation/>

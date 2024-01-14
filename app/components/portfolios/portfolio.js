@@ -1,5 +1,5 @@
-import Carousel from "@/components/portfolios/carousel";
-import BackButton from "@/components/backButton/backButton";
+import Carousel from "@/app/components/portfolios/carousel";
+import BackButton from "@/app/components/backButton/backButton";
 import React from "react";
 import Image from "next/image";
 const Portfolio = ({ data }) => {

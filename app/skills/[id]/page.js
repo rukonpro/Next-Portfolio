@@ -1,9 +1,9 @@
 import React from 'react';
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
-import Navigation from "@/components/navigation/navigation";
-import BackButton from "@/components/backButton/backButton";
-import SkillsCard from "@/components/skills/SkillsCard";
-import Footer from "@/components/footer/footer";
+import Navigation from "@/app/components/navigation/navigation";
+import BackButton from "@/app/components/backButton/backButton";
+import SkillsCard from "@/app/components/skills/SkillsCard";
+import Footer from "@/app/components/footer/footer";
 
 const Page = ({params}) => {
     

@@ -1,5 +1,5 @@
 import React  from 'react';
-import Contact from "@/components/contact/contact";
+import Contact from "@/app/components/contact/contact";
 const ContactModal = () => {
     return (
         <dialog id="contactModal" className="modal ">

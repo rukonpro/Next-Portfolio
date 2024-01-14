@@ -1,5 +1,5 @@
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
-import PortfolioMapping from "@/components/portfolios/portfolioMapping";
+import PortfolioMapping from "@/app/components/portfolios/portfolioMapping";
 import {Suspense} from "react";
 import Link from "next/link";
 

@@ -1,7 +1,7 @@
-import FollowUs from "@/components/followUs/followUs";
-import Slider from "@/components/slider/slider";
-import {chewy} from "@/fonts/fonts";
-import ScrollingButton from "@/components/scroolButton/scroolButton";
+import FollowUs from "@/app/components/followUs/followUs";
+import Slider from "@/app/components/slider/slider";
+import {chewy} from "@/app/utils/fonts/fonts";
+import ScrollingButton from "@/app/components/scroolButton/scroolButton";
 
 const Header = () => {
 

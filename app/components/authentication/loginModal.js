@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
-import Login from "@/components/authentication/login";
-import Registration from "@/components/authentication/registration";
+import Login from "@/app/components/authentication/login";
+import Registration from "@/app/components/authentication/registration";
 
 export default function LoginModal() {
     const [isLogin, setIsLogin] = useState(false);

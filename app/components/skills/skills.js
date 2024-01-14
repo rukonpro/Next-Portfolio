@@ -1,6 +1,6 @@
 import React from 'react';
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
-import SkillsMapping from "@/components/skills/SkillsMapping";
+import SkillsMapping from "@/app/components/skills/SkillsMapping";
 
 const Skills = () => {
     return (

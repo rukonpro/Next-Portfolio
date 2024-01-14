@@ -1,4 +1,4 @@
-import Portfolio from "@/components/portfolios/portfolio";
+import Portfolio from "@/app/components/portfolios/portfolio";
 
 const Modals = ({ data }) => {
 

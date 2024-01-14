@@ -11,6 +11,8 @@
   "dependencies": {
     "@apollo/client": "^3.8.9",
     "@apollo/server": "^4.10.0",
+    "@apollo/server-plugin-operation-registry": "^4.0.1",
+    "@apollo/subgraph": "^2.6.3",
     "@as-integrations/next": "^3.0.0",
     "@emailjs/browser": "^3.11.0",
     "@prisma/client": "^5.8.0",
@@ -19,6 +21,7 @@
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
     "jsonwebtoken": "^9.0.2",
+    "loglevel": "^1.8.1",
     "micro": "^10.0.1",
     "mongoose": "^8.0.4",
     "next": "14.0.4",

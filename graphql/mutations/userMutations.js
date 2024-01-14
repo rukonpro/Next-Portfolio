@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 export default {
     registerUser:async (_,{ username, email, password }) => {
         try {
-            const user = new User({ username, email, password });
+            const user = new User({ username, email, password,role:"USER" });
             await user.save();
             return user;
         } catch (error) {
@@ -26,7 +26,7 @@ export default {
             if (!passwordMatch) {
                 return new Error('Incorrect password');
             }
-            const options = { userId: user._id, email: user.email, username: user.username };
+            const options = { userId: user._id, email: user.email, username: user.username,role:user.role };
             const token = tokenGenerator(options);
             return { user, token };
         } catch (error) {

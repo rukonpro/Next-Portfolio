@@ -24,8 +24,14 @@ const typeDefs=gql`
         username: String!
         email: String!
         password: String!
+        role:Role
     }
+    enum Role {
+        ADMIN
+        REVIEWER
+        USER
 
+    }
     type AuthPayload {
         token: String
         user: User

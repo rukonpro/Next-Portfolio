@@ -3,7 +3,7 @@ import User from "@/graphql/models/userModel";
 export default {
     projectInfo: (_,__,{user}) => {
         if(!user){
-            return
+            return "User is not authenticated"
         }
         return {
             title:"Portfolio with Rukon Pro",

@@ -5,7 +5,7 @@ const SECRET_KEY = process?.env?.JWT_SECRET_KEY;
 const authenticateUser = (req) => {
 
     if(!req?.headers?.authorization){
-        return "Token has expired";
+       return   'User is not authenticated'
     }
     // Extract the token from the Authorization header
     const token = req?.headers?.authorization?.split(" ")[1] || "";

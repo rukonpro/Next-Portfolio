@@ -1,10 +1,14 @@
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
-
 import { ApolloServer } from "@apollo/server";
-import typeDefs from "@/pages/graphql/schema";
 import authenticateUser from "@/pages/jsonwebtoken/jsonwebtoken";
+import gql from "graphql-tag";
 
+const typeDefs =gql`
+    type Query {
+        hello: String
+    }
 
+`
 
 const resolvers = {
 

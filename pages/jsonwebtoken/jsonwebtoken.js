@@ -1,10 +1,14 @@
 import jwt from "jsonwebtoken";
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY;
+const SECRET_KEY = process?.env?.JWT_SECRET_KEY;
 
 const authenticateUser = (req) => {
+
+    if(!req?.headers?.authorization){
+        return "Token has expired";
+    }
     // Extract the token from the Authorization header
-    const token = req.headers.authorization?.split(" ")[1] || "";
+    const token = req?.headers?.authorization?.split(" ")[1] || "";
 
     return new Promise((resolve, reject) => {
         if (!token) {

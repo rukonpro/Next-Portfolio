@@ -4771,6 +4771,7 @@ __metadata:
     "@as-integrations/next": "npm:^3.0.0"
     "@emailjs/browser": "npm:^3.11.0"
     "@prisma/client": "npm:^5.8.0"
+    apollo-server-core: "npm:^3.13.0"
     apollo-server-micro: "npm:^3.13.0"
     autoprefixer: "npm:^10.0.1"
     bcrypt: "npm:^5.1.1"

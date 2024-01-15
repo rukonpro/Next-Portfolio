@@ -1,5 +1,5 @@
 import User from "@/graphql/models/userModel";
-import tokenGenerator from "@/pages/helpers/tokenGenerator";
+import tokenGenerator from "@/graphql/helpers/tokenGenerator";
 import bcrypt from "bcrypt";
 
 

@@ -14,8 +14,8 @@ import databaseConnection from "@/app/assite/DB/databaseConnection";
 import typeDefs from "@/graphql/typeDefs/typeDepf";
 import loglevel from 'loglevel';
 import { buildSubgraphSchema } from '@apollo/subgraph';
-import formatError from "@/pages/helpers/formatError";
-import serverWillStart from "@/pages/helpers/serverWillStart";
+import formatError from "@/graphql/helpers/formatError";
+import serverWillStart from "@/graphql/helpers/serverWillStart";
 
 /*databaseConnection*/
 databaseConnection().then(res=>{

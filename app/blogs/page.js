@@ -17,6 +17,6 @@ const Blogs = () => {
 export default Blogs;
 
 export const metadata = {
-    title: 'MERN stack dev - Blogs',
+    title: 'MERN Stack Dev. - Blogs',
     description: 'Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.',
 }

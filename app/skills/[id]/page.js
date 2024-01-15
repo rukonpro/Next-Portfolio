@@ -62,7 +62,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     const skills=portfolioData?.skills?.find(data=>data?.title===params?.id);
 
     return {
-        title: `MERN stack dev - ${skills.title}`,
+        title: `MERN Stack Dev. - ${skills.title}`,
         description: 'Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.',
     }
 }

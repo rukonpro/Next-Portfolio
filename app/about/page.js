@@ -4,7 +4,7 @@ import Footer from "@/app/components/footer/footer";
 
 
 export const metadata = {
-    title: 'MERN stack dev - About',
+    title: 'MERN Stack Dev. - About',
     description: 'Hello!\n' +
         'I am a Web Developer, React Developer,MERN stack developer, or aJavaScript enthusiast.\n' +
         '\n' +

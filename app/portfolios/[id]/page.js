@@ -44,7 +44,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     const previousImages = (await parent).openGraph?.images || [];
 
     return {
-        title: portfolio.title,
+        title: `MERN Stack Dev. - ${portfolio.title}`,
         openGraph: {
             images: [...portfolio?.images, ...previousImages],
         },

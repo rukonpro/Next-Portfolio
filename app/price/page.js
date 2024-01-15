@@ -5,7 +5,7 @@ import Footer from "@/app/components/footer/footer";
 
 
 export const metadata = {
-    title: 'MERN stack dev - price',
+    title: 'MERN Stack Dev. - price',
     description: 'Pay as you grow\n' +
         '\n' +
         'I offer comprehensive MERN stack development expertise to bring your portfolios to life. My pricing structure is designed to provide flexibility based on the scope and complexity of your needs.',

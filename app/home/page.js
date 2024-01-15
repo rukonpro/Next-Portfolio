@@ -1,4 +1,3 @@
-import React from "react";
 import About from "@/app/components/about/about";
 import Header from "@/app/components/header/header";
 import Counter from "@/app/components/counter/counter";
@@ -10,12 +9,15 @@ import Portfolios from "@/app/components/portfolios/portfolios";
 import Certifications from "@/app/components/certifications/certifications";
 import Blogs from "@/app/components/blogs/blogs";
 import ContactLayout from "@/app/components/contact/ContactLayout";
-
+import Pricing from "@/app/components/pricing/pricing";
+export const metadata = {
+    title: 'MERN stack dev - Rukon.Pro',
+    description: 'Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.',
+}
 export default function Home() {
 
-
     return (
-        <React.Fragment>
+        <section>
             <Navigation/>
             <Header/>
             <Counter/>
@@ -25,8 +27,9 @@ export default function Home() {
             <Portfolios/>
             <Blogs/>
             <Certifications/>
+            <Pricing/>
             <ContactLayout/>
             <Footer/>
-        </React.Fragment>
+        </section>
     )
 }

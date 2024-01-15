@@ -6,16 +6,19 @@ import Image from "next/image";
 import MenuIcon from "@/public/images/menu-bar.png";
 import CloseIcon from "@/public/images/close.png";
 import LoginModal from "@/app/components/authentication/loginModal";
-
 import portfollioData from "@/app/assite/portfollioData/portfollioData";
+
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const menuHandler = () =>setMenuOpen(value => !value);
     const loginModal=()=> document.getElementById("login").showModal();
 
+
+
+
     return (
         <nav className="fixed z-50 top-0  w-full  duration-500 ">
-            <div className={`${menuOpen?"p-3":"p-0"} duration-500`}>
+            <div className={`${menuOpen?"p-3 lg:p-0":"p-0"} duration-500`}>
 
                 <div
                     className={`  ${menuOpen ? "  rounded-xl bg-gradient-to-tr from-[#5e2594ec] to-[#270257fd]" +

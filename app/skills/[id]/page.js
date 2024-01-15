@@ -4,9 +4,12 @@ import BackButton from "@/app/components/backButton/backButton";
 import SkillsCard from "@/app/components/skills/SkillsCard";
 import Footer from "@/app/components/footer/footer";
 
+
+
+
 const Page = ({params}) => {
-    
     const skills=portfolioData?.skills?.find(data=>data?.title===params?.id);
+
     return (
         <div className=" bg-[#0e0e36] min-h-screen overflow-hidden ">
             <Navigation/>
@@ -53,8 +56,21 @@ const Page = ({params}) => {
 
 export default Page;
 
+
+
+export async function generateMetadata({ params, searchParams }, parent) {
+    const skills=portfolioData?.skills?.find(data=>data?.title===params?.id);
+
+    return {
+        title: `MERN stack dev - ${skills.title}`,
+        description: 'Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.',
+    }
+}
+
+
 export function generateStaticParams() {
     return portfolioData?.skills?.map((portfolio) => ({
         id: portfolio.title,
     }))
 }
+

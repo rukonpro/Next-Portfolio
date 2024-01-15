@@ -4,6 +4,11 @@ import PortfolioMapping from "@/app/components/portfolios/portfolioMapping";
 import BackButton from "@/app/components/backButton/backButton";
 import Footer from "@/app/components/footer/footer";
 
+
+export const metadata = {
+    title: 'MERN stack dev - Portfolios',
+    description: 'Welcome to my portfolios! As a MERN stack developer, I specialize in crafting dynamic and efficient web applications. Below are some key portfolios that showcase my skills and passion for creating seamless user experiences.',
+}
 const Portfolios = () => {
     return (
         <div className=" bg-[#0e0e36] min-h-screen overflow-hidden  relative ">

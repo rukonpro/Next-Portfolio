@@ -1,6 +1,6 @@
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import { ApolloServer } from "@apollo/server";
-import authenticateUser from "@/pages/jsonwebtoken/jsonwebtoken";
+import authenticateUser from "@/graphql/helpers/jsonwebtoken";
 /*
 import { ApolloServerPluginLandingPageLocalDefault, ApolloServerPluginLandingPageProductionDefault } from '@apollo/server/plugin/landingPage/default';
 */
@@ -34,6 +34,7 @@ const server = new ApolloServer({
     logger,
     schema: buildSubgraphSchema({ typeDefs, resolvers }),
     introspection: true,
+    cache: "bounded",
     formatError: formatError,
     plugins: [
         ApolloServerPluginLandingPageGraphQLPlayground(),

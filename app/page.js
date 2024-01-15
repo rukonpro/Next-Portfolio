@@ -1,5 +1,6 @@
-import HomePage from "@/app/home/page"
-export default function Home() {
+import HomePage from "@/app/home/page";
+export default async function Home() {
+
   return (
     <main>
         <HomePage/>

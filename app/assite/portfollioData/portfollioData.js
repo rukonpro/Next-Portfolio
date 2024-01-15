@@ -85,32 +85,36 @@ const portfolioData = {
     navLinks : [
         {
             title: "Home",
-            path: "/#home",
+            path: "/home",
         },
         {
             title: "About",
-            path: "/#about",
+            path: "/about",
         },
         {
             title: "Skills",
-            path: "/#skills",
+            path: "/skills",
         },
         {
             title: "Services",
-            path: "/#services",
+            path: "/services",
         },
 
         {
             title: "Portfolio",
-            path: "/#portfolios",
+            path: "/portfolios",
         },
         {
             title: "Blogs",
-            path: "/#blogs",
+            path: "/blogs",
+        },
+        {
+            title: "Pricing",
+            path: "/price",
         },
         {
             title: "Contact",
-            path: "/#contact",
+            path: "/contact",
         },
     ],
     banner:[
@@ -660,7 +664,7 @@ const portfolioData = {
                 id: "Eskul",
                 title: "Eskul",
                 logo: EskulLogo,
-                description: "Eskul - My latest full-stack project. A responsive school management website with dynamic features. Built using React, Mongoose, Express, Firebase, NodeJS, and Material UI, it includes admin and user dashboards. Users can discover transportation options, purchase books, donate, hire online tutors, and provide feedback. Contact and FAQ forms enhance user interaction. Deployed with SSL Commerce on Heroku, Eskul showcases my skills in creating comprehensive, responsive, and feature-rich web solutions.",
+                description: "Eskul - My latest full-stack project. A responsive school management website with dynamic features. Built using React, Mongoose, Express, Firebase, NodeJS, and Material UI, it includes admin and user dashboards. Users can discover transportation options, purchase books, donate, hire online tutors, and provide feedback. contact and FAQ forms enhance user interaction. Deployed with SSL Commerce on Heroku, Eskul showcases my skills in creating comprehensive, responsive, and feature-rich web solutions.",
                 images: [SkulCover, SkulImg1, SkulImg2, SkulImg3],
                 technology: ["React", "Mongoose", "Express", "Firebase", "Node.JS", "Material UI", "SSL Commerce", "Email.js", "Heroku"],
                 point: [

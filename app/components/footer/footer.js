@@ -65,7 +65,7 @@ const Footer = () => {
                             <div className="pt-10 lg:pt-0">
                                 <h1 className="text-center text-[#fccdff] font-bold tracking-[5px]">Follow Us</h1>
                                 <div className="flex justify-center">
-                                    <FollowUs/>
+                                    <FollowUs position={"center"}/>
                                 </div>
                             </div>
                         </div>

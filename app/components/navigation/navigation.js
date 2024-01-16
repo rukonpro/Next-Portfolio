@@ -26,7 +26,7 @@ const Navigation = () => {
                         " from-[#0a0e36]" +
                         " to-[#0a0e36] "} ${!menuOpen && " bg-[#0a0e36] duration-500"} transition-colors `}>
                     <div>
-                        <div className="flex  justify-between items-center md:px-8 px-5 py-4   ">
+                        <div className="flex  justify-between items-center md:px-8 px-5  py-4  max-w-[1200px] mx-auto ">
                             <div>
                                 <Link
                                     href="/#home"
@@ -45,7 +45,7 @@ const Navigation = () => {
                             <div className=" hidden lg:block">
 
                                 <div>
-                                    <ul className="flex items-center gap-5 text-white font-bold px-5 text-xl  ">
+                                    <ul className="flex items-center gap-5 text-white font-bold  text-xl  ">
                                         {
                                             portfollioData?.navLinks?.map((nav, index) => {
                                                     return (

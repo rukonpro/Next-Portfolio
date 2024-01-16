@@ -10,7 +10,7 @@ const Header = () => {
             id="home"
             className="relative  bg-[#0e0e36] "
         >
-            <div className=" container  flex items-center mx-auto px-5 py-24">
+            <div className="  flex items-center max-w-[1200px] mx-auto px-5 py-24">
                 <div className=" relative z-10 ">
                     <div className='grid lg:grid-cols-2 grid-cols-1 gap-5 items-center'>
                         <div>
@@ -54,7 +54,7 @@ const Header = () => {
                                 >Javascript Developer</p></div>
 
 
-                                <FollowUs/>
+                                <FollowUs position={"left"}/>
                                 <a
                                     data-aos="fade-right"
                                     data-aos-offset="10"

@@ -1,6 +1,8 @@
 "use client"
 import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
+import Image from "next/image";
+import DevelopImage from "@/public/images/rukon-pro-develop.png";
 
 const Counter = () => {
     const counter=[
@@ -19,12 +21,16 @@ const Counter = () => {
         },
     ]
     return (
-        <div className="relative bg-[#340846]  overflow-hidden">
+        <div className="relative bg-[#340846]  overflow-hidden  ">
             <div className="absolute  inset-0  blur-[200px] radial-gradient"/>
+           <div className="flex justify-center pt-2">
+               <Image src={DevelopImage} alt="rukon pro develop" className="absolute size-11/12  "/>
+           </div>
+            <div className="relative z-10 lg:py-72 py-28">
 
-            <div className="relative z-10">
-                <div className="w-full max-w-[1200px] mx-auto py-28  px-5">
-                    <div className="grid grid-cols-3 gap-4 md:gap-5 items-center justify-center">
+                <div className="w-full max-w-[1200px] mx-auto  px-5 relative ">
+
+                    <div className="grid grid-cols-3 gap-4 md:gap-5 items-center justify-center ">
                         {counter?.map((counter, index) => (
                             <InView key={index} trackVisibility rootMargin="0px 0px" delay={100}>
                                 {({inView, ref}) => (
@@ -33,7 +39,7 @@ const Counter = () => {
                                         style={{
                                             boxShadow: "0 0 5px 0 #a855f7",
                                         }}
-                                        className="border border-purple-500 rounded-xl p-3 md:p-5 text-center bg-gradient-to-tr from-[#9c69fe]/20 to-[#260b4b] h-full"
+                                        className="border border-purple-500 rounded-xl p-3 md:p-5 text-center bg-gradient-to-tr from-[#9c69fe]/20 to-[#260b4b] h-full w-full"
                                     >
                                         <p
                                             style={{

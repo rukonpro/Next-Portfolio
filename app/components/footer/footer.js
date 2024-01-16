@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import FollowUs from "@/app/components/followUs/followUs";
-/*import FooterImage from "@/public/images/rukon-pro-footer-images.png";
-import Image from "next/image";*/
+
 
 const Footer = () => {
     return (
@@ -65,11 +64,9 @@ const Footer = () => {
                         <div className='w-full flex justify-center'>
                             <div className="pt-10 lg:pt-0">
                                 <h1 className="text-center text-[#fccdff] font-bold tracking-[5px]">Follow Us</h1>
-                               <div className="flex justify-center">
-                                   <FollowUs/>
-                               </div>
-                                <br/>
-                              {/*  <Image src={FooterImage} alt="Rukon-pro"/>*/}
+                                <div className="flex justify-center">
+                                    <FollowUs/>
+                                </div>
                             </div>
                         </div>
                     </div>

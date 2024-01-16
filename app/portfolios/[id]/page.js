@@ -41,12 +41,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params, searchParams }, parent) {
     const portfolio= portfolioData?.portfolios?.future?.find(data=>data?.id===params?.id);
-    const previousImages = (await parent).openGraph?.images || [];
 
     return {
         title: `MERN Stack Dev. - ${portfolio.title}`,
-        openGraph: {
-            images: [...portfolio?.images, ...previousImages],
-        },
+        description:portfolio?.description
     }
 }

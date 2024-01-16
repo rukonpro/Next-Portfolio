@@ -1,11 +1,14 @@
 import React from 'react';
 import Link from "next/link";
 import FollowUs from "@/app/components/followUs/followUs";
+/*import FooterImage from "@/public/images/rukon-pro-footer-images.png";
+import Image from "next/image";*/
 
 const Footer = () => {
     return (
-        <footer className=" bg-[#0e0e36] relative pt-32 max-h-max">
-            <div className="absolute w-full z-10 ">
+        <footer className="  bg-[#0e0e36]  pt-32 bg-right-bottom bg-contain  bg-no-repeat " style={{backgroundImage:`url("/images/rukon-pro-footer-images.png")`}} >
+
+            <div className=" absolute w-full z-10 " >
                 <div className=" max-w-[1200px] px-5  mx-auto ">
                     <div className="grid lg:grid-cols-3">
                         <div>
@@ -62,21 +65,25 @@ const Footer = () => {
                         <div className='w-full flex justify-center'>
                             <div className="pt-10 lg:pt-0">
                                 <h1 className="text-center text-[#fccdff] font-bold tracking-[5px]">Follow Us</h1>
-                                <FollowUs/>
+                               <div className="flex justify-center">
+                                   <FollowUs/>
+                               </div>
+                                <br/>
+                              {/*  <Image src={FooterImage} alt="Rukon-pro"/>*/}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className=" flex flex-col lg:flex-row justify-between blur-[70px] ">
-                <div className=" h-60 w-full  bg-gradient-to-tl from-[#22062d] to-[#532f82] rounded-full"/>
-                <div className=" h-[30vh] w-full  bg-gradient-to-tr from-[#230a48] to-[#282f5b]  rounded-full"/>
-                <div className="h-10 lg:h-60 w-full  bg-gradient-to-tl from-[#380644] to-[#36084b]  rounded-full"/>
+            <div className=" relative flex flex-col lg:flex-row justify-between blur-[70px]  ">
+                <div className=" h-20 lg:h-72 w-full  bg-gradient-to-tl from-[#22062d] to-[#532f82] rounded-full"/>
+                <div className="h-48 w-full  bg-gradient-to-tr from-[#230a48] to-[#282f5b]  rounded-full"/>
+                <div className="h-72  w-full  bg-gradient-to-tl from-[#9480f969] to-[#dd06cb47]  rounded-full"/>
             </div>
-            <div className=" flex justify-center py-5 text-white z-10 pt-10">
+            <div className=" flex justify-center py-5 text-white z-20 pt-10 ">
                 <h1 className="text-gray-400">Copy right &copy;{new Date().getFullYear()} <span
-                    className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text ">Rukon.Pro</span>
+                    className="bg-gradient-to-br from-[#bcb0ff] to-[#e900fe9e] text-transparent bg-clip-text ">Rukon.Pro</span>
                 </h1>
             </div>
         </footer>

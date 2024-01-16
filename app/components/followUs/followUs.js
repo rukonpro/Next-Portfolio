@@ -5,7 +5,7 @@ import portfolioData from "@/app/assite/portfollioData/portfollioData";
 
 const FollowUs = () => {
     return (
-        <ol className='flex flex-wrap gap-2 pt-5'>
+        <ol className='flex flex-wrap justify-center gap-2 pt-5'>
             {
                portfolioData?.followUs?.map((data,index)=>{
                     return (

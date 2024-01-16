@@ -23,8 +23,11 @@ const Counter = () => {
     return (
         <div className="relative bg-[#340846]  overflow-hidden  ">
             <div className="absolute  inset-0  blur-[200px] radial-gradient"/>
-           <div className="flex justify-center pt-2">
-               <Image src={DevelopImage} alt="rukon pro develop" className="absolute size-11/12  "/>
+           <div className="flex justify-center">
+               <Image
+                   src={DevelopImage} alt="rukon pro develop"
+                   placeholder="blur"
+                   className="absolute size-11/12  "/>
            </div>
             <div className="relative z-10 lg:py-72 py-28">
 
@@ -46,7 +49,7 @@ const Counter = () => {
                                                 textShadow: "rgb(167, 92, 238) -0.5px 0px, rgb(131, 21, 236) -1px 0px," +
                                                     " rgb(131, 28, 230) -1.5px 0px, rgb(134, 22, 242) -2px 0px, rgb(121, 0, 236) -2.5px 0px",
                                             }}
-                                            className={`text-3xl sm:text-5xl md:text-7xl lg:text-9xl md:p-5 bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text`}>
+                                            className={`text-3xl sm:text-5xl md:text-7xl lg:text-9xl md:p-5 bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text`}>
                                             {counter?.title === "Year Experience" ? 0 : ""}<CountUp
                                             end={inView ? counter?.end : 0} start={counter?.start}/>
                                             +

@@ -1,5 +1,5 @@
 "use client"
-
+import 'aos/dist/aos.css';
 import React, { useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +7,7 @@ import MenuIcon from "@/public/images/menu-bar.png";
 import CloseIcon from "@/public/images/close.png";
 import LoginModal from "@/app/components/authentication/loginModal";
 import portfollioData from "@/app/assite/portfollioData/portfollioData";
+import AocFuc from "@/app/utils/AOS";
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,8 +15,7 @@ const Navigation = () => {
     const loginModal=()=> document.getElementById("login").showModal();
 
 
-
-
+    AocFuc()
     return (
         <nav className="fixed z-50 top-0  w-full  duration-500 ">
             <div className={`${menuOpen?"p-3 lg:p-0":"p-0"} duration-500`}>

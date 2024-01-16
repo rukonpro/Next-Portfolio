@@ -1,4 +1,5 @@
 import './globals.css'
+import 'aos/dist/aos.css';
 import {chewy} from "@/app/utils/fonts/fonts";
 
 
@@ -8,6 +9,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en" className="scroll-smooth">
       <body className={chewy.className}>

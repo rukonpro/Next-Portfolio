@@ -23,10 +23,9 @@ const Navigation = () => {
                 <div
                     className={`  ${menuOpen ? "  rounded-xl bg-gradient-to-tr from-[#5e2594ec] to-[#270257fd]" +
                         " lg:from-[#0a0e36] lg:to-[#0a0e36] lg:m-0 lg:rounded-none " : " bg-gradient-to-tr" +
-                        " from-[#0a0e36]" +
-                        " to-[#0a0e36] "} ${!menuOpen && " bg-[#0a0e36] duration-500"} transition-colors `}>
+                        " from-[#0e0e3688] to-[#0e0e3696] "} ${!menuOpen && " bg-[#0e0e3696] duration-500"} transition-colors `}>
                     <div>
-                        <div className="flex  justify-between items-center md:px-8 px-5  py-4  max-w-[1200px] mx-auto ">
+                        <div className="flex  justify-between items-center xl:px-0 px-5   py-4  max-w-[1200px] mx-auto ">
                             <div>
                                 <Link
                                     href="/#home"

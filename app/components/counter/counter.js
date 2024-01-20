@@ -21,7 +21,7 @@ const Counter = () => {
         },
     ]
     return (
-        <div className="relative bg-gradient-radial to-[#12173e] from-[#1d0f1d8d]   overflow-hidden  ">
+        <div className="relative bg-gradient-radial to-[#12173e] from-[#816aff]   overflow-hidden  ">
             <div className="absolute  inset-0  blur-[200px] radial-gradient"/>
            <div className="flex justify-center">
                <Image

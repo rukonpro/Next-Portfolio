@@ -4,8 +4,8 @@ import Navigation from "@/app/components/navigation/navigation";
 import Footer from "@/app/components/footer/footer";
 
 
-const Page = ({params}) => {
-    const portfolio= portfolioData?.portfolios?.future?.find(data=>data?.id===params?.id);
+const Page = async ({params}) => {
+    const portfolio= await portfolioData?.portfolios?.future?.find(data=>data?.id===params?.id);
 
     const jsonLd = {
         '@context': 'https://schema.org',

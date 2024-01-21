@@ -6,11 +6,11 @@ const Contact = () => {
     return (
         <section className=" relative bg-[#0f0523] py-28 ">
             <div
-                className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
-                style={{
+                className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg bg-gradient-to-tr from-[#622291] to-[#9d31f7] "
+           /*     style={{
                     background:
                         "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)",
-                }}
+                }}*/
             ></div>
 
             <div className="relative  z-10 max-w-[1200px] mx-auto ">

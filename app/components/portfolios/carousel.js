@@ -22,7 +22,7 @@ const Carousel = ({images}) => {
                 {
                     images?.map((image,index)=>{
                         return (
-                            <SwiperSlide key={image} id={index}>
+                            <SwiperSlide key={index} id={index}>
                                 <div  className="carousel-item relative w-full">
                                     <Image src={image} alt="banner"/>
                                 </div>

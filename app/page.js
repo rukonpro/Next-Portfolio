@@ -1,9 +1,10 @@
+import React from "react";
 import HomePage from "@/app/home/page";
 export default async function Home() {
 
   return (
-    <main>
+    <React.Fragment>
         <HomePage/>
-    </main>
+    </React.Fragment>
   )
 }

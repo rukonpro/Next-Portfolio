@@ -1,3 +1,4 @@
+import React from "react";
 import About from "@/app/components/about/about";
 import Header from "@/app/components/header/header";
 import Counter from "@/app/components/counter/counter";
@@ -17,7 +18,7 @@ export const metadata = {
 export default function Home() {
 
     return (
-        <section>
+        <React.Fragment>
             <Navigation/>
             <Header/>
             <Counter/>
@@ -30,6 +31,6 @@ export default function Home() {
             <Pricing/>
             <ContactLayout/>
             <Footer/>
-        </section>
+        </React.Fragment>
     )
 }

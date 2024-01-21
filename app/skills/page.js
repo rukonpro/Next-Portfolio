@@ -4,16 +4,13 @@ import Skills from "@/app/components/skills/skills";
 import Footer from "@/app/components/footer/footer";
 
 
-const SkillsAll = ({params}) => {
+const SkillsAll = () => {
     return (
       <section>
           <Navigation/>
-          <div className="pt-16">
               <Suspense fallback={"<h1>Loading...</h1>"}>
                   <Skills/>
               </Suspense>
-          </div>
-
           <Footer/>
       </section>
     );

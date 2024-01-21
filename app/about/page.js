@@ -16,9 +16,7 @@ const About = () => {
     return (
         <section>
             <Navigation/>
-               <div className="pt-16">
                    <AboutComponent/>
-               </div>
             <Footer/>
         </section>
     );

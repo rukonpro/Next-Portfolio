@@ -5,9 +5,7 @@ const Contact = () => {
     return (
         <div>
             <Navigation/>
-            <div className="pt-16">
                 <ContactComponent/>
-            </div>
                 <Footer/>
         </div>
     );

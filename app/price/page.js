@@ -14,9 +14,7 @@ const Pricing = () => {
     return (
         <section>
             <Navigation/>
-            <div className="pt-16">
                 <PricingComponent/>
-            </div>
             <Footer/>
         </section>
     );

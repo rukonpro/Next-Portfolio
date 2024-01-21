@@ -8,9 +8,7 @@ const Services = () => {
     return (
         <section>
             <Navigation/>
-            <div className="pt-16">
             <ServicesComponent/>
-            </div>
             <Footer/>
         </section>
     );

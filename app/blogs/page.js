@@ -6,9 +6,7 @@ const Blogs = () => {
     return (
         <section>
             <Navigation/>
-            <div className="pt-16">
                 <BlogsComponent/>
-            </div>
                 <Footer/>
         </section>
     );

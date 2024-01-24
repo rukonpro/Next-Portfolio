@@ -12,7 +12,7 @@ const PortfolioMapping = () => {
                            data-aos="fade-up"
                            data-aos-anchor-placement="center-bottom"
                            data-aos-duration="1000"
-                           className="bg-gradient-to-r from-[#0d1247]/30 to-gray-900/30 hover:bg-[#280f5f] h-full flex items-center py-[16px] px-[32px]  font-[400] rounded-2xl portfolioCardContainer  hover:z-10 ">
+                           className="bg-gradient-to-r from-[#0d1247]/30 to-gray-900/30 hover:bg-[#9669fe]/30 h-full flex items-center py-[16px] px-[32px]  font-[400] rounded-2xl portfolioCardContainer">
                                 <Link href={`/portfolios/${data?.id}`}>
                                         <div className="grid grid-cols-3 gap-5 items-center">
 

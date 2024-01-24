@@ -207,3 +207,17 @@ body {
   transform: rotate3d(45,50,5,-8deg) scale(1.1) scaleZ(-1.1);
   transition: 0.5s ease-in;
 }
+
+.portfolioCardImageContainer{
+  position: relative;
+  perspective: 180px;
+}
+.portfolioCardAnimation{
+  transition-duration: 0.5s;
+}
+.portfolioCardContainer:hover .portfolioCardAnimation{
+  transform-style: preserve-3d;
+  transform: rotateY(-20deg);
+  transition-duration: 0.5s;
+  margin-left: -50px;
+}

@@ -12,7 +12,7 @@ const PortfolioMapping = () => {
                            data-aos="fade-up"
                            data-aos-anchor-placement="center-bottom"
                            data-aos-duration="1000"
-                           className="bg-gradient-to-r from-[#0d1247]/30 to-gray-900/30 hover:bg-[#280f5f] h-full flex items-center py-[16px] px-[32px] font-[400] rounded-2xl portfolioCardContainer">
+                           className="bg-gradient-to-r from-[#0d1247]/30 to-gray-900/30 hover:bg-[#280f5f] h-full flex items-center py-[16px] px-[32px]  font-[400] rounded-2xl portfolioCardContainer  hover:z-10 ">
                                 <Link href={`/portfolios/${data?.id}`}>
                                         <div className="grid grid-cols-3 gap-5 items-center">
 
@@ -21,7 +21,7 @@ const PortfolioMapping = () => {
                                             </div>
                                             <div className="col-span-2 portfolioCardImageContainer">
                                                 <Image
-                                                    className=" w-full cursor-pointer  rounded-2xl   portfolioCardAnimation"
+                                                    className="cursor-pointer  rounded-2xl   portfolioCardAnimation "
                                                     src={data?.images?.[0]}
                                                     alt="protfoliocover"
                                                 />

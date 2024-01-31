@@ -15,6 +15,7 @@ const SkillsCard = ({data}) => {
                             data-aos-offset="10"
                             data-aos-duration="1000"
                             data-aos-easing="ease-in-sine"
+className="object-contain h-28"
                             src={data?.logo}
                             alt={data?.title}/>:''
                     }

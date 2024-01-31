@@ -44,6 +44,7 @@ import Sass from  "@/public/images/sass-1.svg";
 import Kotlin from  "@/public/images/kotlin-2.svg";
 import Android from  "@/public/images/android-4.svg";
 import Git from  "@/public/images/git-icon.svg";
+import ReactHookFrom from "@/public/images/react-hook-form-logo-only.png";
 import Github from  "@/public/images/github-icon-1.svg";
 import NPM from  "@/public/images/npm-icon.png";
 import Yarn from  "@/public/images/yarn.svg";
@@ -231,11 +232,13 @@ const portfolioData = {
                 },
                 {
                     title:  "Redux-toolkit",
+                    logo: ReduxIcon,
                     description: "Opinionated Redux utility library.",
                     color: "rgba(118, 74, 188, 0.30)"
                 },
                 {
                     title: "RTK Query",
+                    logo: ReduxIcon,
                     description: "Declarative data fetching with Redux.",
                     color: "rgba(118, 74, 188, 0.30)"
                 },
@@ -271,9 +274,9 @@ const portfolioData = {
                 },
                 {
                     title: "React-hook-form",
+                    logo: ReactHookFrom,
                     description: "React library for efficient form-handling.",
-                    color: "rgba(97, 218, 251, 0.30)"
-                },
+                    color: "rgba(235, 90, 144, 0.30)"                },
                 {
                     title: "Firebase",
                     description: "Google's mobile and web platform.",
@@ -391,11 +394,13 @@ const portfolioData = {
                 },
                 {
                     title:  "Redux-toolkit",
+                    logo: ReduxIcon,
                     description: "Opinionated Redux utility library.",
                     color: "rgba(118, 74, 188, 0.30)"
                 },
                 {
                     title: "RTK Query",
+                    logo: ReduxIcon,
                     description: "Declarative data fetching with Redux.",
                     color: "rgba(118, 74, 188, 0.30)"
                 },
@@ -419,8 +424,9 @@ const portfolioData = {
                 },
                 {
                     title: "React-hook-form",
+                    logo: ReactHookFrom,
                     description: "React library for efficient form-handling.",
-                    color: "rgba(97, 218, 251, 0.30)"
+                    color: "rgba(235, 90, 144, 0.30)"
                 },
                 {
                     title: "Firebase",

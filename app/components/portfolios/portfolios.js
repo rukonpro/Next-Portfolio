@@ -32,7 +32,7 @@ const Portfolios = () => {
                     </p>
                 </div>
 
-               <Suspense fallback={"<h1>Loading...</h1>"}>
+               <Suspense fallback={"<h1>loading...</h1>"}>
                    <PortfolioMapping/>
                </Suspense>
 

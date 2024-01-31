@@ -19,7 +19,7 @@ const Navigation = () => {
        AocFuc()
    },[])
     return (
-        <nav className="fixed z-50 top-0  w-full  duration-500 ">
+        <nav className="fixed z-50 top-0  w-full  duration-500">
             <div className={`${menuOpen?"p-3 lg:p-0":"p-0"} duration-500`}>
 
                 <div

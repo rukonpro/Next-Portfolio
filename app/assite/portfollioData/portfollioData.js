@@ -728,7 +728,7 @@ const portfolioData = {
                 ],
                 links: {
                     fontEndCode:{
-                        link:"https://github.com/rukonpro/ONLINE-CLOCK-SHOP",
+                        link:"https://github.com/rukonpro/ONLINE-CLOCK-SHOP-Client",
                         icon:Github
                     },
                     backEndCode: {

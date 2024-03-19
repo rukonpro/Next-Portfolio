@@ -224,5 +224,13 @@ body {
   transform-style: preserve-3d;
   transform: rotateY(-60deg) scaleX(1.1);
   transition-duration: 0.5s;
+}
 
+.portfolioCardContainer  .arrowIcon{
+  right: 50px;
+  transition: 0.5s ease-in;
+}
+.portfolioCardContainer:hover .arrowIcon{
+  right: 0;
+  transition: 0.5s ease-in;
 }

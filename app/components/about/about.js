@@ -1,5 +1,6 @@
 import Image from "next/image";
-import ProfileImage from "@/public/images/rukon.webp";
+import ProfileImage from "@/public/images/rukon_cover_photo.jpg";
+
 const About = () => {
     return (
         <section id="about" className='relative bg-[#121837] px-5 py-28'>

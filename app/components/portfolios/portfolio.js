@@ -5,11 +5,17 @@ import Image from "next/image";
 const Portfolio = ({ data }) => {
     return (
         <div className="text-[#fccdff]">
-           <div className="text-end pb-3">
-               <BackButton/>
-           </div>
+            <div className="flex justify-between pb-3">
+                <a href={data?.links?.liveLink?.link} aria-label={data?.title} target="_blank"
+                   rel="noopener noreferrer">
+                    <h1 className='text-lg font-semibold border-b border-purple-500 bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text '>{data?.title}</h1>
+                </a>
+              <div>
+                  <BackButton/>
+              </div>
+            </div>
             <div>
-                    <Carousel images={data?.images} />
+                <Carousel images={data?.images}/>
             </div>
 
             <div>

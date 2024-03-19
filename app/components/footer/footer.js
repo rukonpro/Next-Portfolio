@@ -6,7 +6,6 @@ import FollowUs from "@/app/components/followUs/followUs";
 const Footer = () => {
     return (
         <footer className="  bg-[#0e0e36]  pt-32 bg-right-bottom bg-contain  bg-no-repeat " style={{backgroundImage:`url("/images/rukon-pro-footer-images.png")`}} >
-
             <div className=" absolute w-full z-10 " >
                 <div className=" max-w-[1200px] px-5  mx-auto ">
                     <div className="grid lg:grid-cols-3">

@@ -22,7 +22,10 @@ const Footer = () => {
                                 </li>
                                 <li className="py-3  text-[14px] tracking-[2px]">
 
-                                    Mail:- <a href="mailto: rukon.pro@gmail.com"> rukon.pro@gmail.com</a>
+                                    Mail:-
+                                    <br/>
+                                    <a href="mailto: rukon.js@gmail.com"> rukon.js@gmail.com</a> , <a
+                                    href="mailto: rukon.pro@gmail.com"> rukon.pro@gmail.com</a>
                                 </li>
                                 <li className="py-3  text-[14px] tracking-[2px]">
                                     (Available : Any time)

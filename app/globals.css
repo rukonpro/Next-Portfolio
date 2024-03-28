@@ -152,7 +152,7 @@ body {
   width: 100%;
   height: 2px;
 
-  background-image: linear-gradient(100deg, rgb(115, 14, 239) 0%, rgb(239, 149, 14) 35%, rgb(115, 14, 239) 100%);
+  background-image: linear-gradient(100deg, rgb(77, 1, 171) 0%, rgb(14, 232, 239) 35%, rgb(101, 9, 215) 100%);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;

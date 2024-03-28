@@ -6,12 +6,9 @@ import Image from "next/image";
 import MenuIcon from "@/public/images/menu-bar.png";
 import CloseIcon from "@/public/images/close.png";
 import LoginModal from "@/app/components/authentication/loginModal";
-import portfollioData from "@/app/assite/portfollioData/portfollioData";
 import AocFuc from "@/app/utils/AOS";
 import MobileMenu from "@/app/components/navigation/MobileMenu";
 import DesktopMenu from "@/app/components/navigation/DesktopMenu";
-
-
 
 export const loginModal = () => document.getElementById("login").showModal();
 const Navigation = () => {
@@ -64,14 +61,11 @@ const Navigation = () => {
                             <div className={`hidden lg:block }`}>
                                 <DesktopMenu/>
                             </div>
-
-
                         </div>
                     </div>
 
                     <div className={`  ${!menuOpen ? "hidden" : "block "} lg:hidden duration-700`}>
                         <MobileMenu setMenuOpen={setMenuOpen}/>
-
                     </div>
                 </div>
                 <LoginModal/>

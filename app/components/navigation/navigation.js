@@ -38,7 +38,7 @@ const Navigation = () => {
                                 <button
                                     type="button"
                                     aria-label="Rukon.Pro"
-                                    onClick={menuHandler}
+                                    onClick={()=>setMenuOpen(false)}
                                     className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold  tracking-[2px] ">Rukon.Pro
                                 </button>
                             </Link>

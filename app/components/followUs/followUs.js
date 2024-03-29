@@ -15,7 +15,7 @@ const FollowUs = ({position}) => {
                                 data-aos-offset="10"
                                 data-aos-duration="1200"
                                 data-aos-easing="ease-in-sine"
-                                href="https://github.com/rukonpro" target="_blank" rel="noreferrer">
+                                href={data.link} target="_blank" rel="noreferrer">
                                 <button
                                     style={{
                                         backgroundImage:`linear-gradient(to top, #0e0e36 , ${data?.color})`

@@ -23,7 +23,8 @@ const Navigation = () => {
 
 
     return (
-        <nav className={`fixed z-50 top-0 items-center  w-full ${menuOpen?"h-[100vh] lg:h-16 ":"lg:h-18"}   bg-gradient-to-tr from-blue-950/95 to-purple-950/95 via-sky-950/95 duration-100 `}>
+        <nav className={`fixed z-50 top-0 items-center  w-full ${menuOpen?"h-[100vh] lg:h-16 ":"lg:h-18" +
+            " via-violet-900/30"}   bg-gradient-to-tr from-blue-950/95 to-purple-950/95 via-sky-950/95  `}>
             <div>
                 <div>
                     <div>
@@ -37,6 +38,7 @@ const Navigation = () => {
                                 <button
                                     type="button"
                                     aria-label="Rukon.Pro"
+                                    onClick={menuHandler}
                                     className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold  tracking-[2px] ">Rukon.Pro
                                 </button>
                             </Link>
@@ -59,7 +61,7 @@ const Navigation = () => {
                             </button>
 
                             <div className={`hidden lg:block }`}>
-                                <DesktopMenu/>
+                                <DesktopMenu />
                             </div>
                         </div>
                     </div>

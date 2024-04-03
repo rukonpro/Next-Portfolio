@@ -51,7 +51,7 @@ const ContactInfo = () => {
                         href="mailto:rukon.js@gmail.com"
                         target="_blank" rel="noreferrer"
                     >
-                      rukon.js@gmail.com
+                      rukonWhats_Is_Features_In_Javascript_EE6@gmail.com
                     </a>
                   </span>
                     </address>

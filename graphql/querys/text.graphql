@@ -1,0 +1,5 @@
+query ProjectInfo {
+    projectInfo {
+        description
+    }
+}

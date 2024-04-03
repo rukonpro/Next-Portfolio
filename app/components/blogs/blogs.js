@@ -1,15 +1,18 @@
-import Image from "next/image";
-import Blog1 from "@/public/images/Rectangle_37.webp";
-import Blog2 from "@/public/images/Rectangle_38.webp";
-import Blog3 from "@/public/images/Rectangle_39.webp";
-import Blog4 from "@/public/images/Rectangle_40.webp";
+import Link from "next/link";
+import HowToConnectionOfMongooseInNodeJs from "@/public/BlogsImage/how_to_mongoose_Connection.webp";
+import WhatsIsFeatureInJavasriptES6 from "@/public/BlogsImage/javascript_ES6.png";
+import TheDifferentWaysToDefineAFunctionInJavaScript from "@/public/BlogsImage/The_different_ways_to_define_a_function_in_JavaScript.webp";
+import HowToDuplicateGitRepository  from "@/public/BlogsImage/HowToDuplicateRepository .jpg";
+
+import BlogCard from "@/app/components/blogs/BlogCard";
+
 const Blogs = () => {
     return (
         <section id="blogs" className="relative  bg-[#0e0e36]     overflow-x-hidden px-5 py-28">
             <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
                  style={{background: "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)"}}></div>
             <article
-                className="relative  z-10 flex-none md:flex justify-around items-center backdrop-blur-3xl  backdrop-opacity-70 ">
+                className="relative  max-w-[1200px]  mx-auto z-10 flex-none md:flex justify-around items-center backdrop-blur-3xl  backdrop-opacity-70 ">
                 <div>
                     <div className="flex justify-center">
                         <div
@@ -21,49 +24,38 @@ const Blogs = () => {
                             className="text-white z-10 md:text-5xl text-2xl font-bold  absolute tracking-[4px]">Blogs</h1>
                     </div>
 
-                    <div className="grid md:grid-cols-3 grid-cols-2  pt-10">
-                        <div className="md:col-span-1 col-span-1 flex md:justify-start justify-center">
-                            <Image
-                                data-aos="fade-left"
-                                data-aos-anchor-placement="top-bottom"
-                                data-aos-duration="2000"
-                                src={Blog1}  alt="blog"
-                                loading="lazy"/>
-                        </div>
-                        <div className="md:col-span-1 col-span-1 flex md:justify-start justify-center">
-                            <Image
-                                data-aos="fade-down"
-                                data-aos-anchor-placement="top-bottom"
-                                data-aos-duration="2000"
-                                src={Blog2} alt="blog"
-                                loading="lazy"/>
-                        </div>
-                        <div className="md:col-span-1 col-span-1 flex md:justify-start justify-center">
-                            <Image
-                                data-aos="fade-right"
-                                data-aos-anchor-placement="top-bottom"
-                                data-aos-duration="2000"
-                                src={Blog3} alt="blog"
-                                loading="lazy"/>
-                        </div>
-                        <div className="md:col-span-3 flex justify-center">
-                            <Image
-                                data-aos="fade-up"
-                                data-aos-duration="2000"
-                                src={Blog4} alt="blog" loading="lazy"/>
-                        </div>
+                    <div className="grid md:grid-cols-4 grid-cols-1 gap-4  pt-10">
+                        <BlogCard
+                            banner={HowToConnectionOfMongooseInNodeJs}
+                            title="How to Connection of Mongoose in Node Js."
+                            date="2 min read · Mar 4, 2022"
+                            path="/blogs/HowToConnectionOfMongooseInNodeJs"
+                        />
+
+                        <BlogCard
+                            banner={WhatsIsFeatureInJavasriptES6}
+                            title="What's features in Javascript ES6."
+                            date="2 min read · Mar 4, 2022"
+                            path="/blogs/Whats_Is_Features_In_Javascript_EE6"
+
+                        />
+                        <BlogCard
+                            banner={TheDifferentWaysToDefineAFunctionInJavaScript}
+                            title="The different ways to define a function in JavaScript."
+                            date="3 min read, May 26, 2021"
+                            path="/blogs/TheDifferentWaysToDefineAFunctionInJavaScript"
+
+                        />
+                        <BlogCard
+                            banner={HowToDuplicateGitRepository}
+                            title="How to Duplicating a repository?"
+                            date="Dec 15, 2023"
+                            path="/blogs/HowToDuplicateGitRepository"
+
+                        />
                     </div>
                 </div>
             </article>
-
-            <div className="flex justify-center pt-5">
-                <button
-                    aria-label="All Blogs"
-                    type="button"
-                    className="text-white text-lg font-bold  w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70] shadow-2xl shadow-fuchsia-300 active:shadow-md active:shadow-fuchsia-100/30">
-                    All Blogs
-                </button>
-            </div>
         </section>
     );
 };

@@ -41,7 +41,7 @@ const BlogDetails = ({params}) => {
         <section>
             <Navigation/>
             <div className="relative  bg-[#0e0e36]     overflow-x-hidden  pt-28 ">
-                <div className="max-w-[1200px] mx-auto px-5">
+                <div className="max-w-[1200px] mx-auto px-5 text-white">
                     {blog()}
                 </div>
             </div>

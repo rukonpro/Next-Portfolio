@@ -25,7 +25,7 @@ const Blogs = () => {
                             className="text-white z-10 md:text-5xl text-2xl font-bold  absolute tracking-[4px]">Blogs</h1>
                     </div>
 
-                    <div className="grid md:grid-cols-4 grid-cols-1 gap-4  pt-10 text-white">
+                    <div className="grid md:grid-cols-4 grid-cols-1 gap-4  pt-28 text-white">
                         {
                             portfollioData?.blogs?.map(blog=>{
                                 return(

@@ -6,8 +6,8 @@ import AvatarRukon from "@/public/images/rukon.jpg";
 const BlogCard = ({blog}) => {
     const {title,banner,date,id}=blog;
     return (
-        <div className="border-b flex flex-col justify-between">
-            <Link href={`blogs/${id}`}>
+        <div className="border-b flex flex-col justify-between hover:bg-gradient-to-tr hover:to-[#2f055a]/90 hover:from-[#055c8f] rounded overflow-hidden lg:hover:skew-y-12 lg:-skew-y-12 duration-500 lg:hover:translate-x-2.5 lg:hover:translate-y-0 hover:-translate-y-3 hover:shadow-lg hover:shadow-fuchsia-300/20 ">
+            <Link href={`blogs/${id}`} className=" pb-10">
                 <Image
                     className="w-full    object-cover h-44"
                     data-aos="fade-left"
@@ -18,9 +18,9 @@ const BlogCard = ({blog}) => {
                     loading="lazy"
                     placeholder="blur"
                 />
-                <h1 className="text-xl pt-3">{title}</h1>
+                <h1 className="text-xl pt-3 px-2">{title}</h1>
             </Link>
-            <Link href="/about" className="flex gap-4  py-10">
+            <Link href="/about" className="flex gap-4  pb-10 px-2">
                 <div>
                     <Image src={AvatarRukon} alt="rukonpro profile"
                            height={50}

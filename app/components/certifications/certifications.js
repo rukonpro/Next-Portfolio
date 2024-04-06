@@ -35,6 +35,7 @@ const Certifications = () => {
                                                     className="object-fill h-[200px] w-[250px] lg:w-[500px] lg:h-[400px]"
                                                     src={data?.image}
                                                     placeholder="blur"
+                                                    loading="lazy"
                                                     alt={data?.title}/>
                                         </li>
                                     )

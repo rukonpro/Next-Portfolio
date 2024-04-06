@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import BlogsComponent from "@/app/components/blogs/blogs";
 import Navigation from "@/app/components/navigation/navigation";
 import Footer from "@/app/components/footer/footer";
@@ -6,8 +6,10 @@ const Blogs = () => {
     return (
         <section>
             <Navigation/>
-                <BlogsComponent/>
-                <Footer/>
+               <Suspense fallback={<h1>Loading...</h1>}>
+                   <BlogsComponent/>
+                   <Footer/>
+               </Suspense>
         </section>
     );
 };

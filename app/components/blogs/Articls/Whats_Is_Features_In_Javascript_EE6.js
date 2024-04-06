@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import Image from "next/image";
 import AvatarRukon from "/public/images/rukon.jpg";
 import WhatsIsFeatureInJavasriptES6 from "@/public/BlogsImage/javascript_ES6.png";
@@ -12,8 +12,11 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
             <BlogUser userName="Rukon Uddin" profilePhoto={AvatarRukon} date="3 min read, Dec 20, 2021"/>
             <br/>
             <div>
-                <Image src={WhatsIsFeatureInJavasriptES6} alt="Whats Is Features In Javascript EE6"
+                <Image src={WhatsIsFeatureInJavasriptES6}
+                       alt="Whats Is Features In Javascript EE6"
                        className="w-full"
+                       placeholder="blur"
+                       loading="lazy"
                 />
 
                 <p className="pt-5 text-xl">ES6 refers to version 6 of the ECMA script programming language. … is a
@@ -40,18 +43,17 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
                     </li>
                 </ul>
                 <br/>
-                <CodeBlog
-                    code={`
-    Var year=20;
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`
+var year=20;
     console.log(name,year);
-    console.log(name,year);
-                    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
-
-
-                <br/>
+    console.log(name,year);`}
+                    </CodeBlog>
+                </Suspense>
+            <br/>
 
                 <ul className="list-inside list-disc">
                     <li className="pt-5 text-xl">
@@ -65,40 +67,43 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
 
                 <p className="pt-5 text-xl">Example:1</p>
                 <br/>
-                <CodeBlog
-                    code={`
-    let name = "Rukon";
-    let name= "Delwar";
-    // SyntaxError: 'x' has already been declared
-   `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`
+let name = "Rukon";
+let name= "Delwar";
+// SyntaxError: 'x' has already been declared`}
+                    </CodeBlog>
+                </Suspense>
+
                 <p className="pt-5 text-xl">Example:2</p>
                 <br/>
-                <CodeBlog
-                    code={`
-    {
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {` 
+{
     let number = 2;
-    }
+}
     console.log(number)
-    // x can NOT be used here
-   `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
-
+    // x can NOT be used here`}
+                    </CodeBlog>
+                </Suspense>
                 <p className="pt-5 text-xl">Example:3</p>
                 <br/>
-                <CodeBlog
-                    code={`
-   Let number=100;
-       number=200;
-       console.log(number); // number is 200
-   `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`
+Let number=100;
+   number=200;
+   console.log(number); // number is 200`}
+                    </CodeBlog>
+                </Suspense>
                 <br/>
 
                 <ul className="list-inside list-disc">
@@ -112,37 +117,36 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
 
                 <p className="pt-5 text-xl">Example: 1</p>
                 <br/>
-
-                <CodeBlog
-                    code={`
-   var a = 10;
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {` 
+var a = 10;
     
     {
     const a = 2;
     }
     
-    console.log(a) // output= 10
-    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
+    console.log(a) // output= 10`}
+                    </CodeBlog>
+                </Suspense>
                 <br/>
 
 
                 <p className="pt-5 text-xl">Example: 2</p>
                 <br/>
-
-                <CodeBlog
-                    code={`
-    const number = 1000;
-          number = 122; // This will give an error
-          number = number + 10; // This will also give an error
-    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
-                <br/>
-
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`
+const number = 1000;
+      number = 122; // This will give an error
+      number = number + 10; // This will also give an error`}
+                    </CodeBlog>
+                </Suspense>
+             <br/>
                 <h1 className="text-2xl font-extrabold">Default parameters:</h1>
 
                 <ul className="list-inside list-disc">
@@ -155,20 +159,20 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
 
                 <p className="pt-5 text-xl">Example:</p>
                 <br/>
-
-                <CodeBlog
-                    code={`
-   function multiply(a, b = 1) {
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`
+function multiply(a, b = 1) {
                 return a * b;
               }
    console.log(multiply(5, 2));
    // expected output: 10
    console.log(multiply(5));
-   // expected output: 5
-    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
+   // expected output: 5`}
+                    </CodeBlog>
+                </Suspense>
                 <br/>
                 <h1 className="text-2xl font-extrabold">Template string:</h1>
                 <ul className="list-inside list-disc">
@@ -180,15 +184,14 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
 
                 <p className="pt-5 text-xl">Example: 1</p>
                 <br/>
-                <CodeBlog
-                    code={`
-   let template = \`Template string\`;
-    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
-
-                <br/>
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`let template = \`Template string\`;`}
+                    </CodeBlog>
+                </Suspense>
+           <br/>
 
                 <ul className="list-inside list-disc">
                     <li className="pt-5 text-xl">
@@ -197,13 +200,13 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
                 </ul>
                 <p className="pt-5 text-xl">Example: 2</p>
                 <br/>
-                <CodeBlog
-                    code={`
-   let text = \`I am "rukon"\`;
-    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`let text = \`I am "rukon"\`;`}
+                    </CodeBlog>
+                </Suspense>
                 <br/>
                 <ul className="list-inside list-disc">
                     <li className="pt-5 text-xl">
@@ -213,14 +216,13 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
                 <br/>
                 <p className="pt-5 text-xl">Example: 3</p>
                 <br/>
-                <CodeBlog
-                    code={`
-   let text = \`The template allows literally multiline strings\`;
-    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
-
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`let text = \`The template allows literally multiline strings\`;`}
+                    </CodeBlog>
+                </Suspense>
                 <br/>
                 <ul className="list-inside list-disc">
                     <li className="pt-5 text-xl">
@@ -231,16 +233,17 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
                 <br/>
                 <p className="pt-5 text-xl">Example: 4</p>
                 <br/>
-                <CodeBlog
-                    code={"let name= \"Rukon\";\n" +
-                        "let year= 20;\n" +
-                        "let person= `my name is ${name}.I am ${year}!years old`;\n" +
-                        "console.log(person)"
-                    }
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
-                <br/>
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {"let name= \"Rukon\";\n" +
+                            "let year= 20;\n" +
+                            "let person= `my name is ${name}.I am ${year}!years old`;\n" +
+                            "console.log(person)"}
+                    </CodeBlog>
+                </Suspense>
+              <br/>
                 <p className="pt-5 text-xl">Spread Operator:</p>
                 <br/>
                 <ul className="list-inside list-disc">
@@ -252,16 +255,18 @@ const Whats_Is_Features_In_Javascript_EE6 = () => {
                 <br/>
                 <p className="pt-5 text-xl">Example:</p>
                 <br/>
-                <CodeBlog
-                    code={`
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`
 const numbersOne = [1, 2, 3];
 const numbersTwo = [4, 5, 6];
 const numbersCombined = […numbersOne, …numbersTwo];
 console.log(numbersCombined) // outpot 1, 2, 3,4, 5, 6
-                    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
+                        `}
+                    </CodeBlog>
+                </Suspense>
 
                 <br/>
                 <h1 className="text-2xl font-extrabold">Arrow Functions:</h1>
@@ -276,32 +281,33 @@ console.log(numbersCombined) // outpot 1, 2, 3,4, 5, 6
                 <br/>
                 <p className="pt-5 text-xl">Example:1</p>
                 <br/>
-                <CodeBlog
-                    code={`
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`
 Function before() {
     return "Before Function!";
 }
-console.log(before)
-                    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
+console.log(before)`}
+                    </CodeBlog>
+                </Suspense>
                 <br/>
                 <p className="pt-5 text-xl">Arrow Function:</p>
                 <p className="pt-5 text-xl">Example:2</p>
                 <br/>
-                <CodeBlog
-                    code={`
-Const arrow = () => {
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`
+const arrow = () => {
     return "Arrow Function!";
 }
-console.log(arrow())
-                    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
-
-                <br/>
+console.log(arrow())`}
+                    </CodeBlog>
+                </Suspense>
+        <br/>
                 <ul className="list-inside list-disc">
                     <li className="pt-5 text-xl">
                         If the function does not need to be a parameter and returns a single value, then the direct
@@ -312,14 +318,14 @@ console.log(arrow())
                 <p className="pt-5 text-xl">Example:3</p>
 
                 <br/>
-                <CodeBlog
-                    code={`
-Const arrow = () => "Arrow Function";
-                    `}
-                    language="VBScript"
-                    showLineNumbers={true}
-                />
-                <br/>
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <CodeBlog
+                        language="javascript"
+                    >
+                        {`const arrow = () => "Arrow Function";`}
+                    </CodeBlog>
+                </Suspense>
+        <br/>
                 <p>Thank you read for my block !</p>
             </div>
 

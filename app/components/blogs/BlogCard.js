@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import AvatarRukon from "@/public/images/rukon.jpg";
 
-const BlogCard = ({banner,date,title,path}) => {
+const BlogCard = ({blog}) => {
+    const {title,banner,date,id}=blog;
     return (
-        <Link href={path} className="border-b flex flex-col justify-between">
-            <div>
+        <div className="border-b flex flex-col justify-between">
+            <Link href={`blogs/${id}`}>
                 <Image
                     className="w-full    object-cover h-44"
                     data-aos="fade-left"
@@ -14,26 +15,28 @@ const BlogCard = ({banner,date,title,path}) => {
                     data-aos-duration="2000"
                     src={banner}
                     alt="How ToConnection Of Mongoose In NodeJs"
-                    loading="lazy"/>
-
+                    loading="lazy"
+                    placeholder="blur"
+                />
                 <h1 className="text-xl pt-3">{title}</h1>
-            </div>
-            <div className="flex gap-4  py-10">
-                <Link href="/about">
+            </Link>
+            <Link href="/about" className="flex gap-4  py-10">
+                <div>
                     <Image src={AvatarRukon} alt="rukonpro profile"
                            height={50}
                            width={50}
+                           blurDataURL={AvatarRukon}
                            className="rounded-full"
                     />
-                </Link>
+                </div>
                 <div>
-                    <Link href="/about" className="hover:underline">
-                        <h1>Rukon Uddin</h1>
-                    </Link>
+                    <h1 className="hover:underline">
+                        Rukon Uddin
+                    </h1>
                     <small>{date}</small>
                 </div>
-            </div>
-        </Link>
+            </Link>
+        </div>
     );
 };
 

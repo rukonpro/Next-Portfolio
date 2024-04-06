@@ -11,6 +11,7 @@ const BlogUser = ({userName,date,profilePhoto}) => {
                        height={50}
                        width={50}
                        className="rounded-full"
+                       placeholder="blur"
                 />
             </Link>
             <div>

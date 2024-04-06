@@ -81,6 +81,17 @@ import EmailIcon from "@/public/images/gmail.png";
 import SkypeIcon from "@/public/images/skype.png";
 import Whatsapp from "@/public/images/whatsapp.png";
 import PhoneIcon from "@/public/images/phone-call.png";
+import HowToConnectionOfMongooseInNodeJsBanner from "@/public/BlogsImage/how_to_mongoose_Connection.webp";
+import HowToDuplicateGitRepositoryBanner  from "@/public/BlogsImage/HowToDuplicateRepository .jpg";
+import TheDifferentWaysToDefineAFunctionInJavaScriptBanner
+    from "@/public/BlogsImage/The_different_ways_to_define_a_function_in_JavaScript.webp";
+import WhatsIsFeatureInJavasriptES6Banner from "@/public/BlogsImage/javascript_ES6.png";
+import HowToConnectionOfMongooseInNodeJs from "@/app/components/blogs/Articls/How_to_Connection_of_Mongoose_in_Node_Js";
+import Whats_Is_Features_In_Javascript_EE6 from "@/app/components/blogs/Articls/Whats_Is_Features_In_Javascript_EE6";
+import The_different_ways_to_define_a_function_in_JavaScript
+    from "@/app/components/blogs/Articls/The_different_ways_to_define_a_function_in_JavaScript";
+import HowToDuplicateGitRepository from "@/app/components/blogs/Articls/HowToDuplicateGitRepository";
+
 
 const portfolioData = {
     navLinks : [
@@ -906,6 +917,36 @@ const portfolioData = {
             }
         ]
     },
+    blogs:[
+        {
+            id:"HowToConnectionOfMongooseInNodeJs",
+            date:"2 min read · Mar 4, 2022",
+            title:"How to Connection of Mongoose in Node Js.",
+            banner:HowToConnectionOfMongooseInNodeJsBanner,
+            blog:<HowToConnectionOfMongooseInNodeJs/>
+        },
+        {
+            id:"Whats_Is_Features_In_Javascript_EE6",
+            date:"2 min read · Mar 4, 2022",
+            title:"What's features in Javascript ES6.",
+            banner:WhatsIsFeatureInJavasriptES6Banner,
+            blog:<Whats_Is_Features_In_Javascript_EE6/>
+        },
+        {
+            id:"TheDifferentWaysToDefineAFunctionInJavaScript",
+            date:"3 min read, May 26, 2021",
+            title:"The different ways to define a function in JavaScript.",
+            banner:TheDifferentWaysToDefineAFunctionInJavaScriptBanner,
+            blog:<The_different_ways_to_define_a_function_in_JavaScript/>
+        },
+        {
+            id:"HowToDuplicateGitRepository",
+            date:"Dec 15, 2023",
+            title:"How to Duplicating a repository?",
+            banner:HowToDuplicateGitRepositoryBanner,
+            blog:<HowToDuplicateGitRepository/>
+        },
+    ],
     pricing:{
         title:"Pricing",
         subtitle:"Pay as you grow",

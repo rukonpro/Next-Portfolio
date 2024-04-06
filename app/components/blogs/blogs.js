@@ -5,6 +5,7 @@ import TheDifferentWaysToDefineAFunctionInJavaScript from "@/public/BlogsImage/T
 import HowToDuplicateGitRepository  from "@/public/BlogsImage/HowToDuplicateRepository .jpg";
 
 import BlogCard from "@/app/components/blogs/BlogCard";
+import portfollioData from "@/app/assite/portfollioData/portfollioData";
 
 const Blogs = () => {
     return (
@@ -25,34 +26,18 @@ const Blogs = () => {
                     </div>
 
                     <div className="grid md:grid-cols-4 grid-cols-1 gap-4  pt-10 text-white">
-                        <BlogCard
-                            banner={HowToConnectionOfMongooseInNodeJs}
-                            title="How to Connection of Mongoose in Node Js."
-                            date="2 min read · Mar 4, 2022"
-                            path="/blogs/HowToConnectionOfMongooseInNodeJs"
-                        />
+                        {
+                            portfollioData?.blogs?.map(blog=>{
+                                return(
+                                    <BlogCard
+                                        key={blog.id}
+                                        blog={blog}
+                                    />
+                                )
+                            })
+                        }
 
-                        <BlogCard
-                            banner={WhatsIsFeatureInJavasriptES6}
-                            title="What's features in Javascript ES6."
-                            date="2 min read · Mar 4, 2022"
-                            path="/blogs/Whats_Is_Features_In_Javascript_EE6"
 
-                        />
-                        <BlogCard
-                            banner={TheDifferentWaysToDefineAFunctionInJavaScript}
-                            title="The different ways to define a function in JavaScript."
-                            date="3 min read, May 26, 2021"
-                            path="/blogs/TheDifferentWaysToDefineAFunctionInJavaScript"
-
-                        />
-                        <BlogCard
-                            banner={HowToDuplicateGitRepository}
-                            title="How to Duplicating a repository?"
-                            date="Dec 15, 2023"
-                            path="/blogs/HowToDuplicateGitRepository"
-
-                        />
                     </div>
                 </div>
             </article>

@@ -30,7 +30,7 @@ const About = () => {
                                 </div>
                             </div>
 
-                            <article
+                            <desc
                                 data-aos="fade-up"
                                 data-aos-easing="linear"
                                 data-aos-duration="1000"
@@ -47,7 +47,7 @@ const About = () => {
                                 <br/>
 
                                 I am currently available for a job. If your company needs a React developer, web developer, or MERN stack developer, get in touch.
-                            </article>
+                            </desc>
                         </div>
                     </div>
                 </div>

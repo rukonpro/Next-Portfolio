@@ -25,9 +25,12 @@ const Blogs = () => {
                             className="text-white z-10 md:text-5xl text-2xl font-bold  absolute tracking-[4px]">Blogs</h1>
                     </div>
 
-                    <div className=" mx-auto text-justify">
+                    <desc className=" mx-auto text-justify">
                         <blockquote
-                            className="  font-bold  text-base text-slate-400 tracking-[2px]  pt-10 ">
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-duration="1000"
+                            className="  font-bold  text-base text-slate-400 tracking-[2px]  pt-5 ">
                             Welcome to my portfolio blog where I delve into the dynamic world of MERN (MongoDB,
                             Express.js,
                             React.js, Node.js) stack development! As a passionate Full Stack Developer, I am committed
@@ -37,7 +40,7 @@ const Blogs = () => {
                             challenges I encounter while architecting robust applications using the MERN stack.
                         </blockquote>
                         <blockquote
-                            className="font-bold  text-base text-slate-400 tracking-[2px]  pt-10">
+                            className="font-bold  text-base text-slate-400 tracking-[2px]  pt-5">
                             Discover how I leverage MongoDB's flexibility for database management, harness the power of
                             Express.js for building scalable APIs, and utilize React.js to craft interactive user
                             interfaces. Follow along as I showcase my proficiency in Node.js, enabling server-side
@@ -45,7 +48,7 @@ const Blogs = () => {
                             and handling asynchronous operations effortlessly.
                         </blockquote>
                         <blockquote
-                            className="font-bold  text-base text-slate-400 tracking-[2px]  pt-10">
+                            className="font-bold  text-base text-slate-400 tracking-[2px]  pt-5">
                             From tackling complex application logic to optimizing performance, my portfolio blog offers
                             a
                             glimpse into my expertise in developing modern web solutions. Whether you're a fellow
@@ -60,7 +63,7 @@ const Blogs = () => {
                             together on the quest to build exceptional web experiences that captivate and engage users
                             worldwide.
                         </blockquote>
-                    </div>
+                    </desc>
                     <div
                         className="grid xl:grid-cols-4 lg:grid-cols-3  sm:grid-cols-2 grid-cols-1 gap-4 gap-y-16  pt-28 text-white">
                         {

@@ -12,6 +12,7 @@ const About = () => {
                             data-aos-duration="1500"
                             className='h-full w-full rounded-xl object-contain scale-x-[-1] !transform rotate-X-190'
                             placeholder="blur"
+                            loading="lazy"
                             src={ProfileImage}
                             alt="profilephoto" />
                     <div>

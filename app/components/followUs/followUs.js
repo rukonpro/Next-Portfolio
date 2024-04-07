@@ -23,7 +23,10 @@ const FollowUs = ({position}) => {
                                         className={` w-10 p-2 h-10 rounded-full flex justify-center items-center  shadow-2xl shadow-fuchsia-300  relative transition-all  duration-500  hover:bottom-2 bottom-0`}>
                                     <Image
                                         src={data?.icon}
-                                        alt="GithubIcon"/>
+                                        alt={data.title}
+                                        placeholder="blur"
+                                        loading="lazy"
+                                    />
                                 </button>
                             </a>
                         </li>

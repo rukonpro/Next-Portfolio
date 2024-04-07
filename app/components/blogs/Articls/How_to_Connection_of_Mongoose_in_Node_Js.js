@@ -10,7 +10,7 @@ import BlogUser from "@/app/components/blogs/BlogUser";
 const HowToConnectionOfMongooseInNodeJs = () => {
     return (
         <div>
-            <h1 className="lg:text-5xl md:text-2xl text-xl font-extrabold">How to Connection of Mongoose in Node
+            <h1 className="lg:text-5xl text-2xl  font-extrabold">How to Connection of Mongoose in Node
                 Js.</h1>
 
             <BlogUser userName="Rukon Uddin" profilePhoto={AvatarRukon} date="2 min read · Mar 4, 2022"/>

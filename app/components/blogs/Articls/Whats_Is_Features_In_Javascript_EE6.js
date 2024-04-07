@@ -7,7 +7,7 @@ import BlogUser from "@/app/components/blogs/BlogUser";
 const Whats_Is_Features_In_Javascript_EE6 = () => {
     return (
         <div>
-            <h1 className="lg:text-5xl md:text-2xl text-xl font-extrabold">javascript ES6</h1>
+            <h1 className="lg:text-5xl text-2xl  font-extrabold">javascript ES6</h1>
 
             <BlogUser userName="Rukon Uddin" profilePhoto={AvatarRukon} date="3 min read, Dec 20, 2021"/>
             <br/>

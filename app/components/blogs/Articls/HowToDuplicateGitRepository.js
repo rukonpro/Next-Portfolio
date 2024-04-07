@@ -8,7 +8,7 @@ import CodeBlog from "@/app/components/blogs/CodeBlog";
 const HowToDuplicateGitRepository = () => {
     return (
         <div>
-            <h1 className="lg:text-5xl md:text-2xl text-xl font-extrabold">How to Duplicating a repository?</h1>
+            <h1 className="lg:text-5xl text-2xl font-extrabold">How to Duplicating a repository?</h1>
             <BlogUser userName="Rukon Uddin" profilePhoto={AvatarRukon} date="Dec 15, 2023"/>
             <br/>
             <div>

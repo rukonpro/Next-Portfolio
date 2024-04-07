@@ -86,11 +86,20 @@ import HowToDuplicateGitRepositoryBanner  from "@/public/BlogsImage/HowToDuplica
 import TheDifferentWaysToDefineAFunctionInJavaScriptBanner
     from "@/public/BlogsImage/The_different_ways_to_define_a_function_in_JavaScript.webp";
 import WhatsIsFeatureInJavasriptES6Banner from "@/public/BlogsImage/javascript_ES6.png";
+
 import HowToConnectionOfMongooseInNodeJs from "@/app/components/blogs/Articls/How_to_Connection_of_Mongoose_in_Node_Js";
 import Whats_Is_Features_In_Javascript_EE6 from "@/app/components/blogs/Articls/Whats_Is_Features_In_Javascript_EE6";
 import The_different_ways_to_define_a_function_in_JavaScript
     from "@/app/components/blogs/Articls/The_different_ways_to_define_a_function_in_JavaScript";
 import HowToDuplicateGitRepository from "@/app/components/blogs/Articls/HowToDuplicateGitRepository";
+import WhatIsExpressJsAAndWhyWouldWeUseItBanner from "@/public/BlogsImage/WhatIsExpressJsAAndWhyWouldWeUseItBanner.png";
+import WhatIsExpressJsAAndWhyWouldWeUseIt from "@/app/components/blogs/Articls/WhatIsExpressJsAAndWhyWouldWeUseIt";
+import WhatIsAnAPIBanner1 from "@/public/BlogsImage/WhatIsAnAPIBanner1.png";
+import WhatIsAnApi from "@/app/components/blogs/Articls/WhatIsAnAPI";
+import JsxAndStateProps from "@/app/components/blogs/Articls/JSX_and_State_Props";
+import JsxAndStatePropsBanner1 from "@/public/BlogsImage/JsxAndStatePropsBanner1.png";
+import HowToStartProgramingForBeginner from "@/app/components/blogs/Articls/HowToStartProgramingForBeginner";
+import HowToStartProgramingForBeginnerBanner from "@/public/BlogsImage/How-to-Start-Coding-for-Beginners.jpg";
 
 
 const portfolioData = {
@@ -919,6 +928,20 @@ const portfolioData = {
     },
     blogs:[
         {
+            id:"JsxAndStateProps",
+            date:"December 22, 2021",
+            title:"JSX and State/Props",
+            banner:JsxAndStatePropsBanner1,
+            blog:<JsxAndStateProps/>
+        },
+        {
+            id:"WhatIsAnAPI",
+            date:"December 21, 2021",
+            title:"What is an API, the purpose of API, GET, POST?",
+            banner:WhatIsAnAPIBanner1,
+            blog:<WhatIsAnApi/>
+        },
+        {
             id:"HowToConnectionOfMongooseInNodeJs",
             date:"2 min read · Mar 4, 2022",
             title:"How to Connection of Mongoose in Node Js.",
@@ -946,6 +969,20 @@ const portfolioData = {
             banner:HowToDuplicateGitRepositoryBanner,
             blog:<HowToDuplicateGitRepository/>
         },
+        {
+            id:"WhatIsExpressJsAAndWhyWouldWeUseIt",
+            date:"December 23, 2021",
+            title: "What is Express.js and Why would we use it?",
+            banner: WhatIsExpressJsAAndWhyWouldWeUseItBanner,
+            blog: <WhatIsExpressJsAAndWhyWouldWeUseIt/>
+        },
+        {
+            id:"HowToStartProgramingForBeginner",
+            date:"Apr-07-2024 , 5 min read",
+            title: "How to start Programing for Beginner?",
+            banner: HowToStartProgramingForBeginnerBanner,
+            blog: <HowToStartProgramingForBeginner/>
+        }
     ],
     pricing:{
         title:"Pricing",

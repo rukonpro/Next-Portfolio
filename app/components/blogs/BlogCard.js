@@ -6,7 +6,7 @@ import AvatarRukon from "@/public/images/rukon.jpg";
 const BlogCard = ({blog}) => {
     const {title,banner,date,id}=blog;
     return (
-        <div className="border-b flex flex-col justify-between hover:bg-gradient-to-tr hover:to-[#2f055a]/90 hover:from-[#055c8f] rounded overflow-hidden lg:hover:skew-y-12 lg:-skew-y-12 duration-500 lg:hover:translate-x-2.5 lg:hover:translate-y-0 hover:-translate-y-3 hover:shadow-lg hover:shadow-fuchsia-300/20 ">
+        <div className="border-b flex flex-col justify-between hover:bg-gradient-to-tr hover:to-[#2f055a]/90 hover:from-[#055c8f] rounded overflow-hidden lg:hover:skew-y-12 lg:-skew-y-12 duration-500 lg:hover:translate-x-2.5 lg:hover:translate-y-0 hover:-translate-y-3 hover:shadow-lg hover:shadow-fuchsia-300/20 hover:z-10 ">
             <Link href={`blogs/${id}`} className=" pb-10">
                 <Image
                     className="w-full    object-cover h-44"

@@ -8,7 +8,7 @@ import CodeBlog from "@/app/components/blogs/CodeBlog";
 const TheDifferentWaysToDefineAFunctionInJavaScript = () => {
     return (
         <div>
-            <h1 className="lg:text-5xl md:text-2xl text-xl font-extrabold">The different ways to define a function in
+            <h1 className="lg:text-5xl text-2xl  font-extrabold">The different ways to define a function in
                 JavaScript</h1>
             <BlogUser userName="Rukon Uddin" profilePhoto={AvatarRukon} date="3 min read·May 26, 2021"/>
             <br/>

@@ -9,7 +9,7 @@ const BlogDetails = ({params}) => {
     const blog=portfolioData.blogs.find(data=>data?.id===params?.id);
 
     return (
-        <section>
+        <article>
             <Navigation/>
             <div className="relative  bg-[#0e0e36]     overflow-x-hidden  pt-28 ">
                 <div className="max-w-[1200px] mx-auto px-5 text-white">
@@ -17,7 +17,7 @@ const BlogDetails = ({params}) => {
                 </div>
             </div>
             <Footer/>
-        </section>
+        </article>
     );
 };
 

@@ -113,10 +113,12 @@ JavaScript
             <h1 className="text-3xl">Now, the question is where to start learning programming.</h1>
             <br/>
             <br/>
-            <p className="text-xl">Usually, you have to try to learn programming yourself for a minimum of six months.
+            <p className="text-xl">
+                {` Usually, you have to try to learn programming yourself for a minimum of six months.
                 Especially from free tutorials on YouTube or free online courses. If you can learn on your own, that's
                 the best. And if, for some reason, you can't even after giving six months, then you can start learning
-                by buying a paid course.</p>
+                by buying a paid course.`}
+            </p>
         </div>
     );
 };

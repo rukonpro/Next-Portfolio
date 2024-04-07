@@ -76,11 +76,11 @@ const WhatIsAnApi = () => {
             <br/>
             <br/>
             <br/>
-            <p className="text-xl">The waiter, like an API, accepts the customer's order and translates the order into easy-to-follow
+            <p className="text-xl">{`The waiter, like an API, accepts the customer's order and translates the order into easy-to-follow
                 instructions that the kitchen uses to fulfill that order often following a specific code or input that
                 the kitchen can easily recognize. The kitchen is like a server that works to create order in the way the
                 customer wants it, hopefully! When the meal is ready, the waiter picks up the order and undefined
-                Delivers to the customer. undefined</p>
+                Delivers to the customer. undefined`}</p>
             <br/>
             <br/>
             <div>

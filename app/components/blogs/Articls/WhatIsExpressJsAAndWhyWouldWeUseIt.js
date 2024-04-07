@@ -33,11 +33,11 @@ const WhatIsExpressJsAAndWhyWouldWeUseIt = () => {
                 and HTML is very important to be able to use Express.js.</p>
             <br/>
             <br/>
-            <p className="text-lg">Express.js makes it easy to manage web applications It is a part of JavaScript-based
+            <p className="text-lg">{`Express.js makes it easy to manage web applications It is a part of JavaScript-based
                 technology which is MEAN software undefined Known as Stack which stands for MongoDB, ExpressJS,
                 AngularJS, and Node.js.Express.js is part of MEAN's backend and handles routing, sessions, HTTP
                 requests, errors. Express.js's JavaScript library helps programmers build web apps faster. Express.js
-                doubles the functionality of node.js. In fact, if you do not use Express.</p>
+                doubles the functionality of node.js. In fact, if you do not use Express.`}</p>
             <br/>
             <br/>
             <p className="text-lg">js, then you had to do a lot of complex programming to create an efficient and good

@@ -38,13 +38,13 @@ const JsxAndStateProps = () => {
             />
             <br/>
             <br/>
-            <p className="text-xl">JSX stands for JavaScript XML.JSX is an HTML or not it's a fun tag syntax. Looks
-                like an HTML tag, it is converted to JavaScript.</p>
+            <p className="text-xl">{`JSX stands for JavaScript XML.JSX is an HTML or not it's a fun tag syntax. Looks
+                like an HTML tag, it is converted to JavaScript.`}</p>
             <br/>
             <br/>
-            <p className="text-xl">Many might think it might be HTML, but it's actually JSX. This is a syntax
+            <p className="text-xl">{`Many might think it might be HTML, but it's actually JSX. This is a syntax
                 extension of JavaScript. It comes from the full power of JavaScript.This allows us to write HTML
-                in React.</p>
+                in React.`}</p>
             <br/>
             <br/>
             <p className="text-xl">One of the requirements, when you start learning React, is to learn JSX. The
@@ -151,9 +151,9 @@ const JsxAndStateProps = () => {
             <h1 className="text-2xl">What are the props in React?</h1>
             <br/>
             <br/>
-            <p className="text-xl">Props mean "property". They are reading components only. It is an object that
+            <p className="text-xl">{`Props mean "property". They are reading components only. It is an object that
                 stores the value of the tag attribute and acts as an HTML attribute. It provides a way to
-                transmit data from one component to another.</p>
+                transmit data from one component to another.`}</p>
             <br/>
             <br/>
             <Image src={JsxAndStatePropsBanner3}
@@ -170,9 +170,9 @@ const JsxAndStateProps = () => {
             <h1 className="text-2xl">What is the state in React?</h1>
             <br/>
             <br/>
-            <p className="text-xl">The State is a JavaScript object that is capable of storing the component's
+            <p className="text-xl">{`The State is a JavaScript object that is capable of storing the component's
                 dynamic data. It can keep track of changes in a component's render. Since the state dynamically
-                reserves it only for interactivity, you should not use it for static react projects.</p>
+                reserves it only for interactivity, you should not use it for static react projects.`}</p>
             <br/>
             <br/>
             <Image src={JsxAndStatePropsBanner4}

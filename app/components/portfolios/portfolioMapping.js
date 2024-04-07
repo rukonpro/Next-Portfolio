@@ -10,12 +10,10 @@ const PortfolioMapping = () => {
                 {portfolioData?.portfolios?.future.map((data) =>{
                     return (
                         <li key={data?.id}
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="center-bottom"
-                            data-aos-duration="1000"
-                            className="bg-gradient-to-r from-[#0d1247]/30 to-gray-900/30 hover:bg-[#9669fe]/30 h-full flex items-center py-[16px] px-[32px]  font-[400] rounded-2xl portfolioCardContainer hover:z-10">
+                            className="bg-gradient-to-r from-[#0d1247]/30 to-gray-900/30 hover:bg-[#9669fe]/30 h-full flex items-center py-[16px] px-[32px]  font-[400] rounded-2xl  hover:z-10 portfolioCardContainer relative">
 
-                            <div className="arrowIcon absolute ">
+                            <div
+                                className="arrowIcon absolute ">
                                 <div className=" w-11 rotate-180">
                                     <Image src={ArrowIcon} alt=""/>
                                 </div>

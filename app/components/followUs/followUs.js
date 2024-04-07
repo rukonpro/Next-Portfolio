@@ -24,7 +24,6 @@ const FollowUs = ({position}) => {
                                     <Image
                                         src={data?.icon}
                                         alt={data.title}
-                                        placeholder="blur"
                                         loading="lazy"
                                     />
                                 </button>

@@ -30,24 +30,32 @@ const About = () => {
                                 </div>
                             </div>
 
-                            <desc
-                                data-aos="fade-up"
-                                data-aos-easing="linear"
-                                data-aos-duration="1000"
-                                className="text-white  md:text-xl text-base   tracking-[1px] pt-20"><span
+                            <div className="pt-36">
+                                <desc
+                                    data-aos="fade-up"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1000"
+                                    className="text-white  md:text-xl text-base   tracking-[1px] "><span
 
-                                className='text-2xl font-extrabold'>Hello!</span> <br/>
+                                    className='text-2xl font-extrabold'>Hello!</span> <br/>
 
-                                I am a Web Developer, React Developer, MERN stack developer, and JavaScript enthusiast.
-                                <br/>
-                                <br/>
-                                I have good knowledge of building web applications with React.js for the client side, Node.js / express.js for the server side, and MongoDB for the database. I’m curious, and I enjoy work that challenges me to learn something new and stretch in a different direction. I do my best to stay on top of changes in the state of the art so that I can meet challenges with tools well suited to the job at hand.
+                                    I am a Web Developer, React Developer, MERN stack developer, and JavaScript
+                                    enthusiast.
+                                    <br/>
+                                    <br/>
+                                    I have good knowledge of building web applications with React.js for the client
+                                    side, Node.js / express.js for the server side, and MongoDB for the database. I’m
+                                    curious, and I enjoy work that challenges me to learn something new and stretch in a
+                                    different direction. I do my best to stay on top of changes in the state of the art
+                                    so that I can meet challenges with tools well suited to the job at hand.
 
-                                <br/>
-                                <br/>
+                                    <br/>
+                                    <br/>
 
-                                I am currently available for a job. If your company needs a React developer, web developer, or MERN stack developer, get in touch.
-                            </desc>
+                                    I am currently available for a job. If your company needs a React developer, web
+                                    developer, or MERN stack developer, get in touch.
+                                </desc>
+                            </div>
                         </div>
                     </div>
                 </div>

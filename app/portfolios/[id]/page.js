@@ -47,3 +47,14 @@ export async function generateMetadata({ params, searchParams }, parent) {
         description:portfolio?.description
     }
 }
+export async function  getStaticPaths() {
+    const paths= await portfolioData?.portfolios?.future?.map(future=>{
+        return{
+            params:{id:future.id}
+        }
+    })
+    return {
+        paths,
+        fallback: 'blocking', // false or "blocking"
+    }
+}

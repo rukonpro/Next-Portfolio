@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import Navigation from "@/app/components/navigation/navigation";
 import Footer from "@/app/components/footer/footer";
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
@@ -27,7 +27,19 @@ export default BlogDetails;
 
 
 export function generateStaticParams() {
-    return portfolioData?.blogs?.map((blog) => ({
+    return  portfolioData?.blogs?.map((blog) => ({
         id: blog.id,
     }))
+}
+
+export async function  getStaticPaths() {
+    const paths= await portfolioData?.blogs?.map(blog=>{
+        return{
+            params:{id:blog.id}
+        }
+    })
+    return {
+        paths,
+        fallback: 'blocking', // false or "blocking"
+    }
 }

@@ -22,12 +22,12 @@ const Certifications = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className="flex justify-center">
                     <desc
                         data-aos="fade-up"
                         data-aos-anchor-placement="bottom-bottom"
                         data-aos-duration="1000"
-                        className="  font-bold  text-base text-slate-400 tracking-[2px]  pt-5 "
+                        className="  font-bold  text-base text-slate-400 tracking-[2px]  pt-5 max-w-4xl md:text-center  text-justify px-5 "
                     >
                         {`Each certification represents a milestone in my journey towards becoming a seasoned MERN stack
                         developer, equipped with the skills and knowledge to tackle complex projects and deliver

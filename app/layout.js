@@ -9,10 +9,11 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+    const isDev = process.env.NODE_ENV === 'development';
 
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={chewy.className}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning={isDev}>
+      <body className={chewy.className} >
      <main>
          {children}
      </main>

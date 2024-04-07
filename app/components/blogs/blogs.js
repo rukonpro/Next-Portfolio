@@ -1,5 +1,6 @@
 import BlogCard from "@/app/components/blogs/BlogCard";
 import portfollioData from "@/app/assite/portfollioData/portfollioData";
+import Link from "next/link";
 
 const Blogs = () => {
     return (
@@ -81,9 +82,21 @@ const Blogs = () => {
                                 )
                             })
                         }
-
-
                     </div>
+                    {/*<div className="flex justify-center pt-16">
+                        <Link
+                            href="/blogs"
+                            passHref={true}
+                            legacyBehavior={true}
+                        >
+                            <button
+                                aria-label="All Blogs"
+                                type="button"
+                                className="text-white text-lg font-bold  w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70] shadow-2xl shadow-fuchsia-300 active:shadow-md active:shadow-fuchsia-100/30">
+                                All Blogs
+                            </button>
+                        </Link>
+                    </div>*/}
                 </div>
             </article>
         </section>

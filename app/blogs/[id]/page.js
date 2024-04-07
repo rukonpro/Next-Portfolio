@@ -12,7 +12,7 @@ const BlogDetails = ({params}) => {
         <article>
             <Navigation/>
             <div className="relative  bg-[#0e0e36]     overflow-x-hidden  pt-28 ">
-                <div className="max-w-[1200px] mx-auto px-5 text-white">
+                <div className="max-w-[800px] mx-auto px-5 text-white">
                         {blog?.blog}
                 </div>
             </div>

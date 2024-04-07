@@ -1,9 +1,3 @@
-import Link from "next/link";
-import HowToConnectionOfMongooseInNodeJs from "@/public/BlogsImage/how_to_mongoose_Connection.webp";
-import WhatsIsFeatureInJavasriptES6 from "@/public/BlogsImage/javascript_ES6.png";
-import TheDifferentWaysToDefineAFunctionInJavaScript from "@/public/BlogsImage/The_different_ways_to_define_a_function_in_JavaScript.webp";
-import HowToDuplicateGitRepository  from "@/public/BlogsImage/HowToDuplicateRepository .jpg";
-
 import BlogCard from "@/app/components/blogs/BlogCard";
 import portfollioData from "@/app/assite/portfollioData/portfollioData";
 
@@ -31,37 +25,37 @@ const Blogs = () => {
                             data-aos-anchor-placement="bottom-bottom"
                             data-aos-duration="1000"
                             className="  font-bold  text-base text-slate-400 tracking-[2px]  pt-5 ">
-                            Welcome to my portfolio blog where I delve into the dynamic world of MERN (MongoDB,
+                            {`Welcome to my portfolio blog where I delve into the dynamic world of MERN (MongoDB,
                             Express.js,
                             React.js, Node.js) stack development! As a passionate Full Stack Developer, I am committed
                             to
                             creating innovative and seamless web experiences. Here, I document my journey, insights, and
                             the
-                            challenges I encounter while architecting robust applications using the MERN stack.
+                            challenges I encounter while architecting robust applications using the MERN stack.`}
                         </blockquote>
                         <blockquote
                             className="font-bold  text-base text-slate-400 tracking-[2px]  pt-5">
-                            Discover how I leverage MongoDB's flexibility for database management, harness the power of
+                            {`Discover how I leverage MongoDB's flexibility for database management, harness the power of
                             Express.js for building scalable APIs, and utilize React.js to craft interactive user
                             interfaces. Follow along as I showcase my proficiency in Node.js, enabling server-side
                             scripting
-                            and handling asynchronous operations effortlessly.
+                            and handling asynchronous operations effortlessly.`}
                         </blockquote>
                         <blockquote
                             className="font-bold  text-base text-slate-400 tracking-[2px]  pt-5">
-                            From tackling complex application logic to optimizing performance, my portfolio blog offers
+                            {`From tackling complex application logic to optimizing performance, my portfolio blog offers
                             a
                             glimpse into my expertise in developing modern web solutions. Whether you're a fellow
                             developer
                             seeking inspiration or a business owner looking to elevate your online presence, explore my
-                            projects and learn how MERN stack development can elevate your digital footprint.
+                            projects and learn how MERN stack development can elevate your digital footprint.`}
                         </blockquote>
                         <blockquote
                             className=" font-bold  text-base text-slate-400 tracking-[2px]  pt-10">
-                            Join me on this exhilarating journey of innovation and continuous learning as I push the
+                            {` Join me on this exhilarating journey of innovation and continuous learning as I push the
                             boundaries of what's possible in the realm of Full Stack and React development. Let's embark
                             together on the quest to build exceptional web experiences that captivate and engage users
-                            worldwide.
+                            worldwide.`}
                         </blockquote>
                     </desc>
                     <div

@@ -22,6 +22,20 @@ const Certifications = () => {
                     </div>
                 </div>
 
+                <div>
+                    <desc
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="1000"
+                        className="  font-bold  text-base text-slate-400 tracking-[2px]  pt-5 "
+                    >
+                        {`Each certification represents a milestone in my journey towards becoming a seasoned MERN stack
+                        developer, equipped with the skills and knowledge to tackle complex projects and deliver
+                        exceptional results. Whether you're seeking assurance of my capabilities or inspiration for your
+                        own professional development, explore my certification showcase and witness the dedication and
+                        passion I bring to every project.`}
+                    </desc>
+                </div>
                 <div className="pt-10">
                     <Marquee
                         pauseOnHover={true}
@@ -30,12 +44,12 @@ const Certifications = () => {
                             {
                                 portfolioData?.certifications?.map((data, index) => {
                                     return (
-                                        <li key={index} >
-                                                <Image
-                                                    className="object-fill h-[200px] w-[250px] lg:w-[500px] lg:h-[400px]"
-                                                    src={data?.image}
-                                                    placeholder="blur"
-                                                    loading="lazy"
+                                        <li key={index}>
+                                            <Image
+                                                className="object-fill h-[200px] w-[250px] lg:w-[500px] lg:h-[400px]"
+                                                src={data?.image}
+                                                placeholder="blur"
+                                                loading="lazy"
                                                     alt={data?.title}/>
                                         </li>
                                     )

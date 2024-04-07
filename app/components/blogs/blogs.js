@@ -19,7 +19,7 @@ const Blogs = () => {
                             className="text-white z-10 md:text-5xl text-2xl font-bold  absolute tracking-[4px]">Blogs</h1>
                     </div>
 
-                    <desc className=" mx-auto text-justify">
+                    <desc className=" mx-auto text-justify pt-10">
                         <blockquote
                             data-aos="fade-up"
                             data-aos-anchor-placement="bottom-bottom"
@@ -34,6 +34,9 @@ const Blogs = () => {
                             challenges I encounter while architecting robust applications using the MERN stack.`}
                         </blockquote>
                         <blockquote
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-duration="1000"
                             className="font-bold  text-base text-slate-400 tracking-[2px]  pt-5">
                             {`Discover how I leverage MongoDB's flexibility for database management, harness the power of
                             Express.js for building scalable APIs, and utilize React.js to craft interactive user
@@ -42,6 +45,9 @@ const Blogs = () => {
                             and handling asynchronous operations effortlessly.`}
                         </blockquote>
                         <blockquote
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-duration="1000"
                             className="font-bold  text-base text-slate-400 tracking-[2px]  pt-5">
                             {`From tackling complex application logic to optimizing performance, my portfolio blog offers
                             a
@@ -51,7 +57,10 @@ const Blogs = () => {
                             projects and learn how MERN stack development can elevate your digital footprint.`}
                         </blockquote>
                         <blockquote
-                            className=" font-bold  text-base text-slate-400 tracking-[2px]  pt-10">
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-duration="1000"
+                            className=" font-bold  text-base text-slate-400 tracking-[2px]  pt-5">
                             {` Join me on this exhilarating journey of innovation and continuous learning as I push the
                             boundaries of what's possible in the realm of Full Stack and React development. Let's embark
                             together on the quest to build exceptional web experiences that captivate and engage users

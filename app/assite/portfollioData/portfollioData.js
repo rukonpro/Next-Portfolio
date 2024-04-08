@@ -1029,18 +1029,22 @@ const portfolioData = {
     },
     certifications:[
         {
+            id:"ProgramingHeroBatch-4Certifications",
             title:"Programing hero Batch-4 Certifications",
             image: MernStackCertifications
         },
         {
+            id:"ReactCertifications",
             title:"React Certifications",
             image:ReactCetifications
         },
         {
+            id:"ProgramingHerroGraduateForBlackBelt",
             title:"Programing Herro Graduate for Black Belt",
             image:BlackBelt
         },
         {
+            id:"CongratsForCompleteWebDevelopment",
             title: "Congrats for Complete Web development",
             image: Congratulation
         }

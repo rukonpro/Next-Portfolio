@@ -1,15 +1,29 @@
-import React from 'react';
+"use client"
+import React, {useState} from 'react';
 import Marquee from "react-fast-marquee";
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import Image from "next/image";
+import Certificate from "@/app/components/certifications/Certificate";
 
 const Certifications = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [id,setId] = useState(null);
+    const openModal =async (id) => {
+       await setId(id)
+       await setIsOpen(true);
+
+    };
+
+    const closeModal = async () => {
+      await  setId(null);
+      await  setIsOpen(false);
+    };
     return (
         <div
             className="py-28 relative bg-[#0e0e36]"
         >
             <div className="absolute custom-animate-pulse inset-0 blur-[118px] radial-gradient"></div>
-            <div className="relative z-10">
+            <div className="relative z-10 max-w-[1200px] mx-auto">
                 <div className="flex justify-center">
                     <div className="flex items-center relative">
                         <div
@@ -44,7 +58,9 @@ const Certifications = () => {
                             {
                                 portfolioData?.certifications?.map((data, index) => {
                                     return (
-                                        <li key={index}>
+                                        <li key={index}
+                                        onClick={()=>openModal(data?.id)}
+                                        >
                                             <Image
                                                 className="object-fill h-[200px] w-[250px] lg:w-[500px] lg:h-[400px]"
                                                 src={data?.image}
@@ -58,6 +74,7 @@ const Certifications = () => {
                         </ol>
                     </Marquee>
                 </div>
+                <Certificate isOpen={isOpen} closeModal={closeModal} id={id}/>
             </div>
         </div>
     );

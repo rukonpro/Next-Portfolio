@@ -2,7 +2,9 @@ import React from 'react';
 import Modal from "@/app/components/Modal/Modal";
 import Image from "next/image";
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
-import CloseIcon from "/public/images/close.png"
+import CloseIcon from "/public/images/close.png";
+
+
 const Certificate = ({isOpen,closeModal,id}) => {
 const image=portfolioData?.certifications?.find(data=>data?.id===id);
     return (

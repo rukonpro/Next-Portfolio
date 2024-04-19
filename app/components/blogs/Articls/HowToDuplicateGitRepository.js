@@ -4,11 +4,12 @@ import AvatarRukon from "@/public/images/rukon.jpg";
 import Image from "next/image";
 import HowToDuplicateGitRepositoryBanner from "@/public/BlogsImage/HowToDuplicateRepository .jpg";
 import CodeBlog from "@/app/components/blogs/CodeBlog";
+import {H1, H3} from "@/app/components/blogs/BlogComponents/BlogComponents";
 
 const HowToDuplicateGitRepository = () => {
     return (
         <div>
-            <h1 className="lg:text-5xl text-2xl font-extrabold">How to Duplicating a repository?</h1>
+            <H1>How to Duplicating a repository?</H1>
             <BlogUser userName="Rukon Uddin" profilePhoto={AvatarRukon} date="Dec 15, 2023"/>
             <br/>
             <div>
@@ -21,9 +22,9 @@ const HowToDuplicateGitRepository = () => {
             </div>
 
             <br/>
-            <h1 className="text-2xl">Git:</h1>
+            <H1>Git:</H1>
             <br/>
-            <h1 className="text-xl font-extrabold">1. Clone the Repository:</h1>
+            <H3>1. Clone the Repository:</H3>
             <CodeBlog language="javascript">
                 {
                     `git clone <repository_url>`
@@ -33,7 +34,7 @@ const HowToDuplicateGitRepository = () => {
             <p className="pt-5 text-lg">This creates a local copy of the repository on your machine.</p>
             <br/>
             <br/>
-            <h1 className="text-lg font-extrabold">2. Change Directory into the Cloned Repository:</h1>
+            <H3>2. Change Directory into the Cloned Repository:</H3>
             <br/>
             <CodeBlog language="javascript">
                 {
@@ -41,8 +42,8 @@ const HowToDuplicateGitRepository = () => {
                 }
             </CodeBlog>
             <br/>
-            <h1 className="text-lg font-extrabold">3. (Optional) Rename the Remote (if you want to push changes to a new
-                repository):</h1>
+            <H3>3. (Optional) Rename the Remote (if you want to push changes to a new
+                repository):</H3>
             <br/>
             <CodeBlog language="JavaScript">
                 {
@@ -50,7 +51,7 @@ const HowToDuplicateGitRepository = () => {
                 }
             </CodeBlog>
             <br/>
-            <h1 className="text-lg font-extrabold">4. Create a New Repository (Optional):</h1>
+            <H3>4. Create a New Repository (Optional):</H3>
             <br/>
             <ul className="list-inside list-disc">
                 <li className="pt-5 text-xl">If you want to create a new repository on GitHub or another Git hosting
@@ -61,7 +62,7 @@ const HowToDuplicateGitRepository = () => {
                 </li>
             </ul>
             <br/>
-            <h1 className="text-lg font-extrabold">5. Add a New Remote (if you created a new repository):</h1>
+            <H3>5. Add a New Remote (if you created a new repository):</H3>
             <br/>
             <CodeBlog language="javascript">
                 {
@@ -69,7 +70,7 @@ const HowToDuplicateGitRepository = () => {
                 }
             </CodeBlog>
             <br/>
-            <h1 className="text-lg font-extrabold">6. Push to the New Repository (if you created a new repository):</h1>
+            <H3>6. Push to the New Repository (if you created a new repository):</H3>
             <br/>
             <CodeBlog language="javascript">
                 {

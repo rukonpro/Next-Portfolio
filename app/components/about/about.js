@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProfileImage from "@/public/images/rukon_cover_photo.jpg";
+import ProfileImage from "@/public/images/rukon_cover_photo_2.jpg";
 
 const About = () => {
     return (
@@ -10,7 +10,7 @@ const About = () => {
                             data-aos="fade-up"
                             data-aos-easing="linear"
                             data-aos-duration="1500"
-                            className='h-full w-full rounded-xl object-contain scale-x-[-1] !transform rotate-X-190'
+                            className='h-full w-full rounded-xl object-contain '
                             placeholder="blur"
                             loading="lazy"
                             src={ProfileImage}

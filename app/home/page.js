@@ -12,26 +12,28 @@ import Blogs from "@/app/components/blogs/blogs";
 import ContactLayout from "@/app/components/contact/ContactLayout";
 import Pricing from "@/app/components/pricing/pricing";
 
+
 export const metadata = {
     title: 'MERN Stack Dev. - Rukon.Pro',
     description: 'Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.',
 }
+
 export default function Home() {
 
     return (
         <React.Fragment>
-            <Navigation/>
-            <Header/>
-            <Counter/>
-            <About/>
-            <Skills/>
-            <Services/>
-            <Portfolios/>
-            <Blogs/>
-            <Certifications/>
-            <Pricing/>
-            <ContactLayout/>
-            <Footer/>
+            <Navigation />
+            <Header />
+            <Counter />
+            <About />
+            <Skills />
+            <Services />
+            <Portfolios />
+            <Blogs />
+            <Certifications />
+            <Pricing />
+            <ContactLayout />
+            <Footer />
         </React.Fragment>
     )
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import portfollioData from "@/app/assite/portfollioData/portfollioData";
 import Link from "next/link";
-import {loginModal} from "@/app/components/navigation/navigation";
+import { loginModal } from "@/app/components/navigation/navigation";
 
-const MobileMenu = ({setMenuOpen}) => {
+const MobileMenu = ({ setMenuOpen, status, handleSingOut }) => {
     return (
         <ul className=" text-white font-bold  text-xl  ">
             {
@@ -25,14 +25,28 @@ const MobileMenu = ({setMenuOpen}) => {
             }
             <li
                 className=" bg-gradient-to-l from-[#0a0cd00d] to-[#9a4cd09d] px-5 py-3 rounded-l-full my-3 animated-button w-full ">
-                <button
-                    type="button"
-                    id="loginbuttion1"
-                    aria-label="Login"
-                    onClick={loginModal}
-                    className="w-full tracking-[3px] "><span
-                    className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Login</span>
-                </button>
+
+                {
+                    status == "authenticated" ?
+                        <button
+                            type="button"
+                            id="LogoutButton"
+                            aria-label="LoginOut"
+                            onClick={handleSingOut}
+                            className="w-full tracking-[3px] "><span
+                                className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Logout</span>
+                        </button> :
+
+                        <button
+                            type="button"
+                            id="loginbuttion1"
+                            aria-label="Login"
+                            onClick={loginModal}
+                            className="w-full tracking-[3px] "><span
+                                className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Login</span>
+                        </button>
+                }
+
             </li>
         </ul>
     );

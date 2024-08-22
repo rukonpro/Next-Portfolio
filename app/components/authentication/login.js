@@ -1,7 +1,33 @@
 "use client"
+import { signIn } from 'next-auth/react';
+
 import React, { useState } from "react";
 const Login = ({ setIsLogin }) => {
   const [isPasswordHidden, setPasswordHidden] = useState(true);
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const result = await signIn('credentials', {
+      redirect: false,
+      email,
+      password
+    });
+
+    if (result.error) {
+      setError(result.error);
+    } else {
+     
+      // Redirect on success
+    }
+  };
+
+
+
 
   return (
     <section
@@ -18,7 +44,8 @@ const Login = ({ setIsLogin }) => {
         </div>
 
         <div className="py-10 ">
-          <form>
+          {error && <p className='text-red-500'>{error}</p>}
+          <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 md:gap-5 gap-y-3 gap-x-1  px-3  border border-purple-700 rounded-2xl    py-5">
               <div className=" col-span-2 ">
                 <label className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text text-[16px] font-bold">
@@ -28,6 +55,10 @@ const Login = ({ setIsLogin }) => {
                   className="mt-2 px-5 py-2 rounded-lg w-full border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r    from-[#020617ff] via-[#5f3391ff] to-[#020617ff] autofill:!bg-gradient-to-tl autofill:!from-[#5f3391ff] autofill:!to-[#020617ff] text-white font-bold   clickSound"
                   type="email"
                   name="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   placeholder="rukon.pro@gmail.com"
                 />
               </div>
@@ -38,7 +69,7 @@ const Login = ({ setIsLogin }) => {
                     Password:
                   </label>
                   <button
-                      aria-label="Forgot password?"
+                    aria-label="Forgot password?"
                     type="button"
                     className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text text-[16px] font-bold clickSound"
                   >
@@ -94,6 +125,10 @@ const Login = ({ setIsLogin }) => {
                 <input
                   type={isPasswordHidden ? "password" : "text"}
                   className="mt-2 px-5 py-2 w-full rounded-[10px]  border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-l  from-[#020617ff] via-[#5f3391ff] to-[#020617ff] text-white font-bold   clickSound"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
                   placeholder="******"
                 />
               </div>

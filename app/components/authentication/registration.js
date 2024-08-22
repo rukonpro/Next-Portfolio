@@ -1,8 +1,29 @@
 "use client"
 import React, { useState } from "react";
+import axios from 'axios';
 
 const Registration = ({ setIsLogin }) => {
     const [isPasswordHidden, setPasswordHidden] = useState(true)
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [fname, setFname] = useState("");
+    const [lname, setLname] = useState('');
+    const [error, setError] = useState(null);
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError(null);
+        setMessage('');
+        e.preventDefault();
+        try {
+            await axios.post('/api/auth/register', { email, password, name: fname + " " + lname });
+            setMessage("Register successfully")
+            // router.push('/auth/signin');
+        } catch (error) {
+            setError(error.response?.data?.error || 'An unexpected error occurred.');
+        }
+    };
 
     return (
 
@@ -20,7 +41,9 @@ const Registration = ({ setIsLogin }) => {
 
 
                 <div className='py-10 '>
-                    <form >
+                    {error && <p className="text-red-500">{error}</p>}
+                    {message && <p className="text-green-500">{message}</p>}
+                    <form onSubmit={handleSubmit}>
 
                         <div className='grid grid-cols-2 md:gap-5 gap-y-3 gap-x-1  px-3   border border-purple-700  rounded-lg py-5'>
 
@@ -29,6 +52,8 @@ const Registration = ({ setIsLogin }) => {
                                 <label className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text font-bold ">First Name:</label>
                                 <input
                                     className="mt-2 px-5 py-2 w-full rounded-[10px]  border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#5f3391ff] to-[#020617ff] text-white font-bold  clickSound"
+                                    value={fname}
+                                    onChange={(e) => setFname(e.target.value)}
                                     type="fname"
                                     name="fname"
                                     placeholder='Rukon'
@@ -39,6 +64,8 @@ const Registration = ({ setIsLogin }) => {
                                 <label className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text font-bold ">Last Name:</label>
                                 <input
                                     className="mt-2 px-5 py-2 w-full rounded-[10px]  border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#5f3391ff] to-[#020617ff] text-white font-bold  clickSound"
+                                    value={lname}
+                                    onChange={(e) => setLname(e.target.value)}
                                     type="lname"
                                     name="lname"
                                     placeholder='Uddin'
@@ -48,6 +75,8 @@ const Registration = ({ setIsLogin }) => {
                                 <label className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text font-bold ">Email address:</label>
                                 <input
                                     className="mt-2 px-5 py-2 w-full rounded-[10px]  border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#5f3391ff] to-[#020617ff]  text-white font-bold   clickSound"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     type="email"
                                     name="email"
                                     placeholder='rukon.pro@gmail.com'
@@ -86,8 +115,11 @@ const Registration = ({ setIsLogin }) => {
                                 </button>
 
                                 <input
-                                    type={isPasswordHidden ? "password" : "text"}
+
                                     className="mt-2 px-5 py-2 w-full rounded-[10px]  border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#5f3391ff] to-[#020617ff]  text-white font-bold   clickSound"
+                                    type={isPasswordHidden ? "password" : "text"}
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     placeholder='******'
 
                                 />

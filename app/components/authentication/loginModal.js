@@ -5,6 +5,8 @@ import Registration from "@/app/components/authentication/registration";
 
 export default function LoginModal() {
     const [isLogin, setIsLogin] = useState(false);
+  
+
     return (
         <dialog id="login" className="modal">
             <div className="modal-box p-0 shadow-2xl shadow-[#3f223a80]">

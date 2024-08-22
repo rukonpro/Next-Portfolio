@@ -23,14 +23,14 @@ export default NextAuth({
             }
         })
     ],
-    pages: {
-        home: "/",
-        signIn: '/auth/signin',
-        signOut: '/auth/signout',
-        error: '/auth/error',
-        verifyRequest: '/auth/verify-request',
-        newAccount: '/auth/new-account'
-    },
+    // pages: {
+    //     home: "/",
+    //     signIn: '/auth/signin',
+    //     signOut: '/auth/signout',
+    //     error: '/auth/error',
+    //     verifyRequest: '/auth/verify-request',
+    //     newAccount: '/auth/new-account'
+    // },
     session: {
         jwt: true,
 

@@ -18,6 +18,8 @@ const Navigation = () => {
 
     const { data: session, status } = useSession();
 
+
+
     const handleSingOut = () => {
         signOut()
     }

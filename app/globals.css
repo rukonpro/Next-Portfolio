@@ -234,3 +234,12 @@ body {
   right: 0;
   transition: 0.5s ease-in;
 }
+
+.blogs-bg{
+  background-image: url("../public/images/planet-3.jpg");
+ 
+  background-size: contain;
+
+  
+ 
+}

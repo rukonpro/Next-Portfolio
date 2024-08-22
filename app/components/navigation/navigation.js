@@ -12,8 +12,11 @@ import MobileMenu from "@/app/components/navigation/MobileMenu";
 import DesktopMenu from "@/app/components/navigation/DesktopMenu";
 
 export const loginModal = () => document.getElementById("login").showModal();
+
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+
     const menuHandler = () => setMenuOpen(value => !value);
 
     const { data: session, status } = useSession();
@@ -30,9 +33,12 @@ const Navigation = () => {
 
     return (
 
-        <nav className={`fixed z-50 top-0 items-center  w-full ${menuOpen ? "h-[100vh] lg:h-16 " : "lg:h-18" +
-            " via-violet-900/30"}   bg-gradient-to-tr from-blue-950/95 to-purple-950/95 via-sky-950/95  `}>
-            <div>
+        <nav
+
+            className={` fixed top-0 z-50 w-full backdrop-blur-3xl`}>
+            <div
+                // style={{ backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)" }}
+            >
                 <div>
                     <div>
                         <div
@@ -68,16 +74,30 @@ const Navigation = () => {
                             </button>
 
                             <div className={`hidden lg:block }`}>
-                                <DesktopMenu status={status} handleSingOut={handleSingOut} />
+                                <DesktopMenu
+                                    status={status}
+                                    handleSingOut={handleSingOut}
+                                    isDialogOpen={isDialogOpen}
+                                    setIsDialogOpen={setIsDialogOpen}
+                                />
                             </div>
                         </div>
                     </div>
 
                     <div className={`  ${!menuOpen ? "hidden" : "block "} lg:hidden duration-700`}>
-                        <MobileMenu setMenuOpen={setMenuOpen} status={status} handleSingOut={handleSingOut} />
+                        <MobileMenu
+                            setMenuOpen={setMenuOpen}
+                            status={status}
+                            handleSingOut={handleSingOut}
+                            isDialogOpen={isDialogOpen}
+                            setIsDialogOpen={setIsDialogOpen}
+                        />
                     </div>
                 </div>
-                <LoginModal />
+                <LoginModal
+                    isDialogOpen={isDialogOpen}
+                    setIsDialogOpen={setIsDialogOpen}
+                />
             </div>
         </nav>
 

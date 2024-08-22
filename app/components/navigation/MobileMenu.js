@@ -3,7 +3,8 @@ import portfollioData from "@/app/assite/portfollioData/portfollioData";
 import Link from "next/link";
 import { loginModal } from "@/app/components/navigation/navigation";
 
-const MobileMenu = ({ setMenuOpen, status, handleSingOut }) => {
+const MobileMenu = ({ setMenuOpen, status, handleSingOut, setIsDialogOpen }) => {
+
     return (
         <ul className=" text-white font-bold  text-xl  ">
             {
@@ -32,7 +33,7 @@ const MobileMenu = ({ setMenuOpen, status, handleSingOut }) => {
                             type="button"
                             id="LogoutButton"
                             aria-label="LoginOut"
-                            onClick={handleSingOut}
+                            onClick={() => setIsDialogOpen(true)}
                             className="w-full tracking-[3px] "><span
                                 className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Logout</span>
                         </button> :
@@ -41,7 +42,7 @@ const MobileMenu = ({ setMenuOpen, status, handleSingOut }) => {
                             type="button"
                             id="loginbuttion1"
                             aria-label="Login"
-                            onClick={loginModal}
+                            onClick={setIsDialogOpen}
                             className="w-full tracking-[3px] "><span
                                 className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Login</span>
                         </button>

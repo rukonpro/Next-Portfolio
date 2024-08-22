@@ -1,28 +1,32 @@
 "use client"
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 
 import React, { useState } from "react";
-const Login = ({ setIsLogin }) => {
-  const [isPasswordHidden, setPasswordHidden] = useState(true);
 
+const Login = ({ setIsLogin, setIsDialogOpen }) => {
+  const [isPasswordHidden, setPasswordHidden] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+
+
 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
     const result = await signIn('credentials', {
       redirect: false,
       email,
       password
     });
-
+    setIsLoading(false);
     if (result.error) {
       setError(result.error);
     } else {
-     
-      // Redirect on success
+      setIsDialogOpen(false)
     }
   };
 
@@ -135,11 +139,12 @@ const Login = ({ setIsLogin }) => {
               <div className='col-span-2 flex justify-center text-white font-bold font-["Roboto"] '>
                 <button
                   type="submit"
+                  disabled={isLoading}
                   aria-label="Login"
                   className=" w-full py-2  rounded-[10px] border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#020617ff] via-[#5f3391ff] to-[#020617ff]   text-white text-xl font-bold   hover:shadow-2xl  hover:shadow-[#111827] clickSound"
                 >
                   <span className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text  font-bold">
-                    Login
+                    {isLoading ? "Loading..." : "Login"}
                   </span>
                 </button>
               </div>

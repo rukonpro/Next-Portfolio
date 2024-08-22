@@ -42,7 +42,7 @@ const Counter = () => {
                                         style={{
                                             boxShadow: "0 0 5px 0 #a855f7",
                                         }}
-                                        className="border border-purple-500 rounded-xl p-3 md:p-5 text-center bg-gradient-to-tr from-[#9c69fe]/20 to-[#260b4b] h-full w-full"
+                                        className="border border-purple-500 rounded-xl p-3 md:p-5 text-center bg-gradient-to-tr from-[#9c69fe]/20 to-[#260b4b] h-full w-full backdrop-blur-sm"
                                     >
                                         <p
                                             style={{

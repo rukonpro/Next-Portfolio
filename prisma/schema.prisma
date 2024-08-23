@@ -18,3 +18,12 @@ model User {
   createdAt DateTime @default(now())
   age       Int?    // New field added
 }
+
+model Blog {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String
+  thumbnail String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

@@ -4,8 +4,8 @@ import GetStartButton from "@/app/components/getStartButton/getStartButton";
 const Pricing = () => {
 
     return (
-        <section className='relative  bg-gray-950 '>
-            <div className='absolute inset-0 mx-auto   radial-gradient' ></div>
+        <section className='relative  bg-gray-900 '>
+            <div className='absolute inset-0 mx-auto  blur-3xl  radial-gradient' ></div>
             <div className="backdrop-blur-3xl py-28 px-5">
                 <div className="relative max-w-[1200px] mx-auto text-gray-300 sm:px-4 md:px-8">
                     <div className='max-w-xl mx-auto space-y-3 px-4 sm:text-center sm:px-0'>

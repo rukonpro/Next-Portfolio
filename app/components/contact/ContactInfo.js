@@ -8,7 +8,7 @@ import Image from "next/image";
 const ContactInfo = () => {
     return (
         <section>
-            <div className=" bg-gray-950 relative  p-5 mx-5">
+            <div className=" bg-gray-900 relative  p-5 mx-5">
                 <div
                     className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
                     style={{

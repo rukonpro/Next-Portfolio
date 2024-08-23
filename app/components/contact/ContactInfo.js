@@ -8,15 +8,9 @@ import Image from "next/image";
 const ContactInfo = () => {
     return (
         <section>
-            <div className=" bg-gray-900 relative  p-5 mx-5">
-                <div
-                    className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
-                    style={{
-                        background:
-                            "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)",
-                    }}
-                ></div>
-                <div className="relative z-10">
+            <div className="  relative backdrop-blur-3xl p-5 mx-5">
+                
+                <div className="relative z-10 ">
                     <h1 className="text-white text-2xl font-bold  tracking-[4px]">
                         CONTACT INFO
                     </h1>

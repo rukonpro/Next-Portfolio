@@ -1,9 +1,9 @@
 import React from 'react';
 import portfollioData from "@/app/assite/portfollioData/portfollioData";
 import Link from "next/link";
-import { loginModal } from "@/app/components/navigation/navigation";
 
-const DesktopMenu = ({ status, handleSingOut, setIsDialogOpen }) => {
+
+const DesktopMenu = () => {
 
 
     return (
@@ -28,27 +28,7 @@ const DesktopMenu = ({ status, handleSingOut, setIsDialogOpen }) => {
                 }
                 )
             }
-            <li>
 
-                {
-                    status == "authenticated" ? <button
-                        type="button"
-                        aria-label="Login"
-                        onClick={handleSingOut}
-                        className=" bg-gradient-to-r from-[#5e2594ec] to-[#270257fd] px-5 py-1 rounded-lg  animated-button tracking-[3px]  text-[#fccdff]"
-                    ><span
-                        className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Logout</span>
-                    </button> :
-                        <button
-                            type="button"
-                            aria-label="Login"
-                            className=" bg-gradient-to-r from-[#5e2594ec] to-[#270257fd] px-5 py-1 rounded-lg  animated-button tracking-[3px]  text-[#fccdff]"
-                            onClick={() => setIsDialogOpen(true)}><span
-                                className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Login</span>
-                        </button>
-                }
-
-            </li>
         </ul>
     );
 };

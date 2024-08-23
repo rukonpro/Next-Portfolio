@@ -10,6 +10,9 @@ import LoginModal from "@/app/components/authentication/loginModal";
 import AocFuc from "@/app/utils/AOS";
 import MobileMenu from "@/app/components/navigation/MobileMenu";
 import DesktopMenu from "@/app/components/navigation/DesktopMenu";
+import ProfileDropdown from '../ProfileDropdown/ProfileDropdown';
+import Dropdown from '../ProfileDropdown/dropdown';
+// import DrawerMenuMobile from '../Drawer/DrawerMenuMobile';
 
 export const loginModal = () => document.getElementById("login").showModal();
 
@@ -33,29 +36,15 @@ const Navigation = () => {
 
     return (
 
-        <nav
+        <nav className={` fixed top-0 z-50 w-full backdrop-blur-3xl`}>
 
-            className={` fixed top-0 z-50 w-full backdrop-blur-3xl`}>
-            <div
-                // style={{ backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)" }}
-            >
-                <div>
-                    <div>
-                        <div
-                            className="flex  justify-between items-center xl:px-0 px-5   py-4  max-w-[1200px] mx-auto ">
-                            <Link
-                                href="/#home"
-                                passHref={true}
-                                legacyBehavior={true}
-                            >
-                                <button
-                                    type="button"
-                                    aria-label="Rukon.Pro"
-                                    onClick={() => setMenuOpen(false)}
-                                    className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold  tracking-[2px] ">Rukon.Pro
-                                </button>
-                            </Link>
+            <ul>
+                <li>
+                    <ul
+                        className="flex  justify-between  items-center xl:px-0 px-5   py-4  max-w-[1200px] mx-auto ">
+                        {/* <DrawerMenuMobile /> */}
 
+                        <li className='flex items-center gap-1'>
                             <button
                                 type="button"
                                 id="threeDotButton"
@@ -73,32 +62,56 @@ const Navigation = () => {
                                 }
                             </button>
 
-                            <div className={`hidden lg:block }`}>
-                                <DesktopMenu
-                                    status={status}
-                                    handleSingOut={handleSingOut}
-                                    isDialogOpen={isDialogOpen}
-                                    setIsDialogOpen={setIsDialogOpen}
-                                />
-                            </div>
-                        </div>
-                    </div>
+                            <Link
+                                href="/#home"
+                                passHref={true}
+                                legacyBehavior={true}
+                            >
+                                <button
+                                    type="button"
+                                    aria-label="Rukon.Pro"
+                                    onClick={() => setMenuOpen(false)}
+                                    className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold  tracking-[2px] ">Rukon.Pro
+                                </button>
+                            </Link>
+                        </li>
 
-                    <div className={`  ${!menuOpen ? "hidden" : "block "} lg:hidden duration-700`}>
-                        <MobileMenu
-                            setMenuOpen={setMenuOpen}
-                            status={status}
-                            handleSingOut={handleSingOut}
-                            isDialogOpen={isDialogOpen}
-                            setIsDialogOpen={setIsDialogOpen}
-                        />
-                    </div>
-                </div>
-                <LoginModal
-                    isDialogOpen={isDialogOpen}
-                    setIsDialogOpen={setIsDialogOpen}
-                />
-            </div>
+
+                        <li>
+                            <ul className='flex items-start gap-3'>
+                                <li className={`hidden lg:block }`}>
+                                    <DesktopMenu />
+                                </li>
+
+                                <li>
+                                    <Dropdown
+                                        status={status}
+                                        handleSingOut={handleSingOut}
+                                        isDialogOpen={isDialogOpen}
+                                        setIsDialogOpen={setIsDialogOpen}
+                                    />
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li className={`  ${!menuOpen ? "hidden" : "block "} lg:hidden duration-700`}>
+                    <MobileMenu
+                        setMenuOpen={setMenuOpen}
+                        status={status}
+                        handleSingOut={handleSingOut}
+                        isDialogOpen={isDialogOpen}
+                        setIsDialogOpen={setIsDialogOpen}
+                    />
+                </li>
+                <li>
+                    <LoginModal
+                        isDialogOpen={isDialogOpen}
+                        setIsDialogOpen={setIsDialogOpen}
+                    />
+                </li>
+            </ul>
+
         </nav>
 
     );

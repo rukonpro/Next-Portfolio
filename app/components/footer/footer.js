@@ -1,11 +1,45 @@
-import React from 'react';
+"use client"
+
+import { useEffect, useState } from 'react';
 import Link from "next/link";
 import FollowUs from "@/app/components/followUs/followUs";
 
-
 const Footer = () => {
+
+    const [isInView, setIsInView] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsInView(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        const footerElement = document.querySelector('#lazy-footer');
+        if (footerElement) {
+            observer.observe(footerElement);
+        }
+
+        return () => {
+            if (footerElement) {
+                observer.unobserve(footerElement);
+            }
+        };
+    }, []);
+
+
     return (
-        <footer className="  bg-[#0e0e36]  pt-32 bg-right-bottom bg-contain  bg-no-repeat " style={{backgroundImage:`url("/images/rukon-pro-footer-images.png")`}} >
+        <footer
+            id="lazy-footer"
+            className="  bg-[#0e0e36]  pt-32 bg-right-bottom bg-contain  bg-no-repeat " style={{
+                backgroundImage: isInView
+                    ? `url("/images/rukon-pro-footer-images.png")`
+                    : 'none',
+            }} >
             <div className=" absolute w-full z-[2] " >
                 <div className=" max-w-[1200px] px-5  mx-auto ">
                     <div className="grid lg:grid-cols-3">
@@ -22,10 +56,10 @@ const Footer = () => {
                                 <li className="py-3  text-[14px] tracking-[2px]">
 
                                     Mail:-
-                                    <br/>
+                                    <br />
                                     <a href="mailto: rukon.js@gmail.com"> rukon.js@gmail.com</a> ||
                                     <a
-                                    href="mailto: rukon.pro@gmail.com"> rukon.pro@gmail.com</a>
+                                        href="mailto: rukon.pro@gmail.com"> rukon.pro@gmail.com</a>
                                 </li>
                                 <li className="py-3  text-[14px] tracking-[2px]">
                                     (Available : Any time)
@@ -68,7 +102,7 @@ const Footer = () => {
                             <div className="pt-10 lg:pt-0">
                                 <h1 className="text-center text-[#fccdff] font-bold tracking-[5px]">Follow Us</h1>
                                 <div className="flex justify-center">
-                                    <FollowUs position={"center"}/>
+                                    <FollowUs position={"center"} />
                                 </div>
                             </div>
                         </div>
@@ -77,9 +111,9 @@ const Footer = () => {
             </div>
 
             <div className=" relative flex flex-col lg:flex-row justify-between blur-[70px]  ">
-                <div className=" h-20 lg:h-72 w-full  bg-gradient-to-tl from-[#22062d] to-[#532f82] rounded-full"/>
-                <div className="h-48 w-full  bg-gradient-to-tr from-[#230a48] to-[#282f5b]  rounded-full"/>
-                <div className="h-72  w-full  bg-gradient-to-tl from-[#9480f969] to-[#dd06cb47]  rounded-full"/>
+                <div className=" h-20 lg:h-72 w-full  bg-gradient-to-tl from-[#22062d] to-[#532f82] rounded-full" />
+                <div className="h-48 w-full  bg-gradient-to-tr from-[#230a48] to-[#282f5b]  rounded-full" />
+                <div className="h-72  w-full  bg-gradient-to-tl from-[#9480f969] to-[#dd06cb47]  rounded-full" />
             </div>
             <div className=" flex justify-center py-5 text-white z-20 pt-10 ">
                 <h1 className="text-gray-400">Copy right &copy;{new Date().getFullYear()} <span

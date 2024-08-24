@@ -1,8 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 import formidable from 'formidable';
 import fs from 'fs';
-import path from 'path';
-import { v4 as uuidv4 } from 'uuid'; // Import UUID package
+import axios from 'axios';
+import FormData from 'form-data'; // Import FormData from form-data package
 
 const prisma = new PrismaClient();
 
@@ -14,31 +14,12 @@ export const config = {
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-        const uploadDir = path.join(process.cwd(), 'public/uploads');
-
-        // Ensure the upload directory exists
-        if (!fs.existsSync(uploadDir)) {
-            fs.mkdirSync(uploadDir, { recursive: true });
-        }
-
         const form = formidable({
             keepExtensions: true,
-            fileWriteStreamHandler: (file) => {
-                // Generate a unique filename using UUID and preserve the extension
-                const extension = path.extname(file.originalFilename);
-                const uniqueFilename = `${uuidv4()}${extension}`;
-                const filePath = path.join(uploadDir, uniqueFilename);
-
-                // Attach the new filename to the file object for later use
-                file.newFilename = uniqueFilename;
-
-                return fs.createWriteStream(filePath);
-            }
         });
 
         form.parse(req, async (err, fields, files) => {
             if (err) {
-                console.error('Error parsing the form:', err);
                 return res.status(500).json({ error: 'Failed to process the form' });
             }
 
@@ -48,7 +29,26 @@ export default async function handler(req, res) {
             let thumbnail = null;
             if (files.thumbnail) {
                 const file = files.thumbnail[0] || files.thumbnail;
-                thumbnail = `/uploads/${file.newFilename}`;
+                const imagePath = file.filepath;
+
+                try {
+                    // Create form-data object
+                    const formData = new FormData();
+                    formData.append('image', fs.createReadStream(imagePath));
+
+                    // Upload to ImageBB
+                    const response = await axios.post(`https://api.imgbb.com/1/upload?key=${process.env.IMAGEBB_API_KEY}`, formData, {
+                        headers: {
+                            ...formData.getHeaders(),
+                        }
+                    });
+
+                    thumbnail = response.data.data.url; // ImageBB URL
+
+                } catch (error) {
+                    console.error('Error uploading file to ImageBB:', error.response?.data || error.message);
+                    return res.status(500).json({ error: 'Failed to upload file to ImageBB' });
+                }
             }
 
             try {
@@ -70,4 +70,3 @@ export default async function handler(req, res) {
         res.status(405).end(`Method ${req.method} Not Allowed`);
     }
 }
-

@@ -39,11 +39,10 @@ export default async function handler(req, res) {
                 return res.status(500).json({ error: 'Failed to process the form' });
             }
 
-            const title = fields?.title?.[0];
-            const content = fields?.content?.[0];
+            const title = fields?.title?.[0] || "";
+            const content = fields?.content?.[0] || "";
             const thumbnail = files.thumbnail?.[0]?.newFilepath || null;
 
-         
 
             try {
                 const blog = await prisma.blog.create({

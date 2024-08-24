@@ -38,7 +38,7 @@ export default function BlogForm() {
         formData.append('thumbnail', thumbnail);
 
         try {
-            const response = await axios.post('/api/blog/blog', formData, {
+            const response = await axios.post('/api/blog/createBlog', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

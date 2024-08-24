@@ -43,7 +43,7 @@ export default async function handler(req, res) {
             const content = fields?.content?.[0];
             const thumbnail = files.thumbnail?.[0]?.newFilepath || null;
 
-            console.log("rukon------------------------------->", title, content, files.thumbnail)
+         
 
             try {
                 const blog = await prisma.blog.create({

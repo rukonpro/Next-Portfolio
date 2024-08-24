@@ -1,6 +1,5 @@
 import { PrismaClient } from '@prisma/client';
 import formidable from 'formidable';
-import fs from 'fs';
 import path from 'path';
 
 const prisma = new PrismaClient();
@@ -14,42 +13,31 @@ export const config = {
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const form = formidable({
-            keepExtensions: true,
-        });
-
-        form.on('file', (formName, file) => {
-            const uploadDir = path.join(process.cwd(), 'public/uploads');
-            const filePath = path.join(uploadDir, file.originalFilename);
-
-            // Create directory if it doesn't exist
-            if (!fs.existsSync(uploadDir)) {
-                fs.mkdirSync(uploadDir, { recursive: true });
-            }
-
-            const readStream = fs.createReadStream(file.filepath);
-            const writeStream = fs.createWriteStream(filePath);
-
-            readStream.pipe(writeStream);
-
-            file.newFilepath = `/uploads/${path.basename(filePath)}`;
+            uploadDir: "./public/uploads", // Save uploads in public/uploads folder
+            keepExtensions: true
         });
 
         form.parse(req, async (err, fields, files) => {
+
             if (err) {
                 return res.status(500).json({ error: 'Failed to process the form' });
             }
 
-            const title = fields?.title?.[0] || "";
-            const content = fields?.content?.[0] || "";
-            const thumbnail = files.thumbnail?.[0]?.newFilepath || null;
+            const title = fields?.title[0];
+            const content = fields?.content[0];
 
+       
+
+            const thumbnail = files.thumbnail[0] ? `/uploads/${path.basename(files.thumbnail[0].filepath)}` : null;
+
+            // console.log("data check rukon--->", title, content, thumbnail)
 
             try {
                 const blog = await prisma.blog.create({
                     data: {
                         title,
                         content,
-                        thumbnail,
+                        thumbnail
                     },
                 });
                 res.status(201).json({ message: 'Blog saved successfully!', blog });

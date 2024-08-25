@@ -7,22 +7,20 @@ import BlogUser from '@/app/components/blogs/BlogUser';
 import AvatarRukon from "/public/images/rukon.jpg";
 import baseURL from '@/app/utils/baseURL/baseURL';
 
+const fetchBlog = async (id) => {
+    try {
+        const response = await axios.get(`${baseURL}/api/blog/${id}`);
+        return response?.data;
 
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 
 const BlogDetails = async ({ params }) => {
     const id = params?.id;
-    let blog = null;
-
-    try {
-        const response = await axios.get(`${baseURL}/api/blog/${id}`);
-        blog = response?.data;
-
-    } catch (error) {
-        // toast.success(error?.response?.data?.error);
-    }
-
-
+    let blog = await fetchBlog(id);
 
 
     return (

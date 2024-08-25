@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import About from "@/app/components/about/about";
 import Header from "@/app/components/header/header";
 import Counter from "@/app/components/counter/counter";
@@ -23,17 +23,39 @@ export default function Home() {
     return (
         <React.Fragment>
             <Navigation />
-            <Header />
-            <Counter />
-            <About />
-            <Skills />
-            <Services />
-            <Portfolios />
-            <Blogs />
-            <Certifications />
-            <Pricing />
-            <ContactLayout />
-            <Footer />
+            <Suspense fallback={<p>Loading...</p>}>
+                <Header />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Counter />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <About />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Skills />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Services />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Portfolios />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Blogs />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Certifications />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Pricing />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <ContactLayout />
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Footer />
+            </Suspense>
         </React.Fragment>
     )
 }

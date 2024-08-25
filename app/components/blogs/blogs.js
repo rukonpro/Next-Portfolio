@@ -1,12 +1,29 @@
 import BlogCard from "@/app/components/blogs/BlogCard";
-import portfollioData from "@/app/assite/portfollioData/portfollioData";
-import Link from "next/link";
+import axios from "axios";
+import { Suspense } from "react";
 
-const Blogs = () => {
+
+const Blogs = async () => {
+
+    let blogs = null;
+    let errorMassage = null;
+
+    try {
+        const response = await axios.get(`http://localhost:3000/api/blog/getBlogs`, {
+            params: {
+                fields: 'title,thumbnail,id,createdAt,updatedAt',
+            }
+        });
+        blogs = response?.data;
+
+    } catch (error) {
+        errorMassage = error?.response?.data?.error
+    }
+
+
+
     return (
         <section id="blogs" className="relative  blogs-bg  bg-slate-800  overflow-x-hidden ">
-            {/* <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
-                 style={{background: "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)"}}></div> */}
             <div className="backdrop-blur-3xl px-5 py-28">
                 <article
                     className="relative  max-w-[1200px]  mx-auto z-10 flex-none md:flex justify-around items-center  ">
@@ -71,33 +88,24 @@ const Blogs = () => {
                                 </blockquote>
                             </desc>
                         </div>
+
+                        {
+                            errorMassage && <p className="text-red-500 pt-5 text-center">{errorMassage}</p>
+                        }
                         <div
                             className="grid xl:grid-cols-4 lg:grid-cols-3  sm:grid-cols-2 grid-cols-1 gap-4 gap-y-16  pt-28 text-white">
                             {
-                                portfollioData?.blogs?.map(blog => {
+                                blogs?.map(blog => {
                                     return (
-                                        <BlogCard
-                                            key={blog.id}
-                                            blog={blog}
-                                        />
+                                        <Suspense fallback={<p>Loading...</p>} key={blog.id}>
+                                            <BlogCard
+                                                blog={blog}
+                                            />
+                                        </Suspense>
                                     )
                                 })
                             }
                         </div>
-                        {/*<div className="flex justify-center pt-16">
-                        <Link
-                            href="/blogs"
-                            passHref={true}
-                            legacyBehavior={true}
-                        >
-                            <button
-                                aria-label="All Blogs"
-                                type="button"
-                                className="text-white text-lg font-bold  w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70] shadow-2xl shadow-fuchsia-300 active:shadow-md active:shadow-fuchsia-100/30">
-                                All Blogs
-                            </button>
-                        </Link>
-                    </div>*/}
                     </div>
                 </article>
             </div>

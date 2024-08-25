@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
-import 'react-quill/dist/quill.snow.css';
+
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
@@ -10,7 +10,7 @@ const modules = {
     toolbar: [
         [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
         [{ size: [] }],
-        ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+        ['bold', 'italic', 'underline', 'strike', 'blockquote',],
         [{ 'list': 'ordered' }, { 'list': 'bullet' },
         { 'indent': '-1' }, { 'indent': '+1' }],
         ['link', 'image', 'video'],
@@ -24,7 +24,7 @@ export default function BlogForm() {
     const [thumbnail, setThumbnail] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
-
+    console.log(content)
     const handleThumbnailChange = (e) => {
         setThumbnail(e.target.files[0]);
     };
@@ -90,6 +90,7 @@ export default function BlogForm() {
                     <label className="block text-sm font-medium text-gray-700">Content:</label>
                     <ReactQuill
                         value={content}
+                        theme="snow"
                         onChange={setContent}
                         modules={modules}
                         className="mt-1"

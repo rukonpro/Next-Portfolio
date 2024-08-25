@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
@@ -12,13 +12,13 @@ export default function Blogs() {
         const response = await axios.get('/api/blog/getBlogs');
         setBlogs(response.data);
       } catch (error) {
-        console.error('Error fetching Blogs:', error);
+        
       }
     };
 
     fetchBlogs();
   }, []);
-
+  
 
   return (
     <div className="max-w-4xl mx-auto p-8">

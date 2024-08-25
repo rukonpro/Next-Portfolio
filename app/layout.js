@@ -1,6 +1,7 @@
 "use client"
 import './globals.css'
 import 'aos/dist/aos.css';
+import 'react-quill/dist/quill.snow.css';
 import { chewy } from "@/app/utils/fonts/fonts";
 import { SessionProvider } from 'next-auth/react';
 
@@ -18,8 +19,9 @@ export default function RootLayout({ children }) {
       <body className={chewy.className} >
         <main>
           <SessionProvider>
-            {children}
+              {children}
           </SessionProvider>
+
         </main>
       </body>
     </html>

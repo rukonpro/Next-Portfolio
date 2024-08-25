@@ -6,10 +6,7 @@ const Dashboard = () => {
     return (
         <div className='bg-slate-400  w-screen h-screen overflow-y-auto'>
             <h1>Dashboard</h1>
-
             <BlogForm />
-
-
             <Blogs/>
         </div>
     );

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { H1 } from '@/app/components/blogs/BlogComponents/BlogComponents';
 import BlogUser from '@/app/components/blogs/BlogUser';
 import AvatarRukon from "/public/images/rukon.jpg";
+import baseURL from '@/app/utils/baseURL/baseURL';
 
 
 
@@ -14,7 +15,7 @@ const BlogDetails = async ({ params }) => {
     let blog = null;
 
     try {
-        const response = await axios.get(`http://localhost:3000/api/blog/${id}`);
+        const response = await axios.get(`${baseURL}/api/blog/${id}`);
         blog = response?.data;
 
     } catch (error) {
@@ -58,7 +59,7 @@ export default BlogDetails;
 
 const blogs = async () => {
     try {
-        const response = await axios.get(`http://localhost:3000/api/blog/getBlogs`, {
+        const response = await axios.get(`${baseURL}/api/blog/getBlogs`, {
             params: {
                 fields: 'title,thumbnail,id,createdAt,updatedAt,content',
             }

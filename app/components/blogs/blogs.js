@@ -1,4 +1,5 @@
 import BlogCard from "@/app/components/blogs/BlogCard";
+import baseURL from "@/app/utils/baseURL/baseURL";
 import axios from "axios";
 import { Suspense } from "react";
 
@@ -9,7 +10,7 @@ const Blogs = async () => {
     let errorMassage = null;
 
     try {
-        const response = await axios.get(`http://localhost:3000/api/blog/getBlogs`, {
+        const response = await axios.get(`${baseURL}/api/blog/getBlogs`, {
             params: {
                 fields: 'title,thumbnail,id,createdAt,updatedAt',
             }

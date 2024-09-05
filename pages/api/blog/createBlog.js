@@ -50,7 +50,6 @@ export default async function handler(req, res) {
                     return res.status(500).json({ error: 'Failed to upload file to ImageBB' });
                 }
             }
-
             try {
                 const blog = await prisma.blog.create({
                     data: {

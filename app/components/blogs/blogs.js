@@ -40,7 +40,7 @@ const Blogs = async () => {
                         </div>
 
                         <div className="pt-16">
-                            <desc className=" mx-auto text-justify ">
+                            <div className=" mx-auto text-justify ">
                                 <blockquote
                                     data-aos="fade-up"
                                     data-aos-anchor-placement="bottom-bottom"
@@ -87,7 +87,7 @@ const Blogs = async () => {
                             together on the quest to build exceptional web experiences that captivate and engage users
                             worldwide.`}
                                 </blockquote>
-                            </desc>
+                            </div>
                         </div>
 
                         {

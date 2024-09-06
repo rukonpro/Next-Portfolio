@@ -1,13 +1,37 @@
+"use client"
 import React from 'react';
 import BlogForm from '../blogForm/BlogForm';
-import Blogs from '../blogForm/Blogs';
+import {useSession} from "next-auth/react";
+import { useRouter } from 'next/navigation'
+import Loading from "@/app/loading";
+import Navigation from "@/app/components/navigation/navigation";
+import Footer from "@/app/components/footer/footer";
 
 const Dashboard = () => {
+    const router = useRouter();
+    const { data: session, status } = useSession();
+
+    if (status === 'loading') {
+        return <Loading/>;
+    }
+
+    if (session?.user?.role!=="ADMIN") {
+        return router.push("/");
+    }
     return (
-        <div className='bg-slate-400  w-screen h-screen overflow-y-auto'>
-            <h1>Dashboard</h1>
-            <BlogForm />
-            <Blogs/>
+        <div className='bg-slate-400'>
+            <Navigation/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <BlogForm/>
+            <br/>
+            <br/>
+
+            <Footer/>
         </div>
     );
 };

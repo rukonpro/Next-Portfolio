@@ -5,7 +5,8 @@ import bcrypt from 'bcryptjs';
 
 const prisma = new PrismaClient();
 
-export default NextAuth({
+
+export const authOptions = {
     providers: [
         CredentialsProvider({
             name: 'Credentials',
@@ -17,7 +18,7 @@ export default NextAuth({
                 const user = await prisma.user.findUnique({ where: { email: credentials.email } });
 
                 if (user && credentials.password && await bcrypt.compare(credentials.password, user.password)) {
-                    return { id: user.id, email: user.email, name: user.name };
+                    return { id: user.id, email: user.email, name: user.name,role:user.role };
                 }
                 return null;
             }
@@ -36,7 +37,7 @@ export default NextAuth({
 
     },
     jwt: {
-        // Configure the signing key for the JWT. 
+        // Configure the signing key for the JWT.
         // This is important for ensuring the JWT is secure.
         secret: process.env.JWT_SECRET,
     },
@@ -49,8 +50,12 @@ export default NextAuth({
             if (user) {
                 token.id = user.id;
                 token.email = user.email;
+                token.role = user.role;
+
+
             }
             return token;
         }
     }
-});
+}
+export default NextAuth(authOptions);

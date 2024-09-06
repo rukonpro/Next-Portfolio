@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import ProfileImage from "@/public/images/rukon_cover_photo_2.jpg";
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function Dropdown({ status, handleSingOut, setIsDialogOpen }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -54,24 +55,24 @@ export default function Dropdown({ status, handleSingOut, setIsDialogOpen }) {
                                 tabIndex="-1"
                             >
                                 <div className="p-1" role="none">
-                                    <a
-                                        href="#"
+                                    <Link
+                                        href="/contact"
                                         className="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-500/30 hover:rounded"
                                         role="menuitem"
                                         tabIndex="-1"
                                         id="menu-item-0"
                                     >
                                         Profile
-                                    </a>
-                                    <a
-                                        href="#"
+                                    </Link>
+                                    <Link
+                                        href="/dashboard"
                                         className="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-500/30 hover:rounded"
                                         role="menuitem"
                                         tabIndex="-1"
                                         id="menu-item-0"
                                     >
                                         Dashboard
-                                    </a>
+                                    </Link>
                                     <a
                                         href="#"
                                         className="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-500/30 hover:rounded"

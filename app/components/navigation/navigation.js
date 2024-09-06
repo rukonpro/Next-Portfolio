@@ -25,7 +25,6 @@ const Navigation = () => {
     const { data: session, status } = useSession();
 
 
-
     const handleSingOut = () => {
         signOut()
     }
@@ -36,7 +35,7 @@ const Navigation = () => {
 
     return (
 
-        <nav className={` fixed top-0 z-50 w-full backdrop-blur-3xl`}>
+        <nav className={` fixed scroll-smooth top-0 left-0 z-50 w-full backdrop-blur-3xl`}>
 
             <ul>
                 <li>

@@ -11,6 +11,7 @@ import Certifications from "@/app/components/certifications/certifications";
 import Blogs from "@/app/components/blogs/blogs";
 import ContactLayout from "@/app/components/contact/ContactLayout";
 import Pricing from "@/app/components/pricing/pricing";
+import BlogSkeleton from "@/app/components/Skeletons/BlogSkeleton/BlogSkeleton";
 
 
 export const metadata = {
@@ -41,7 +42,7 @@ export default function Home() {
             <Suspense fallback={<p>Loading...</p>}>
                 <Portfolios />
             </Suspense>
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<BlogSkeleton/>}>
                 <Blogs />
             </Suspense>
             <Suspense fallback={<p>Loading...</p>}>

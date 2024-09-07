@@ -206,6 +206,8 @@ const portfolioData = {
                     logo:JsIcon,
                     color:"rgba(233, 202, 50, 0.30)",
                     link:"https://www.javascript.com/",
+
+
                 },
                 {
                     title: "React.JSX",
@@ -987,7 +989,7 @@ const portfolioData = {
     pricing:{
         title:"Pricing",
         subtitle:"Pay as you grow",
-        description:"I offer comprehensive MERN stack development expertise to bring your portfolios to life. My pricing structure is designed to provide flexibility based on the scope and complexity of your needs.",
+        description:"I offer comprehensive MERN stack development expertise to bring your portfolios to life. My service structure is designed to provide flexibility based on the scope and complexity of your needs.",
         future:[
             {
                 name: "Hourly Rate",
@@ -1003,12 +1005,12 @@ const portfolioData = {
             },
             {
                 name: "Project-Based Pricing",
-                desc: "For larger portfolios, I am open to discussing project-based pricing. This may include:",
+                desc: "For larger portfolios, I am open to discussing project-based service. This may include:",
                 price: 899,
                 isMostPop: false,
                 features: [
                     "In-depth project analysis and planning.",
-                    "Fixed pricing for the entire project, providing cost predictability.",
+                    "Fixed service for the entire project, providing cost predictability.",
                     "Milestone-based payments to ensure progress alignment.",
                 ],
             },

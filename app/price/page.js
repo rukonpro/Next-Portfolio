@@ -8,7 +8,7 @@ export const metadata = {
     title: 'MERN Stack Dev. - price',
     description: 'Pay as you grow\n' +
         '\n' +
-        'I offer comprehensive MERN stack development expertise to bring your portfolios to life. My pricing structure is designed to provide flexibility based on the scope and complexity of your needs.',
+        'I offer comprehensive MERN stack development expertise to bring your portfolios to life. My service structure is designed to provide flexibility based on the scope and complexity of your needs.',
 }
 const Pricing = () => {
     return (

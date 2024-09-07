@@ -1,7 +1,21 @@
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import GetStartButton from "@/app/components/getStartButton/getStartButton";
+import axios from "axios";
+import baseURL from "@/app/utils/baseURL/baseURL";
 
-const Pricing = () => {
+
+const getPricing=async ()=>{
+    try {
+    return   axios.get(`${baseURL}/api/service/findMany`);
+    }
+    catch(error){
+     return error.response.data.message;
+    }
+}
+
+const Pricing = async () => {
+const pricings =await getPricing();
+
 
     return (
         <section className='relative  bg-gray-900 '>
@@ -29,11 +43,11 @@ const Pricing = () => {
                     </div>
                     <ol className='mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                         {
-                            portfolioData?.pricing?.future?.map((item, index) => {
+                            pricings?.data?.map((item) => {
 
                                 return (
                                     (
-                                        <li key={index}
+                                        <li key={item.id}
                                             data-aos="fade-up"
                                             className={`relative  mt-5  flex-1 flex flex-col hover:shadow-sky-500/20 shadow-2xl sm:mt-0 sm:rounded-xl sm:max-w-md    bg-gradient-to-t from-gray-950 to-[#3b056d]   rounded-lg  hover:border-orange-500 hover:bg-gradient-to-b   border-transparent `}
                                         >
@@ -60,13 +74,13 @@ const Pricing = () => {
                                             </div>
                                             <ul className='p-4 py-8 space-y-3 md:p-8'>
                                                 {
-                                                    item.features.map((featureItem, idx) => (
-                                                        <li key={idx} className='flex items-center gap-5'
+                                                    item.features.map((featureItem) => (
+                                                        <li key={featureItem?.id} className='flex items-center gap-5'
                                                             data-aos="fade-up"
                                                         >
                                                             <svg
                                                                 xmlns='http://www.w3.org/2000/svg'
-                                                                className={`h-5 w-5 ${item.isMostPop ? "text-cyan-600" : ""}`}
+                                                                className={`h-5 w-5 ${item.isMostPop ? "text-fuchsia-700" : ""}`}
                                                                 viewBox='0 0 20 20'
                                                                 fill='currentColor'>
                                                                 <path

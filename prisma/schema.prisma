@@ -34,3 +34,47 @@ model Blog {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+
+
+enum ProficiencyLevel {
+  EXPERIENCED
+  COMFORTABLE
+  FAMILIAR
+  TOOLS
+}
+
+model Skill {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  title           String
+  description     String
+  logo            String  // If you are storing URLs or paths to icons
+  color           String
+  link            String
+  proficiencyLevel ProficiencyLevel
+}
+
+
+
+model Project {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  title        String
+  logo         String  // URL or path to the logo image
+  description  String
+  images       String[] // Array of URLs or paths to images
+  technology   String[] // Array of technologies used
+  point        String[] // Key points about the project
+  links        Json     // Stores various links as a JSON object
+}
+
+
+
+
+model Service {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  desc        String   // Description of the service
+  price       Float    // Hourly rate price
+  isMostPop   Boolean  // To indicate if the service is most popular
+  features    Json     // Array of strings stored as JSON
+}

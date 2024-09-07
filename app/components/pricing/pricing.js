@@ -1,19 +1,19 @@
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import GetStartButton from "@/app/components/getStartButton/getStartButton";
-// import axios from "axios";
-// import baseURL from "@/app/utils/baseURL/baseURL";
+import axios from "axios";
+import baseURL from "@/app/utils/baseURL/baseURL";
 
 
-// export const getPricing=async ()=>{
-//     try {
-//     return   axios.get(`${baseURL}/api/service/findMany`);
-//     }catch(error){
-//      return error?.response?.data?.message;
-//     }
-// }
+export const getPricing=async ()=>{
+    try {
+    return   axios.get(`${baseURL}/api/service/findMany`);
+    }catch(error){
+     return error?.response?.data?.message;
+    }
+}
 
-const Pricing =  () => {
-// const pricings =await getPricing();
+const Pricing = async () => {
+const pricings =await getPricing();
 
 
     return (
@@ -42,7 +42,7 @@ const Pricing =  () => {
                     </div>
                     <ol className='mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                         {
-                            portfolioData?.pricing?.future?.map((item) => {
+                            pricings?.data?.map((item) => {
 
                                 return (
                                     (

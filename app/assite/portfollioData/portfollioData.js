@@ -795,16 +795,16 @@ const portfolioData = {
                 logo: OnlineClockShopLogo,
                 description: "\"Niche Product Website - An online clock shop meticulously crafted with React, React-router, SSL, Express.js, Firebase, Material UI, Tailwind CSS, and MongoDB. Users enjoy seamless functionality, including single-order addition, order reviews, deletion, and placement. The platform supports user authentication through Firebase, enabling easy login.js with Google, account creation, and login.js.\n" +
                     "\n" +
-                    "Admins wield comprehensive control with the ability to manage all orders, add, update, and delete products, and define user rules. The integration of modern technologies ensures a secure, user-friendly, and efficient experience for both customers and administrators, making this clock shop a showcase of my proficiency in web development.\"",
+                    "Admins wield comprehensive control with the ability to manage all order, add, update, and delete products, and define user rules. The integration of modern technologies ensures a secure, user-friendly, and efficient experience for both customers and administrators, making this clock shop a showcase of my proficiency in web development.\"",
                 images: [OnlineClockCover, OnlineClockShop1, OnlineClockShop2, OnlineClockShop3],
                 technology: ["React", "React-router", "SSL Commerce", "Express.js", "Firebase", "Material UI", "Telwind CSS", "MongoDB", "Mongoose"],
                 point: [
-                    "    Users can easily add single orders to their shopping cart.\n" +
-                    "    A user-friendly interface allows for the review of previous orders.\n" +
+                    "    Users can easily add single order to their shopping cart.\n" +
+                    "    A user-friendly interface allows for the review of previous order.\n" +
                     "    Order deletion functionality is available for a seamless user experience.\n" +
-                    "    The platform supports the placement of new orders with a straightforward process.",
+                    "    The platform supports the placement of new order with a straightforward process.",
 
-                    "    Admins have the capability to manage and track all orders efficiently.\n" +
+                    "    Admins have the capability to manage and track all order efficiently.\n" +
                     "    Product management is made easy with the ability to add, update, and delete products.\n" +
                     "    Admins can set specific user rules, enhancing control and security.",
 
@@ -902,10 +902,10 @@ const portfolioData = {
                 images: [ShopMartCover],
                 technology: ["React", "React-router", "Node.js", "Express.js", "Firebase", "Material UI", "Tailwind CSS", "MongoDB", "Chat-Engin", "Email.js"],
                 point: [
-                    "Order Management: Users can effortlessly add, review, and delete orders, providing a streamlined shopping experience.",
-                    "Place Orders: A straightforward process for users to place orders for their desired products.",
+                    "Order Management: Users can effortlessly add, review, and delete order, providing a streamlined shopping experience.",
+                    "Place Orders: A straightforward process for users to place order for their desired products.",
                     "Real-time Chat: Shop Mart integrates Chat-Engin for users to engage in real-time conversations with each other, fostering community and enhancing user experience.",
-                    "Order Management: Admins have comprehensive control over all orders, ensuring efficient order processing and fulfillment.",
+                    "Order Management: Admins have comprehensive control over all order, ensuring efficient order processing and fulfillment.",
                     "Product Management: Admins can easily add, update, and delete products, keeping the inventory up-to-date.",
                     "User Role Management: Admins can assign and manage user roles, ensuring secure access and data management.",
                     "Firebase Integration: Seamless and secure user authentication through Firebase, enabling users to log in with Google and create accounts with ease.",

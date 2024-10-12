@@ -4,8 +4,43 @@ import PortfolioMapping from "@/app/components/portfolios/portfolioMapping";
 import BackButton from "@/app/components/backButton/backButton";
 import Footer from "@/app/components/footer/footer";
 
-
-
+export async function generateMetadata() {
+    return {
+      title: 'Projects - Showcasing Web Development Expertise | Rukon.Pro',
+      description:
+        'Discover Rukon’s web development projects, including full-stack applications, eCommerce platforms, and modern web solutions built using MERN stack and other cutting-edge technologies.',
+      keywords: 'Rukon projects, web development portfolio, MERN stack projects, ReactJS, NodeJS, full-stack applications, programming projects, eCommerce development',
+      authors: 'Rukon',
+      creator: 'Rukon',
+      publisher: 'Rukon.Pro',
+      openGraph: {
+        title: 'Projects - Showcasing Web Development Expertise | Rukon.Pro',
+        description:
+          'Explore Rukon’s project portfolio featuring cutting-edge web development projects, built with the latest technologies such as MERN stack, React, Node.js, and more.',
+        url: 'https://rukonpro.vercel.app/portfolios',
+        siteName: 'Rukon.Pro',
+        locale: 'en_US',
+        type: 'website',
+        images: [
+          {
+            url: 'https://rukonpro.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frukon_cover_photo_2.169d9c02.jpg&w=1920&q=75',
+            width: 1200,
+            height: 630,
+            alt: 'Rukon Project Portfolio Cover',
+          },
+        ],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Projects - Showcasing Web Development Expertise | Rukon.Pro',
+        description:
+          'Browse through Rukon’s web development projects portfolio, featuring full-stack applications and innovative web solutions built with modern technologies.',
+        image: 'https://rukonpro.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frukon_cover_photo_2.169d9c02.jpg&w=1920&q=75',
+      },
+      themeColor: '#382e6b',
+    };
+  }
+  
 const Portfolios = () => {
     return (
         <div className=" bg-[#0e0e36] min-h-screen overflow-hidden  relative ">
@@ -41,9 +76,3 @@ const Portfolios = () => {
 };
 
 export default Portfolios;
-
-
-export const metadata = {
-    title: 'MERN Stack Dev. - Portfolios',
-    description: 'Welcome to my portfolios! As a MERN stack developer, I specialize in crafting dynamic and efficient web applications. Below are some key portfolios that showcase my skills and passion for creating seamless user experiences.',
-}

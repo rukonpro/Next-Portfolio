@@ -3,6 +3,7 @@ import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import SkillsMapping from "@/app/components/skills/SkillsMapping";
 
 const Skills = () => {
+
     return (
         <section id="skills"
                  className=" overflow-hidden relative flex justify-center items-center bg-[#0e0e36] py-28 px-5">

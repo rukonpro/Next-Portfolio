@@ -7,22 +7,22 @@ import Footer from "@/app/components/footer/footer";
 
 
 
-const Page = ({params}) => {
-    const skills=portfolioData?.skills?.find(data=>data?.title===params?.id);
+const Page = ({ params }) => {
+    const skills = portfolioData?.skills?.find(data => data?.title === params?.id);
 
     return (
         <div className=" bg-[#0e0e36] min-h-screen overflow-hidden ">
-            <Navigation/>
+            <Navigation />
 
 
             <div className="max-w-[1200px] relative  z-10 mx-auto px-5 py-20">
                 <div className="flex justify-between items-center py-3"
-                     data-aos="fade-up"
-                     data-aos-anchor-placement="bottom-bottom"
-                     data-aos-duration="1000"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    data-aos-duration="1000"
                 >
                     <h1 className={`text-white text-xl  font-bold  pt-15 `}>All {params?.id}</h1>
-                    <BackButton/>
+                    <BackButton />
                 </div>
                 <div>
 
@@ -35,7 +35,7 @@ const Page = ({params}) => {
                                         data-aos-anchor-placement="bottom-bottom"
                                         data-aos-duration="1000"
                                     >
-                                        <SkillsCard data={data}/>
+                                        <SkillsCard data={data} />
                                     </li>
                                 )
                             })
@@ -43,13 +43,13 @@ const Page = ({params}) => {
                     </ol>
 
                     <div className="flex justify-center py-3">
-                        <BackButton/>
+                        <BackButton />
                     </div>
                 </div>
 
             </div>
             <div className="absolute custom-animate-pulse inset-0 blur-[118px] radial-gradient"></div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };
@@ -58,14 +58,45 @@ export default Page;
 
 
 
-export async function generateMetadata({ params, searchParams }, parent) {
-    const skills=portfolioData?.skills?.find(data=>data?.title===params?.id);
+export async function generateMetadata({ params }) {
+    // Assuming portfolioData is available in this scope
+    const skills = portfolioData?.skills?.find(data => data?.title === params?.id);
+    // Check if skills data is found
+    if (!skills) {
+        // Return default metadata or handle the error appropriately
+        return {
+            title: "Skills Not Found",
+            description: "The requested skills information could not be found."
+        };
+    }
 
     return {
         title: `MERN Stack Dev. - ${skills.title}`,
         description: 'Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.',
+        // Optionally, you can add more metadata fields here
+        keywords: "MERN, web development, portfolio, skills, developer",
+        openGraph: {
+            title: `MERN Stack Dev. - ${skills.title}`,
+            description: 'Explore the portfolio of Your Name, a skilled MERN stack developer.',
+            url: `https://rukonpro.vercel.app/skills/${params.id}`,
+            images: skills?.data?.map(skill => ({
+                url: skill.logo.src,
+                height: skill?.height,
+                width: skill?.width,
+                alt: `Skills in ${skill.title}`
+            })),
+
+            type: "website",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `MERN Stack Dev. - ${skills.title}`,
+            description: 'Explore the portfolio of Your Name, a skilled MERN stack developer.',
+            image: "/images/rukon-pro-footer-images.png", // Replace with the actual image URL
+        },
     }
 }
+
 
 
 export function generateStaticParams() {

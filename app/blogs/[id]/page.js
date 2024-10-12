@@ -13,9 +13,51 @@ const fetchBlog = async (id) => {
         return response?.data;
 
     } catch (error) {
-        console.log(error)
+        
     }
 }
+
+
+export async function generateMetadata({ params }) {
+  const blogId = params.id;
+  const blogPost = await fetchBlog(blogId); // Fetching blog post data dynamically
+
+  return {
+    title: `${blogPost?.title} - Blogs - Rukon.Pro`,
+    description: `Read this comprehensive guide on "${blogPost?.title}". This article explains JSX, State, and Props in React, and compares JSX with HTML syntax to make learning React easier.`,
+    keywords: 'JSX, React Props, React State, ReactJS, React development, JavaScript, HTML in React',
+    authors: 'Rukon',
+    creator: 'Rukon',
+    publisher: 'Rukon.Pro',
+    openGraph: {
+      title: `${blogPost?.title} - Blogs - Rukon.Pro`,
+      description: `Explore the fundamentals of JSX and React Props/State in this blog post.`,
+      url: `https://rukonpro.vercel.app/blogs/${blogId}`,
+      siteName: 'Rukon.Pro',
+      locale: 'en_US',
+      type: 'article',
+      publishedTime: blogPost?.createdAt,
+      modifiedTime: blogPost?.updatedAt,
+      images: [
+        {
+          url: blogPost?.thumbnail || 'https://i.ibb.co/cbkLWr5/225f953fb79eb8d1c5cac0803.webp',
+          width: 1200,
+          height: 630,
+          alt: blogPost?.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${blogPost?.title} - Blogs - Rukon.Pro`,
+      description: `Check out this detailed blog post explaining JSX, State, and Props in React development.`,
+      image: blogPost?.thumbnail || 'https://i.ibb.co/cbkLWr5/225f953fb79eb8d1c5cac0803.webp',
+    },
+    themeColor: '#382e6b',
+  };
+}
+
+
 
 
 const BlogDetails = async ({ params }) => {
@@ -38,7 +80,7 @@ const BlogDetails = async ({ params }) => {
                                 date={blog?.createdAt} />
                             <br />
                             <img src={blog?.thumbnail} alt={blog?.title} />
-                            <div className="ql-editor" dangerouslySetInnerHTML={{ __html: blog.content }} />
+                            <div className="ql-editor" dangerouslySetInnerHTML={{ __html: blog?.content }} />
                         </div>
                     }
 

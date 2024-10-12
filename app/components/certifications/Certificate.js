@@ -17,11 +17,11 @@ const image=portfolioData?.certifications?.find(data=>data?.id===id);
                         <button type="button"
                                 onClick={closeModal}
                                 className="text-red-500 text-xl">
-                            <Image height={24} src={CloseIcon} alt="close icon" loading="lazy" placeholder="blur"/>
+                            <Image height={24} src={CloseIcon} alt="close icon" loading="lazy" />
                         </button>
                     </div>
                     <div className="max-w-md">
-                        <Image src={image?.image} alt={image?.title} placeholder="blur" loading="lazy" className="object-contain w-full h-full"/>
+                        <Image src={image?.image} alt={image?.title}  loading="lazy" className="object-contain w-full h-full"/>
                     </div>
                 </div>
             }

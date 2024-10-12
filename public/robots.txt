@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://rukonpro.vercel.app
+
+# Sitemaps
+Sitemap: https://rukonpro.vercel.app/sitemap.xml

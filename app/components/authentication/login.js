@@ -144,7 +144,7 @@ const Login = ({ setIsLogin, setIsDialogOpen }) => {
                   className=" w-full py-2  rounded-[10px] border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#020617ff] via-[#5f3391ff] to-[#020617ff]   text-white text-xl font-bold   hover:shadow-2xl  hover:shadow-[#111827] clickSound"
                 >
                   <span className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text  font-bold">
-                    {isLoading ? "Loading..." : "Login"}
+                    {isLoading ? "Loader..." : "Login"}
                   </span>
                 </button>
               </div>

@@ -56,7 +56,7 @@ const Navigation = () => {
                                     onClick={() => setMenuOpen(false)}
                                     className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold  tracking-[2px] ">
 
-                                       <Image src={Logo} alt="rukonpro" className="w-1/2"/>
+                                       <Image src={Logo} alt="rukonpro" className="w-1/4"/>
 
                                 </button>
                             </Link>

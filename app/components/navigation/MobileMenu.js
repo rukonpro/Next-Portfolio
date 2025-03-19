@@ -3,7 +3,7 @@ import portfollioData from "@/app/assite/portfollioData/portfollioData";
 import Link from "next/link";
 import { loginModal } from "@/app/components/navigation/navigation";
 
-const MobileMenu = ({ setMenuOpen}) => {
+const MobileMenu = ({ setMenuOpen,dropdown}) => {
 
     return (
         <ul className=" text-white font-bold  text-xl  ">
@@ -24,6 +24,8 @@ const MobileMenu = ({ setMenuOpen}) => {
                     </li>
                 )
             }
+           <li className="flex justify-center"> {dropdown}</li>
+            <br/>
         </ul>
     );
 };

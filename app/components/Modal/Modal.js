@@ -17,7 +17,13 @@ const Modal = ({ isOpen, closeModal, children }) => {
                         onClick={handleOutsideClick}
                     >
                         <div className="mx-3  ">
-                            <div className="bg-white rounded-2xl overflow-hidden bg-gradient-radial from-[#a128b2] to-[#17081a] via-[#4634a3] p-2 ">{children}</div>
+                            <div className="bg-white rounded-2xl overflow-hidden bg-gradient-radial from-[#a128b2] to-[#17081a] via-[#4634a3] p-2 "
+
+                                 data-aos="fade-right"
+                                 data-aos-offset="10"
+                                 data-aos-duration="600"
+                                 data-aos-easing="ease-in-sine"
+                            >{children}</div>
                         </div>
                     </div>
                 </div>

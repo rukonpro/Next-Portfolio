@@ -40,7 +40,7 @@ const Registration = ({ setIsLogin }) => {
 
 
 
-                <div className='py-10 '>
+                <div className='py-10 max-w-72 mx-auto'>
                     {error && <p className="text-red-500">{error}</p>}
                     {message && <p className="text-green-500">{message}</p>}
                     <form onSubmit={handleSubmit}>
@@ -79,7 +79,7 @@ const Registration = ({ setIsLogin }) => {
                                     onChange={(e) => setEmail(e.target.value)}
                                     type="email"
                                     name="email"
-                                    placeholder='rukon.pro@gmail.com'
+                                    placeholder='example@gmail.com'
                                 />
 
                             </div>
@@ -130,7 +130,7 @@ const Registration = ({ setIsLogin }) => {
                                 <button
                                     type="submit"
                                     aria-label="Register"
-                                    className=" w-full py-2  rounded-[10px] border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#5f3391ff] to-[#020617ff]  text-white text-xl font-bold   hover:shadow-2xl  hover:shadow-[#111827] clickSound"
+                                    className=" w-full py-2   rounded-t-[50px] border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#5f3391ff] to-[#020617ff]  text-white text-xl font-bold   hover:shadow-2xl  hover:shadow-[#111827] clickSound"
                                 >
                                     <span className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text  font-bold">
                                         Register

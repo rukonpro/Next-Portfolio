@@ -28,7 +28,7 @@ export default function Dropdown({ status, handleSingOut, setIsDialogOpen }) {
 
         <>
             {
-                status == "authenticated" ?
+                status === "authenticated" ?
                     <div className="relative inline-block text-left" ref={dropdownRef}>
 
 

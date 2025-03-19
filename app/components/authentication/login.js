@@ -47,7 +47,7 @@ const Login = ({ setIsLogin, setIsDialogOpen }) => {
           </div>
         </div>
 
-        <div className="py-10 ">
+        <div className="py-10 max-w-72 mx-auto">
           {error && <p className='text-red-500'>{error}</p>}
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 md:gap-5 gap-y-3 gap-x-1  px-3  border border-purple-700 rounded-2xl    py-5">
@@ -141,7 +141,7 @@ const Login = ({ setIsLogin, setIsDialogOpen }) => {
                   type="submit"
                   disabled={isLoading}
                   aria-label="Login"
-                  className=" w-full py-2  rounded-[10px] border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#020617ff] via-[#5f3391ff] to-[#020617ff]   text-white text-xl font-bold   hover:shadow-2xl  hover:shadow-[#111827] clickSound"
+                  className=" w-full py-2  rounded-t-[50px] border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#020617ff] via-[#5f3391ff] to-[#020617ff]   text-white text-xl font-bold   hover:shadow-2xl  hover:shadow-[#111827] clickSound"
                 >
                   <span className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text  font-bold">
                     {isLoading ? "Loader..." : "Login"}

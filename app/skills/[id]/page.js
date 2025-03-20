@@ -11,7 +11,7 @@ const Page = ({ params }) => {
     const skills = portfolioData?.skills?.find(data => data?.title === params?.id);
 
     return (
-        <div className=" bg-[#0e0e36] min-h-screen overflow-hidden ">
+        <div className="  min-h-screen overflow-hidden ">
             <Navigation />
 
 
@@ -48,7 +48,9 @@ const Page = ({ params }) => {
                 </div>
 
             </div>
-            <div className="absolute custom-animate-pulse inset-0 blur-[118px] radial-gradient"></div>
+            <div
+                className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-[357px] blur-[1000px] sm:max-w-md md:max-w-lg"
+                style={{background: "linear-gradient(106.89deg, rgba(141, 76, 206, 0.11) 15.73%, rgb(165, 14, 233) 15.74%, rgba(255, 0, 0, 0.26) 56.49%, rgba(234, 51, 214, 0.4) 115.91%)"}}/>
             <Footer />
         </div>
     );

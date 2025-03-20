@@ -11,9 +11,9 @@ const image=portfolioData?.certifications?.find(data=>data?.id===id);
         <Modal isOpen={isOpen} closeModal={closeModal}>
             {
                 image?.image &&
-                <div className="">
+                <div >
                     <div className="flex justify-between gap-4">
-                        <h1 className="text-black pt-5 pb-2  text-xl text-white">{image?.title}</h1>
+                        <h1 className=" pt-5 pb-2  text-xl text-white">{image?.title}</h1>
                         <button type="button"
                                 onClick={closeModal}
                                 className="text-red-500 text-xl">

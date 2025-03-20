@@ -25,7 +25,7 @@ const Certifications = () => {
             <div className="absolute custom-animate-pulse inset-0 blur-[118px] "></div>
 
             <div
-                className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-[357px] blur-[1000px] sm:max-w-md md:max-w-xl"
+                className="absolute custom-animate-pulse  inset-0 m-auto  blur-[1000px] max-w-xs h-[357px]  sm:max-w-md md:max-w-xl"
                 style={{background: "linear-gradient(106.89deg, rgba(141, 76, 206, 0.11) 15.73%, rgb(165, 14, 233) 15.74%, rgba(255, 0, 0, 0.26) 56.49%, rgba(234, 51, 214, 0.4) 115.91%)"}}/>
             <div className="relative z-10 max-w-[1200px] mx-auto">
                 <div className="flex justify-center">

@@ -25,6 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.header-slider-container {  /* Or whatever className your Slider uses */
+  position: relative;
+  transform: translate(0, 0); /* Ensures transform works */
+}
 .customShadow {
   box-shadow:
           0 0 28px rgb(145, 1, 255), 0 0 10px 5px rgba(140, 78, 179, 0.702), 0 0 10px 2px #3818622e, 0 0 20px 5px #dd7fff82

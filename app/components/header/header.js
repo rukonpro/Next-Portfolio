@@ -60,7 +60,8 @@ const Header = () => {
         <header
             id="home"
             ref={headerRef}
-            className="relative bg-[#0e0e36]"
+            // style={{backgroundColor:"rgba(41, 5, 58, 0.7)"}}
+            className="relative "
         >
             <div className="flex items-center max-w-[1200px] mx-auto px-5 py-24">
                 <div className="relative z-10">
@@ -116,10 +117,10 @@ const Header = () => {
                     </div>
                 </div>
                 <div
-                    className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
+                    className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-[500px] blur-[118px] sm:max-w-md md:max-w-lg"
                     style={{
                         background:
-                            "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)",
+                            "linear-gradient(106.89deg, rgb(136, 0, 213) 15.73%, rgba(113, 14, 233, 0.41) 15.74%, rgba(209, 121, 249, 0.26) 56.49%, rgb(229, 70, 70) 115.91%)",
                     }}
                 ></div>
             </div>

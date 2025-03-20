@@ -18,8 +18,10 @@ const pricings =await getPricing();
 
 
     return (
-        <section className='relative  bg-gray-900 '>
-            <div className='absolute inset-0 mx-auto  blur-3xl  radial-gradient' ></div>
+        <section className='relative   '>
+            <div
+                className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-[357px] blur-[1000px] sm:max-w-md md:max-w-lg"
+                style={{background: "linear-gradient(106.89deg, rgba(141, 76, 206, 0.11) 15.73%, rgb(165, 14, 233) 15.74%, rgba(255, 0, 0, 0.26) 56.49%, rgba(234, 51, 214, 0.4) 115.91%)"}}/>
             <div className="backdrop-blur-3xl py-28 px-5">
                 <RootLayoutAnimated>
                 <div className="relative max-w-[1200px] mx-auto text-gray-300 sm:px-4 md:px-8">
@@ -50,7 +52,7 @@ const pricings =await getPricing();
                                     (
                                         <li key={item.id}
                                             data-aos="fade-up"
-                                            className={`relative  mt-5  flex-1 flex flex-col hover:shadow-sky-500/20 shadow-2xl sm:mt-0 sm:rounded-xl sm:max-w-md    bg-gradient-to-t from-gray-950 to-[#3b056d]   rounded-lg  hover:border-orange-500 hover:bg-gradient-to-b   border-transparent `}
+                                            className={`relative  mt-5  flex-1 flex flex-col hover:shadow-sky-500/20 shadow-2xl sm:mt-0 sm:rounded-xl sm:max-w-md    bg-gradient-to-t from-gray-950 to-[#05296d26]   rounded-lg  hover:border-orange-500 hover:bg-gradient-to-b   border-transparent `}
                                         >
                                             <div className="p-4 py-8 space-y-4 border-b border-gray-700  md:p-8">
                                                 <h2 className='text-gray-200 font-medium tracking-[3px] '

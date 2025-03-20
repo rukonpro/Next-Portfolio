@@ -8,10 +8,10 @@ import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAn
 const Services = () => {
     return (
         <section id="services"
-                 className=" overflow-hidden relative flex justify-center items-center bg-[#0e0e36] py-28 px-3">
+                 className=" overflow-hidden relative flex justify-center items-center  py-28 px-3">
             <div
                 className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-[357px] blur-[1000px] sm:max-w-md md:max-w-lg"
-                style={{background: "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)"}}/>
+                style={{background: "linear-gradient(106.89deg, rgba(141, 76, 206, 0.11) 15.73%, rgb(165, 14, 233) 15.74%, rgba(255, 0, 0, 0.26) 56.49%, rgba(234, 51, 214, 0.4) 115.91%)"}}/>
                  <RootLayoutAnimated>
                     <div className="max-w-[1200px] relative z-10 mx-auto ">
                         <div className="flex justify-center">
@@ -35,7 +35,7 @@ const Services = () => {
                         <div className="lg:flex flex-none justify-center mt-10">
 
 
-                            <div className="block lg:hidden pb-20">
+                            <div className="block lg:hidden pb-20" >
                                 <div className="flex justify-center">
 
                                         <div className="w-[244.63px] h-[494.98px] z-20 p-3 flex justify-center overflow-hidden">

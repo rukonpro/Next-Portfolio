@@ -21,8 +21,8 @@ const Counter = () => {
         },
     ]
     return (
-        <div className="relative bg-gradient-radial to-[#12173e] from-[#816aff]   overflow-hidden  ">
-            <div className="absolute  inset-0  blur-[200px] radial-gradient"/>
+        <div className="relative  overflow-hidden  ">
+            <div className="absolute  inset-0  blur-[500px]"/>
            <div className="flex justify-center">
                <Image
                    src={DevelopImage} alt="rukon pro develop"

@@ -2,6 +2,7 @@ import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import GetStartButton from "@/app/components/getStartButton/getStartButton";
 import axios from "axios";
 import baseURL from "@/app/utils/baseURL/baseURL";
+import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
 
 export const getPricing=async ()=>{
@@ -20,6 +21,7 @@ const pricings =await getPricing();
         <section className='relative  bg-gray-900 '>
             <div className='absolute inset-0 mx-auto  blur-3xl  radial-gradient' ></div>
             <div className="backdrop-blur-3xl py-28 px-5">
+                <RootLayoutAnimated>
                 <div className="relative max-w-[1200px] mx-auto text-gray-300 sm:px-4 md:px-8">
                     <div className='max-w-xl mx-auto space-y-3 px-4 sm:text-center sm:px-0'>
                         <h1 className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text font-boldd"
@@ -101,6 +103,7 @@ const pricings =await getPricing();
                         }
                     </ol>
                 </div>
+                </RootLayoutAnimated>
             </div>
         </section>
     );

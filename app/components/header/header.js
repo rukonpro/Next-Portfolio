@@ -3,6 +3,7 @@ import Slider from "@/app/components/slider/slider";
 import {chewy} from "@/app/utils/fonts/fonts";
 import ScrollingButton from "@/app/components/scroolButton/scroolButton";
 
+
 const Header = () => {
 
     return (
@@ -53,6 +54,7 @@ const Header = () => {
                             <Slider/>
                         </div>
                     </div>
+
                     <div className="flex justify-center relative">
                         <ScrollingButton/>
                     </div>

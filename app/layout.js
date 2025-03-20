@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
         <main className="!cursor-none">
           <CustomCursor/>
           <AppSessionProvider>
+
             {children}
+
           </AppSessionProvider>
           <Analytics />
         </main>

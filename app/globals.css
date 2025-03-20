@@ -237,9 +237,78 @@ body {
 
 .blogs-bg{
   background-image: url("../public/images/planet-3.jpg");
- 
+
   background-size: contain;
 
-  
- 
+
+
+}
+
+
+
+
+/*logo ---------------------------*/
+
+
+.rukonproLogo {
+  position: relative;
+  text-align: center;
+}
+
+.rukonproText {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  opacity: 0;
+}
+
+.rukonproUnderline {
+  width: 200px;
+  height: 10px;
+  background: purple;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.rukonproLaptop {
+  width: 50px;
+  height: 30px;
+  background: linear-gradient(45deg, #6a00ff, #ff00ff);
+  position: absolute;
+  top: -30px;
+  right: -50px;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+/*Animated page*/
+
+.animatedPage {
+  transform-origin: center;
+  backface-visibility: hidden;
+  perspective: 1200px;
+  width: 100%;
+  height: 100%;
+}
+
+/*Animated footer bg image*/
+
+.animatedFooterBgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/images/rukon-pro-footer-images.png");
+  background-position: right bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
 }

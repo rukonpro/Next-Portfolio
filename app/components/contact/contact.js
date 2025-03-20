@@ -1,5 +1,6 @@
 import ContactForm from "@/app/components/contact/contactForm";
 import ContactInfo from "@/app/components/contact/ContactInfo";
+import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
 const Contact = () => {
 
@@ -12,7 +13,7 @@ const Contact = () => {
                         "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)",
                 }}*/
             ></div>
-
+            <RootLayoutAnimated>
             <div className="relative  z-[0] max-w-[1200px] mx-auto ">
                 <div className="flex px-8 ">
                     <div
@@ -28,6 +29,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            </RootLayoutAnimated>
         </section>
     );
 };

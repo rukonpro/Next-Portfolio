@@ -1,6 +1,7 @@
 import React from 'react';
 import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import SkillsMapping from "@/app/components/skills/SkillsMapping";
+import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
 const Skills = () => {
 
@@ -8,6 +9,8 @@ const Skills = () => {
         <section id="skills"
                  className=" overflow-hidden relative flex justify-center items-center bg-[#0e0e36] py-28 px-5">
             <div className="absolute custom-animate-pulse inset-0 blur-[118px] radial-gradient"></div>
+
+            <RootLayoutAnimated>
             <div className="max-w-[1200px] relative z-10 mx-auto">
                 <div className="flex justify-center">
                     <div className="flex items-center relative">
@@ -46,6 +49,7 @@ const Skills = () => {
                     }
                 </ol>
             </div>
+            </RootLayoutAnimated>
         </section>
     );
 };

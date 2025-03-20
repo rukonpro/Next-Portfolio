@@ -1,10 +1,13 @@
 import Image from "next/image";
 import ProfileImage from "@/public/images/rukon_cover_photo_2.jpg";
+import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
 const About = () => {
     return (
         <section id="about" className='relative bg-[#121837] px-5 py-28'>
             <div className="relative z-10">
+
+                <RootLayoutAnimated>
                 <div className='max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-10 items-center'>
                         <Image
                             data-aos="fade-up"
@@ -60,6 +63,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+                </RootLayoutAnimated>
             </div>
             <div className="absolute inset-0   blur-[150px]   radial-gradient"></div>
         </section>

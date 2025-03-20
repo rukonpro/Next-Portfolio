@@ -3,6 +3,7 @@ import Navigation from "@/app/components/navigation/navigation";
 import PortfolioMapping from "@/app/components/portfolios/portfolioMapping";
 import BackButton from "@/app/components/backButton/backButton";
 import Footer from "@/app/components/footer/footer";
+import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
 export async function generateMetadata() {
     return {
@@ -40,12 +41,12 @@ export async function generateMetadata() {
       themeColor: '#382e6b',
     };
   }
-  
+
 const Portfolios = () => {
     return (
         <div className=" bg-[#0e0e36] min-h-screen overflow-hidden  relative ">
             <Navigation/>
-
+            <RootLayoutAnimated>
             <div className=" z-10 max-w-[1200px] mx-auto px-5   py-20">
                 <div className="flex justify-between items-center py-3"
                      data-aos="fade-up"
@@ -65,9 +66,7 @@ const Portfolios = () => {
                 </div>
             </div>
 
-{/*
-            <div className="absolute custom-animate-pulse inset-0 blur-[118px] radial-gradient"></div>
-*/}
+            </RootLayoutAnimated>
 
             <Footer/>
 

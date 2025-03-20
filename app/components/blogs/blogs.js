@@ -2,6 +2,7 @@ import BlogCard from "@/app/components/blogs/BlogCard";
 import baseURL from "@/app/utils/baseURL/baseURL";
 import axios from "axios";
 import { Suspense } from "react";
+import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
 
 const Blogs = async () => {
@@ -26,6 +27,8 @@ const Blogs = async () => {
     return (
         <section id="blogs" className="relative  blogs-bg  bg-slate-800  overflow-x-hidden ">
             <div className="backdrop-blur-3xl px-5 py-28">
+
+                <RootLayoutAnimated>
                 <article
                     className="relative  max-w-[1200px]  mx-auto z-10 flex-none md:flex justify-around items-center  ">
                     <div >
@@ -109,6 +112,7 @@ const Blogs = async () => {
                         </div>
                     </div>
                 </article>
+                </RootLayoutAnimated>
             </div>
         </section>
     );

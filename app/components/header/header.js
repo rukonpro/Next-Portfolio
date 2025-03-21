@@ -3,8 +3,9 @@ import FollowUs from "@/app/components/followUs/followUs";
 import Slider from "@/app/components/slider/slider";
 import { chewy } from "@/app/utils/fonts/fonts";
 import ScrollingButton from "@/app/components/scroolButton/scroolButton";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Navigation from "@/app/components/navigation/navigation";
 
 const Header = () => {
     const headerRef = useRef(null);
@@ -63,8 +64,9 @@ const Header = () => {
             // style={{backgroundColor:"rgba(41, 5, 58, 0.7)"}}
             className="relative "
         >
+            <Navigation />
             <div className="flex items-center max-w-[1200px] mx-auto px-5 py-24">
-                <div className="relative z-10">
+                <div ref={sliderRef} className="relative z-10">
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 items-center">
                         <div>
                             <div>
@@ -106,7 +108,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="flex justify-center lg:justify-end">
-                            <div ref={sliderRef}>
+                            <div >
                                 <Slider />
                             </div>
                         </div>
@@ -122,7 +124,7 @@ const Header = () => {
                         background:
                             "linear-gradient(106.89deg, rgb(136, 0, 213) 15.73%, rgba(113, 14, 233, 0.41) 15.74%, rgba(209, 121, 249, 0.26) 56.49%, rgb(229, 70, 70) 115.91%)",
                     }}
-                ></div>
+                />
             </div>
         </header>
     );

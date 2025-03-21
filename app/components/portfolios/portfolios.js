@@ -9,8 +9,11 @@ const Portfolios = () => {
             id="portfolios"
             className="relative   py-28 px-5">
             <div
-                className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-[357px] blur-[1000px] sm:max-w-md md:max-w-lg"
-                style={{background: "linear-gradient(106.89deg, rgba(141, 76, 206, 0.11) 15.73%, rgb(165, 14, 233) 15.74%, rgba(255, 0, 0, 0.26) 56.49%, rgba(234, 51, 214, 0.4) 115.91%)"}}/>
+                className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-full md:h-[357px] blur-[1000px] sm:max-w-md md:max-w-lg"
+                style={{
+                    background: "linear-gradient(106.89deg, rgb(71, 0, 81) 15.73%, rgba(113, 14, 233, 0.41) 15.74%, rgba(209, 121, 249, 0.26) 56.49%, rgb(229, 70, 70) 115.91%",
+                }
+            }/>
 
             <div className="relative z-10 max-w-[1200px] mx-auto">
                 <div className="flex justify-center">

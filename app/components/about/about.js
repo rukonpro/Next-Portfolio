@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProfileImage from "@/public/images/rukon_cover_photo_2.jpg";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
+import React from "react";
 
 const About = () => {
     return (
@@ -65,7 +66,13 @@ const About = () => {
                 </div>
                 </RootLayoutAnimated>
             </div>
-            <div className="absolute inset-0   blur-[150px]   radial-gradient"></div>
+            <div
+                className="absolute custom-animate-pulse inset-0 m-auto    blur-[118px] h-full md:h-[500px] max-w-xs sm:max-w-md md:max-w-[1200px]"
+                style={{
+                    background:
+                        "linear-gradient(106.89deg, rgb(71, 0, 81) 15.73%, rgba(113, 14, 233, 0.41) 15.74%, rgba(209, 121, 249, 0.26) 56.49%, rgb(229, 70, 70) 115.91%)",
+                }}
+            />
         </section>
     );
 };

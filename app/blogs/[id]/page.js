@@ -13,7 +13,7 @@ const fetchBlog = async (id) => {
         return response?.data;
 
     } catch (error) {
-        
+
     }
 }
 
@@ -66,9 +66,18 @@ const BlogDetails = async ({ params }) => {
 
 
     return (
-        <article>
+        <article className="relative ">
+
+            <div
+            className=" custom-animate-pulse inset-0 m-auto max-w-xs h-[500px] blur-[118px] sm:max-w-md md:max-w-lg fixed"
+            style={{
+                background:
+                    "linear-gradient(106.89deg, rgb(136, 0, 213) 15.73%, rgba(113, 14, 233, 0.41) 15.74%, rgba(209, 121, 249, 0.26) 56.49%, rgb(229, 70, 70) 115.91%)",
+            }}
+        ></div>
+
             <Navigation />
-            <div className="relative  bg-[#0e0e36]     overflow-x-hidden  pt-28 ">
+            <div className="relative    overflow-x-hidden  pt-28 ">
                 <div className="max-w-[800px] mx-auto px-5 text-white">
                     {
                         blog &&

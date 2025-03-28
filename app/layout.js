@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning={isDev}>
       <body className={chewy.className} >
-        <main className="!cursor-none bg-black w-screen overflow-x-hidden>
+        <main className="!cursor-none bg-black w-screen overflow-x-hidden">
           <CustomCursor/>
           <AppSessionProvider>
 

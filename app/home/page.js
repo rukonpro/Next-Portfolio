@@ -39,6 +39,7 @@ export default function Home() {
             <Suspense fallback={<p>Loading...</p>}>
                 <Services />
             </Suspense>
+<div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-[#470051] via-[#710EE9] to-transparent blur-3xl opacity-70"></div>
             <Suspense fallback={<p>Loading...</p>}>
                 <Portfolios />
             </Suspense>

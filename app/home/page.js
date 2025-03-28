@@ -36,6 +36,9 @@ export default function Home() {
             <Suspense fallback={<p>Loading...</p>}>
                 <Skills />
             </Suspense>
+
+<div className="relative">
+<div className="relative z-10">
             <Suspense fallback={<p>Loading...</p>}>
                 <Services />
             </Suspense>
@@ -43,6 +46,8 @@ export default function Home() {
             <Suspense fallback={<p>Loading...</p>}>
                 <Portfolios />
             </Suspense>
+</div>
+</div>
             <Suspense fallback={<BlogSkeleton/>}>
                 <Blogs />
             </Suspense>

@@ -37,7 +37,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url("../public/images/mountain-with-purple-moon-background.jpg");
+  background-image: url('../public/images/mountain-with-purple-moon-background.jpg');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;

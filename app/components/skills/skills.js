@@ -7,13 +7,7 @@ const Skills = () => {
 
     return (
         <section id="skills"
-                 className=" overflow-hidden relative flex justify-center items-center py-28 px-5">
-            <div
-                className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-full md:h-[357px] blur-[1000px] sm:max-w-md md:max-w-lg"
-                style={{
-                    background: "linear-gradient(106.89deg, rgb(71, 0, 81) 15.73%, rgba(113, 14, 233, 0.41) 15.74%, rgba(209, 121, 249, 0.26) 56.49%, rgb(229, 70, 70) 115.91%",
-                }
-                }/>
+                 className=" skills-bg  relative flex justify-center items-center py-28 px-5">
 
             <RootLayoutAnimated>
             <div className="max-w-[1200px] relative z-10 mx-auto">

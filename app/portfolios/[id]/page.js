@@ -16,7 +16,7 @@ const Page = async ({ params }) => {
         description: portfolio.description,
     }
     return (
-        <section className="text-white bg-gradient-to-tl to-[#060212] via-[#021a30] from-[#410b42] bg-fixed">
+        <section className="portfolio-bg text-white bg-gradient-to-tl to-[#060212] via-[#021a30] from-[#410b42] bg-fixed">
             <Navigation />
             <div className="max-w-[1200px] mx-auto py-28 px-5">
                 <Portfolio data={portfolio} />

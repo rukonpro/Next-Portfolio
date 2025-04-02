@@ -61,7 +61,7 @@ const Footer = () => {
     }, [isInView]);
 
     return (
-        <footer id="lazy-footer" className="relative pt-32 overflow-hidden ">
+        <footer id="lazy-footer" className="relative pt-32 overflow-hidden footer-bg ">
             {/* Background Image Animation */}
             <div ref={bgRef} className="animatedFooterBgImage" />
 

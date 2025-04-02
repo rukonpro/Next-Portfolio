@@ -21,11 +21,10 @@ const Counter = () => {
         },
     ]
     return (
-        <div className="relative  overflow-hidden  ">
-            <div className="absolute  inset-0  blur-[500px]"/>
-           <div className="flex justify-center">
+        <div className="counter-bg">
+           <div className="flex justify-center ">
                <Image
-                   src={DevelopImage} alt="rukon pro develop"
+                   src={DevelopImage} alt="rukon pro developer"
                    placeholder="blur"
                    className="absolute size-11/12 w-full "/>
            </div>

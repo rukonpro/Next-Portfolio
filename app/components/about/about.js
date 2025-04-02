@@ -5,7 +5,7 @@ import React from "react";
 
 const About = () => {
     return (
-        <section id="about" className='relative  px-5 py-28'>
+        <section id="about" className='relative  px-5 py-28 about-bg'>
             <div className="relative z-10">
 
                 <RootLayoutAnimated>
@@ -66,13 +66,7 @@ const About = () => {
                 </div>
                 </RootLayoutAnimated>
             </div>
-            <div
-                className="absolute custom-animate-pulse inset-0 m-auto    blur-[118px] h-full md:h-[500px] max-w-xs sm:max-w-md md:max-w-[1200px]"
-                style={{
-                    background:
-                        "linear-gradient(106.89deg, rgb(71, 0, 81) 15.73%, rgba(113, 14, 233, 0.41) 15.74%, rgba(209, 121, 249, 0.26) 56.49%, rgb(229, 70, 70) 115.91%)",
-                }}
-            />
+
         </section>
     );
 };

@@ -12,12 +12,14 @@ import MobileMenu from "@/app/components/navigation/MobileMenu";
 import DesktopMenu from "@/app/components/navigation/DesktopMenu";
 import Logo from "@/public/images/rukonpro_logo.png";
 import Dropdown from '../ProfileDropdown/dropdown';
+import {usePathname} from "next/navigation";
 
 export const loginModal = () => document.getElementById("login").showModal();
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const pathname = usePathname();
 
     const menuHandler = () => setMenuOpen(value => !value);
 
@@ -46,7 +48,7 @@ const Navigation = () => {
 
 
                             <Link
-                                href="/#home"
+                                href="/home"
                                 passHref={true}
                                 legacyBehavior={true}
                             >
@@ -66,7 +68,7 @@ const Navigation = () => {
                         <li>
                             <ul className='flex items-start gap-3'>
                                 <li className={`hidden lg:block }`}>
-                                    <DesktopMenu />
+                                    <DesktopMenu pathname={pathname}/>
                                 </li>
 
                                 <li className="">

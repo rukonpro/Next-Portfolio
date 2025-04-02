@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
 
 
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning={isDev}>
+    <html lang="en" className="scroll-smooth scroll-" suppressHydrationWarning={isDev}>
       <body className={chewy.className} >
         <main className="!cursor-none bg-black w-screen overflow-x-hidden">
           <CustomCursor/>

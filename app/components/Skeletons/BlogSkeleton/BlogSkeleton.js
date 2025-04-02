@@ -1,29 +1,43 @@
-import React from 'react';
-import BlogCardSkeleton from "@/app/components/Skeletons/BlogSkeleton/BlogCardSkeleton";
+"use client";
+import React from "react";
 
-const BlogSkeleton = () => {
-
-
+const BlogsSkeleton = () => {
     return (
-        <div className="max-w-[1200px] mx-auto py-28 px-5">
-            <div className="flex justify-center">
-                <div className="flex items-center gap-3">
-                    <div className="h-16 w-16 bg-slate-200 rounded-full animate-pulse"></div>
-                    <div className="w-28 h-10 bg-slate-200 animate-pulse"></div>
-                </div>
+        <section id="blogs" className="relative blogs-bg">
+            <div className="px-5 py-28">
+                <article className="relative max-w-[1200px] mx-auto z-10 flex-none md:flex justify-around items-center">
+                    <div>
+                        {/* Heading Skeleton */}
+                        <div className="flex justify-center relative">
+                            <div className="w-[55px] h-[55px] bg-gray-700 rounded-full animate-pulse absolute right-16 top-2" />
+                            <div className="h-8 md:h-12 w-32 bg-gray-700 rounded animate-pulse" />
+                        </div>
+
+                        {/* Description Skeleton */}
+                        <div className="pt-16 mx-auto text-justify space-y-6">
+                            {[...Array(4)].map((_, index) => (
+                                <div key={index} className="space-y-3">
+                                    <div className="h-4 md:h-5 w-full bg-gray-700 rounded animate-pulse" />
+                                    <div className="h-4 md:h-5 w-5/6 bg-gray-700 rounded animate-pulse" />
+                                    <div className="h-4 md:h-5 w-3/4 bg-gray-700 rounded animate-pulse" />
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Blog Cards Skeleton */}
+                        <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 gap-y-16 pt-28">
+                            {[...Array(4)].map((_, index) => (
+                                <div
+                                    key={index}
+                                    className="h-64 md:h-72 w-full bg-gray-700 rounded-xl animate-pulse"
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </article>
             </div>
-
-            <div className="pt-20">
-                <div className="bg-slate-200 h-16 w-11/12 animate-pulse"></div>
-                <div className="bg-slate-200 h-16 w-10/12 animate-pulse mt-10"></div>
-                <div className="bg-slate-200 h-16  animate-pulse mt-10"></div>
-                <div className="bg-slate-200 h-16 w-11/12 animate-pulse mt-10"></div>
-            </div>
-
-        <BlogCardSkeleton/>
-
-        </div>
+        </section>
     );
 };
 
-export default BlogSkeleton;
+export default BlogsSkeleton;

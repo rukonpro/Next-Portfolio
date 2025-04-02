@@ -66,7 +66,7 @@ const BlogDetails = async ({ params }) => {
 
 
     return (
-        <article className="relative ">
+        <article className="relative blogs-bg">
 
             <div
             className=" custom-animate-pulse inset-0 m-auto max-w-xs h-[500px] blur-[118px] sm:max-w-md md:max-w-lg fixed"

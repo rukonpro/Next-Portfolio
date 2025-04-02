@@ -20,18 +20,12 @@ const Certifications = () => {
     };
     return (
         <div
-            className="py-28 relative "
+            className="py-28 certification-bg "
         >
-            <div className="absolute custom-animate-pulse inset-0 blur-[118px] "></div>
 
-            <div
-                className="absolute custom-animate-pulse  inset-0 m-auto  blur-[1000px] max-w-xs h-[357px]  sm:max-w-md md:max-w-xl"
-                style={{background: "linear-gradient(106.89deg, rgba(141, 76, 206, 0.11) 15.73%, rgb(165, 14, 233) 15.74%, rgba(255, 0, 0, 0.26) 56.49%, rgba(234, 51, 214, 0.4) 115.91%)"}}/>
             <div className="relative z-10 max-w-[1200px] mx-auto">
                 <div className="flex justify-center">
                     <div className="flex items-center relative">
-                        <div
-                            className="  w-[55px] h-[55px] bg-gradient-to-tl from-[#17113a] to-[#8907c0]  animate-spin rounded-full  customShadow"></div>
                         <h1
                             data-aos="fade-up"
                             data-aos-anchor-placement="bottom-bottom"

@@ -25,15 +25,9 @@ const Blogs = async () => {
 
 
     return (
-        <section id="blogs" className="relative    overflow-x-hidden ">
+        <section id="blogs" className="relative blogs-bg ">
 
-            <div
-                className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-full md:h-[357px] blur-[1000px] sm:max-w-md md:max-w-lg"
-                style={{
-                    background: "linear-gradient(106.89deg, rgb(71, 0, 81) 15.73%, rgba(113, 14, 233, 0.41) 15.74%, rgba(209, 121, 249, 0.26) 56.49%, rgb(229, 70, 70) 115.91%",
-                }
-                }/>
-            <div className="backdrop-blur-3xl px-5 py-28">
+            <div className=" px-5 py-28">
 
                 <RootLayoutAnimated>
                 <article

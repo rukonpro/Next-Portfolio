@@ -11,7 +11,7 @@ const Page = ({ params }) => {
     const skills = portfolioData?.skills?.find(data => data?.title === params?.id);
 
     return (
-        <div className="  min-h-screen overflow-hidden ">
+        <div className="skills-bg">
             <Navigation />
 
 

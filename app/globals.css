@@ -25,11 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-.headerBg{
+.headerBg {
   position: relative;
   z-index: 1;
 }
-.headerBg::before{
+.headerBg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -37,23 +37,24 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url('../public/images/mountain-with-purple-moon-background.jpg');
+  background-image: url("../public/images/mountain-with-purple-moon-background.jpg");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  filter: blur(300px);
+  filter: blur(5px);
 }
 
-.header-slider-container {  /* Or whatever className your Slider uses */
+.header-slider-container {
+  /* Or whatever className your Slider uses */
   position: relative;
   transform: translate(0, 0); /* Ensures transform works */
 }
 
-.counter-bg{
+.counter-bg {
   position: relative;
   z-index: 1;
 }
-.counter-bg::before{
+.counter-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -61,11 +62,15 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(318deg, rgba(107, 14, 219, 0.44) 4.75%, rgba(2, 104, 255, 0.22) 53.4%);
+  background: linear-gradient(
+    318deg,
+    rgba(107, 14, 219, 0.44) 4.75%,
+    rgba(2, 104, 255, 0.22) 53.4%
+  );
   background-size: cover;
   filter: blur(300px);
 }
-.counter-bg::after{
+.counter-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -77,12 +82,11 @@ body {
   background-size: cover;
   background-repeat: repeat;
 }
-.skills-bg{
+.skills-bg {
   position: relative;
   z-index: 1;
-
 }
-.skills-bg::before{
+.skills-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -90,11 +94,15 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(318deg, rgba(20, 15, 179, 0.4), rgba(30, 3, 39, 0.78));
+  background: linear-gradient(
+    318deg,
+    rgba(20, 15, 179, 0.4),
+    rgba(30, 3, 39, 0.78)
+  );
   background-size: cover;
   filter: blur(300px);
 }
-.skills-bg::after{
+.skills-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -106,12 +114,11 @@ body {
   background-repeat: repeat;
 }
 
-.services-bg{
+.services-bg {
   position: relative;
   z-index: 1;
-
 }
-.services-bg::before{
+.services-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -121,9 +128,8 @@ body {
   z-index: -1;
   background: linear-gradient(318deg, rgb(63, 0, 96), rgba(12, 19, 45, 0.8));
   filter: blur(300px);
-
 }
-.services-bg::after{
+.services-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -137,11 +143,11 @@ body {
   background-repeat: repeat;
 }
 
-.portfolio-bg{
+.portfolio-bg {
   position: relative;
   z-index: 1;
 }
-.portfolio-bg::before{
+.portfolio-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -149,10 +155,15 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(318deg, rgba(0, 164, 141, 0.38), rgba(41, 1, 79, 0.78));  background-size: cover;
+  background: linear-gradient(
+    318deg,
+    rgba(0, 164, 141, 0.38),
+    rgba(41, 1, 79, 0.78)
+  );
+  background-size: cover;
   filter: blur(300px);
 }
-.portfolio-bg::after{
+.portfolio-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -161,13 +172,12 @@ body {
   height: 100%;
   z-index: -1;
   background-image: url("../public/images/playground-bg.png");
-
 }
-.blogs-bg{
+.blogs-bg {
   position: relative;
   z-index: 1;
 }
-.blogs-bg::before{
+.blogs-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -175,12 +185,16 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(318deg, rgba(66, 0, 62, 0.31), rgba(0, 42, 123, 0.57));
+  background: linear-gradient(
+    318deg,
+    rgba(66, 0, 62, 0.31),
+    rgba(0, 42, 123, 0.57)
+  );
   background-size: cover;
   filter: blur(300px);
 }
 
-.blogs-bg::after{
+.blogs-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -190,12 +204,12 @@ body {
   z-index: -1;
   background-image: url("../public/images/playground-bg.png");
 }
-.certification-bg{
+.certification-bg {
   position: relative;
   z-index: 1;
 }
 
-.certification-bg::before{
+.certification-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -203,39 +217,46 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(318deg, rgba(124, 72, 1, 0.4), rgba(41, 1, 79, 0.78));
-  background-size: cover;
-  filter: blur(300px);
-
-}
-.certification-bg::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url("../public/images/playground-bg.png");
-}
-
-.pricing-bg{
-  position: relative;
-  z-index: 1;
-}
-.pricing-bg::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(318deg, rgba(124, 72, 1, 0.4), rgba(41, 1, 79, 0.78));
+  background: linear-gradient(
+    318deg,
+    rgba(124, 72, 1, 0.4),
+    rgba(41, 1, 79, 0.78)
+  );
   background-size: cover;
   filter: blur(300px);
 }
-.pricing-bg::after{
+.certification-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../public/images/playground-bg.png");
+}
+
+.pricing-bg {
+  position: relative;
+  z-index: 1;
+}
+.pricing-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    318deg,
+    rgba(124, 72, 1, 0.4),
+    rgba(41, 1, 79, 0.78)
+  );
+  background-size: cover;
+  filter: blur(300px);
+}
+.pricing-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -245,11 +266,11 @@ body {
   z-index: 1;
   background-image: url("../public/images/playground-bg.png");
 }
-.contact-bg{
+.contact-bg {
   position: relative;
   z-index: 1;
 }
-.contact-bg::before{
+.contact-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -257,12 +278,15 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(318deg, rgba(90, 0, 164, 0.14), rgba(11, 1, 79, 0.78));
+  background: linear-gradient(
+    318deg,
+    rgba(41, 3, 55, 0.77), rgba(23, 1, 128, 0.44)
+  );
   background-size: cover;
   filter: blur(300px);
   overflow: hidden;
 }
-.contact-bg::after{
+.contact-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -272,11 +296,11 @@ body {
   z-index: -1;
   background-image: url("../public/images/playground-bg.png");
 }
-.footer-bg{
+.footer-bg {
   position: relative;
   z-index: 1;
 }
-.footer-bg::before{
+.footer-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -290,7 +314,12 @@ body {
 }
 @keyframes example {
   0% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(56, 3, 37), rgba(255, 47, 0, 0.529) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(56, 3, 37),
+      rgba(255, 47, 0, 0.529) 100%
+    );
     transition: 10s;
     rotate: 15deg;
     transform: rotateX(15deg);
@@ -298,7 +327,12 @@ body {
   }
 
   10% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(255, 119, 0) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(86, 31, 4) 35%,
+      rgb(255, 119, 0) 100%
+    );
     transition: 10s;
     rotate: 30deg;
     transform: rotateY(30deg);
@@ -306,7 +340,12 @@ body {
   }
 
   20% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(255, 174, 0) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(86, 31, 4) 35%,
+      rgb(255, 174, 0) 100%
+    );
     transition: 10s;
     rotate: 45deg;
     transform: rotateZ(45deg);
@@ -314,7 +353,12 @@ body {
   }
 
   30% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(166, 0, 255) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(86, 31, 4) 35%,
+      rgb(166, 0, 255) 100%
+    );
     transition: 10s;
     rotate: 65deg;
     transform: rotateX(65deg);
@@ -322,7 +366,12 @@ body {
   }
 
   40% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(0, 166, 8) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(86, 31, 4) 35%,
+      rgb(0, 166, 8) 100%
+    );
     transition: 10s;
     rotate: 85deg;
     transform: rotateY(85deg);
@@ -330,7 +379,12 @@ body {
   }
 
   50% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(32, 32, 94) 35%, rgb(0, 242, 255) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(32, 32, 94) 35%,
+      rgb(0, 242, 255) 100%
+    );
     transition: 10s;
     rotate: 100deg;
     transform: rotateZ(100deg);
@@ -338,7 +392,12 @@ body {
   }
 
   60% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(0, 170, 255) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(86, 31, 4) 35%,
+      rgb(0, 170, 255) 100%
+    );
     transition: 10s;
     rotate: 115deg;
     transform: rotateY(115deg);
@@ -346,7 +405,12 @@ body {
   }
 
   70% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(123, 0, 255) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(86, 31, 4) 35%,
+      rgb(123, 0, 255) 100%
+    );
     transition: 10s;
     rotate: 130deg;
     transform: rotateZ(130deg);
@@ -354,7 +418,12 @@ body {
   }
 
   80% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(0, 4, 255) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(86, 31, 4) 35%,
+      rgb(0, 4, 255) 100%
+    );
     transition: 10s;
     rotate: 145deg;
     transform: rotateX(145deg);
@@ -362,7 +431,12 @@ body {
   }
 
   90% {
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(86, 31, 4) 35%, rgb(204, 0, 255) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(86, 31, 4) 35%,
+      rgb(204, 0, 255) 100%
+    );
     transition: 10s;
     rotate: 165deg;
     transform: rotateY(165deg);
@@ -370,8 +444,12 @@ body {
   }
 
   100% {
-
-    background-image: linear-gradient(100deg, rgb(10, 0, 201) 0%, rgb(0, 0, 0) 35%, rgb(255, 0, 123) 100%);
+    background-image: linear-gradient(
+      100deg,
+      rgb(10, 0, 201) 0%,
+      rgb(0, 0, 0) 35%,
+      rgb(255, 0, 123) 100%
+    );
     transition: 10s;
     rotate: 190deg;
     transform: rotateZ(190deg);
@@ -381,7 +459,12 @@ body {
 }
 
 .bgGradient {
-  background-image: linear-gradient(100deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgb(255, 0, 195) 100%);
+  background-image: linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(255, 0, 195) 100%
+  );
   animation-name: example;
   animation-duration: 10s;
   transition: 5s;
@@ -391,8 +474,6 @@ body {
   left: -100px;
   position: relative;
 }
-
-
 
 .animated-button {
   display: inline-block;
@@ -409,7 +490,12 @@ body {
   width: 100%;
   height: 2px;
 
-  background-image: linear-gradient(100deg, rgb(77, 1, 171) 0%, rgb(14, 232, 239) 35%, rgb(101, 9, 215) 100%);
+  background-image: linear-gradient(
+    100deg,
+    rgb(77, 1, 171) 0%,
+    rgb(14, 232, 239) 35%,
+    rgb(101, 9, 215) 100%
+  );
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
@@ -434,19 +520,21 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-image: linear-gradient(100deg, rgb(77, 1, 171) 0%, rgb(14, 232, 239) 35%, rgb(101, 9, 215) 100%);
+  background-image: linear-gradient(
+    100deg,
+    rgb(77, 1, 171) 0%,
+    rgb(14, 232, 239) 35%,
+    rgb(101, 9, 215) 100%
+  );
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-
-
-
-.about-bg{
-  position:relative;
+.about-bg {
+  position: relative;
   z-index: 1;
 }
-.about-bg::before{
+.about-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -454,10 +542,14 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(318deg, rgba(13, 111, 149, 0.6) 4.75%, rgba(151, 0, 200, 0.17) 53.4%);
+  background: linear-gradient(
+    318deg,
+    rgba(13, 111, 149, 0.6) 4.75%,
+    rgba(151, 0, 200, 0.17) 53.4%
+  );
   filter: blur(300px);
 }
-.about-bg::after{
+.about-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -467,72 +559,80 @@ body {
   z-index: -1;
   background-image: url("../public/images/playground-bg.png");
 }
-.mouseButton{
-  animation: animatedMouse 5s steps(5) ;
+.mouseButton {
+  animation: animatedMouse 5s steps(5);
   animation-duration: 5s;
   animation-direction: alternate-reverse;
 }
 
 @keyframes animatedMouse {
-  0%   {
+  0% {
     transform: rotate(45deg);
     transition: 5s;
   }
-  25%  {
+  25% {
     transform: rotate(-45deg);
     transition: 5s;
   }
-  50%  {
-    transform: rotate(45deg)
+  50% {
+    transform: rotate(45deg);
   }
   75% {
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
   }
   100% {
-    transform: rotate(45deg)
+    transform: rotate(45deg);
   }
 }
 
-
-
-.radial-gradient{
-  background: radial-gradient(closest-corner, rgba(135, 0, 252, 0.55) 15.73%, rgba(221, 0, 255, 0.21) 15.74%, rgba(10, 30, 108, 0.42) 56.49%, rgb(24, 10, 52) 115.91%);
-  background: -moz-radial-gradient(circle at center, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%,rgba(79, 70, 229, 0.4) 115.91%);
+.radial-gradient {
+  background: radial-gradient(
+    closest-corner,
+    rgba(135, 0, 252, 0.55) 15.73%,
+    rgba(221, 0, 255, 0.21) 15.74%,
+    rgba(10, 30, 108, 0.42) 56.49%,
+    rgb(24, 10, 52) 115.91%
+  );
+  background: -moz-radial-gradient(
+    circle at center,
+    rgba(192, 132, 252, 0.11) 15.73%,
+    rgba(14, 165, 233, 0.41) 15.74%,
+    rgba(232, 121, 249, 0.26) 56.49%,
+    rgba(79, 70, 229, 0.4) 115.91%
+  );
   background-position-y: center;
   background-attachment: fixed;
 }
-.skillsCard{
+.skillsCard {
   transition: 0.5s ease-in-out;
 }
-.skillsCard:hover{
-  box-shadow:-3px 3px 3px 3px #df00ff14;
-  transform: rotate3d(45,50,5,-8deg) scale(1.1) scaleZ(-1.1);
+.skillsCard:hover {
+  box-shadow: -3px 3px 3px 3px #df00ff14;
+  transform: rotate3d(45, 50, 5, -8deg) scale(1.1) scaleZ(-1.1);
   transition: 0.5s ease-in;
 }
 
-
-.portfolioCardAnimation{
+.portfolioCardAnimation {
   transition-duration: 0.5s;
   position: relative;
 }
-.portfolioCardImageContainer{
+.portfolioCardImageContainer {
   position: relative;
   perspective: 400px;
   transition-duration: 0.5s;
 }
 
-
-.portfolioCardContainer:hover .portfolioCardAnimation{
+.portfolioCardContainer:hover .portfolioCardAnimation {
   transform-style: preserve-3d;
   transform: rotateY(-60deg) scaleX(1.1);
   transition-duration: 0.5s;
 }
 
-.portfolioCardContainer  .arrowIcon{
+.portfolioCardContainer .arrowIcon {
   right: 50px;
   transition: 0.5s ease-in;
 }
-.portfolioCardContainer:hover .arrowIcon{
+.portfolioCardContainer:hover .arrowIcon {
   right: 0;
   transition: 0.5s ease-in;
 }
@@ -542,15 +642,9 @@ body {
 
 /*  background-size: contain;*/
 
-
-
 /*}*/
 
-
-
-
 /*logo ---------------------------*/
-
 
 .rukonproLogo {
   position: relative;

@@ -1,32 +1,32 @@
-import './globals.css'
-import 'aos/dist/aos.css';
-import 'react-quill/dist/quill.snow.css';
-import { chewy } from "@/app/utils/fonts/fonts";
-import { Analytics } from "@vercel/analytics/react"
-import AppSessionProvider from './Context/AppSessionProvider';
+import "./globals.css";
+import "aos/dist/aos.css";
+import "react-quill/dist/quill.snow.css";
+import { chewy,hurricane,inter,lemon } from "@/app/utils/fonts/fonts";
+import { Analytics } from "@vercel/analytics/react";
+import AppSessionProvider from "./Context/AppSessionProvider";
 import CustomCursor from "@/app/components/customCursor/CustomCursor";
 export const metadata = {
-  title: 'MERN Stack Dev. - Rukon.Pro',
-  description: 'Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.',
-}
+  title: "MERN Stack Dev. - Rukon.Pro",
+  description:
+    "Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.",
+};
 
 export default function RootLayout({ children }) {
-  const isDev = process.env.NODE_ENV === 'development';
-
+  const isDev = process.env.NODE_ENV === "development";
 
   return (
-    <html lang="en" className="scroll-smooth scroll-" suppressHydrationWarning={isDev}>
-      <body className={chewy.className} >
+    <html
+      lang="en"
+      className="scroll-smooth scroll-"
+      suppressHydrationWarning={isDev}
+    >
+      <body className={inter.className}>
         <main className="!cursor-none bg-black w-screen overflow-x-hidden">
-          <CustomCursor/>
-          <AppSessionProvider>
-
-            {children}
-
-          </AppSessionProvider>
+          <CustomCursor />
+          <AppSessionProvider>{children}</AppSessionProvider>
           <Analytics />
         </main>
       </body>
     </html>
-  )
+  );
 }

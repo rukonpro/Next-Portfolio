@@ -23,7 +23,7 @@ const Certifications = () => {
             className="py-28 certification-bg "
         >
 
-            <div className="relative z-10 max-w-[1200px] mx-auto">
+            <div className="relative  max-w-[1200px] mx-auto z-10">
                 <div className="flex justify-center">
                     <div className="flex items-center relative">
                         <h1
@@ -72,8 +72,9 @@ const Certifications = () => {
                         </ol>
                     </Marquee>
                 </div>
-                <Certificate isOpen={isOpen} closeModal={closeModal} id={id}/>
+
             </div>
+            <Certificate isOpen={isOpen} closeModal={closeModal} id={id}/>
         </div>
     );
 };

@@ -11,19 +11,12 @@ const image=portfolioData?.certifications?.find(data=>data?.id===id);
         <Modal isOpen={isOpen} closeModal={closeModal}>
             {
                 image?.image &&
-                <div >
-                    <div className="flex justify-between gap-4">
-                        <h1 className=" pt-5 pb-2  text-xl text-white">{image?.title}</h1>
-                        <button type="button"
-                                onClick={closeModal}
-                                className="text-red-500 text-xl">
-                            <Image height={24} src={CloseIcon} alt="close icon" loading="lazy" />
-                        </button>
+
+                    <div>
+                        <h1 className="  pb-2  text-xl text-white pt-7">{image?.title}</h1>
+                        <Image src={image?.image} alt={image?.title}   loading="lazy" className="object-contain " />
                     </div>
-                    <div className="max-w-md">
-                        <Image src={image?.image} alt={image?.title}  loading="lazy" className="object-contain w-full h-full"/>
-                    </div>
-                </div>
+
             }
         </Modal>
     );

@@ -3,7 +3,7 @@ import { signIn, useSession } from 'next-auth/react';
 
 import React, { useState } from "react";
 
-const Login = ({ setIsLogin, setIsDialogOpen }) => {
+const Login = ({ setIsLogin, setIsModalOpen }) => {
   const [isPasswordHidden, setPasswordHidden] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -26,7 +26,7 @@ const Login = ({ setIsLogin, setIsDialogOpen }) => {
     if (result.error) {
       setError(result.error);
     } else {
-      setIsDialogOpen(false)
+      setIsModalOpen(false)
     }
   };
 
@@ -35,22 +35,22 @@ const Login = ({ setIsLogin, setIsDialogOpen }) => {
 
   return (
     <section
-      className=" relative  overflow-hidden bg-gradient-to-tl to-[#5e0058e5] via-[#031220] from-[#370029]  py-10  "
+      className=" relative  overflow-hidden  py-10  "
     >
       <div className="relative  z-10 container mx-auto  px-3">
         <div className="flex ">
-          <div className="flex px-8 ">
+          <div className="flex ">
             <div className="relative -inset-3   w-[55px] h-[55px] bg-gradient-to-r from-[#17113a] to-[#8907c0]  animate-spin rounded-full customShadow" />
-            <h1 className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text z-10 md:text-5xl text-2xl font-bold  absolute">
+            <h1 className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text z-10 md:text-3xl text-2xl font-bold  absolute">
               Login
             </h1>
           </div>
         </div>
 
-        <div className="py-10 max-w-72 mx-auto">
+        <div className="py-10  mx-auto">
           {error && <p className='text-red-500'>{error}</p>}
           <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 md:gap-5 gap-y-3 gap-x-1  px-3  border border-purple-700 rounded-2xl    py-5">
+            <div className="grid grid-cols-2 md:gap-5 gap-y-3 gap-x-1 ">
               <div className=" col-span-2 ">
                 <label className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text text-[16px] font-bold">
                   Email address:

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
 
-const Registration = ({ setIsLogin }) => {
+const Registration = ({ setIsModalOpen,setIsLogin,isLogin }) => {
     const [isPasswordHidden, setPasswordHidden] = useState(true)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -19,6 +19,7 @@ const Registration = ({ setIsLogin }) => {
         try {
             await axios.post('/api/auth/register', { email, password, name: fname + " " + lname });
             setMessage("Register successfully")
+            setIsModalOpen(false);
             // router.push('/auth/signin');
         } catch (error) {
             setError(error.response?.data?.error || 'An unexpected error occurred.');
@@ -27,25 +28,25 @@ const Registration = ({ setIsLogin }) => {
 
     return (
 
-        <section id="contact" className=' relative  overflow-hidden bg-gradient-to-tl to-[#13053d] via-[#031220] from-[#250725]  py-10  '>
+        <section id="contact" >
 
             <div className='relative  z-10 container mx-auto  px-3'>
 
                 <div className="flex ">
-                    <div className="flex px-8 ">
+                    <div className="flex  ">
                         <div className="relative -inset-3   w-[55px] h-[55px] bg-gradient-to-r from-[#17113a] to-[#8907c0]  animate-spin rounded-full customShadow" />
-                        <h1 className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text z-10 md:text-5xl text-2xl font-bold  absolute">Registration</h1>
+                        <h1 className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text z-10 md:text-3xl text-2xl font-bold  absolute">Registration</h1>
                     </div>
                 </div>
 
 
 
-                <div className='py-10 max-w-72 mx-auto'>
+                <div className='py-10 mx-auto'>
                     {error && <p className="text-red-500">{error}</p>}
                     {message && <p className="text-green-500">{message}</p>}
                     <form onSubmit={handleSubmit}>
 
-                        <div className='grid grid-cols-2 md:gap-5 gap-y-3 gap-x-1  px-3   border border-purple-700  rounded-lg py-5'>
+                        <div className='grid grid-cols-2 md:gap-5 gap-y-3 gap-x-1 '>
 
 
                             <div className=" col-span-1 ">

@@ -5,7 +5,7 @@ import IconImage from "@/public/images/BlockChain.svg";
 
 const FollowUs = ({ position }) => {
   return (
-    <ol className={`flex flex-wrap justify-${position} gap-2 pt-5`}>
+    <ol className={`flex flex-wrap justify-${position} gap-2`}>
       {portfolioData?.followUs?.map((data, index) => {
         return (
           <li key={index}>
@@ -26,8 +26,8 @@ const FollowUs = ({ position }) => {
               >
                 <Image
                   src={data?.icon}
-                  height={25}
-                  width={25}
+                  height={20}
+                  width={20}
                   alt={data.title}
                   loading="lazy"
                 />

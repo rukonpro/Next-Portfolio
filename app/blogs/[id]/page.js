@@ -77,7 +77,7 @@ const BlogDetails = async ({ params }) => {
         ></div>
 
             <Navigation />
-            <div className="relative    overflow-x-hidden  pt-28 ">
+            <div className="relative    overflow-x-hidden  pt-28 z-10">
                 <div className="max-w-[800px] mx-auto px-5 text-white">
                     {
                         blog &&

@@ -27,11 +27,9 @@ const Blogs = async () => {
     return (
         <section id="blogs" className="relative blogs-bg ">
 
-            <div className=" px-5 py-28">
-
-                <RootLayoutAnimated>
-                <article
-                    className="relative  max-w-[1200px]  mx-auto z-10 flex-none md:flex justify-around items-center  ">
+                <div
+                    className="  px-5 py-28 relative  max-w-[1200px]  mx-auto z-10 flex-none md:flex justify-around items-center  ">
+                    <RootLayoutAnimated>
                     <div >
                         <div className="flex justify-center">
                             <div
@@ -112,9 +110,10 @@ const Blogs = async () => {
                             }
                         </div>
                     </div>
-                </article>
-                </RootLayoutAnimated>
-            </div>
+                    </RootLayoutAnimated>
+                </div>
+
+
         </section>
     );
 };

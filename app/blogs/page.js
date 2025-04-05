@@ -36,15 +36,17 @@ export const metadata = {
     themeColor: '#382e6b',
   };
 
-  
+
 const Blogs = () => {
     return (
         <section>
-            <Navigation/>
-               <Suspense fallback={<h1>Loading...</h1>}>
-                   <BlogsComponent/>
+
+                   <Navigation />
+                        <Suspense fallback={<h1>Loading...</h1>}>
+                               <BlogsComponent/>
+                        </Suspense>
                    <Footer/>
-               </Suspense>
+
         </section>
     );
 };

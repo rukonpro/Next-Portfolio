@@ -5,7 +5,7 @@ import Image from "next/image";
 const Portfolio = ({ data }) => {
     return (
         <div className="text-[#fccdff]">
-            <div className="flex justify-between pb-3">
+            <div className="flex justify-between pb-3 z-10">
                 <a href={data?.links?.liveLink?.link} aria-label={data?.title} target="_blank"
                    rel="noopener noreferrer">
                     <h1 className='text-lg font-semibold border-b border-purple-500 bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text '>{data?.title}</h1>

@@ -131,9 +131,6 @@ const MobileMenu = memo(({ pathname, isOpen, setMenuOpen, dropdown }) => {
                                 <div className="my-8 flex justify-center">{dropdown}</div>
                             </li>
                         </ul>
-
-
-
                     </div>
                 </div>
             </div>

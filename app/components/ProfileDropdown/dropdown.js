@@ -153,7 +153,7 @@ export default function Dropdown({ status, handleSignOut, setIsModalOpen }) {
                 <button
                     type="button"
                     aria-label="Login"
-                    className="bg-gradient-to-r from-[#5e2594ec] to-[#270257fd] px-5 py-1 rounded-lg animated-button tracking-[3px] text-[#fccdff]"
+                    className="bg-gradient-to-r from-[#5e2594ec] to-[#270257fd] px-5 py-1 rounded-lg animated-button tracking-[3px] text-[#fccdff] text-[16px] font-bold"
                     onClick={() => setIsModalOpen(true)}
                 >
           <span className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">

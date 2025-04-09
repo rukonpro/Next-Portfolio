@@ -13,9 +13,9 @@ const NotfoundPages= () => {
     return (
         <section
             onMouseMove={handleMovementChange}
-            className="relative py-28 bg-gray-900 h-screen    bg-no-repeat   bg-cover " style={{backgroundImage:`url("/images/rukon-pro-footer-images.png")`,backgroundPosition:`${movementX}px ${movementY}px`}}>
+            className=" relative py-28 bg-gray-900 h-screen    bg-no-repeat   bg-cover " style={{backgroundImage:`url("/images/rukon-pro-footer-images.png")`,backgroundPosition:`${movementX}px ${movementY}px`}}>
             <div
-                className="relative z-10 max-w-screen-xl mx-auto px-4 text-gray-300 justify-between gap-24 lg:flex md:px-8">
+                className=" relative z-10 max-w-screen-xl mx-auto px-4 text-gray-300 justify-between gap-24 lg:flex md:px-8">
                 <div className="max-w-lg mx-auto space-y-3 text-center">
                     <h3 className="text-orange-600 font-semibold">
                         404 Error

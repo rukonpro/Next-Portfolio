@@ -6,17 +6,17 @@ import Image from "next/image";
 import Certificate from "@/app/components/certifications/Certificate";
 
 const Certifications = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [id,setId] = useState(null);
     const openModal =async (id) => {
        await setId(id)
-       await setIsOpen(true);
+       await setIsModalOpen(true);
 
     };
 
     const closeModal = async () => {
       await  setId(null);
-      await  setIsOpen(false);
+      await  setIsModalOpen(false);
     };
     return (
         <div
@@ -74,7 +74,7 @@ const Certifications = () => {
                 </div>
 
             </div>
-            <Certificate isOpen={isOpen} closeModal={closeModal} id={id}/>
+            <Certificate isModalOpen={isModalOpen} closeModal={closeModal} id={id}/>
         </div>
     );
 };

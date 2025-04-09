@@ -1,7 +1,7 @@
 import "./globals.css";
 import "aos/dist/aos.css";
 import "react-quill/dist/quill.snow.css";
-import { chewy,hurricane,inter,lemon } from "@/app/utils/fonts/fonts";
+import {inter} from "@/app/utils/fonts/fonts";
 import { Analytics } from "@vercel/analytics/react";
 import AppSessionProvider from "./Context/AppSessionProvider";
 import CustomCursor from "@/app/components/customCursor/CustomCursor";
@@ -21,9 +21,11 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning={isDev}
     >
       <body className={inter.className}>
-        <main className="!cursor-none bg-black w-screen overflow-x-hidden">
+        <main className="!cursor-none bg-black w-screen !overflow-hidden !overflow-y-auto">
           <CustomCursor />
-          <AppSessionProvider>{children}</AppSessionProvider>
+          <AppSessionProvider>
+            {children}
+          </AppSessionProvider>
           <Analytics />
         </main>
       </body>

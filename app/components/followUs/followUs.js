@@ -22,12 +22,13 @@ const FollowUs = ({ position }) => {
                 style={{
                   backgroundImage: `linear-gradient(to top, #0e0e36 , ${data?.color})`,
                 }}
-                className={`p-2 rounded-full flex justify-center items-center  shadow-2xl shadow-fuchsia-300  relative transition-all  duration-500  hover:bottom-2 bottom-0`}
+                className={`p-2 md:p-1 lg:p-2 rounded-full flex justify-center items-center  shadow-2xl shadow-fuchsia-300  relative transition-all  duration-500  hover:bottom-2 bottom-0`}
               >
                 <Image
                   src={data?.icon}
-                  height={20}
-                  width={20}
+                  className={position==="left"&&`md:w-[16px] md:h-[16px]`}
+                  height={16}
+                  width={16}
                   alt={data.title}
                   loading="lazy"
                 />

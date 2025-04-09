@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import CloseIcon from "@/public/images/close.png"; // Assuming this is your close icon
 
-const Modal = ({ isOpen, closeModal, children }) => {
+const Modal = ({ isModalOpen, closeModal, children }) => {
     const modalRef = useRef(null);
     const overlayRef = useRef(null);
 
@@ -12,7 +12,7 @@ const Modal = ({ isOpen, closeModal, children }) => {
         const modal = modalRef.current;
         const overlay = overlayRef.current;
 
-        if (isOpen) {
+        if (isModalOpen) {
             gsap.set(modal, { display: "flex" });
             gsap.set(overlay, { display: "block" });
 
@@ -65,7 +65,7 @@ const Modal = ({ isOpen, closeModal, children }) => {
                 },
             });
         }
-    }, [isOpen]);
+    }, [isModalOpen]);
 
     const handleOutsideClick = (e) => {
         if (e.target === e.currentTarget) {
@@ -78,22 +78,22 @@ const Modal = ({ isOpen, closeModal, children }) => {
             {/* Overlay */}
             <div
                 ref={overlayRef}
-                className="fixed inset-0 bg-black/60 !z-50 hidden h-screen w-screen "
+                className="fixed inset-0  z-50 hidden h-screen w-screen "
                 onClick={handleOutsideClick}
             />
 
             {/* Modal Content */}
             <div
                 ref={modalRef}
-                className="fixed inset-0 !z-50 flex items-center justify-center w-full h-screen hidden backdrop-blur-md"
+                className="fixed inset-0 z-50 flex items-center justify-center w-full h-screen hidden backdrop-blur-md "
             >
-                <div className="relative max-w-xl w-full bg-white/5 backdrop-blur-md rounded-xl shadow-lg p-6">
+                <div className="relative max-w-xl w-full backdrop-blur-3xl rounded-xl shadow-lg p-6">
                     {/* Close Button */}
                     <button
                         type="button"
                         aria-label="Close modal"
                         onClick={closeModal}
-                        className="absolute !z-50 top-4 right-4 p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300"
+                        className="absolute !z-50 top-4 right-4 p-2  bg-gradient-to-tr from-[#030b55ec] to-[#994cd0f5] rounded-full transition-transform duration-500"
                     >
                         <Image
                             src={CloseIcon}

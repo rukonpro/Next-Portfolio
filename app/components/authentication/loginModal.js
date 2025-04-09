@@ -11,7 +11,7 @@ export default function LoginModal({isModalOpen, setIsModalOpen}) {
 
     return (
 
-                <Modal isOpen={isModalOpen} closeModal={() => setIsModalOpen(false)}>
+                <Modal isModalOpen={isModalOpen} closeModal={() => setIsModalOpen(false)}>
                     {!isLogin ?
                         <Login
                             setIsLogin={setIsLogin}

@@ -15,8 +15,7 @@ const ScroolButton = () => {
             className="mouseButton  "
         >
             <svg
-                width="45"
-                height="77"
+                className="h-12 md:h-16 w-full"
                 viewBox="0 0 45 77"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

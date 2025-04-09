@@ -56,7 +56,7 @@ const Login = ({ setIsLogin, setIsModalOpen }) => {
                   Email address:
                 </label>
                 <input
-                  className="mt-2 px-5 py-2 rounded-lg w-full border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r    from-[#020617ff] via-[#5f3391ff] to-[#020617ff] autofill:!bg-gradient-to-tl autofill:!from-[#5f3391ff] autofill:!to-[#020617ff] text-white font-bold   clickSound"
+                  className="mt-2 px-5 py-2 rounded-lg w-full border border-purple-500  focus:outline-purple-400 text-white font-bold bg-transparent  "
                   type="email"
                   name="email"
                   id="email"
@@ -128,7 +128,7 @@ const Login = ({ setIsLogin, setIsModalOpen }) => {
 
                 <input
                   type={isPasswordHidden ? "password" : "text"}
-                  className="mt-2 px-5 py-2 w-full rounded-[10px]  border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-l  from-[#020617ff] via-[#5f3391ff] to-[#020617ff] text-white font-bold   clickSound"
+                  className="mt-2 px-5 py-2 w-full rounded-[10px]  border border-purple-500  focus:outline-purple-400 bg-transparent  text-white font-bold"
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -141,10 +141,10 @@ const Login = ({ setIsLogin, setIsModalOpen }) => {
                   type="submit"
                   disabled={isLoading}
                   aria-label="Login"
-                  className=" w-full py-2  rounded-t-[50px] border border-purple-500  focus:outline-purple-400 bg-gradient-to-l focus:bg-gradient-to-r   from-[#020617ff] via-[#5f3391ff] to-[#020617ff]   text-white text-xl font-bold   hover:shadow-2xl  hover:shadow-[#111827] clickSound"
+                  className=" w-full py-2  rounded-t-[50px] border border-purple-500  focus:outline-purple-400 bg-transparent   text-white text-xl font-bold   hover:shadow-2xl  hover:shadow-[#111827] clickSound"
                 >
                   <span className="bg-gradient-to-r from-[#9e31f7ff] to-[#344dedff] text-transparent bg-clip-text  font-bold">
-                    {isLoading ? "Loader..." : "Login"}
+                    {isLoading ? "Loading..." : "Login"}
                   </span>
                 </button>
               </div>

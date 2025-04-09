@@ -5,10 +5,10 @@ import portfolioData from "@/app/assite/portfollioData/portfollioData";
 import CloseIcon from "/public/images/close.png";
 
 
-const Certificate = ({isOpen,closeModal,id}) => {
+const Certificate = ({isModalOpen,closeModal,id}) => {
 const image=portfolioData?.certifications?.find(data=>data?.id===id);
     return (
-        <Modal isOpen={isOpen} closeModal={closeModal}>
+        <Modal isModalOpen={isModalOpen} closeModal={closeModal}>
             {
                 image?.image &&
 

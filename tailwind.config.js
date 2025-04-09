@@ -43,6 +43,9 @@ module.exports = {
       perspective: {
         '400': '400px',
       },
+      backdropBlur: {
+        xl: '24px',
+      },
     },
   },
   plugins: [require("daisyui")],

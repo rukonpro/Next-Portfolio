@@ -9,15 +9,13 @@ const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const slideRefs = useRef([]);
 
-    // Function to animate slides using scale and rotation
     const animateSlide = (index) => {
         const prevIndex = (index - 1 + slides.length) % slides.length;
 
-        // Fade out and scale down the previous slide with a slight rotation
         gsap.to(slideRefs.current[prevIndex], {
             opacity: 0,
             scale: 0.8,
-            rotation: -10,
+            rotation: -5,
             duration: 0.5,
             ease: "power2.out",
             onComplete: () => {
@@ -25,10 +23,9 @@ const Slider = () => {
             },
         });
 
-        // Fade in the new slide from a scaled-down and rotated state
         gsap.fromTo(
             slideRefs.current[index],
-            { opacity: 0, scale: 0.8, rotation: 10 },
+            { opacity: 0, scale: 0.8, rotation: 5 },
             {
                 opacity: 1,
                 scale: 1,
@@ -40,7 +37,6 @@ const Slider = () => {
         );
     };
 
-    // Automatic slide change every 5 seconds
     useEffect(() => {
         if (slides.length === 0) return;
 
@@ -55,7 +51,6 @@ const Slider = () => {
         return () => clearInterval(intervalId);
     }, [slides.length]);
 
-    // Initial setup for slides
     useEffect(() => {
         if (slides.length > 0) {
             slideRefs.current.forEach((el, i) => {
@@ -66,24 +61,10 @@ const Slider = () => {
                 }
             });
         }
-    }, [slides.length]);
-
-    // Manual control: Go to next slide
-    const nextSlide = () => {
-        const newIndex = (currentIndex + 1) % slides.length;
-        setCurrentIndex(newIndex);
-        animateSlide(newIndex);
-    };
-
-    // Manual control: Go to previous slide
-    const prevSlide = () => {
-        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
-        setCurrentIndex(newIndex);
-        animateSlide(newIndex);
-    };
+    }, [slides.length, currentIndex]);
 
     return (
-        <div className="relative w-full h-[20em] md:h-[30em] lg:h-[42em] overflow-hidden">
+        <div className="relative w-full h-[40vh] overflow-hidden">
             {slides.map((slide, index) => (
                 <div
                     key={slide.id}
@@ -94,33 +75,13 @@ const Slider = () => {
                         src={slide.content}
                         alt={`Slide ${index + 1}`}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes="(max-width: 360px) 100vw, (max-width: 768px) 75vw, 50vw"
                         className="object-contain"
                         loading="eager"
                         priority={index === 0}
                     />
                 </div>
             ))}
-
-            {/* Manual control buttons, shown only if there are multiple slides */}
-            {/*{slides.length > 1 && (*/}
-            {/*    <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-4">*/}
-            {/*        <button*/}
-            {/*            onClick={prevSlide}*/}
-            {/*            aria-label="Previous Slide"*/}
-            {/*            className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600 transition-colors"*/}
-            {/*        >*/}
-            {/*            ◀*/}
-            {/*        </button>*/}
-            {/*        <button*/}
-            {/*            onClick={nextSlide}*/}
-            {/*            aria-label="Next Slide"*/}
-            {/*            className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600 transition-colors"*/}
-            {/*        >*/}
-            {/*            ▶*/}
-            {/*        </button>*/}
-            {/*    </div>*/}
-            {/*)}*/}
         </div>
     );
 };

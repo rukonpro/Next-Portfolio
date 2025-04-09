@@ -14,7 +14,6 @@ import Logo from "@/public/images/rukonpro_logo.png";
 import Dropdown from "../ProfileDropdown/dropdown";
 import { usePathname } from "next/navigation";
 
-// export const loginModal = () => document.getElementById("login").showModal();
 
 const Navigation = memo(() => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -37,64 +36,70 @@ const Navigation = memo(() => {
     };
 
     return (
-        <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-3xl">
-            <div className="flex justify-between items-center px-5 py-4 max-w-[1200px] mx-auto">
-                <Link href="/home" passHref legacyBehavior>
-                    <button
-                        type="button"
-                        aria-label="Rukon.Pro"
-                        onClick={() => setMenuOpen(false)}
-                        className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold tracking-[2px]"
-                    >
-                        <Image
-                            src={Logo}
-                            alt="rukonpro"
-                            width={96}
-                            height={32}
-                            className="md:w-32"
-                            priority
-                        />
-                    </button>
-                </Link>
+       <>
+           <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-3xl">
+               <div className="flex justify-between items-center px-5 py-4 max-w-[1200px] mx-auto">
+                   <Link href="/home" passHref legacyBehavior>
+                       <button
+                           type="button"
+                           aria-label="Rukon.Pro"
+                           onClick={() => setMenuOpen(false)}
+                           className="bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text text-[22px] font-bold tracking-[2px]"
+                       >
+                           <Image
+                               src={Logo}
+                               alt="rukonpro"
+                               width={96}
+                               height={32}
+                               className="md:w-32"
+                               priority
+                           />
+                       </button>
+                   </Link>
 
-                <div className="flex items-center gap-3">
-                    {/* Desktop Menu (Visible only on lg and above) */}
-                    <DesktopMenu pathname={pathname} className="hidden lg:flex" />
+                   <div className="flex items-center gap-3">
+                       {/* Desktop Menu (Visible only on lg and above) */}
+                       <DesktopMenu pathname={pathname} className="hidden lg:flex" />
 
-                    {/* Mobile Menu Toggle (Visible only below lg) */}
-                    <button
-                        type="button"
-                        aria-label={menuOpen ? "Close menu" : "Open menu"}
-                        onClick={toggleMenu}
-                        className={`lg:hidden p-2 bg-gradient-to-tr from-[#030b55ec] to-[#994cd0f5] rounded-full transition-transform duration-500 ${
-                            menuOpen ? "rotate-180" : "rotate-0"
-                        }`}
-                    >
-                        <Image
-                            src={menuOpen ? CloseIcon : MenuIcon}
-                            alt={menuOpen ? "close" : "menu"}
-                            width={20}
-                            height={20}
-                            className="h-5 w-5"
-                        />
-                    </button>
+                       {/* Mobile Menu Toggle (Visible only below lg) */}
+                       <button
+                           type="button"
+                           aria-label={menuOpen ? "Close menu" : "Open menu"}
+                           onClick={toggleMenu}
+                           className={`lg:hidden p-2 bg-gradient-to-tr from-[#030b55ec] to-[#994cd0f5] rounded-full transition-transform duration-500 ${
+                               menuOpen ? "rotate-180" : "rotate-0"
+                           }`}
+                       >
+                           <Image
+                               src={menuOpen ? CloseIcon : MenuIcon}
+                               alt={menuOpen ? "close" : "menu"}
+                               width={20}
+                               height={20}
+                               className="h-5 w-5"
+                           />
+                       </button>
+                       {/* Desktop Dropdown (Visible only on lg and above) */}
+                       <div className="hidden lg:inline-block">
+                           <Dropdown {...dropdownProps} />
+                       </div>
+                   </div>
+               </div>
 
-                    {/* Desktop Dropdown (Visible only on lg and above) */}
-                    <div className="hidden lg:inline-block">
-                        <Dropdown {...dropdownProps} />
-                    </div>
-                </div>
-            </div>
 
-            {/* Mobile Menu Modal (Visible only below lg) */}
-            <MobileMenu
-                isOpen={menuOpen}
-                setMenuOpen={setMenuOpen}
-                dropdown={<Dropdown {...dropdownProps} />}
-            />
+           </nav>
+           {/* Mobile Menu Modal (Visible only below lg) */}
+           <MobileMenu
+               pathname={pathname}
+               isOpen={menuOpen}
+               setMenuOpen={setMenuOpen}
 
-            <RegisterAndLogin isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-        </nav>
+               dropdown={<Dropdown {...dropdownProps} />}
+           />
+           <RegisterAndLogin
+               isModalOpen={isModalOpen}
+               setIsModalOpen={setIsModalOpen}
+           />
+       </>
     );
 });
 

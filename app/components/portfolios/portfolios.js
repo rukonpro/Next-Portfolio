@@ -45,7 +45,7 @@ const Portfolios = () => {
                         <button
                             aria-label="All Project"
                             type="button"
-                            className="text-white text-lg font-bold  w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70] shadow-2xl shadow-fuchsia-300 active:shadow-md active:shadow-fuchsia-100/30">
+                            className="text-lg font-bold  text-white w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70]">
                             All Project
                         </button>
                     </Link>

@@ -3,16 +3,13 @@ import FollowUs from "@/app/components/followUs/followUs";
 import Slider from "@/app/components/slider/slider";
 import { chewy } from "@/app/utils/fonts/fonts";
 import ScrollingButton from "@/app/components/scroolButton/scroolButton";
-import { useEffect, useRef, useCallback } from "react";
+import React, {useEffect, useRef, useCallback, useState} from "react";
 import { gsap } from "gsap";
-
-
 
 const Header = () => {
     const headerRef = useRef(null);
     const sliderRef = useRef(null);
 
-    // মাউস মুভমেন্ট হ্যান্ডলার
     const handleMouseMove = useCallback((e) => {
         const header = headerRef.current;
         const slider = sliderRef.current;
@@ -25,18 +22,17 @@ const Header = () => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const moveX = (x - centerX) / 10;
-        const moveY = (y - centerY) / 10;
+        const moveX = (x - centerX) / 15;
+        const moveY = (y - centerY) / 15;
 
         gsap.to(slider, {
             x: moveX,
             y: moveY,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power2.out",
         });
     }, []);
 
-    // মাউস লিভ হ্যান্ডলার
     const handleMouseLeave = useCallback(() => {
         const slider = sliderRef.current;
         if (!slider) return;
@@ -74,31 +70,20 @@ const Header = () => {
             id="home"
             ref={headerRef}
             role="banner"
-            className="headerBg  overflow-hidden h-screen"
+            className="headerBg  h-svh md:max-h-screen lg:h-svh  flex justify-center items-center px-4 py-6"
         >
-            <div className="flex items-center max-w-[1200px] mx-auto px-5 py-[30px]">
+            <div className="flex items-center max-w-[1200px] w-full mx-auto">
                 <div className="relative z-10 w-full">
-                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 items-center">
-                        <div className="space-y-4">
-                            <p className="text-xl md:text-4xl font-bold bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text tracking-[5px]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+                        <div className="space-y-3 md:space-y-2 lg:space-y-3">
+                            <p className="text-lg md:text-2xl lg:text-4xl font-bold bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text tracking-[2px] sm:tracking-[5px]">
                                 Hello!, I'm
                             </p>
-                            <h1 className="md:text-8xl text-5xl font-bold">
-                                <span
-                                    className={`${chewy.className} bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text tracking-[2px]`}
-                                >
-                                    Rukon Uddin
-                                </span>
-                            </h1>
-                            <p className="md:text-xl text-lg font-bold md:tracking-[3px] tracking-[1px] text-[#fccdff] flex flex-wrap">
-                                MERN-stack | React | React-Native | Javascript | Kotlin Developer
-                            </p>
+                            <h1 className={`bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text tracking-[1px] text-4xl md:text-3xl lg:text-7xl font-bold`}>Rukon Uddin</h1>
+                            <p className="text-sm sm:text-base md:text-sm lg:text-xl font-bold tracking-[1px] text-[#fccdff] flex flex-wrap">MERN-stack | React | React-Native | Javascript | Kotlin Developer</p>
                             <FollowUs position="left" />
                             <a
                                 data-aos="fade-right"
-                                data-aos-offset="10"
-                                data-aos-duration="600"
-                                data-aos-easing="ease-in-sine"
                                 href="https://drive.google.com/file/d/1S8dFRWC7f3QH6ZVnGp6miYLwPz8s4coh/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -107,24 +92,22 @@ const Header = () => {
                                 <button
                                     id="downloadcv"
                                     aria-label="Download CV"
-                                    className="text-white md:text-xl text-base font-bold bg-gradient-to-l from-[#1355b7] to-[#0e0e36] rounded-full hover:shadow-2xl hover:shadow-[#263458] tracking-[1px] px-4 py-2 transition-all duration-300"
+                                    className="text-white text-sm sm:text-base md:text-xl font-bold bg-gradient-to-l from-[#1355b7] to-[#0e0e36] rounded-full hover:shadow-2xl hover:shadow-[#263458] tracking-[1px] px-3 py-1 sm:px-4 sm:py-2 transition-all duration-300"
                                 >
-                                    <span className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">
-                                        Download CV
-                                    </span>
+                                  <span className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">Download CV</span>
                                 </button>
                             </a>
                         </div>
-                        <div className="flex justify-center lg:justify-end">
+                        <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
                             <Slider />
                         </div>
                     </div>
-                    <div className="flex justify-center mt-8">
-                        <div ref={sliderRef}>
-                            <ScrollingButton />
-                        </div>
-                    </div>
                 </div>
+
+            </div>
+            <div ref={sliderRef} className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10">
+
+                <ScrollingButton />
             </div>
         </header>
     );

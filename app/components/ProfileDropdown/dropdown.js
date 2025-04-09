@@ -4,7 +4,7 @@ import ProfileImage from "@/public/images/rukon_cover_photo_2.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Dropdown({ status, handleSingOut, setIsDialogOpen }) {
+export default function Dropdown({ status, handleSignOut, setIsModalOpen }) {
     const [isOpen, setIsOpen] = useState(false);
     const [position, setPosition] = useState({
         position: "absolute",
@@ -136,7 +136,7 @@ export default function Dropdown({ status, handleSingOut, setIsDialogOpen }) {
                                     Settings
                                 </a>
                                 <button
-                                    onClick={handleSingOut}
+                                    onClick={handleSignOut}
                                     type="button"
                                     className="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-slate-500/30 hover:rounded"
                                     role="menuitem"
@@ -154,7 +154,7 @@ export default function Dropdown({ status, handleSingOut, setIsDialogOpen }) {
                     type="button"
                     aria-label="Login"
                     className="bg-gradient-to-r from-[#5e2594ec] to-[#270257fd] px-5 py-1 rounded-lg animated-button tracking-[3px] text-[#fccdff]"
-                    onClick={() => setIsDialogOpen(true)}
+                    onClick={() => setIsModalOpen(true)}
                 >
           <span className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">
             Login

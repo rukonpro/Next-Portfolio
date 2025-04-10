@@ -5,6 +5,8 @@ import Ellipse from "@/public/images/Ellipse 7.png";
 import Image from "next/image";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
+import React from "react";
+
 const Services = () => {
     return (
         <section id="services"

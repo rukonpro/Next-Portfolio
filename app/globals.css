@@ -29,7 +29,7 @@ body {
 .headerBg::after,.pricing-bg::after,.certification-bg::after,.contact-bg::after,.counter-bg::after,.services-bg::after,.about-bg::after,.blogs-bg::after,.portfolio-bg::after {
     content: "";
     position: absolute;
-  z-index: 0;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -242,6 +242,18 @@ body {
   filter: blur(300px);
   overflow: hidden;
 }
+
+/*.contact-bg::after {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  z-index: 0;*/
+/*  background-image: url("../public/images/banner-6.png");*/
+/*  background-position: right bottom;*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: auto;*/
+/*}*/
 
 .footer-bg {
   position: relative;

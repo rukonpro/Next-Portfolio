@@ -2,10 +2,12 @@ import Image from "next/image";
 import ProfileImage from "@/public/images/rukon_cover_photo_2.jpg";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 import React from "react";
+import ContactBg from "@/public/images/banner-7.webp";
 
 const About = () => {
     return (
         <section id="about" className='relative  px-5 py-28 about-bg'>
+            <Image src={ContactBg} alt="contact-bg" height={300} width={300} className="absolute  left-0 top-0 w-36 md:w-72 "/>
             <div className="relative z-10">
 
                 <RootLayoutAnimated>

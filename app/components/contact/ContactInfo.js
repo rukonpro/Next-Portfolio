@@ -7,7 +7,7 @@ import LinkDinIcon from "@/public/images/linkedin.webp";
 import Image from "next/image";
 const ContactInfo = () => {
     return (
-        <section className="backdrop-blur-3xl rounded-lg">
+        <section>
             <div >
 
                 <div className="p-2 mx-2 ">

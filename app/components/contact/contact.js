@@ -1,10 +1,13 @@
 import ContactForm from "@/app/components/contact/contactForm";
 import ContactInfo from "@/app/components/contact/ContactInfo";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
+import Image from "next/image";
+import ContactBg from "@/public/images/banner-6.png"
 
 const Contact = () => {
   return (
     <section className=" contact-bg py-28 ">
+        <Image src={ContactBg} alt="contact-bg" height={300} width={300} className="absolute  right-0 bottom-0 w-36 md:w-72 "/>
       <div className="relative   max-w-[1200px] mx-auto z-10">
       <RootLayoutAnimated>
 

@@ -74,6 +74,9 @@ import  Congratulation from "@/public/images/Congrates.png";
 import Banner1 from "@/public/images/header-laptop.svg";
 import Banner2 from "@/public/images/header-laptop-2.svg";
 import Banner3 from "@/public/images/header-laptop-3.svg";
+import Banner4 from "@/public/images/banner-4.svg";
+import Banner5 from "@/public/images/banner-5.png"
+import Banner6 from "@/public/images/banner-6.png"
 import GithubIcon from "@/public/images/github-icon-1.svg";
 import LinkdinIcon from "@/public/images/linkedin.png";
 import Facebook from "@/public/images/facebook.png";
@@ -139,9 +142,13 @@ const portfolioData = {
         },
     ],
     banner:[
-        { id: 1, content: Banner1 },
+        { id: 1, content:  Banner1 },
         { id: 2, content:  Banner2 },
         { id: 3, content:  Banner3 },
+        { id: 4, content:  Banner4 },
+        { id: 5, content:  Banner5 },
+        { id: 6, content:  Banner6 }
+
         // Add more slides as needed
     ],
     followUs:[
@@ -367,7 +374,7 @@ const portfolioData = {
                     link:"https://css3.com/",
                 }
             ]
-        }, 
+        },
         {
             title: "Comfortable",
             descriptions:`<p class="text-base text-[#94a3b8]">

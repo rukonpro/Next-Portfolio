@@ -5,7 +5,7 @@ const SkillsCard = ({ data }) => {
         <a href={data?.link} target="_blank">
             <div
                 style={{ background: `linear-gradient(to top right, rgba(14, 14, 54, 0.03), ${data?.color})` }}
-                className={` skillsCard rounded-[10px] flex   cursor-pointer select-none  p-3 h-full`}
+                className={` skillsCard rounded-[10px] flex   cursor-pointer select-none  p-3 h-full backdrop-blur`}
             >
 
                 <div className="grid grid-cols-6 items-center gap-2 ">

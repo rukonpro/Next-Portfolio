@@ -7,9 +7,9 @@ const Skills = () => {
 
     return (
         <section id="skills"
-                 className=" skills-bg  relative flex justify-center items-center py-28 px-5">
+                 className=" skills-bg  relative flex justify-center items-center  px-5">
 
-            <RootLayoutAnimated>
+            {/*<RootLayoutAnimated>*/}
             <div className="max-w-[1200px] relative z-10 mx-auto">
                 <div className="flex justify-center">
                     <div className="flex items-center relative">
@@ -48,7 +48,7 @@ const Skills = () => {
                     }
                 </ol>
             </div>
-            </RootLayoutAnimated>
+            {/*</RootLayoutAnimated>*/}
         </section>
     );
 };

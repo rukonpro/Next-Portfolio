@@ -44,14 +44,15 @@ export async function generateMetadata() {
 
 const Portfolios = () => {
     return (
-        <div className="  min-h-screen  overflow-hidden  relative ">
+        <div className="  min-h-screen portfolio-bg">
             <Navigation/>
+            <RootLayoutAnimated>
             <div
                 className="absolute custom-animate-pulse inset-0 m-auto max-w-xs h-[357px] blur-[1000px] sm:max-w-md md:max-w-lg"
                 style={{background: "linear-gradient(106.89deg, rgba(141, 76, 206, 0.11) 15.73%, rgb(165, 14, 233) 15.74%, rgba(255, 0, 0, 0.26) 56.49%, rgba(234, 51, 214, 0.4) 115.91%)"}}/>
 
             <div className=" z-10 max-w-[1200px] mx-auto px-5   py-32 ">
-                <RootLayoutAnimated>
+
                 <div className="flex justify-between items-center py-3"
                      data-aos="fade-up"
                      data-aos-anchor-placement="bottom-bottom"
@@ -68,11 +69,9 @@ const Portfolios = () => {
                 >
                     <BackButton/>
                 </div>
-                </RootLayoutAnimated>
+
             </div>
-
-
-
+            </RootLayoutAnimated>
             <Footer/>
 
         </div>

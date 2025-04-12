@@ -15,7 +15,7 @@ const Page = ({ params }) => {
             <Navigation />
 
 
-            <div className="max-w-[1200px] relative  z-10 mx-auto px-5 py-20">
+            <div className="max-w-[1200px] relative  z-10 mx-auto px-5 py-28">
                 <div className="flex justify-between items-center py-3"
                     data-aos="fade-up"
                     data-aos-anchor-placement="bottom-bottom"

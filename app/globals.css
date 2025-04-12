@@ -26,7 +26,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.headerBg::after,.pricing-bg::after,.certification-bg::after,.contact-bg::after,.counter-bg::after,.services-bg::after,.about-bg::after,.blogs-bg::after,.portfolio-bg::after {
+.headerBg::after,.pricing-bg::after,.certification-bg::after,.contact-bg::after,.counter-bg::after,.services-bg::after,.about-bg::after,.blogs-bg::after,.skills-bg::after {
     content: "";
     position: absolute;
     z-index: 0;
@@ -37,8 +37,9 @@ body {
     background-image: url("../public/images/playground-bg.png");
     background-size: cover;
     background-repeat: repeat;
-
 }
+
+
 .headerBg {
   position: relative;
 }
@@ -140,25 +141,37 @@ body {
 
 .portfolio-bg {
   position: relative;
+  z-index: 0;
 
 }
-.portfolio-bg::before {
+.portfolio-bg::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/images/playground-bg.png");
+  background-size: cover;
+  background-repeat: repeat;
+}
+.portfolio-bg::before{
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -1;
   background: linear-gradient(
-    318deg,
-    rgba(0, 164, 141, 0.38),
-    rgba(41, 1, 79, 0.78)
+          318deg,
+          rgba(0, 164, 141, 0.38),
+          rgba(41, 1, 79, 0.78)
   );
   background-size: cover;
   filter: blur(300px);
 }
-
 .blogs-bg {
   position: relative;
 }

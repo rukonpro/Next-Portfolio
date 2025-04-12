@@ -16,16 +16,17 @@ const Page = async ({ params }) => {
         description: portfolio.description,
     }
     return (
-        <section className=" text-white blogs-bg">
+        <section className=" text-white portfolio-bg">
             <Navigation />
             <div className="max-w-[1200px] mx-auto py-28 px-5 z-10">
                 <Portfolio data={portfolio} />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
             </div>
             {/* Add JSON-LD to your page */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
+
             {/* ... */}
             <Footer />
         </section>

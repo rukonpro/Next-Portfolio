@@ -36,8 +36,8 @@ const Navigation = memo(() => {
     };
 
     return (
-       <>
-           <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-3xl">
+       <React.Fragment>
+           <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-3xl bg-transparent">
                <div className="flex justify-between items-center px-5 py-4 max-w-[1200px] mx-auto">
                    <Link href="/home" passHref legacyBehavior>
                        <button
@@ -99,7 +99,7 @@ const Navigation = memo(() => {
                isModalOpen={isModalOpen}
                setIsModalOpen={setIsModalOpen}
            />
-       </>
+       </React.Fragment>
     );
 });
 

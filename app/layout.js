@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       className="scroll-smooth scroll-"
       suppressHydrationWarning={isDev}
     >
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <main className="!cursor-none bg-black w-screen !overflow-hidden !overflow-y-auto">
           <CustomCursor />
           <AppSessionProvider>

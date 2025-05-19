@@ -783,15 +783,15 @@ const portfolioData = {
                 ],
                 links: {
                     fontEndCode:{
-                        link:"https://github.com/rukonpro/Eskul_Client",
+                        link:"https://github.com/rukonpro/EskulClient",
                         icon:Github
                     },
                     backEndCode: {
-                        link:"https://github.com/rukonpro/Eskul_server",
+                        link:"https://github.com/rukonpro/EskulServer",
                         icon:BackEnd
                     },
                     liveLink: {
-                        link:"https://eskul-avengers.web.app",
+                        link:"https://eskul-avengers.vercel.app",
                         icon:LiveIcon
                     }
                 }

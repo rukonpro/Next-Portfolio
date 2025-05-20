@@ -7,7 +7,7 @@ const Skills = () => {
 
     return (
         <section id="skills"
-                 className=" skills-bg  relative flex justify-center items-center  px-5">
+                 className=" skills-bg  relative flex justify-center items-center  px-5 pt-28">
 
             {/*<RootLayoutAnimated>*/}
             <div className="max-w-[1200px] relative z-10 mx-auto">

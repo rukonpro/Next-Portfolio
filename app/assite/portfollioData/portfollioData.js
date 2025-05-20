@@ -36,32 +36,36 @@ import ApolloIcon from "@/public/images/apollo-graphql-1.svg";
 import NextJSIcon from "@/public/images/next-js.svg";
 import TailwindCSSIcon from "@/public/images/tailwind-css-2.svg";
 import MaterialUIIcon from "@/public/images/material-ui-1.svg";
+import Prisma from "@/public/images/prisma.svg";
 import ES6 from "@/public/images/ES6.jpg";
+import ReactRouter from  "@/public/images/ReactRouter.webp"
 import MYSQL from "@/public/images/mysql-logo.svg";
 import TypeScript from "@/public/images/typescript.svg";
 import ReactNative from  "@/public/images/react-native-1.svg";
-import Sass from  "@/public/images/sass-1.svg";
+import SassIcon from  "@/public/images/sass-1.svg";
 import Kotlin from  "@/public/images/kotlin-2.svg";
 import Android from  "@/public/images/android-4.svg";
 import Git from  "@/public/images/git-icon.svg";
-import ReactHookFrom from "@/public/images/react-hook-form-logo-only.png";
+import ReactHookForm from "@/public/images/react-hook-form-logo-only.png";
 import Github from  "@/public/images/github-icon-1.svg";
 import NPM from  "@/public/images/npm-icon.png";
 import Yarn from  "@/public/images/yarn.svg";
 import VisualStudioCode from  "@/public/images/visual-studio-code-1.svg";
 import Webstorm from  "@/public/images/webstorm-icon.svg";
-import Firefox from  "@/public/images/firefox-3.svg";
-import Chrome from  "@/public/images/chrome.svg";
+import FirefoxIcon from  "@/public/images/firefox-3.svg";
+import ChromeIcon from  "@/public/images/chrome.svg";
 import Heroku from  "@/public/images/heroku-4.svg";
-import Render from  "@/public/images/renner-1.svg";
+import RenderIcon from  "@/public/images/renner-1.svg";
 import Netlify from  "@/public/images/netlify.svg";
 import Figma from  "@/public/images/figma-5.svg";
-import Postman from  "@/public/images/postman.svg";
-import Varcel from  "@/public/images/vercel.svg";
+import PostmanIcon from  "@/public/images/postman.svg";
+import Vercel from  "@/public/images/vercel.svg";
 import Python from  "@/public/images/python-5.svg";
 import PHP from  "@/public/images/php-1.svg";
-import Laravel from  "@/public/images/laravel-2.svg";
-import Django from  "@/public/images/django.svg";
+import LaravelIcon from  "@/public/images/laravel-2.svg";
+import DjangoIcon from  "@/public/images/django.svg";
+import Docker from "@/public/images/Docker-Logo.png";
+import Ubuntu from "@/public/images/UbuntuCoF.svg.png"
 import AndroidStudio from "@/public/images/android-auto-os-1.svg";
 import PyCharm from "@/public/images/PyCharm_Icon.svg.png";
 import Express from "@/public/images/express-109.svg";
@@ -204,535 +208,409 @@ const portfolioData = {
     },
     skills:[
         {
-            title:"Experienced",
-
-            data:[
+            "id": "1",
+            "title": "Languages",
+            "data": [
                 {
-                    title:"Javascript",
-                    description:'Powerful, versatile language for web development.',
-                    logo:JsIcon,
-                    color:"rgba(233, 202, 50, 0.30)",
-                    link:"https://www.javascript.com/",
-
-
+                    "title": "JavaScript",
+                    "description": "Versatile language for web and mobile development.",
+                    "logo": JsIcon,
+                    "color": "rgba(233, 202, 50, 0.30)",
+                    "link": "https://www.javascript.com/"
                 },
                 {
-                    title: "React.JSX",
-                    description: "Expressive UI in JavaScript syntax.",
-                    logo: ReactIcon,
-                    color: "rgba(97, 218, 251, 0.30)",
-                    link:"https://react.dev/",
-
+                    "title": "TypeScript",
+                    "description": "Typed JavaScript for scalable applications.",
+                    "logo": TypeScript,
+                    "color": "rgba(0, 122, 204, 0.30)",
+                    "link": "https://www.typescriptlang.org/"
                 },
                 {
-                    title: "Node.JS",
-                    description: "JavaScript runtime for server-side applications.",
-                    logo: NodeJsIcon,
-                    color: "rgba(0, 212, 134, 0.30)",
-                    link:"https://nodejs.org/en",
+                    "title": "Kotlin",
+                    "description": "Expressive language for Android and multiplatform apps.",
+                    "logo": Kotlin,
+                    "color": "rgba(127, 82, 255, 0.30)",
+                    "link": "https://kotlinlang.org/"
                 },
                 {
-                    title: "MongoDB",
-                    description: "NoSQL database for scalable applications.",
-                    logo: MongoDBIcon,
-                    color: "rgba(89, 150, 54, 0.30)",
-                    link:"https://www.mongodb.com/",
-                },
-
-                {
-                    title:  "Express.JS",
-                    description: "Fast, unopinionated web framework for Node.js.",
-                    logo:Express,
-                    color: "rgba(0, 255, 88, 0.30)",
-                    link:"https://expressjs.com/",
-                },
-
-                {
-                    title:"Next.JS",
-                    description: "React framework for server-rendered apps.",
-                    logo: NextJSIcon,
-                    color: "rgba(255, 255, 255, 0.30)",
-                    link:"https://nextjs.org/",
-                },
-                {
-                    title: "ES6",
-                    description: "ECMAScript 2015: JavaScript language enhancements.",
-                    logo: ES6,
-                    color: "rgba(250, 222, 52, 0.30)",
-                    link:"https://www.javascripttutorial.net/es6/",
-                },
-                {
-                    title: "Redux",
-                    description: "State management for JavaScript applications.",
-                    logo: ReduxIcon,
-                    color: "rgba(118, 74, 188, 0.30)",
-                    link:"https://redux.js.org/",
-                },
-                {
-                    title:  "Redux-toolkit",
-                    logo: ReduxIcon,
-                    description: "Opinionated Redux utility library.",
-                    color: "rgba(118, 74, 188, 0.30)",
-                    link:"https://redux-toolkit.js.org/",
-                },
-                {
-                    title: "RTK Query",
-                    logo: ReduxIcon,
-                    description: "Declarative data fetching with Redux.",
-                    color: "rgba(118, 74, 188, 0.30)",
-                    link:"https://redux-toolkit.js.org/rtk-query/overview",
-                },
-                {
-                    title: "PostgresQL",
-                    description: "Open-source relational database management system.",
-                    logo:Postgresql,
-                    color: "rgba(47, 103, 146, 0.30)",
-                    link:"https://www.postgresql.org/",
-                },
-                {
-                    title: "MySQL",
-                    description: "Popular open-source relational database system.",
-                    logo: MYSQL,
-                    color: "rgba(0, 117, 143, 0.30)",
-                    link:"https://www.mysql.com/",
-                },
-                {
-                    title: "Mongoose",
-                    description: "MongoDB ODM for elegant modeling.",
-                    logo: Mongoose,
-                    color: "rgba(251, 112, 43, 0.30)",
-                    link:"https://mongoosejs.com/",
-                },
-                {
-                    title: "GraphQL",
-                    description: "Query language for APIs, flexible and efficient.",
-                    logo: GraphQLIcon,
-                    color: "rgba(229, 53, 171, 0.30)",
-                    link:"https://graphql.org/",
-                },
-                {
-                    title: "Apollo Client",
-                    description: "Robust GraphQL client for React.",
-                    logo: ApolloIcon,
-                    color: "rgba(255, 255, 255, 0.30)",
-                    link:"https://www.apollographql.com/",
-                },
-                {
-                    title: "React-hook-form",
-                    logo: ReactHookFrom,
-                    description: "React library for efficient form-handling.",
-                    color: "rgba(235, 90, 144, 0.30)",
-                    link:"https://react-hook-form.com/",
-                },
-                {
-                    title: "Firebase",
-                    description: "Google's mobile and web platform.",
-                    logo: FireBaseIcon,
-                    color: "rgba(254, 166, 17, 0.30)",
-                    link:"https://firebase.google.com/",
-                },
-                {
-                    title: "Bootstrap 4&5",
-                    description: "Responsive front-end framework for web.",
-                    logo: Bootstrap,
-                    color: "rgba(70, 50, 119, 0.30)",
-                    link:"https://getbootstrap.com/",
-                },
-                {
-                    title: "React-Bootstrap",
-                    description: "Bootstrap components for React applications.",
-                    logo: ReactBootstrap,
-                    color: "rgba(70, 50, 119, 0.30)",
-                    link:"https://react-bootstrap.netlify.app/",
-                },
-                {
-                    title:  "Material UI",
-                    description: "React components following Material Design.",
-                    logo: MaterialUIIcon,
-                    color: "rgba(0, 176, 255, 0.30)",
-                    link:"https://mui.com/",
-                },
-                {
-                    title: "Tailwind-CSS",
-                    description: "Utility-first CSS framework for flexibility.",
-                    logo: TailwindCSSIcon,
-                    color: "rgba(6, 182, 212, 0.30)",
-                    link:"https://tailwindcss.com/",
-                },
-                {
-                    title: "HTML5",
-                    description: "Latest version of the Hypertext Markup Language.",
-                    logo: HtmlIcon,
-                    color: "rgba(227, 79, 38, 0.30)",
-                    link:"https://html.com/",
-                },
-                {
-                    title:  "CSS3",
-                    description: "Latest version of Cascading Style Sheets.",
-                    logo: CSSIcon,
-                    color: "rgba(27, 115, 186, 0.30)",
-                    link:"https://css3.com/",
+                    "title": "ES6",
+                    "description": "Modern JavaScript standard with enhanced features.",
+                    "logo": ES6,
+                    "color": "rgba(233, 202, 50, 0.30)",
+                    "link": "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/"
                 }
             ]
         },
         {
-            title: "Comfortable",
-            descriptions:`<p class="text-base text-[#94a3b8]">
-                            In my professional journey, I've honed the invaluable skill of being comfortably adaptable
-                            in diverse and dynamic environments. Whether navigating through complex projects or
-                            collaborating with cross-functional teams, my ability to seamlessly integrate into various
-                            scenarios sets me apart. I thrive in ambiguity, transforming challenges into opportunities
-                            for innovation and growth.
-
-                            <br/> <br/>
-
-                            Being "Comfortable" is not just about familiarity; it's a mindset that allows me to navigate
-                            through the ever-evolving landscape of the professional world with ease. It's the assurance
-                            that I bring to every project, knowing that I can tackle the unexpected and find effective
-                            solutions. This adaptability extends beyond the technical realm to encompass communication,
-                            teamwork, and leadership.
-                            <br/> <br/>
-                            My comfort in ambiguity is a strategic asset, enhancing my capacity to lead, collaborate,
-                            and deliver results. It enables me to maintain composure under pressure, making me a
-                            reliable team member in high-stakes projects. This skill doesn't just denote familiarity; it
-                            signifies a mindset that turns challenges into stepping stones for success.
-                        </p>`,
-            data: [
+            "id": "2",
+            "title": "Frontend",
+            "data": [
                 {
-                    title: "MongoDB",
-                    description: "NoSQL database for scalable applications.",
-                    logo: MongoDBIcon,
-                    color: "rgba(89, 150, 54, 0.30)",
-                    link:"https://www.mongodb.com/",
+                    "title": "React",
+                    "description": "Dynamic UI library for web applications.",
+                    "logo": ReactIcon,
+                    "color": "rgba(97, 218, 251, 0.30)",
+                    "link": "https://react.dev/"
                 },
                 {
-                    title:  "Express.JS",
-                    description: "Fast, unopinionated web framework for Node.js.",
-                    logo:Express,
-                    color: "rgba(0, 255, 88, 0.30)",
-                    link:"https://expressjs.com/",
-
+                    "title": "Next.js",
+                    "description": "React framework for server-rendered web apps.",
+                    "logo": NextJSIcon,
+                    "color": "rgba(255, 255, 255, 0.30)",
+                    "link": "https://nextjs.org/"
                 },
                 {
-                    title: "React.JSX",
-                    description: "Expressive UI in JavaScript syntax.",
-                    logo: ReactIcon,
-                    color: "rgba(97, 218, 251, 0.30)",
-                    link:"https://react.dev/",
-
+                    "title": "React Router",
+                    "description": "Declarative routing for React web applications.",
+                    "logo": ReactRouter,
+                    "color": "rgba(202, 53, 48, 0.30)",
+                    "link": "https://reactrouter.com/"
                 },
                 {
-                    title: "Node.JS",
-                    description: "JavaScript runtime for server-side applications.",
-                    logo: NodeJsIcon,
-                    color: "rgba(0, 212, 134, 0.30)",
-                    link:"https://nodejs.org/en",
+                    "title": "Redux",
+                    "description": "Predictable state management for web apps.",
+                    "logo": ReduxIcon,
+                    "color": "rgba(118, 74, 188, 0.30)",
+                    "link": "https://redux.js.org/"
                 },
                 {
-                    title:"Javascript",
-                    description:'Powerful, versatile language for web development.',
-                    logo:JsIcon,
-                    color:"rgba(233, 202, 50, 0.30)",
-                    link:"https://www.javascript.com/",
+                    "title": "Redux Toolkit",
+                    "description": "Streamlined Redux for efficient state management.",
+                    "logo": ReduxIcon,
+                    "color": "rgba(118, 74, 188, 0.30)",
+                    "link": "https://redux-toolkit.js.org/"
                 },
                 {
-                    title:"Next.JS",
-                    description: "React framework for server-rendered apps.",
-                    logo: NextJSIcon,
-                    color: "rgba(255, 255, 255, 0.30)",
-                    link:"https://nextjs.org/",
-
+                    "title": "RTK Query",
+                    "description": "Declarative data fetching for Redux apps.",
+                    "logo": ReduxIcon,
+                    "color": "rgba(118, 74, 188, 0.30)",
+                    "link": "https://redux-toolkit.js.org/rtk-query/overview"
                 },
                 {
-                    title: "ES6",
-                    description: "ECMAScript 2015: JavaScript language enhancements.",
-                    logo: ES6,
-                    color: "rgba(250, 222, 52, 0.30)",
-                    link:"https://www.javascripttutorial.net/es6/",
+                    "title": "React Hook Form",
+                    "description": "Efficient form handling for React apps.",
+                    "logo": ReactHookForm,
+                    "color": "rgba(235, 90, 144, 0.30)",
+                    "link": "https://react-hook-form.com/"
                 },
                 {
-                    title: "Redux",
-                    description: "State management for JavaScript applications.",
-                    logo: ReduxIcon,
-                    color: "rgba(118, 74, 188, 0.30)",
-                    link:"https://redux.js.org/",
+                    "title": "HTML5",
+                    "description": "Standard for structuring web content.",
+                    "logo": HtmlIcon,
+                    "color": "rgba(227, 79, 38, 0.30)",
+                    "link": "https://html.com/"
                 },
                 {
-                    title:  "Redux-toolkit",
-                    logo: ReduxIcon,
-                    description: "Opinionated Redux utility library.",
-                    color: "rgba(118, 74, 188, 0.30)",
-                    link:"https://redux-toolkit.js.org/",
+                    "title": "CSS3",
+                    "description": "Modern styling for web interfaces.",
+                    "logo": CSSIcon,
+                    "color": "rgba(27, 115, 186, 0.30)",
+                    "link": "https://css3.com/"
                 },
                 {
-                    title: "RTK Query",
-                    logo: ReduxIcon,
-                    description: "Declarative data fetching with Redux.",
-                    color: "rgba(118, 74, 188, 0.30)",
-                    link:"https://redux-toolkit.js.org/rtk-query/overview",
+                    "title": "Tailwind CSS",
+                    "description": "Utility-first CSS for rapid UI development.",
+                    "logo": TailwindCSSIcon,
+                    "color": "rgba(6, 182, 212, 0.30)",
+                    "link": "https://tailwindcss.com/"
                 },
                 {
-                    title: "Mongoose",
-                    description: "MongoDB ODM for elegant modeling.",
-                    logo: Mongoose,
-                    color: "rgba(251, 112, 43, 0.30)",
-                    link:"https://mongoosejs.com/",
+                    "title": "Bootstrap 4 & 5",
+                    "description": "Responsive CSS framework for web design.",
+                    "logo": Bootstrap,
+                    "color": "rgba(70, 50, 119, 0.30)",
+                    "link": "https://getbootstrap.com/"
                 },
                 {
-                    title: "GraphQL",
-                    description: "Query language for APIs, flexible and efficient.",
-                    logo: GraphQLIcon,
-                    color: "rgba(229, 53, 171, 0.30)",
-                    link:"https://graphql.org/",
+                    "title": "React Bootstrap",
+                    "description": "Bootstrap components for React web apps.",
+                    "logo": ReactBootstrap,
+                    "color": "rgba(70, 50, 119, 0.30)",
+                    "link": "https://react-bootstrap.netlify.app/"
                 },
                 {
-                    title: "Apollo Client",
-                    description: "Robust GraphQL client for React.",
-                    logo: ApolloIcon,
-                    color: "rgba(255, 255, 255, 0.30)",
-                    link:"https://www.apollographql.com/",
+                    "title": "Material UI",
+                    "description": "Material Design components for React.",
+                    "logo": MaterialUIIcon,
+                    "color": "rgba(0, 176, 255, 0.30)",
+                    "link": "https://mui.com/"
                 },
                 {
-                    title: "React-hook-form",
-                    logo: ReactHookFrom,
-                    description: "React library for efficient form-handling.",
-                    color: "rgba(235, 90, 144, 0.30)",
-                    link:"https://react-hook-form.com/",
+                    "title": "Apollo Client",
+                    "description": "GraphQL client for React data management.",
+                    "logo": ApolloIcon,
+                    "color": "rgba(255, 255, 255, 0.30)",
+                    "link": "https://www.apollographql.com/"
                 },
                 {
-                    title: "Firebase",
-                    description: "Google's mobile and web platform.",
-                    logo: FireBaseIcon,
-                    color: "rgba(254, 166, 17, 0.30)",
-                    link:"https://firebase.google.com/",
-                },
-                {
-                    title: "Bootstrap 4&5",
-                    description: "Responsive front-end framework for web.",
-                    logo: Bootstrap,
-                    color: "rgba(70, 50, 119, 0.30)",
-                    link:"https://getbootstrap.com/",
-                },
-                {
-                    title: "React-Bootstrap",
-                    description: "Bootstrap components for React applications.",
-                    logo: ReactBootstrap,
-                    color: "rgba(70, 50, 119, 0.30)",
-                    link:"https://react-bootstrap.netlify.app/",
-                },
-                {
-                    title:  "Material UI",
-                    description: "React components following Material Design.",
-                    logo: MaterialUIIcon,
-                    color: "rgba(0, 176, 255, 0.30)",
-                    link:"https://mui.com/",
-                },
-                {
-                    title: "Tailwind-CSS",
-                    description: "Utility-first CSS framework for flexibility.",
-                    logo: TailwindCSSIcon,
-                    color: "rgba(6, 182, 212, 0.30)",
-                    link:"https://tailwindcss.com/",
-                },
-                {
-                    title: "HTML5",
-                    description: "Latest version of the Hypertext Markup Language.",
-                    logo: HtmlIcon,
-                    color: "rgba(227, 79, 38, 0.30)",
-                    link:"https://html.com/",
-                },
-                {
-                    title:  "CSS3",
-                    description: "Latest version of Cascading Style Sheets.",
-                    logo: CSSIcon,
-                    color: "rgba(27, 115, 186, 0.30)",
-                    link:"https://css3.com/",
+                    "title": "Sass",
+                    "description": "CSS preprocessor for advanced styling.",
+                    "logo": SassIcon,
+                    "color": "rgba(204, 102, 153, 0.30)",
+                    "link": "https://sass-lang.com/"
                 }
-
-            ],
+            ]
         },
         {
-            title: "Familiar",
-            data: [
+            "id": "3",
+            "title": "Backend",
+            "data": [
                 {
-                    title: "TypeScript",
-                    description: "Typed superset of JavaScript language.",
-                    logo: TypeScript,
-                    color: "rgba(0, 122, 204, 0.30)",
-                    link: "https://www.typescriptlang.org/",
+                    "title": "Node.js",
+                    "description": "JavaScript runtime for server-side applications.",
+                    "logo": NodeJsIcon,
+                    "color": "rgba(0, 212, 134, 0.30)",
+                    "link": "https://nodejs.org/en"
                 },
                 {
-                    title: "React-Native",
-                    description: "Mobile app development framework ",
-                    logo: ReactNative,
-                    color: "rgba(97, 218, 251, 0.30)",
-                    link: "https://reactnative.dev/",
+                    "title": "Express.js",
+                    "description": "Minimalist web framework for Node.js.",
+                    "logo": Express,
+                    "color": "rgba(0, 255, 88, 0.30)",
+                    "link": "https://expressjs.com/"
                 },
                 {
-                    title: "Sass",
-                    description: "CSS preprocessor for more maintainable styles.",
-                    logo: Sass,
-                    color: "rgba(207, 100, 154, 0.30)",
-                    link: "https://sass-lang.com/",
+                    "title": "Prisma",
+                    "description": "Modern ORM for Node.js and TypeScript.",
+                    "logo": Prisma,
+                    "color": "rgba(0, 133, 155, 0.30)",
+                    "link": "https://www.prisma.io/"
                 },
                 {
-                    title: "Kotlin",
-                    description: "Concise, expressive programming language for modern Android development.",
-                    logo: Kotlin,
-                    color: "rgba(127, 82, 255, 0.30)",
-                    link: "https://kotlinlang.org/",
+                    "title": "MongoDB",
+                    "description": "NoSQL database for scalable applications.",
+                    "logo": MongoDBIcon,
+                    "color": "rgba(89, 150, 54, 0.30)",
+                    "link": "https://www.mongodb.com/"
                 },
                 {
-                    title: "Jetpack Compose",
-                    description: "Modern Android UI toolkit by Google.",
-                    logo: Android,
-                    color: "rgba(61, 219, 133, 0.30)",
-                    link: "https://developer.android.com/",
+                    "title": "Mongoose",
+                    "description": "MongoDB ODM for elegant data modeling.",
+                    "logo": Mongoose,
+                    "color": "rgba(251, 112, 43, 0.30)",
+                    "link": "https://mongoosejs.com/"
                 },
                 {
-                    title: "Python",
-                    description: "High-level, versatile programming language.",
-                    logo: Python,
-                    color: "rgba(255, 221, 85, 0.30)",
-                    link: "https://www.python.org/",
+                    "title": "PostgreSQL",
+                    "description": "Robust open-source relational database.",
+                    "logo": Postgresql,
+                    "color": "rgba(47, 103, 146, 0.30)",
+                    "link": "https://www.postgresql.org/"
                 },
                 {
-                    title: "Django",
-                    description: "High-level Python web framework.",
-                    logo: Django,
-                    color: "rgba(43, 169, 119, 0.30)",
-                    link: "https://www.djangoproject.com/",
+                    "title": "MySQL",
+                    "description": "Popular relational database system.",
+                    "logo": MYSQL,
+                    "color": "rgba(0, 117, 143, 0.30)",
+                    "link": "https://www.mysql.com/"
                 },
                 {
-                    title: "PHP",
-                    description: "Server-side scripting language for web development.",
-                    logo: PHP,
-                    color: "rgba(137, 147, 190, 0.30)",
-                    link: "https://www.php.net/",
+                    "title": "GraphQL",
+                    "description": "Flexible query language for APIs.",
+                    "logo": GraphQLIcon,
+                    "color": "rgba(229, 53, 171, 0.30)",
+                    "link": "https://graphql.org/"
                 },
                 {
-                    title: "Laravel",
-                    description: "Elegant PHP web application framework.",
-                    logo: Laravel,
-                    color: "rgba(255, 45, 32, 0.30)",
-                    link: "https://laravel.com/",
+                    "title": "Firebase",
+                    "description": "Google's platform for real-time apps.",
+                    "logo": FireBaseIcon,
+                    "color": "rgba(254, 166, 17, 0.30)",
+                    "link": "https://firebase.google.com/"
                 }
-            ],
+            ]
         },
         {
-            title: "Tools",
-            data: [
+            "id": "4",
+            "title": "Mobile & Multiplatform Development",
+            "data": [
                 {
-                    title: "Git",
-                    description: "Distributed version control system for tracking changes in source code.",
-                    logo: Git,
-                    color: "rgba(222, 76, 54, 0.30)",
-                    link: "https://git-scm.com/",
+                    "title": "React Native",
+                    "description": "Framework for cross-platform mobile apps.",
+                    "logo": ReactNative,
+                    "color": "rgba(97, 218, 251, 0.30)",
+                    "link": "https://reactnative.dev/"
                 },
                 {
-                    title: "GitHub",
-                    description: "Web-based platform for Git repositories, collaboration, and version control.",
-                    logo: Github,
-                    color: "rgba(255, 255, 255, 0.30)",
-                    link: "https://github.com/",
+                    "title": "Kotlin Multiplatform",
+                    "description": "Cross-platform development with Kotlin.",
+                    "logo": Kotlin,
+                    "color": "rgba(127, 82, 255, 0.30)",
+                    "link": "https://kotlinlang.org/docs/multiplatform.html"
                 },
                 {
-                    title: "npm",
-                    description: "Node Package Manager for JavaScript.",
-                    logo: NPM,
-                    color: "rgba(203, 56, 55, 0.30)",
-                    link: "https://www.npmjs.com/",
+                    "title": "Jetpack Compose",
+                    "description": "Modern toolkit for Android UI development.",
+                    "logo": Android,
+                    "color": "rgba(61, 219, 133, 0.30)",
+                    "link": "https://developer.android.com/jetpack/compose"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "title": "Tools",
+            "data": [
+                {
+                    "title": "Git",
+                    "description": "Version control for collaborative development.",
+                    "logo": Git,
+                    "color": "rgba(222, 76, 54, 0.30)",
+                    "link": "https://git-scm.com/"
                 },
                 {
-                    title: "Yarn",
-                    description: "Fast and secure JavaScript package manager.",
-                    logo: Yarn,
-                    color: "rgba(51, 152, 194, 0.30)",
-                    link: "https://yarnpkg.com/",
+                    "title": "GitHub",
+                    "description": "Platform for code hosting and collaboration.",
+                    "logo": Github,
+                    "color": "rgba(255, 255, 255, 0.30)",
+                    "link": "https://github.com/"
                 },
                 {
-                    title: "VS Code",
-                    description: "Free source code editor by Microsoft.",
-                    logo: VisualStudioCode,
-                    color: "rgba(60, 153, 212, 0.30)",
-                    link: "https://code.visualstudio.com/",
+                    "title": "npm",
+                    "description": "Package manager for JavaScript projects.",
+                    "logo": NPM,
+                    "color": "rgba(203, 56, 55, 0.30)",
+                    "link": "https://www.npmjs.com/"
                 },
                 {
-                    title: "WebStorm",
-                    description: "JetBrains IDE for web development.",
-                    logo: Webstorm,
-                    color: "rgba(0, 205, 215, 0.30)",
-                    link: "https://www.jetbrains.com/webstorm/",
+                    "title": "Yarn",
+                    "description": "Efficient JavaScript package manager.",
+                    "logo": Yarn,
+                    "color": "rgba(51, 152, 194, 0.30)",
+                    "link": "https://yarnpkg.com/"
                 },
                 {
-                    title: "Android Studio",
-                    description: "Official IDE for Android app development.",
-                    logo: AndroidStudio,
-                    color: "rgba(3, 169, 244, 0.30)",
-                    link: "https://developer.android.com/studio/intro",
+                    "title": "VS Code",
+                    "description": "Lightweight editor for modern development.",
+                    "logo": VisualStudioCode,
+                    "color": "rgba(60, 153, 212, 0.30)",
+                    "link": "https://code.visualstudio.com/"
                 },
                 {
-                    title: "PyCharm",
-                    description: "JetBrains IDE for Python development.",
-                    logo: PyCharm,
-                    color: "rgba(105, 223, 122, 0.30)",
-                    link: "https://www.jetbrains.com/pycharm/",
+                    "title": "WebStorm",
+                    "description": "IDE for advanced web development.",
+                    "logo": Webstorm,
+                    "color": "rgba(0, 205, 215, 0.30)",
+                    "link": "https://www.jetbrains.com/webstorm/"
                 },
                 {
-                    title: "Firefox dev tool",
-                    description: "Built-in developer tools in Mozilla Firefox browser.",
-                    logo: Firefox,
-                    color: "rgba(245, 34, 56, 0.30)",
-                    link: "https://firefox-dev.tools/",
+                    "title": "PyCharm",
+                    "description": "IDE for Python development.",
+                    "logo": PyCharm,
+                    "color": "rgba(105, 223, 122, 0.30)",
+                    "link": "https://www.jetbrains.com/pycharm/"
                 },
                 {
-                    title: "Chrome dev tool",
-                    description: "Integrated developer tools in Google Chrome browser.",
-                    logo: Chrome,
-                    color: "rgba(129, 179, 84, 0.30)",
-                    link: "https://developer.chrome.com/docs/devtools",
+                    "title": "Android Studio",
+                    "description": "Official IDE for Android development.",
+                    "logo": AndroidStudio,
+                    "color": "rgba(3, 169, 244, 0.30)",
+                    "link": "https://developer.android.com/studio"
                 },
                 {
-                    title: "Heroku",
-                    description: "Cloud platform for deploying applications.",
-                    logo: Heroku,
-                    color: "rgba(67, 0, 152, 0.30)",
-                    link: "https://www.heroku.com/",
+                    "title": "Vercel",
+                    "description": "Platform for deploying web applications.",
+                    "logo": Vercel,
+                    "color": "rgba(233, 202, 50, 0.30)",
+                    "link": "https://vercel.com/"
                 },
                 {
-                    title: "Render",
-                    description: "Cloud platform for hosting web applications and static sites.",
-                    logo: Render,
-                    color: "rgba(214, 31, 39, 0.30)",
-                    link: "https://render.com/",
+                    "title": "Heroku",
+                    "description": "Cloud platform for app deployment.",
+                    "logo": Heroku,
+                    "color": "rgba(67, 0, 152, 0.30)",
+                    "link": "https://www.heroku.com/"
                 },
                 {
-                    title: "Netlify",
-                    description: "Hosting and automation platform for web portfolios and serverless functions.",
-                    logo: Netlify,
-                    color: "rgba(37, 199, 183, 0.30)",
-                    link: "https://www.netlify.com/",
+                    "title": "Netlify",
+                    "description": "Hosting for static sites and serverless functions.",
+                    "logo": Netlify,
+                    "color": "rgba(37, 199, 183, 0.30)",
+                    "link": "https://www.netlify.com/"
                 },
                 {
-                    title: "Varcel",
-                    description: "Cloud platform for serverless functions and static site hosting.",
-                    logo: Varcel,
-                    color: "rgba(233, 202, 50, 0.30)",
-                    link: "https://vercel.com",
+                    "title": "Figma",
+                    "description": "Collaborative tool for UI/UX design.",
+                    "logo": Figma,
+                    "color": "rgba(10, 207, 131, 0.30)",
+                    "link": "https://www.figma.com/"
                 },
                 {
-                    title: "Figma",
-                    description: "Collaborative interface design tool for teams.",
-                    logo: Figma,
-                    color: "rgba(10, 207, 131, 0.30)",
-                    link: "https://www.figma.com",
+                    "title": "Ubuntu/Linux",
+                    "description": "Open-source OS for development environments.",
+                    "logo": Ubuntu,
+                    "color": "rgba(221, 74, 37, 0.30)",
+                    "link": "https://ubuntu.com/"
                 },
                 {
-                    title: "Postman",
-                    description: "API development and testing tool.",
-                    logo: Postman,
-                    color: "rgba(255, 108, 55, 0.30)",
-                    link: "https://www.postman.com/",
+                    "title": "Postman",
+                    "description": "API testing and development tool.",
+                    "logo": PostmanIcon,
+                    "color": "rgba(255, 108, 64, 0.30)",
+                    "link": "https://www.postman.com/"
+                },
+                {
+                    "title": "Render",
+                    "description": "Cloud platform for hosting and scaling apps.",
+                    "logo": RenderIcon,
+                    "color": "rgba(255, 159, 28, 0.30)",
+                    "link": "https://render.com/"
+                },
+                {
+                    "title": "Chrome",
+                    "description": "Fast and secure web browser for development.",
+                    "logo": ChromeIcon,
+                    "color": "rgba(66, 133, 244, 0.30)",
+                    "link": "https://www.google.com/chrome/"
+                },
+                {
+                    "title": "Firefox",
+                    "description": "Privacy-focused browser with developer tools.",
+                    "logo": FirefoxIcon,
+                    "color": "rgba(255, 85, 0, 0.30)",
+                    "link": "https://www.mozilla.org/en-US/firefox/"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "title": "Familiar",
+            "data": [
+                {
+                    "title": "Python",
+                    "description": "High-level language for diverse applications.",
+                    "logo": Python,
+                    "color": "rgba(255, 221, 85, 0.30)",
+                    "link": "https://www.python.org/"
+                },
+                {
+                    "title": "PHP",
+                    "description": "Server-side language for web development.",
+                    "logo": PHP,
+                    "color": "rgba(137, 147, 190, 0.30)",
+                    "link": "https://www.php.net/"
+                },
+                {
+                    "title": "Docker",
+                    "description": "Platform for containerized applications.",
+                    "logo": Docker,
+                    "color": "rgba(0, 114, 255, 0.30)",
+                    "link": "https://www.docker.com/"
+                },
+                {
+                    "title": "Laravel",
+                    "description": "PHP framework for elegant web applications.",
+                    "logo": LaravelIcon,
+                    "color": "rgba(255, 45, 85, 0.30)",
+                    "link": "https://laravel.com/"
+                },
+                {
+                    "title": "Django",
+                    "description": "Python framework for rapid web development.",
+                    "logo": DjangoIcon,
+                    "color": "rgba(10, 70, 60, 0.30)",
+                    "link": "https://www.djangoproject.com/"
                 }
             ]
         }

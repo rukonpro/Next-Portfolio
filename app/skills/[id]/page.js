@@ -8,7 +8,8 @@ import Footer from "@/app/components/footer/footer";
 
 
 const Page = ({ params }) => {
-    const skills = portfolioData?.skills?.find(data => data?.title === params?.id);
+
+    const skills = portfolioData?.skills?.find(data => data?.id === params?.id);
 
     return (
         <div className="skills-bg">
@@ -16,21 +17,22 @@ const Page = ({ params }) => {
 
 
             <div className="max-w-[1200px] relative  z-10 mx-auto px-5 py-28">
-                <div className="flex justify-between items-center py-3"
+                <div className="flex gap-1 items-center py-3"
                     data-aos="fade-up"
                     data-aos-anchor-placement="bottom-bottom"
                     data-aos-duration="1000"
                 >
-                    <h1 className={`text-white text-xl  font-bold  pt-15 `}>All {params?.id}</h1>
                     <BackButton />
+                    <h1 className={`text-white text-xl  font-bold  pt-15 `}>{skills?.title}</h1>
+
                 </div>
                 <div>
 
                     <ol className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  gap-5">
                         {
-                            skills?.data?.map((data, index) => {
+                            skills?.data?.map((data) => {
                                 return (
-                                    <li key={index}
+                                    <li key={data?.id}
                                         data-aos="fade-up"
                                         data-aos-anchor-placement="bottom-bottom"
                                         data-aos-duration="1000"

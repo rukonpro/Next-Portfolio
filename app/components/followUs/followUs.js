@@ -6,9 +6,9 @@ import IconImage from "@/public/images/BlockChain.svg";
 const FollowUs = ({ position }) => {
   return (
     <ol className={`flex flex-wrap justify-${position} gap-2`}>
-      {portfolioData?.followUs?.map((data, index) => {
+      {portfolioData?.followUs?.map((data) => {
         return (
-          <li key={index}>
+          <li key={data?.title}>
             <a
               data-aos="fade-right"
               data-aos-offset="10"

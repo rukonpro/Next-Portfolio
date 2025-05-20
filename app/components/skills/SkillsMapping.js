@@ -26,7 +26,7 @@ const SkillsMapping = ({data}) => {
 
                 <div className="flex justify-center py-5">
                     <Link
-                        href={`skills/${data?.title}`}
+                        href={`skills/${data?.id}`}
                         passHref={true}
                         legacyBehavior={true}
                         data-aos="fade-up"
@@ -37,7 +37,7 @@ const SkillsMapping = ({data}) => {
                             aria-label={`All ${data.title}`}
                             type="button"
                             className="text-lg font-bold  text-white w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70]">
-                            All {data.title}
+                            See more
                         </button>
                     </Link>
                 </div>

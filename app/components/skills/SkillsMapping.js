@@ -36,7 +36,7 @@ const SkillsMapping = ({data}) => {
                         <button
                             aria-label={`All ${data.title}`}
                             type="button"
-                            className="text-lg font-bold  text-white w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70]">
+                            className="px-6 py-3 rounded-lg transition-colors duration-300 bg-[#9669fe]/50 hover:bg-[#7b55cc]/50 ">
                             See more
                         </button>
                     </Link>

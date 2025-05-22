@@ -35,21 +35,6 @@ const Portfolios = () => {
                <Suspense fallback={"<h1>loading...</h1>"}>
                    <PortfolioMapping/>
                </Suspense>
-
-                <div className="flex justify-center">
-                    <Link
-                        href="/portfolios"
-                        passHref={true}
-                        legacyBehavior={true}
-                    >
-                        <button
-                            aria-label="All Project"
-                            type="button"
-                            className="text-lg font-bold  text-white w-64 border py-2 px-5 rounded-lg hover:bg-[#350b70]">
-                            All Project
-                        </button>
-                    </Link>
-                </div>
             </div>
         </section>
     );

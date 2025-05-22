@@ -62,14 +62,6 @@ const Portfolios = () => {
                     <BackButton/>
                 </div>
                 <PortfolioMapping/>
-                <div className="flex  justify-center py-3"
-                     data-aos="fade-up"
-                     data-aos-anchor-placement="bottom-bottom"
-                     data-aos-duration="1000"
-                >
-                    <BackButton/>
-                </div>
-
             </div>
             </RootLayoutAnimated>
             <Footer/>

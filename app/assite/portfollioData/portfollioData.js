@@ -108,6 +108,11 @@ import JsxAndStatePropsBanner1 from "@/public/BlogsImage/JsxAndStatePropsBanner1
 import HowToStartProgramingForBeginner from "@/app/components/blogs/Articls/HowToStartProgramingForBeginner";
 import HowToStartProgramingForBeginnerBanner from "@/public/BlogsImage/How-to-Start-Coding-for-Beginners.jpg";
 
+import BrandLogo from "@/public/images/BrandLogo.webp";
+import Brand1 from "@/public/images/brand1.png";
+import Brand2 from "@/public/images/brand2.png";
+import Brand3 from "@/public/images/brand3.png";
+import Brand4 from "@/public/images/barnd4.png";
 
 const portfolioData = {
     navLinks : [
@@ -644,6 +649,34 @@ const portfolioData = {
                     liveLink: {
                         link:"https://www.musafira2z.com/",
                         icon:LiveIcon
+                    }
+                }
+            },
+            {
+                id: "Brand-OnlineMarketplace",
+                title: "Brand - Online Marketplace",
+                logo: BrandLogo,
+                description: "As a developer for Brand, an online marketplace, I built a full-stack e-commerce platform using Next.js, MongoDB, and Prisma. The project features secure authentication with Next-Auth, form validation with Yup, and responsive design with Tailwind CSS. Integrated Cloudinary for image management and implemented functionalities like product search, shopping cart, wishlist, and an admin dashboard for streamlined operations.",
+                images: [Brand1, Brand2, Brand3, Brand4],
+                technology: ["Next.js", "MongoDB", "Prisma", "Yup", "Tailwind CSS", "Axios", "Next-Auth", "Cloudinary"],
+                point: [
+                    "Developed a full-stack e-commerce platform using Next.js, MongoDB, and Prisma for efficient product management and transactions.",
+                    "Implemented secure user authentication with Next-Auth and robust form validation using Yup.",
+                    "Designed a responsive and intuitive UI with Tailwind CSS, enhancing user experience across devices.",
+                    "Integrated Cloudinary for efficient image management and added features like product search, shopping cart, wishlist, and admin dashboard."
+                ],
+                links: {
+                    fontEndCode: {
+                        link: null,
+                        icon: null
+                    },
+                    backEndCode: {
+                        link: null,
+                        icon: null
+                    },
+                    liveLink: {
+                        link: "https://brand-rukon.vercel.app",
+                        icon: LiveIcon
                     }
                 }
             },

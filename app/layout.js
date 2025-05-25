@@ -17,11 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="scroll-smooth scroll-"
+      className="scroll-smooth "
       suppressHydrationWarning={isDev}
     >
       <body className={`${inter.className} overflow-x-hidden overflow-y-auto`}>
-        <main className="!cursor-none bg-black">
+        <main className="!cursor-none bg-black relative">
           <CustomCursor />
           <AppSessionProvider>
             {children}

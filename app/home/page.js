@@ -48,6 +48,7 @@ import ServicesSkeleton from "@/app/components/Skeletons/ServicesSkeleton/Servic
 import PortfoliosSkeleton from "@/app/components/Skeletons/PortfoliosSkeleton/PortfoliosSkeleton";
 import BlogsSkeleton from "@/app/components/Skeletons/BlogSkeleton/BlogSkeleton";
 import CertificationsSkeleton from "@/app/components/Skeletons/CertificationsSkeleton/CertificationsSkeleton";
+import AnimatedCodeBlock from "@/app/components/codeBlock/CodeBlock";
 
 // Metadata for SEO and page configuration
 export const metadata = {
@@ -65,7 +66,7 @@ export const metadata = {
  */
 export default function Home() {
     return (
-        <React.Fragment>
+        <div className="overflow-x-hidden">
             {/* Navigation is not wrapped in Suspense as it’s typically critical */}
             <Navigation />
 
@@ -73,19 +74,19 @@ export default function Home() {
             <Suspense fallback={<HeaderSkeleton />}>
                 <Header />
             </Suspense>
-
+            <Suspense fallback={<AboutSkeleton />}>
+                <About />
+            </Suspense>
             <Suspense fallback={<CounterSkeleton />}>
                 <Counter />
             </Suspense>
 
-            <Suspense fallback={<AboutSkeleton />}>
-                <About />
-            </Suspense>
+
 
             <Suspense fallback={<SkillsSkeleton />}>
                 <Skills />
             </Suspense>
-
+                <AnimatedCodeBlock/>
             <Suspense fallback={<ServicesSkeleton />}>
                 <Services />
             </Suspense>
@@ -113,6 +114,6 @@ export default function Home() {
             <Suspense fallback={<p>Loading Footer...</p>}>
                 <Footer />
             </Suspense>
-        </React.Fragment>
+        </div>
     );
 }

@@ -70,7 +70,7 @@ const Header = () => {
             id="home"
             ref={headerRef}
             role="banner"
-            className="headerBg  h-svh md:max-h-screen lg:h-svh  flex justify-center items-center px-4 py-6"
+            className="headerBg  h-svh md:max-h-screen lg:h-svh  flex justify-center items-center px-4 py-6 "
         >
             <div className="flex items-center max-w-[1200px] w-full mx-auto">
                 <div className="relative z-10 w-full">

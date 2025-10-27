@@ -1,23 +1,23 @@
 import React from 'react';
-import Navigation from "@/app/components/navigation/navigation";
-import PortfolioMapping from "@/app/components/portfolios/portfolioMapping";
-import BackButton from "@/app/components/backButton/backButton";
-import Footer from "@/app/components/footer/footer";
+import Navigation from "@/app/components/layout/navigation/navigation";
+import PortfolioMapping from "@/app/components/views/portfolios/portfolioMapping";
+import BackButton from "@/app/components/ui/backButton/backButton";
+import Footer from "@/app/components/layout/footer/footer";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
 export async function generateMetadata() {
     return {
       title: 'Projects - Showcasing Web Development Expertise | Rukon.Pro',
       description:
-        'Discover Rukon’s web development projects, including full-stack applications, eCommerce platforms, and modern web solutions built using MERN stack and other cutting-edge technologies.',
-      keywords: 'Rukon projects, web development portfolio, MERN stack projects, ReactJS, NodeJS, full-stack applications, programming projects, eCommerce development',
+        'Discover Rukon’s web development projects, including full-stack applications, eCommerce platforms, and modern web solutions built with the latest cutting-edge technologies.',
+      keywords: 'Rukon projects, web development portfolio, full-stack projects, ReactJS, NodeJS, full-stack applications, programming projects, eCommerce development',
       authors: 'Rukon',
       creator: 'Rukon',
       publisher: 'Rukon.Pro',
       openGraph: {
         title: 'Projects - Showcasing Web Development Expertise | Rukon.Pro',
         description:
-          'Explore Rukon’s project portfolio featuring cutting-edge web development projects, built with the latest technologies such as MERN stack, React, Node.js, and more.',
+          'Explore Rukon’s project portfolio featuring cutting-edge web development projects, built with the latest technologies such as React, Node.js, and more.',
         url: 'https://rukonpro.vercel.app/portfolios',
         siteName: 'Rukon.Pro',
         locale: 'en_US',
@@ -38,9 +38,14 @@ export async function generateMetadata() {
           'Browse through Rukon’s web development projects portfolio, featuring full-stack applications and innovative web solutions built with modern technologies.',
         image: 'https://rukonpro.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frukon_cover_photo_2.169d9c02.jpg&w=1920&q=75',
       },
-      themeColor: '#382e6b',
     };
   }
+
+export const generateViewport = () => {
+    return {
+        themeColor: '#382e6b',
+    }
+}
 
 const Portfolios = () => {
     return (

@@ -2,40 +2,40 @@ import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 
 // Dynamic imports for components with consistent loading fallbacks
-const About = dynamic(() => import("@/app/components/about/about"), {
+const About = dynamic(() => import("@/app/components/views/about/about"), {
     loading: () => <AboutSkeleton />,
 });
-const Header = dynamic(() => import("@/app/components/header/header"), {
+const Header = dynamic(() => import("@/app/components/layout/header/header"), {
     loading: () => <HeaderSkeleton />,
 });
-const Counter = dynamic(() => import("@/app/components/counter/counter"), {
+const Counter = dynamic(() => import("@/app/components/views/counter/counter"), {
     loading: () => <CounterSkeleton />,
 });
-const Navigation = dynamic(() => import("@/app/components/navigation/navigation"), {
+const Navigation = dynamic(() => import("@/app/components/layout/navigation/navigation"), {
     loading: () => <p>Loading Navigation...</p>,
 });
-const Services = dynamic(() => import("@/app/components/services/services"), {
+const Services = dynamic(() => import("@/app/components/views/services/services"), {
     loading: () => <ServicesSkeleton />,
 });
-const Footer = dynamic(() => import("@/app/components/footer/footer"), {
+const Footer = dynamic(() => import("@/app/components/layout/footer/footer"), {
     loading: () => <p>Loading Footer...</p>,
 });
-const Skills = dynamic(() => import("@/app/components/skills/skills"), {
+const Skills = dynamic(() => import("@/app/components/views/skills/skills"), {
     loading: () => <SkillsSkeleton />,
 });
-const Portfolios = dynamic(() => import("@/app/components/portfolios/portfolios"), {
+const Portfolios = dynamic(() => import("@/app/components/views/portfolios/portfolios"), {
     loading: () => <PortfoliosSkeleton />,
 });
-const Certifications = dynamic(() => import("@/app/components/certifications/certifications"), {
+const Certifications = dynamic(() => import("@/app/components/views/certifications/certifications"), {
     loading: () => <CertificationsSkeleton />,
 });
-const Blogs = dynamic(() => import("@/app/components/blogs/blogs"), {
+const Blogs = dynamic(() => import("@/app/components/views/blogs/blogs"), {
     loading: () => <BlogsSkeleton />,
 });
-const ContactLayout = dynamic(() => import("@/app/components/contact/ContactLayout"), {
+const ContactLayout = dynamic(() => import("@/app/components/views/contact/ContactLayout"), {
     loading: () => <p>Loading Contact...</p>,
 });
-const Pricing = dynamic(() => import("@/app/components/pricing/pricing"), {
+const Pricing = dynamic(() => import("@/app/components/views/pricing/pricing"), {
     loading: () => <p>Loading Pricing...</p>,
 });
 
@@ -48,16 +48,20 @@ import ServicesSkeleton from "@/app/components/Skeletons/ServicesSkeleton/Servic
 import PortfoliosSkeleton from "@/app/components/Skeletons/PortfoliosSkeleton/PortfoliosSkeleton";
 import BlogsSkeleton from "@/app/components/Skeletons/BlogSkeleton/BlogSkeleton";
 import CertificationsSkeleton from "@/app/components/Skeletons/CertificationsSkeleton/CertificationsSkeleton";
-import AnimatedCodeBlock from "@/app/components/codeBlock/CodeBlock";
+import AnimatedCodeBlock from "@/app/components/views/codeBlock/CodeBlock";
 
 // Metadata for SEO and page configuration
 export const metadata = {
-    title: "MERN Stack Developer - Rukon.Pro",
+    title: "Full Stack Developer - Rukon.Pro",
     description:
-        "Explore the portfolio of Rukon, a skilled MERN stack developer specializing in building robust, scalable, and high-performance web applications.",
-    keywords: "MERN stack, web development, portfolio, Rukon, Next.js, React",
+        "Explore the portfolio of Rukon, a skilled Full stack developer specializing in building robust, scalable, and high-performance web applications.",
+    keywords: "Full stack, web development, portfolio, Rukon, Next.js, React",
     author: "Rukon",
-    viewport: "width=device-width, initial-scale=1.0",
+};
+
+export const viewport = {
+    width: "device-width",
+    initialScale: 1.0,
 };
 
 /**

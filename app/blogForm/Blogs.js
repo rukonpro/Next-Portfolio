@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { getBlogs } from "@/app/lib/data";
 // import Image from 'next/image';
 
 export default function Blogs() {
@@ -9,10 +9,10 @@ export default function Blogs() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('/api/blog/getBlogs');
-        setBlogs(response.data);
+        const blogsData = await getBlogs();
+        setBlogs(blogsData);
       } catch (error) {
-        
+        console.error("Failed to fetch blogs:", error);
       }
     };
 

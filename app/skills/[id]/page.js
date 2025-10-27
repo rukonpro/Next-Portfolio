@@ -1,8 +1,8 @@
-import portfolioData from "@/app/assite/portfollioData/portfollioData";
-import Navigation from "@/app/components/navigation/navigation";
-import BackButton from "@/app/components/backButton/backButton";
-import SkillsCard from "@/app/components/skills/SkillsCard";
-import Footer from "@/app/components/footer/footer";
+import portfolioData from "@/app/assets/portfolioData/portfolioData";
+import Navigation from "@/app/components/layout/navigation/navigation";
+import BackButton from "@/app/components/ui/backButton/backButton";
+import SkillsCard from "@/app/components/views/skills/SkillsCard";
+import Footer from "@/app/components/layout/footer/footer";
 
 
 
@@ -75,13 +75,13 @@ export async function generateMetadata({ params }) {
     }
 
     return {
-        title: `MERN Stack Dev. - ${skills.title}`,
-        description: 'Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.',
+        title: `Full Stack Dev. - ${skills.title}`,
+        description: 'Explore the portfolio of Your Name, a skilled Full stack developer with expertise in building robust web applications.',
         // Optionally, you can add more metadata fields here
-        keywords: "MERN, web development, portfolio, skills, developer",
+        keywords: "Full stack, web development, portfolio, skills, developer",
         openGraph: {
-            title: `MERN Stack Dev. - ${skills.title}`,
-            description: 'Explore the portfolio of Your Name, a skilled MERN stack developer.',
+            title: `Full Stack Dev. - ${skills.title}`,
+            description: 'Explore the portfolio of Your Name, a skilled Full stack developer.',
             url: `https://rukonpro.vercel.app/skills/${params.id}`,
             images: skills?.data?.map(skill => ({
                 url: skill.logo.src,
@@ -94,8 +94,8 @@ export async function generateMetadata({ params }) {
         },
         twitter: {
             card: "summary_large_image",
-            title: `MERN Stack Dev. - ${skills.title}`,
-            description: 'Explore the portfolio of Your Name, a skilled MERN stack developer.',
+            title: `Full Stack Dev. - ${skills.title}`,
+            description: 'Explore the portfolio of Your Name, a skilled Full stack developer.',
             image: "/images/rukon-pro-footer-images.png", // Replace with the actual image URL
         },
     }

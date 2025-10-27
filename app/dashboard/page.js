@@ -4,8 +4,8 @@ import BlogForm from '../blogForm/BlogForm';
 import {useSession} from "next-auth/react";
 import { useRouter } from 'next/navigation'
 import Loading from "@/app/loading";
-import Navigation from "@/app/components/navigation/navigation";
-import Footer from "@/app/components/footer/footer";
+import Navigation from "@/app/components/layout/navigation/navigation";
+import Footer from "@/app/components/layout/footer/footer";
 
 const Dashboard = () => {
     const router = useRouter();

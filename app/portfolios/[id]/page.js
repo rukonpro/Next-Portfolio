@@ -1,7 +1,7 @@
-import Portfolio from "@/app/components/portfolios/portfolio";
-import portfolioData from "@/app/assite/portfollioData/portfollioData";
-import Navigation from "@/app/components/navigation/navigation";
-import Footer from "@/app/components/footer/footer";
+import Portfolio from "@/app/components/views/portfolios/portfolio";
+import portfolioData from "@/app/assets/portfolioData/portfolioData";
+import Navigation from "@/app/components/layout/navigation/navigation";
+import Footer from "@/app/components/layout/footer/footer";
 
 
 const Page = async ({ params }) => {
@@ -54,7 +54,6 @@ export async function generateMetadata({ params }) {
           url: 'https://rukonpro.vercel.app',
           images: [],
         },
-        themeColor: '#FF0000',
         robots: 'noindex, nofollow', // Add this for pages you don’t want indexed
       };
     }
@@ -86,19 +85,19 @@ export async function generateMetadata({ params }) {
           description: portfolio.description,
           image: portfolio.images[0].src,
         },
-        themeColor: '#009688',
         robots: 'index, follow', // This tells search engines to index the page and follow its links
     };
 }
 
-export async function getStaticPaths() {
-    const paths = portfolioData?.portfolios?.future?.map(future => {
+export async function generateViewport({ params }) {
+    const portfolio = portfolioData?.portfolios?.future?.find(data => data?.id === params?.id);
+
+    if (!portfolio) {
         return {
-            params: { id: future.id }
+            themeColor: '#FF0000',
         }
-    })
-    return {
-        paths,
-        fallback: 'blocking', // false or "blocking"
     }
+    return {
+        themeColor: '#009688',
+    };
 }

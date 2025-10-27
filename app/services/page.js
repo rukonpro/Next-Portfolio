@@ -1,7 +1,7 @@
 import React from 'react';
-import ServicesComponent from "@/app/components/services/services";
-import Navigation from "@/app/components/navigation/navigation";
-import Footer from "@/app/components/footer/footer";
+import ServicesComponent from "@/app/components/views/services/services";
+import Navigation from "@/app/components/layout/navigation/navigation";
+import Footer from "@/app/components/layout/footer/footer";
 import Head from 'next/head';
 
 const Services = () => {

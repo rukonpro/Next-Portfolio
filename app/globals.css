@@ -518,3 +518,16 @@ body {
   backdrop-filter: blur(100px);
   background-color: rgba(21, 0, 32, 0.22);
 }
+
+/* Fix for -webkit-text-size-adjust warning */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Fix for AOS library transition-delay bug */
+[data-aos][data-aos][data-aos-delay='50'] { transition-delay: 50ms !important; }
+[data-aos][data-aos][data-aos-delay='100'] { transition-delay: 100ms !important; }
+[data-aos][data-aos][data-aos-delay='150'] { transition-delay: 150ms !important; }
+[data-aos][data-aos][data-aos-delay='200'] { transition-delay: 200ms !important; }
+[data-aos][data-aos][data-aos-delay='250'] { transition-delay: 250ms !important; }
+[data-aos][data-aos][data-aos-delay='300'] { transition-delay: 300ms !important; }

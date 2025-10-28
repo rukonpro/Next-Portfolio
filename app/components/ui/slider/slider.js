@@ -51,18 +51,6 @@ const Slider = () => {
         return () => clearInterval(intervalId);
     }, [slides.length]);
 
-    useEffect(() => {
-        if (slides.length > 0) {
-            slideRefs.current.forEach((el, i) => {
-                if (i !== currentIndex) {
-                    gsap.set(el, { opacity: 0, scale: 1, rotation: 0, display: "none" });
-                } else {
-                    gsap.set(el, { opacity: 1, scale: 1, rotation: 0, display: "block" });
-                }
-            });
-        }
-    }, [slides.length, currentIndex]);
-
     return (
         <div className="relative w-full h-[40vh] overflow-hidden">
             {slides.map((slide, index) => (
@@ -70,6 +58,7 @@ const Slider = () => {
                     key={slide.id}
                     ref={(el) => (slideRefs.current[index] = el)}
                     className="absolute top-0 left-0 w-full h-full"
+                    style={{ display: index === 0 ? 'block' : 'none' }}
                 >
                     <Image
                         src={slide.content}
@@ -77,7 +66,7 @@ const Slider = () => {
                         fill
                         sizes="(max-width: 360px) 100vw, (max-width: 768px) 75vw, 50vw"
                         className="object-contain"
-                        priority
+                        priority={index === 0}
                     />
                 </div>
             ))}

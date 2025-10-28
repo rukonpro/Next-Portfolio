@@ -1,22 +1,30 @@
 import React from 'react';
-import Navigation from "@/app/components/layout/navigation/navigation";
 import PricingComponent from "@/app/components/views/pricing/pricing";
-import Footer from "@/app/components/layout/footer/footer";
+import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 
 
 export const metadata = {
-    title: 'Full Stack Dev. - price',
-    description: 'Pay as you grow\n' +
-        '\n' +
-        'I offer comprehensive Full stack development expertise to bring your portfolios to life. My service structure is designed to provide flexibility based on the scope and complexity of your needs.',
+    title: 'Pricing Plans',
+    description: 'Find the right pricing plan for your web development needs. I offer flexible plans for projects of all sizes.',
+    keywords: 'pricing, web development, cost, budget, full stack developer',
+    author: 'Rukon Pro',
+    openGraph: {
+        title: 'Pricing Plans - Rukon.Pro',
+        description: 'Flexible pricing for web development projects.',
+        url: 'https://rukonpro.vercel.app/price',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Pricing Plans - Rukon.Pro',
+        description: 'Flexible pricing for web development projects.',
+    },
 }
 const Pricing = () => {
     return (
-        <section>
-            <Navigation/>
-                <PricingComponent/>
-            <Footer/>
-        </section>
+        <PageLayout>
+            <PricingComponent/>
+        </PageLayout>
     );
 };
 

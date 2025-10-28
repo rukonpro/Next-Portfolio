@@ -81,7 +81,7 @@ export default function Dropdown({ status, handleSignOut, setIsModalOpen }) {
     return (
         <>
             {status === "authenticated" ? (
-                <div className="relative inline-block text-left" ref={dropdownRef}>
+                <div className="relative inline-block text-left " ref={dropdownRef}>
                     <button
                         ref={buttonRef}
                         onClick={() => setIsOpen(!isOpen)}
@@ -100,14 +100,14 @@ export default function Dropdown({ status, handleSignOut, setIsModalOpen }) {
 
                     {isOpen && (
                         <div
-                            className="mt-2 w-56 rounded-md shadow-lg backdrop-blur-3xl ring-1 ring-black ring-opacity-5 z-10"
-                            style={position} // Use dynamic position state
+                            className="mt-2 w-56 rounded-md shadow-lg bg-purple-700 backdrop-blur-3xl ring-1 ring-black ring-opacity-5 z-10"
+                            style={{ ...position, transform: 'translateZ(0)' }} // Use dynamic position state
                             role="menu"
                             aria-orientation="vertical"
                             aria-labelledby="menu-button"
                             tabIndex="-1"
                         >
-                            <div className="p-1" role="none">
+                            <div className="p-1 " role="none">
                                 <Link
                                     href="/contact"
                                     className="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-500/30 hover:rounded"

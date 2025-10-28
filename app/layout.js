@@ -6,10 +6,25 @@ import { Analytics } from "@vercel/analytics/react";
 import AppSessionProvider from "./Context/AppSessionProvider";
 import CustomCursor from "@/app/components/ui/customCursor/CustomCursor";
 export const metadata = {
-  metadataBase: new URL('https://rukonpro.vercel.app'),
-  title: "Full Stack Dev. - Rukon.Pro",
+  metadataBase: new URL("https://rukonpro.vercel.app"),
+  title: {
+    default: "Full Stack Dev. - Rukon.Pro",
+    template: `%s - Rukon.Pro`,
+  },
   description:
-    "Explore the portfolio of Your Name, a skilled Full stack developer with expertise in building robust web applications.",
+    "Explore the portfolio of Rukon Pro, a skilled Full stack developer with expertise in building robust web applications.",
+  openGraph: {
+    title: "Full Stack Dev. - Rukon.Pro",
+    description: "Explore the portfolio of Rukon Pro, a skilled Full stack developer with expertise in building robust web applications.",
+    url: "https://rukonpro.vercel.app",
+    siteName: "Rukon.Pro",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    title: "Full Stack Dev. - Rukon.Pro",
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -7,7 +7,7 @@ import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAn
 
 export async function generateMetadata() {
     return {
-      title: 'Projects - Showcasing Web Development Expertise | Rukon.Pro',
+      title: 'My Portfolio',
       description:
         'Discover Rukon’s web development projects, including full-stack applications, eCommerce platforms, and modern web solutions built with the latest cutting-edge technologies.',
       keywords: 'Rukon projects, web development portfolio, full-stack projects, ReactJS, NodeJS, full-stack applications, programming projects, eCommerce development',

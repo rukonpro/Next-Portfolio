@@ -11,15 +11,16 @@ const BlogCard = ({ blog }) => {
             <Link href={`blogs/${id}`} className=" pb-10">
                 {
                     thumbnail &&
-                    <img
-                        className="w-full    object-cover h-44"
+                    <Image
+                        className="w-full object-cover h-44"
                         data-aos="fade-left"
                         data-aos-anchor-placement="top-bottom"
                         data-aos-duration="2000"
-                        src={thumbnail}                 
+                        src={thumbnail}
                         alt={title}
-                       
-                       
+                        width={500} // Placeholder width
+                        height={250} // Placeholder height (adjust as needed for aspect ratio)
+                        priority={false} // Not critical for initial load
                     />
                 }
                 <h1 className="text-xl pt-3 px-2">{title}</h1>

@@ -1,10 +1,9 @@
 import AboutComponent from "@/app/components/views/about/about";
-import Navigation from "@/app/components/layout/navigation/navigation";
-import Footer from "@/app/components/layout/footer/footer";
+import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 
 
 export const metadata = {
-    title: 'Full Stack Dev. - Rukon.Pro',
+    title: 'About Me',
     description: 'Welcome to Rukon.Pro! I am Rukon, a passionate Full stack developer dedicated to creating dynamic and user-friendly web applications. With a strong foundation in JavaScript, React, Node.js, and MongoDB, I excel at building responsive, scalable solutions that enhance user experiences. My portfolio showcases a variety of projects, from e-commerce platforms to innovative web tools, reflecting my commitment to quality and performance. Join me on this exciting journey in the tech world as I continue to learn, grow, and bring ideas to life through code.',
     keywords: 'Rukon, Full stack developer, web applications, JavaScript, React, Node.js, MongoDB, portfolio, e-commerce, innovative tools',
     authors: 'Rukon',
@@ -42,11 +41,9 @@ export const generateViewport = () => {
 
 const About = () => {
     return (
-        <section>
-            <Navigation />
+        <PageLayout>
             <AboutComponent />
-            <Footer />
-        </section>
+        </PageLayout>
     );
 };
 

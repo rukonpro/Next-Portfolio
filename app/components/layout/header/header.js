@@ -79,7 +79,7 @@ const Header = () => {
                                 Hello!, I'm
                             </p>
                             <h1 className={`font-chewy bg-gradient-to-br from-[#816aff] to-[#d066fd] text-transparent bg-clip-text tracking-[1px] text-4xl md:text-3xl lg:text-7xl font-bold`}>Rukon Uddin</h1>
-                            <p className="text-sm sm:text-base md:text-sm lg:text-xl font-bold tracking-[1px] text-[#fccdff] flex flex-wrap">MERN-stack | React | React-Native | Javascript | Kotlin Developer</p>
+                            <p className="text-sm sm:text-base md:text-sm lg:text-xl font-bold tracking-[1px] text-[#fccdff] flex flex-wrap">Full Stack | React | React-Native | Javascript | Kotlin Developer</p>
                             <FollowUs position="left" />
                             <a
                                 data-aos="fade-right"

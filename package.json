@@ -59,7 +59,6 @@
     "@graphql-codegen/client-preset": "4.2.5",
     "@graphql-codegen/introspection": "4.0.3",
     "autoprefixer": "^10.0.1",
-    "daisyui": "^4.5.0",
     "eslint": "^8",
     "eslint-config-next": "^0.2.4",
     "postcss": "^8",

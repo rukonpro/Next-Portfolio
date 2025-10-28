@@ -1,11 +1,10 @@
 import React, {Suspense} from 'react';
 import BlogsComponent from "@/app/components/views/blogs/blogs";
-import Navigation from "@/app/components/layout/navigation/navigation";
-import Footer from "@/app/components/layout/footer/footer";
+import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 
 
 export const metadata = {
-    title: 'Blogs - Rukon.Pro',
+    title: 'Blogs',
     description: 'Dive into a rich collection of articles and tutorials on web development and technology trends. Written by Rukon, a passionate Full stack developer, these blogs offer valuable insights, practical tips, and in-depth knowledge to help you navigate the world of coding and development. Whether you are a beginner or an experienced developer, there’s something here for everyone to learn and grow.',
     keywords: 'Rukon, Blogs, Web Development, Full Stack, JavaScript, React, Node.js, MongoDB, Technology, Tutorials',
     authors: 'Rukon',
@@ -44,15 +43,11 @@ export const generateViewport = () => {
 
 const Blogs = () => {
     return (
-        <section>
-
-                   <Navigation />
-                        <Suspense fallback={<h1>Loading...</h1>}>
-                               <BlogsComponent/>
-                        </Suspense>
-                   <Footer/>
-
-        </section>
+        <PageLayout>
+            <Suspense fallback={<h1>Loading...</h1>}>
+                <BlogsComponent/>
+            </Suspense>
+        </PageLayout>
     );
 };
 

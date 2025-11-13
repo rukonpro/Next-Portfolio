@@ -1,4 +1,4 @@
-import BlogCard from "./BlogCard";
+import BlogCard from "./BlogCardView";
 import { Suspense } from "react";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 import { getBlogs } from "@/app/lib/data";

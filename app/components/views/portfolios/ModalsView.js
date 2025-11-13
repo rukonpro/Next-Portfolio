@@ -1,5 +1,5 @@
 import React from 'react';
-import Portfolio from "./portfolio";
+import Portfolio from "./PortfolioView";
 
 const Modals = ({ data, isOpen, onClose }) => {
     if (!isOpen) return null;

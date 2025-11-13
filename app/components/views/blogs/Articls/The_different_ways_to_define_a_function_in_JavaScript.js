@@ -1,9 +1,9 @@
 import React from 'react';
-import BlogUser from "../BlogUser";
+import BlogUser from "../BlogUserView";
 import AvatarRukon from "@/public/images/rukon.jpg";
 import Image from "next/image";
 import TheDifferentWaysToDefineAFunctionInJavaScriptBanner from "@/public/BlogsImage/The_different_ways_to_define_a_function_in_JavaScript.webp";
-import CodeBlog from "../CodeBlog";
+import CodeBlog from "@/app/components/views/blogs/CodeBlogView";
 
 const TheDifferentWaysToDefineAFunctionInJavaScript = () => {
     return (

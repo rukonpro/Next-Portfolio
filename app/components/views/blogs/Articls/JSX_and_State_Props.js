@@ -1,12 +1,13 @@
 import React from 'react';
-import BlogUser from "../BlogUser";
+import BlogUser from "../BlogUserView";
 import AvatarRukon from "@/public/images/rukon.jpg";
 import Image from "next/image";
 import JsxAndStatePropsBanner1 from "@/public/BlogsImage/JsxAndStatePropsBanner1.png";
 import JsxAndStatePropsBanner2 from "@/public/BlogsImage/JsxAndStatePropsBanner2.png";
 import JsxAndStatePropsBanner3 from "@/public/BlogsImage/JsxAndStatePropsBanner3.png";
 import JsxAndStatePropsBanner4 from "@/public/BlogsImage/JsxAndStatePropsBanner4.png";
-import CodeBlog from "../CodeBlog";
+import CodeBlog from "@/app/components/views/blogs/CodeBlogView";
+
 
 const JsxAndStateProps = () => {
     return (

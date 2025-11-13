@@ -1,9 +1,10 @@
 import React from 'react';
-import BlogUser from "../BlogUser";
+import BlogUser from "../BlogUserView";
+import CodeBlog from "../CodeBlogView";
 import AvatarRukon from "@/public/images/rukon.jpg";
 import Image from "next/image";
 import WhatIsExpressJsAAndWhyWouldWeUseItBanner from "@/public/BlogsImage/WhatIsExpressJsAAndWhyWouldWeUseItBanner.png";
-import CodeBlog from "../CodeBlog";
+
 
 const WhatIsExpressJsAAndWhyWouldWeUseIt = () => {
     return (

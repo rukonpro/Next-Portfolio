@@ -1,5 +1,5 @@
 import React, {Suspense} from 'react';
-import BlogsComponent from "@/app/components/views/blogs/blogs";
+import BlogsComponent from "@/app/components/views/blogs/BlogsView";
 import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 
 

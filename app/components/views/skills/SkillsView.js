@@ -1,6 +1,6 @@
 import React from 'react';
 import portfolioData from "@/app/assets/portfolioData/portfolioData";
-import SkillsMapping from "./SkillsMapping";
+import SkillsMapping from "./SkillsMappingView";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 
 const Skills = () => {

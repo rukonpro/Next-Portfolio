@@ -2,44 +2,44 @@ import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 
 // Dynamic imports for components with consistent loading fallbacks
-const About = dynamic(() => import("@/app/components/views/about/about"), {
+const About = dynamic(() => import("@/app/components/views/about/AboutView"), {
     loading: () => <p>Loading...</p>,
 });
 const Header = dynamic(() => import("@/app/components/layout/header/header"), {
     loading: () => <p>Loading...</p>,
 });
-const Counter = dynamic(() => import("@/app/components/views/counter/counter"), {
+const Counter = dynamic(() => import("@/app/components/views/counter/CounterView"), {
     loading: () => <p>Loading...</p>,
 });
 const Navigation = dynamic(() => import("@/app/components/layout/navigation/navigation"), {
     loading: () => <p>Loading Navigation...</p>,
 });
-const Services = dynamic(() => import("@/app/components/views/services/services"), {
+const Services = dynamic(() => import("@/app/components/views/services/ServicesView"), {
     loading: () => <p>Loading...</p>,
 });
 const Footer = dynamic(() => import("@/app/components/layout/footer/footer"), {
     loading: () => <p>Loading Footer...</p>,
 });
-const Skills = dynamic(() => import("@/app/components/views/skills/skills"), {
+const Skills = dynamic(() => import("@/app/components/views/skills/SkillsView"), {
     loading: () => <p>Loading...</p>,
 });
-const Portfolios = dynamic(() => import("@/app/components/views/portfolios/portfolios"), {
+const Portfolios = dynamic(() => import("@/app/components/views/portfolios/PortfoliosView"), {
     loading: () => <p>Loading...</p>,
 });
-const Certifications = dynamic(() => import("@/app/components/views/certifications/certifications"), {
+const Certifications = dynamic(() => import("@/app/components/views/certifications/CertificationsView"), {
     loading: () => <p>Loading...</p>,
 });
-const Blogs = dynamic(() => import("@/app/components/views/blogs/blogs"), {
+const Blogs = dynamic(() => import("@/app/components/views/blogs/BlogsView"), {
     loading: () => <p>Loading...</p>,
 });
-const ContactLayout = dynamic(() => import("@/app/components/views/contact/ContactLayout"), {
+const ContactLayout = dynamic(() => import("@/app/components/views/contact/ContactLayoutView"), {
     loading: () => <p>Loading Contact...</p>,
 });
-const Pricing = dynamic(() => import("@/app/components/views/pricing/pricing"), {
+const Pricing = dynamic(() => import("@/app/components/views/pricing/PricingView"), {
     loading: () => <p>Loading Pricing...</p>,
 });
 
-import AnimatedCodeBlock from "@/app/components/views/codeBlock/CodeBlock";
+import AnimatedCodeBlock from "@/app/components/views/codeBlock/CodeBlockView";
 
 // Metadata for SEO and page configuration
 export const metadata = {

@@ -5,7 +5,7 @@ import Image from "next/image";
 import ArrowIcon from "@/public/images/arrow.png";
 import { useState } from "react";
 
-import PortfolioCard from "./PortfolioCard";
+import PortfolioCard from "./PortfolioCardView";
 
 const PortfolioMapping = () => {
     const [visibleItems, setVisibleItems] = useState(6); // Initial number of items to show

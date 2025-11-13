@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
-import Login from "./login";
-import Registration from "./registration";
+import Login from "./LoginView";
+import Registration from "./RegistrationView";
 import Modal from "@/app/components/ui/Modal/Modal";
 
 export default function LoginModal({isModalOpen, setIsModalOpen}) {

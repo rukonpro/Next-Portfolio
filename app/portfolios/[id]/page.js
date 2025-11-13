@@ -1,7 +1,7 @@
-import Portfolio from "@/app/components/views/portfolios/portfolio";
 import portfolioData from "@/app/assets/portfolioData/portfolioData";
 import Navigation from "@/app/components/layout/navigation/navigation";
 import Footer from "@/app/components/layout/footer/footer";
+import Portfolio from "@/app/components/views/portfolios/PortfolioView";
 
 
 const Page = async ({ params }) => {

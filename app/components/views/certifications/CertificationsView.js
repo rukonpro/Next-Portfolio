@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Marquee from "react-fast-marquee";
 import portfolioData from "@/app/assets/portfolioData/portfolioData";
 import Image from "next/image";
-import Certificate from "./Certificate";
+import Certificate from "./CertificateView";
 
 const Certifications = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,10 +1,10 @@
 import React from 'react';
-import BlogUser from "../BlogUser";
+import BlogUser from "../BlogUserView";
 import AvatarRukon from "@/public/images/rukon.jpg";
 import Image from "next/image";
 import HowToDuplicateGitRepositoryBanner from "@/public/BlogsImage/HowToDuplicateRepository .jpg";
-import CodeBlog from "../CodeBlog";
-import {H1, H3} from "../BlogComponents/BlogComponents";
+import CodeBlog from "../CodeBlogView";
+import {H1, H3} from "../Blog";
 
 const HowToDuplicateGitRepository = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import PricingComponent from "@/app/components/views/pricing/pricing";
+import PricingComponent from "@/app/components/views/pricing/PricingView";
 import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 
 

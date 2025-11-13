@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MenuIcon from "@/public/images/menu-bar.png";
 import CloseIcon from "@/public/images/close.png";
-import RegisterAndLogin from "@/app/components/views/authentication/loginModal";
+import RegisterAndLogin from "@/app/components/views/authentication/LoginModalView";
 import AocFuc from "@/app/utils/AOS";
 import MobileMenu from "./MobileMenu";
 import DesktopMenu from "./DesktopMenu";

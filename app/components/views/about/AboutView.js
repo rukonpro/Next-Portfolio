@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProfileImage from "@/public/images/Generated Image September 20, 2025 - 1_43PM.png";
+import ProfileImage from "@/public/images/rukon.jpeg";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 import React from "react";
 import ContactBg from "@/public/images/banner-7.webp";
@@ -11,18 +11,20 @@ const About = () => {
             <div className="relative z-10">
 
                 <RootLayoutAnimated>
-                <div className='max-w-[1200px] mx-auto grid md:grid-cols-2 gap-10 items-center'>
-                    <Image
-                        data-aos="fade-up"
-                        data-aos-easing="linear"
-                        data-aos-duration="1500"
-                        className='h-full w-full rounded-xl object-contain filter'
-                        placeholder="blur"
-                        loading="lazy"
-                        src={ProfileImage}
-                        alt="profilephoto" 
-                        suppressHydrationWarning
-                    />
+                <div className='max-w-[1200px] mx-auto grid md:grid-cols-2 gap-16 items-center'>
+                   <div>
+                       <Image
+                           data-aos="fade-up"
+                           data-aos-easing="linear"
+                           data-aos-duration="1500"
+                           className='h-full w-full rounded-xl  filter bg-purple-700 object-fill'
+                           placeholder="blur"
+                           loading="lazy"
+                           src={ProfileImage}
+                           alt="profilephoto"
+                           suppressHydrationWarning
+                       />
+                   </div>
 
                         <div>
                             <div className="relative ">

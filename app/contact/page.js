@@ -1,4 +1,4 @@
-import ContactComponent from "@/app/components/views/contact/contact"
+import ContactComponent from "@/app/components/views/contact/ContactView"
 import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 const Contact = () => {
     return (

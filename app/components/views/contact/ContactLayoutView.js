@@ -1,9 +1,9 @@
-import Contact from "./contact";
+import ContactView from "@/app/components/views/contact/ContactView";
 
 const ContactLayout = () => {
   return (
     <section id="contact"  >
-      <Contact />
+      <ContactView />
     </section>
   );
 };

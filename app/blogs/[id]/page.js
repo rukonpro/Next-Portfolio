@@ -1,8 +1,8 @@
 import React from 'react';
 import Navigation from "@/app/components/layout/navigation/navigation";
 import Footer from "@/app/components/layout/footer/footer";
-import { H1 } from '@/app/components/views/blogs/BlogComponents/BlogComponents';
-import BlogUser from '@/app/components/views/blogs/BlogUser';
+import { H1 } from '@/app/components/views/blogs/Blog';
+import BlogUser from '@/app/components/views/blogs/BlogUserView';
 import AvatarRukon from "/public/images/rukon.jpg";
 import Image from 'next/image';
 import { getBlogById, getBlogs } from "@/app/lib/data";

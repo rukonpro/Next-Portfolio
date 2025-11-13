@@ -1,4 +1,4 @@
-import AboutComponent from "@/app/components/views/about/about";
+import AboutComponent from "@/app/components/views/about/AboutView";
 import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 
 

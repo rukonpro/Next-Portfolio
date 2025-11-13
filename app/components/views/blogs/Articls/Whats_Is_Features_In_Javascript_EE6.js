@@ -2,8 +2,8 @@ import React, {Suspense} from 'react';
 import Image from "next/image";
 import AvatarRukon from "/public/images/rukon.jpg";
 import WhatsIsFeatureInJavasriptES6 from "@/public/BlogsImage/javascript_ES6.png";
-import CodeBlog from "../CodeBlog";
-import BlogUser from "../BlogUser";
+import CodeBlog from "../CodeBlogView";
+import BlogUser from "../BlogUserView";
 const Whats_Is_Features_In_Javascript_EE6 = () => {
     return (
         <div>

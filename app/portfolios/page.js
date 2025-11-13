@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from "@/app/components/layout/navigation/navigation";
-import PortfolioMapping from "@/app/components/views/portfolios/portfolioMapping";
+import PortfolioMapping from "@/app/components/views/portfolios/PortfolioMappingView";
 import BackButton from "@/app/components/ui/backButton/backButton";
 import Footer from "@/app/components/layout/footer/footer";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";

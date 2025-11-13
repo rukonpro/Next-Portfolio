@@ -7,7 +7,6 @@ import { getPricing } from "@/app/lib/data";
 const Pricing = async () => {
 const pricings = await getPricing();
 
-
     return (
         <section className=' pricing-bg'>
             <div
@@ -37,7 +36,7 @@ const pricings = await getPricing();
                     </div>
                     <ol className='mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                         {
-                            pricings?.data?.map((item) => {
+                            pricings?.map((item) => {
 
                                 return (
                                     (

@@ -1,5 +1,5 @@
 import React, {Suspense} from 'react';
-import Skills from "@/app/components/views/skills/skills";
+import Skills from "@/app/components/views/skills/SkillsView";
 import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 
 

@@ -1,7 +1,7 @@
 import portfolioData from "@/app/assets/portfolioData/portfolioData";
 import Navigation from "@/app/components/layout/navigation/navigation";
 import BackButton from "@/app/components/ui/backButton/backButton";
-import SkillsCard from "@/app/components/views/skills/SkillsCard";
+import SkillsCard from "@/app/components/views/skills/SkillsCardView";
 import Footer from "@/app/components/layout/footer/footer";
 
 

@@ -1,5 +1,5 @@
-import SkillsCard from "./SkillsCard";
 import Link from "next/link";
+import SkillsCardView from "@/app/components/views/skills/SkillsCardView";
 
 const SkillsMapping = ({data}) => {
 
@@ -18,7 +18,7 @@ const SkillsMapping = ({data}) => {
                                     data-aos-duration="1000"
                                     data-aos-delay="0"
                                 >
-                                    <SkillsCard data={data}/>
+                                    <SkillsCardView data={data}/>
                                 </li>
                             )
                         })

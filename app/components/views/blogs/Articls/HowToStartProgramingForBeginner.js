@@ -1,10 +1,11 @@
 import React from 'react';
-import BlogUser from "../BlogUser";
+import BlogUser from "../BlogUserView";
+import CodeBlog from "../CodeBlogView";
 import AvatarRukon from "@/public/images/rukon.jpg";
 import Image from "next/image";
 import HowToStartProgramingForBeginnerBanner from "@/public/BlogsImage/How-to-Start-Coding-for-Beginners.jpg";
-import CodeBlog from "../CodeBlog";
-import {H1, H3, P} from "../BlogComponents/BlogComponents";
+
+import {H1,P} from "../Blog";
 
 const HowToStartProgramingForBeginner = () => {
     return (

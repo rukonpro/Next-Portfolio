@@ -1,5 +1,5 @@
-import ContactForm from "./contactForm";
-import ContactInfo from "./ContactInfo";
+import ContactForm from "./ContactFormView";
+import ContactInfo from "./ContactInfoView";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
 import Image from "next/image";
 import ContactBg from "@/public/images/banner-6.png"

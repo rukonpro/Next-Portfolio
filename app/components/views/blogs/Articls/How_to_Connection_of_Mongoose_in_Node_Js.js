@@ -2,9 +2,9 @@ import React, {Suspense} from 'react';
 import Image from "next/image";
 import AvatarRukon from "/public/images/rukon.jpg";
 import MongooseConnectionImage from "/public/BlogsImage/how_to_mongoose_Connection.webp";
-import CodeBlog from "../CodeBlog";
-import BlogUser from "../BlogUser";
-import {H1, P} from "../BlogComponents/BlogComponents";
+import CodeBlog from "../CodeBlogView";
+import BlogUser from "../BlogUserView";
+import {H1, P} from "../Blog";
 
 const HowToConnectionOfMongooseInNodeJs = () => {
     return (

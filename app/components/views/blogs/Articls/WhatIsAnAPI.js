@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogUser from "../BlogUser";
+import BlogUser from "../BlogUserView";
 import AvatarRukon from "@/public/images/rukon.jpg";
 import Image from "next/image";
 import WhatIsAnAPIBanner1 from "@/public/BlogsImage/WhatIsAnAPIBanner1.png";

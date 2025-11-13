@@ -52,11 +52,11 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export async function generateViewport({ params }) {
-    return {
-        themeColor: '#382e6b',
-    };
-}
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#382e6b',
+};
 
 const BlogDetails = async ({ params }) => {
     const id = params?.id;

@@ -89,15 +89,19 @@ export async function generateMetadata({ params }) {
     };
 }
 
-export async function generateViewport({ params }) {
+export const viewport = ({ params }) => {
     const portfolio = portfolioData?.portfolios?.future?.find(data => data?.id === params?.id);
 
     if (!portfolio) {
         return {
+            width: 'device-width',
+            initialScale: 1,
             themeColor: '#FF0000',
         }
     }
     return {
+        width: 'device-width',
+        initialScale: 1,
         themeColor: '#009688',
     };
-}
+};

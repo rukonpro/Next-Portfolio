@@ -27,3 +27,9 @@ export const metadata = {
         description: 'Let\'s build something amazing together.',
     },
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#37306b',
+};

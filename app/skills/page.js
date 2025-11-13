@@ -32,3 +32,9 @@ export const metadata = {
         description: 'A showcase of my technical skills and expertise in web development.',
     },
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#37306b',
+};

@@ -41,11 +41,11 @@ export async function generateMetadata() {
     };
   }
 
-export const generateViewport = () => {
-    return {
-        themeColor: '#382e6b',
-    }
-}
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#382e6b',
+};
 
 const Portfolios = () => {
     return (

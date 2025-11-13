@@ -20,6 +20,12 @@ export const metadata = {
         description: 'Flexible pricing for web development projects.',
     },
 }
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#37306b',
+};
 const Pricing = () => {
     return (
         <PageLayout>

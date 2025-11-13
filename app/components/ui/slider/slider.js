@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import portfolioData from "@/app/assets/portfolioData/portfolioData";
@@ -9,7 +9,7 @@ const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const slideRefs = useRef([]);
 
-    const animateSlide = (index) => {
+    const animateSlide = useCallback((index) => {
         const prevIndex = (index - 1 + slides.length) % slides.length;
 
         gsap.to(slideRefs.current[prevIndex], {
@@ -35,7 +35,7 @@ const Slider = () => {
                 display: "block",
             }
         );
-    };
+    }, [slides.length, slideRefs]);
 
     useEffect(() => {
         if (slides.length === 0) return;
@@ -49,7 +49,7 @@ const Slider = () => {
         }, 5000);
 
         return () => clearInterval(intervalId);
-    }, [slides.length]);
+    }, [slides.length, animateSlide]);
 
     return (
         <div className="relative w-full h-[40vh] overflow-hidden">

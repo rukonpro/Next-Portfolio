@@ -18,7 +18,7 @@ const RootLayoutAnimated = ({ children }) => {
     }, [pathname]);
 
     return (
-        <div ref={containerRef} className="animatedPage">
+        <div ref={containerRef} className="animatedPage ">
             {children}
         </div>
     );

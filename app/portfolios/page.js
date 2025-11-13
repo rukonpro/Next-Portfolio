@@ -49,7 +49,7 @@ export const generateViewport = () => {
 
 const Portfolios = () => {
     return (
-        <div className="  min-h-screen portfolio-bg">
+        <div className="  min-h-screen portfolio-bg overflow-x-hidden">
             <Navigation/>
             <RootLayoutAnimated>
             <div

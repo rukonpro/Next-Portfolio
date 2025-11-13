@@ -4,7 +4,7 @@ import Footer from "@/app/components/layout/footer/footer";
 
 const PageLayout = ({ children }) => {
     return (
-        <section>
+        <section className="overflow-x-hidden">
             <Navigation />
             {children}
             <Footer />

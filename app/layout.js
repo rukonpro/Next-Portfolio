@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import "react-quill/dist/quill.snow.css";
 import {inter} from "@/app/utils/fonts/fonts";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import AppSessionProvider from "./Context/AppSessionProvider";
 import CustomCursor from "@/app/components/ui/customCursor/CustomCursor";
 export const metadata = {
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
             {children}
           </AppSessionProvider>
           <Analytics />
+          <SpeedInsights/>
         </main>
       </body>
     </html>

@@ -2,6 +2,11 @@
 User-agent: *
 Allow: /
 
+# *
+User-agent: *
+Disallow: /dashboard
+Disallow: /blogForm
+
 # Host
 Host: https://rukonpro.vercel.app
 

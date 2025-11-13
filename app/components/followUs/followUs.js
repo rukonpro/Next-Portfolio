@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import portfolioData from "@/app/assite/portfollioData/portfollioData";
+import portfolioData from "@/app/assets/portfolioData/portfolioData";
 import IconImage from "@/public/images/BlockChain.svg";
 
 const FollowUs = ({ position }) => {
@@ -17,6 +17,7 @@ const FollowUs = ({ position }) => {
               href={data.link}
               target="_blank"
               rel="noreferrer"
+              suppressHydrationWarning
             >
               <button
                 style={{
@@ -26,7 +27,7 @@ const FollowUs = ({ position }) => {
               >
                 <Image
                   src={data?.icon}
-                  className={position==="left"&&`md:w-[16px] md:h-[16px]`}
+                  className={position === "left" ? `md:w-[16px] md:h-[16px]` : ""}
                   height={16}
                   width={16}
                   alt={data.title}

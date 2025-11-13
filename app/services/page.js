@@ -1,24 +1,20 @@
 import React from 'react';
-import ServicesComponent from "@/app/components/services/services";
-import Navigation from "@/app/components/navigation/navigation";
-import Footer from "@/app/components/footer/footer";
-import Head from 'next/head';
+import ServicesComponent from "@/app/components/views/services/ServicesView";
+import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 
 const Services = () => {
 
     return (
-        <section>
-            <Navigation />
+        <PageLayout>
             <ServicesComponent />
-            <Footer />
-        </section>
+        </PageLayout>
     );
 };
 
 export default Services;
 
 export const metadata = {
-    title: "My Services | Web Development Expertise",
+    title: "My Services",
     description: "Explore my web development services including front-end, back-end, and full-stack development. Specializing in responsive web applications and e-commerce solutions.",
     keywords: "web development, front-end, back-end, full-stack, e-commerce, responsive design, JavaScript, React, Node.js, Express.js",
     openGraph: {

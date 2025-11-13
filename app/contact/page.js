@@ -1,19 +1,29 @@
-import ContactComponent from "@/app/components/contact/contact"
-import Navigation from "@/app/components/navigation/navigation";
-import Footer from "@/app/components/footer/footer";
+import ContactComponent from "@/app/components/views/contact/ContactView"
+import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
 const Contact = () => {
     return (
-        <div>
-            <Navigation/>
-                <ContactComponent/>
-                <Footer/>
-        </div>
+        <PageLayout>
+            <ContactComponent/>
+        </PageLayout>
     );
 };
 
 export default Contact;
 
 export const metadata = {
-    title: 'MERN Stack Dev. - Contact',
-    description: '"Ready to bring your digital vision to life. Let\'s connect and discuss how I can elevate your online presence. Reach out for web development expertise in HTML, CSS, JavaScript, and more. Looking forward to collaborating with you!"',
-}
+    title: 'Contact Me',
+    description: 'Get in touch with Rukon Pro to discuss your project. I am available for freelance web development work.',
+    keywords: 'contact, freelance, web developer, hire me, project inquiry',
+    author: 'Rukon Pro',
+    openGraph: {
+        title: 'Contact Me - Rukon.Pro',
+        description: 'Let\'s build something amazing together.',
+        url: 'https://rukonpro.vercel.app/contact',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Contact Me - Rukon.Pro',
+        description: 'Let\'s build something amazing together.',
+    },
+};

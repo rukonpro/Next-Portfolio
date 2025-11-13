@@ -2,62 +2,57 @@ import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 
 // Dynamic imports for components with consistent loading fallbacks
-const About = dynamic(() => import("@/app/components/about/about"), {
-    loading: () => <AboutSkeleton />,
+const About = dynamic(() => import("@/app/components/views/about/AboutView"), {
+    loading: () => <p>Loading...</p>,
 });
-const Header = dynamic(() => import("@/app/components/header/header"), {
-    loading: () => <HeaderSkeleton />,
+const Header = dynamic(() => import("@/app/components/layout/header/header"), {
+    loading: () => <p>Loading...</p>,
 });
-const Counter = dynamic(() => import("@/app/components/counter/counter"), {
-    loading: () => <CounterSkeleton />,
+const Counter = dynamic(() => import("@/app/components/views/counter/CounterView"), {
+    loading: () => <p>Loading...</p>,
 });
-const Navigation = dynamic(() => import("@/app/components/navigation/navigation"), {
+const Navigation = dynamic(() => import("@/app/components/layout/navigation/navigation"), {
     loading: () => <p>Loading Navigation...</p>,
 });
-const Services = dynamic(() => import("@/app/components/services/services"), {
-    loading: () => <ServicesSkeleton />,
+const Services = dynamic(() => import("@/app/components/views/services/ServicesView"), {
+    loading: () => <p>Loading...</p>,
 });
-const Footer = dynamic(() => import("@/app/components/footer/footer"), {
+const Footer = dynamic(() => import("@/app/components/layout/footer/footer"), {
     loading: () => <p>Loading Footer...</p>,
 });
-const Skills = dynamic(() => import("@/app/components/skills/skills"), {
-    loading: () => <SkillsSkeleton />,
+const Skills = dynamic(() => import("@/app/components/views/skills/SkillsView"), {
+    loading: () => <p>Loading...</p>,
 });
-const Portfolios = dynamic(() => import("@/app/components/portfolios/portfolios"), {
-    loading: () => <PortfoliosSkeleton />,
+const Portfolios = dynamic(() => import("@/app/components/views/portfolios/PortfoliosView"), {
+    loading: () => <p>Loading...</p>,
 });
-const Certifications = dynamic(() => import("@/app/components/certifications/certifications"), {
-    loading: () => <CertificationsSkeleton />,
+const Certifications = dynamic(() => import("@/app/components/views/certifications/CertificationsView"), {
+    loading: () => <p>Loading...</p>,
 });
-const Blogs = dynamic(() => import("@/app/components/blogs/blogs"), {
-    loading: () => <BlogsSkeleton />,
+const Blogs = dynamic(() => import("@/app/components/views/blogs/BlogsView"), {
+    loading: () => <p>Loading...</p>,
 });
-const ContactLayout = dynamic(() => import("@/app/components/contact/ContactLayout"), {
+const ContactLayout = dynamic(() => import("@/app/components/views/contact/ContactLayoutView"), {
     loading: () => <p>Loading Contact...</p>,
 });
-const Pricing = dynamic(() => import("@/app/components/pricing/pricing"), {
+const Pricing = dynamic(() => import("@/app/components/views/pricing/PricingView"), {
     loading: () => <p>Loading Pricing...</p>,
 });
 
-// Static imports for skeleton components
-import HeaderSkeleton from "@/app/components/Skeletons/HeaderSkeleton/HeaderSkeleton";
-import CounterSkeleton from "@/app/components/Skeletons/CounterSkeleton/CounterSkeleton";
-import AboutSkeleton from "@/app/components/Skeletons/AboutSkeleton/AboutSkeleton";
-import SkillsSkeleton from "@/app/components/Skeletons/SkillsSkeleton/SkillsSkeleton";
-import ServicesSkeleton from "@/app/components/Skeletons/ServicesSkeleton/ServicesSkeleton";
-import PortfoliosSkeleton from "@/app/components/Skeletons/PortfoliosSkeleton/PortfoliosSkeleton";
-import BlogsSkeleton from "@/app/components/Skeletons/BlogSkeleton/BlogSkeleton";
-import CertificationsSkeleton from "@/app/components/Skeletons/CertificationsSkeleton/CertificationsSkeleton";
-import AnimatedCodeBlock from "@/app/components/codeBlock/CodeBlock";
+import AnimatedCodeBlock from "@/app/components/views/codeBlock/CodeBlockView";
 
 // Metadata for SEO and page configuration
 export const metadata = {
-    title: "MERN Stack Developer - Rukon.Pro",
+    title: "Full Stack Developer - Rukon.Pro",
     description:
-        "Explore the portfolio of Rukon, a skilled MERN stack developer specializing in building robust, scalable, and high-performance web applications.",
-    keywords: "MERN stack, web development, portfolio, Rukon, Next.js, React",
+        "Explore the portfolio of Rukon, a skilled Full stack developer specializing in building robust, scalable, and high-performance web applications.",
+    keywords: "Full stack, web development, portfolio, Rukon, Next.js, React",
     author: "Rukon",
-    viewport: "width=device-width, initial-scale=1.0",
+};
+
+export const viewport = {
+    width: "device-width",
+    initialScale: 1.0,
 };
 
 /**
@@ -71,35 +66,35 @@ export default function Home() {
             <Navigation />
 
             {/* Main content with lazy-loaded components and skeleton fallbacks */}
-            <Suspense fallback={<HeaderSkeleton />}>
+            <Suspense fallback={<p>Loading...</p>}>
                 <Header />
             </Suspense>
-            <Suspense fallback={<AboutSkeleton />}>
+            <Suspense fallback={<p>Loading...</p>}>
                 <About />
             </Suspense>
-            <Suspense fallback={<CounterSkeleton />}>
+            <Suspense fallback={<p>Loading...</p>}>
                 <Counter />
             </Suspense>
 
 
 
-            <Suspense fallback={<SkillsSkeleton />}>
+            <Suspense fallback={<p>Loading...</p>}>
                 <Skills />
             </Suspense>
                 <AnimatedCodeBlock/>
-            <Suspense fallback={<ServicesSkeleton />}>
+            <Suspense fallback={<p>Loading...</p>}>
                 <Services />
             </Suspense>
 
-            <Suspense fallback={<PortfoliosSkeleton />}>
+            <Suspense fallback={<p>Loading...</p>}>
                 <Portfolios />
             </Suspense>
 
-            <Suspense fallback={<BlogsSkeleton />}>
+            <Suspense fallback={<p>Loading...</p>}>
                 <Blogs />
             </Suspense>
 
-            <Suspense fallback={<CertificationsSkeleton />}>
+            <Suspense fallback={<p>Loading...</p>}>
                 <Certifications />
             </Suspense>
 

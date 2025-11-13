@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
-import axios from 'axios';
-// import Image from 'next/image';
+import { getBlogs } from "@/app/lib/data";
+import Image from 'next/image';
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
@@ -9,10 +9,10 @@ export default function Blogs() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('/api/blog/getBlogs');
-        setBlogs(response.data);
+        const blogsData = await getBlogs();
+        setBlogs(blogsData);
       } catch (error) {
-        
+        console.error("Failed to fetch blogs:", error);
       }
     };
 
@@ -28,15 +28,14 @@ export default function Blogs() {
       ) : (
         blogs.map((blog) => (
           <div key={blog.id} className="mb-8 p-6 bg-slate-500 shadow-md rounded-lg">
-            <img src={blog?.thumbnail} alt={blog?.title} className='w-full' />
-
-            {/* <Image
-              src="https://i.ibb.co/hMcTjN1/d10734f0cbd100aef4fbaca00.jpg"
-              alt="Image description"
-              width={800}  // ইমেজের প্রস্থ
-              height={600} // ইমেজের উচ্চতা
-              quality={75} // কোয়ালিটি সেট করুন, যদি প্রয়োজন হয়
-            /> */}
+            <Image
+              src={blog?.thumbnail}
+              alt={blog?.title}
+              className='w-full'
+              width={800}  // Placeholder width
+              height={400} // Placeholder height (adjust as needed for aspect ratio)
+              priority={false} // Not critical for initial load
+            />
             <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
             <div
               className="prose max-w-none"

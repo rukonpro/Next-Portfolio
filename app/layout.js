@@ -4,11 +4,27 @@ import "react-quill/dist/quill.snow.css";
 import {inter} from "@/app/utils/fonts/fonts";
 import { Analytics } from "@vercel/analytics/react";
 import AppSessionProvider from "./Context/AppSessionProvider";
-import CustomCursor from "@/app/components/customCursor/CustomCursor";
+import CustomCursor from "@/app/components/ui/customCursor/CustomCursor";
 export const metadata = {
-  title: "MERN Stack Dev. - Rukon.Pro",
+  metadataBase: new URL("https://rukonpro.vercel.app"),
+  title: {
+    default: "Full Stack Dev. - Rukon.Pro",
+    template: `%s - Rukon.Pro`,
+  },
   description:
-    "Explore the portfolio of Your Name, a skilled MERN stack developer with expertise in building robust web applications.",
+    "Explore the portfolio of Rukon Pro, a skilled Full stack developer with expertise in building robust web applications.",
+  openGraph: {
+    title: "Full Stack Dev. - Rukon.Pro",
+    description: "Explore the portfolio of Rukon Pro, a skilled Full stack developer with expertise in building robust web applications.",
+    url: "https://rukonpro.vercel.app",
+    siteName: "Rukon.Pro",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    title: "Full Stack Dev. - Rukon.Pro",
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -18,9 +34,9 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className="scroll-smooth "
-      suppressHydrationWarning={isDev}
+      suppressHydrationWarning
     >
-      <body className={`${inter.className} overflow-x-hidden overflow-y-auto`}>
+      <body className={`${inter.variable} font-sans overflow-x-hidden overflow-y-auto`}>
         <main className="!cursor-none bg-black relative">
           <CustomCursor />
           <AppSessionProvider>

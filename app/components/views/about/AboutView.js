@@ -7,7 +7,7 @@ import ContactBg from "@/public/images/banner-7.webp";
 const About = () => {
     return (
         <section id="about" className='relative  px-5 py-28 about-bg'>
-            <Image src={ContactBg} alt="contact-bg" height={300} width={300} className="absolute  left-0 top-0 w-36 md:w-72 "/>
+            <Image src={ContactBg} alt="contact-bg" height={300} width={300} sizes="(min-width: 768px) 288px, 144px" className="absolute  left-0 top-0 w-36 md:w-72 "/>
             <div className="relative z-10">
 
                 <RootLayoutAnimated>

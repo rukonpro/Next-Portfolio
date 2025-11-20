@@ -5,6 +5,15 @@ import { Highlight, themes } from "prism-react-renderer";
 import { Copy, Pause, Play, FastForward, Rewind } from "lucide-react";
 import snippets from "@/app/assets/portfolioData/snippets";
 
+// Import Prism core and specific language components
+import Prism from "prismjs";
+import "prismjs/components/prism-markup"; // For HTML
+import "prismjs/components/prism-css";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-python";
+import "prismjs/components/prism-typescript";
+
 
 
 const SPEED_PRESETS = {

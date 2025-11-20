@@ -26,6 +26,7 @@ const Counter = () => {
                <Image
                    src={DevelopImage} alt="rukon pro developer"
                    placeholder="blur"
+                   sizes="100vw"
                    className="absolute size-11/12 w-full "/>
            </div>
             <div className="relative z-10 lg:py-72 py-28">

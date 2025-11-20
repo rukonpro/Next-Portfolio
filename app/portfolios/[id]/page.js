@@ -13,7 +13,7 @@ const Page = async ({ params }) => {
         '@type': 'Project',
         name: portfolio?.title,
         image: portfolio?.images[0],
-        description: portfolio.description,
+        description: portfolio?.description,
     }
     return (
         <section className=" text-white portfolio-bg">
@@ -92,16 +92,17 @@ export async function generateMetadata({ params }) {
 export const viewport = ({ params }) => {
     const portfolio = portfolioData?.portfolios?.future?.find(data => data?.id === params?.id);
 
+
     if (!portfolio) {
         return {
             width: 'device-width',
             initialScale: 1,
-            themeColor: '#FF0000',
+            themeColor: '#37306b',
         }
     }
     return {
         width: 'device-width',
         initialScale: 1,
-        themeColor: '#009688',
+        themeColor: '#37306b',
     };
 };

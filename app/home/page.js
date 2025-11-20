@@ -1,11 +1,8 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
-import AboutSkeleton from "@/app/components/views/about/AboutSkeleton";
-
-// Lazy load the About component
-const About = dynamic(() => import("@/app/components/views/about/AboutView"));
 
 // Static imports for all page components
+import About from "@/app/components/views/about/AboutView";
 import Header from "@/app/components/layout/header/header";
 import Counter from "@/app/components/views/counter/CounterView";
 import Navigation from "@/app/components/layout/navigation/navigation";
@@ -17,7 +14,13 @@ import Certifications from "@/app/components/views/certifications/Certifications
 import Blogs from "@/app/components/views/blogs/BlogsView";
 import ContactLayout from "@/app/components/views/contact/ContactLayoutView";
 import Pricing from "@/app/components/views/pricing/PricingView";
-import AnimatedCodeBlock from "@/app/components/views/codeBlock/CodeBlockView";
+
+// Dynamic import for AnimatedCodeBlock
+import AnimatedCodeBlockSkeleton from "@/app/components/views/codeBlock/AnimatedCodeBlockSkeleton";
+import AboutSkeleton from "@/app/components/views/about/AboutSkeleton";
+const AnimatedCodeBlock = dynamic(() => import("@/app/components/views/codeBlock/CodeBlockView"), {
+    loading: () => <AnimatedCodeBlockSkeleton />,
+});
 
 // Metadata for SEO and page configuration
 export const metadata = {
@@ -48,7 +51,9 @@ export default async function Home() {
             </Suspense>
             <Counter />
             <Skills />
-            <AnimatedCodeBlock/>
+            <Suspense fallback={<AnimatedCodeBlockSkeleton />}>
+                <AnimatedCodeBlock/>
+            </Suspense>
             <Services />
             <Portfolios />
             <Blogs/>

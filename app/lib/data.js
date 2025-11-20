@@ -36,7 +36,7 @@ export const getBlogs = cache(async (params = {}) => {
 // Cached function to get a single blog by ID
 export const getBlogById = cache(async (id) => {
     try {
-        const res = await fetch(`${baseURL}/api/blog/${id}`, { next: { revalidate: 3600 } }); // Revalidate every hour
+        const res = await fetch(`${baseURL}/api/blog/${id}`, { next: { revalidate: 3600, tags: [`blog-${id}`] } }); // Revalidate every hour
         if (!res.ok) {
             throw new Error('Failed to fetch blog');
         }
@@ -46,3 +46,22 @@ export const getBlogById = cache(async (id) => {
         return null;
     }
 });
+
+// Function to delete a blog by ID
+export async function deleteBlog(id) {
+    try {
+        const res = await fetch(`${baseURL}/api/blog/deleteBlog?id=${id}`, {
+            method: 'DELETE',
+        });
+
+        if (!res.ok) {
+            const errorData = await res.json();
+            throw new Error(errorData.error || 'Failed to delete blog');
+        }
+
+        return { success: true };
+    } catch (error) {
+        console.error(`Error deleting blog with id: ${id}`, error);
+        throw error; // Re-throw to be caught by the caller
+    }
+}

@@ -22,6 +22,7 @@ export default async function handler(req, res) {
             });
             res.status(200).json(blogs);
         } catch (error) {
+            console.error('Error fetching blogs from Prisma:', error); // Add more specific logging
             res.status(500).json({ error: 'Failed to fetch blogs' });
         }
     } else {

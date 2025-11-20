@@ -9,7 +9,7 @@ export default async function handler(req, res) {
         try {
             const blog = await prisma.blog.findUnique({
                 where: {
-                    id: id,  // or use { slug: id } if using a slug
+                    id: id,  // Use id directly as it's a string
                 },
             });
 
@@ -19,7 +19,6 @@ export default async function handler(req, res) {
 
             res.status(200).json(blog);
         } catch (error) {
-            console.error('Error fetching blog:', error);
             res.status(500).json({ error: 'Failed to fetch the blog' });
         }
     } else {

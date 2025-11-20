@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const SidebarLink = ({ href, icon: Icon, children }) => {
+const SidebarLink = ({ href, icon: Icon, children, onClick }) => {
     const pathname = usePathname();
 
     const baseClasses = "flex items-center px-4 py-2 rounded-md";
@@ -13,7 +13,7 @@ const SidebarLink = ({ href, icon: Icon, children }) => {
     const linkClasses = `${baseClasses} ${pathname === href ? activeClasses : inactiveClasses}`;
 
     return (
-        <Link href={href} className={linkClasses}>
+        <Link href={href} className={linkClasses} onClick={onClick}>
             <Icon className="mr-3" size={20} />
             {children}
         </Link>

@@ -99,7 +99,6 @@ export default function BlogForm({ initialData, isEditMode, onSuccess }) {
 
     return (
         <div>
-            <h1 className="text-2xl font-bold mb-4">{isEditMode ? 'Edit Blog' : 'Create a New Blog'}</h1>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Title:</label>

@@ -3,6 +3,8 @@ import formidable from 'formidable';
 import fs from 'fs';
 import axios from 'axios';
 import FormData from 'form-data'; // Import FormData from form-data package
+import { getServerSession } from 'next-auth/next'; // Import getServerSession
+import { authOptions } from '../auth/[...nextauth]'; // Import authOptions
 
 const prisma = new PrismaClient();
 
@@ -14,6 +16,12 @@ export const config = {
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
+        const session = await getServerSession(req, res, authOptions); // Get session
+
+        if (!session || session.user.role !== 'ADMIN') { // Check admin role
+            return res.status(401).json({ error: 'Unauthorized' });
+        }
+
         const form = formidable({
             keepExtensions: true,
         });

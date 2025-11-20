@@ -1,5 +1,10 @@
-import AboutComponent from "@/app/components/views/about/AboutView";
 import PageLayout from "@/app/components/layout/PageLayout/PageLayout";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import AboutSkeleton from "@/app/components/views/about/AboutSkeleton";
+
+// Dynamically import the AboutComponent to lazy-load it
+const AboutComponent = dynamic(() => import("@/app/components/views/about/AboutView"));
 
 
 export const metadata = {
@@ -18,7 +23,7 @@ export const metadata = {
         type: 'website',
         images: [
             {
-                url: 'https://rukonpro.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frukon_cover_photo_2.169d9c02.jpg&w=1920&q=75',
+                url: 'https://rukonpro.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frukon.930a2ad6.jpeg&w=1200&q=75',
                 width: 1200,
                 height: 630,
                 alt: 'Rukon Portfolio Image',
@@ -29,7 +34,7 @@ export const metadata = {
         card: 'summary_large_image',
         title: 'Full Stack Dev. - Rukon.Pro',
         description: 'Dive into the world of Rukon, a talented Full stack developer passionate about crafting exceptional web applications. Check out my projects!',
-        image: 'https://rukonpro.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frukon_cover_photo_2.169d9c02.jpg&w=1920&q=75',
+        image: 'https://rukonpro.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frukon.930a2ad6.jpeg&w=1200&q=75',
     },
 };
 
@@ -42,7 +47,9 @@ export const viewport = {
 const About = () => {
     return (
         <PageLayout>
-            <AboutComponent />
+            <Suspense fallback={<AboutSkeleton />}>
+                <AboutComponent />
+            </Suspense>
         </PageLayout>
     );
 };

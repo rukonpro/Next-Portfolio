@@ -1,44 +1,22 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
+import AboutSkeleton from "@/app/components/views/about/AboutSkeleton";
 
-// Dynamic imports for components with consistent loading fallbacks
-const About = dynamic(() => import("@/app/components/views/about/AboutView"), {
-    loading: () => <p>Loading...</p>,
-});
-const Header = dynamic(() => import("@/app/components/layout/header/header"), {
-    loading: () => <p>Loading...</p>,
-});
-const Counter = dynamic(() => import("@/app/components/views/counter/CounterView"), {
-    loading: () => <p>Loading...</p>,
-});
-const Navigation = dynamic(() => import("@/app/components/layout/navigation/navigation"), {
-    loading: () => <p>Loading Navigation...</p>,
-});
-const Services = dynamic(() => import("@/app/components/views/services/ServicesView"), {
-    loading: () => <p>Loading...</p>,
-});
-const Footer = dynamic(() => import("@/app/components/layout/footer/footer"), {
-    loading: () => <p>Loading Footer...</p>,
-});
-const Skills = dynamic(() => import("@/app/components/views/skills/SkillsView"), {
-    loading: () => <p>Loading...</p>,
-});
-const Portfolios = dynamic(() => import("@/app/components/views/portfolios/PortfoliosView"), {
-    loading: () => <p>Loading...</p>,
-});
-const Certifications = dynamic(() => import("@/app/components/views/certifications/CertificationsView"), {
-    loading: () => <p>Loading...</p>,
-});
-const Blogs = dynamic(() => import("@/app/components/views/blogs/BlogsView"), {
-    loading: () => <p>Loading...</p>,
-});
-const ContactLayout = dynamic(() => import("@/app/components/views/contact/ContactLayoutView"), {
-    loading: () => <p>Loading Contact...</p>,
-});
-const Pricing = dynamic(() => import("@/app/components/views/pricing/PricingView"), {
-    loading: () => <p>Loading Pricing...</p>,
-});
+// Lazy load the About component
+const About = dynamic(() => import("@/app/components/views/about/AboutView"));
 
+// Static imports for all page components
+import Header from "@/app/components/layout/header/header";
+import Counter from "@/app/components/views/counter/CounterView";
+import Navigation from "@/app/components/layout/navigation/navigation";
+import Services from "@/app/components/views/services/ServicesView";
+import Footer from "@/app/components/layout/footer/footer";
+import Skills from "@/app/components/views/skills/SkillsView";
+import Portfolios from "@/app/components/views/portfolios/PortfoliosView";
+import Certifications from "@/app/components/views/certifications/CertificationsView";
+import Blogs from "@/app/components/views/blogs/BlogsView";
+import ContactLayout from "@/app/components/views/contact/ContactLayoutView";
+import Pricing from "@/app/components/views/pricing/PricingView";
 import AnimatedCodeBlock from "@/app/components/views/codeBlock/CodeBlockView";
 
 // Metadata for SEO and page configuration
@@ -57,59 +35,27 @@ export const viewport = {
 };
 
 /**
- * Home page component with lazy-loaded sections and skeleton fallbacks
+ * Home page component with all sections statically imported.
  * @returns {JSX.Element} The rendered Home page
  */
-export default function Home() {
+export default async function Home() {
     return (
         <div className="overflow-x-hidden">
-            {/* Navigation is not wrapped in Suspense as it’s typically critical */}
             <Navigation />
-
-            {/* Main content with lazy-loaded components and skeleton fallbacks */}
-            <Suspense fallback={<p>Loading...</p>}>
-                <Header />
-            </Suspense>
-            <Suspense fallback={<p>Loading...</p>}>
+            <Header />
+            <Suspense fallback={<AboutSkeleton />}>
                 <About />
             </Suspense>
-            <Suspense fallback={<p>Loading...</p>}>
-                <Counter />
-            </Suspense>
-
-
-
-            <Suspense fallback={<p>Loading...</p>}>
-                <Skills />
-            </Suspense>
-                <AnimatedCodeBlock/>
-            <Suspense fallback={<p>Loading...</p>}>
-                <Services />
-            </Suspense>
-
-            <Suspense fallback={<p>Loading...</p>}>
-                <Portfolios />
-            </Suspense>
-
-            <Suspense fallback={<p>Loading...</p>}>
-                <Blogs />
-            </Suspense>
-
-            <Suspense fallback={<p>Loading...</p>}>
-                <Certifications />
-            </Suspense>
-
-            <Suspense fallback={<p>Loading Pricing...</p>}>
-                <Pricing />
-            </Suspense>
-
-            <Suspense fallback={<p>Loading Contact...</p>}>
-                <ContactLayout />
-            </Suspense>
-
-            <Suspense fallback={<p>Loading Footer...</p>}>
-                <Footer />
-            </Suspense>
+            <Counter />
+            <Skills />
+            <AnimatedCodeBlock/>
+            <Services />
+            <Portfolios />
+            <Blogs/>
+            <Certifications />
+            <Pricing />
+            <ContactLayout />
+            <Footer />
         </div>
     );
 }

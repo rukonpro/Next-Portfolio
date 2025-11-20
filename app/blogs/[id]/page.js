@@ -18,16 +18,22 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  // Generate dynamic description from the blog's content
+  const textContent = blogPost.content.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim();
+  const description = textContent.length > 155 ? textContent.slice(0, 155) + '...' : textContent;
+
   return {
     title: `${blogPost.title} - Blogs - Rukon.Pro`,
-    description: `Read this comprehensive guide on "${blogPost.title}". This article explains JSX, State, and Props in React, and compares JSX with HTML syntax to make learning React easier.`,
-    keywords: 'JSX, React Props, React State, ReactJS, React development, JavaScript, HTML in React',
+    description: description,
     authors: 'Rukon',
     creator: 'Rukon',
     publisher: 'Rukon.Pro',
+    alternates: {
+      canonical: `https://rukonpro.vercel.app/blogs/${blogId}`,
+    },
     openGraph: {
       title: `${blogPost.title} - Blogs - Rukon.Pro`,
-      description: `Explore the fundamentals of JSX and React Props/State in this blog post.`,
+      description: description,
       url: `https://rukonpro.vercel.app/blogs/${blogId}`,
       siteName: 'Rukon.Pro',
       locale: 'en_US',
@@ -46,7 +52,7 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: 'summary_large_image',
       title: `${blogPost.title} - Blogs - Rukon.Pro`,
-      description: `Check out this detailed blog post explaining JSX, State, and Props in React development.`,
+      description: description,
       image: blogPost.thumbnail || 'https://i.ibb.co/cbkLWr5/225f953fb79eb8d1c5cac0803.webp',
     },
   };
@@ -66,8 +72,42 @@ const BlogDetails = async ({ params }) => {
         return <div className="text-white text-center py-40">Blog not found.</div>;
     }
 
+    const textContent = blog.content.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim();
+    const description = textContent.length > 155 ? textContent.slice(0, 155) + '...' : textContent;
+
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: blog.title,
+        description: description,
+        image: blog.thumbnail || 'https://i.ibb.co/cbkLWr5/225f953fb79eb8d1c5cac0803.webp',
+        author: {
+            '@type': 'Person',
+            name: 'Rukon Uddin',
+            url: 'https://rukonpro.vercel.app/about',
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: 'Rukon.Pro',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://rukonpro.vercel.app/images/rukon.jpg',
+            },
+        },
+        datePublished: blog.createdAt,
+        dateModified: blog.updatedAt,
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://rukonpro.vercel.app/blogs/${id}`,
+        },
+    };
+
     return (
         <article className="relative blogs-bg">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             <div
             className=" custom-animate-pulse inset-0 m-auto max-w-xs h-[500px] blur-[118px] sm:max-w-md md:max-w-lg fixed"
@@ -101,7 +141,7 @@ export default BlogDetails;
 
 export async function generateStaticParams() {
     const blogsData = await getBlogs({ fields: 'id' });
-    return blogsData?.map((blog) => ({
+    return blogsData.map((blog) => ({
         id: blog.id,
-    })) || [];
+    }));
 }

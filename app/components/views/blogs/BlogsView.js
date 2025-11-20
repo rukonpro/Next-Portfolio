@@ -1,15 +1,10 @@
-import BlogCard from "./BlogCardView";
 import { Suspense } from "react";
 import RootLayoutAnimated from "@/app/components/rootLayoutAnimated/rootLayoutAnimated";
-import { getBlogs } from "@/app/lib/data";
+import BlogList from "./BlogList";
+import BlogListSkeleton from "./BlogListSkeleton";
 
 
-const Blogs = async () => {
-    const blogs = await getBlogs({ fields: 'title,thumbnail,id,createdAt,updatedAt' });
-    const errorMassage = !blogs || blogs.length === 0 ? "Could not fetch blogs or no blogs available." : null;
-
-
-
+const Blogs = () => {
     return (
         <section id="blogs" className="relative blogs-bg ">
 
@@ -76,23 +71,9 @@ const Blogs = async () => {
                             </div>
                         </div>
 
-                        {
-                            errorMassage && <p className="text-red-500 pt-5 text-center">{errorMassage}</p>
-                        }
-                        <div
-                            className="grid xl:grid-cols-4 lg:grid-cols-3  sm:grid-cols-2 grid-cols-1 gap-4 gap-y-16  pt-28 text-white">
-                            {
-                                blogs?.map(blog => {
-                                    return (
-                                        <Suspense fallback={<p>Loading...</p>} key={blog.id}>
-                                            <BlogCard
-                                                blog={blog}
-                                            />
-                                        </Suspense>
-                                    )
-                                })
-                            }
-                        </div>
+                        <Suspense fallback={<BlogListSkeleton />}>
+                            <BlogList />
+                        </Suspense>
                     </div>
                     </RootLayoutAnimated>
                 </div>

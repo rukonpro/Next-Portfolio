@@ -18,6 +18,7 @@ import Pricing from "@/app/components/views/pricing/PricingView";
 // Dynamic import for AnimatedCodeBlock
 import AnimatedCodeBlockSkeleton from "@/app/components/views/codeBlock/AnimatedCodeBlockSkeleton";
 import AboutSkeleton from "@/app/components/views/about/AboutSkeleton";
+import BottomNav from "@/app/components/layout/bottomNav";
 const AnimatedCodeBlock = dynamic(() => import("@/app/components/views/codeBlock/CodeBlockView"), {
     loading: () => <AnimatedCodeBlockSkeleton />,
 });
@@ -61,6 +62,7 @@ export default async function Home() {
             <Pricing />
             <ContactLayout />
             <Footer />
+            <BottomNav />
         </div>
     );
 }

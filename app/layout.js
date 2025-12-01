@@ -31,14 +31,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const isDev = process.env.NODE_ENV === "development";
-
   return (
     <html
       lang="en"
       className="scroll-smooth "
       suppressHydrationWarning
     >
-      <body className={`${inter.variable} font-sans overflow-x-hidden overflow-y-auto`}>
+      <body className={`${inter.variable} font-sans  overflow-y-auto`}>
         <main className="!cursor-none bg-black relative">
           <CustomCursor />
           <AppSessionProvider>

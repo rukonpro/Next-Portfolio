@@ -62,7 +62,6 @@ export default async function Home() {
             <Pricing />
             <ContactLayout />
             <Footer />
-            <BottomNav />
         </div>
     );
 }

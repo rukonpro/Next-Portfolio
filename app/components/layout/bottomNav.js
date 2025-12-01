@@ -10,6 +10,7 @@ import {
     useAnimation,
 } from "framer-motion";
 import { Home, FolderKanban, BadgeCheck, MoreHorizontal } from "lucide-react";
+import portfolioData from "@/app/assets/portfolioData/portfolioData";
 
 // Global Gradient
 const GradientDefs = () => (
@@ -131,21 +132,22 @@ export default function BottomNav() {
                                 mass: 0.8,
                             }}
                             onClick={(e) => e.stopPropagation()}
-                            className="fixed inset-x-0 bottom-0 bg-white rounded-t-3xl p-8 pb-12 shadow-2xl cursor-grab active:cursor-grabbing z-[70]"
+                            className="fixed inset-x-0 bottom-0 backdrop-blur-2xl bg-gradient-to-r bg-purple-500/20 rounded-t-3xl p-8 pb-12 shadow-2xl cursor-grab active:cursor-grabbing z-[70]"
                         >
-                            <div className="w-12 h-1.5 bg-gray-400/90 rounded-full mx-auto mb-7" />
+                            <div className="w-12 h-1.5 bg-gradient-to-r from-[#816aff] to-[#d066fd] rounded-full mx-auto mb-7" />
 
-                            <h2 className="text-2xl font-bold text-center mb-10 text-gray-800">Menu</h2>
+                            <h2 className="text-2xl font-bold text-center mb-10 bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent">Menu</h2>
 
                             <div className="grid grid-cols-2 gap-5">
-                                {menuItems.map((item) => (
+                                {portfolioData?.navLinks?.map((item) => (
                                     <Link
-                                        key={item.name}
-                                        href={item.href}
+                                        key={item.title}
+                                        href={item.path}
                                         onClick={closeSheet}
-                                        className="py-5 text-center text-gray-700 font-medium rounded-2xl bg-gray-50 hover:bg-purple-100 hover:text-purple-700 transition-all duration-200"
+                                        className="py-5 text-center  font-medium rounded-2xl bg-gradient-to-br from-[#816aff]/50 to-[#d066fd]/20 hover:from-[#816aff]/50 hover:to-[#d066fd]/50 transition-all duration-200"
                                     >
-                                        {item.name}
+                                        <span className="bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent"> {item.title}</span>
+
                                     </Link>
                                 ))}
                             </div>
@@ -153,7 +155,7 @@ export default function BottomNav() {
                             {/* Close Button → স্মুথলি বন্ধ হবে */}
                             <button
                                 onClick={closeSheet}
-                                className="mt-12 w-full py-4 bg-gradient-to-r from-[#816aff] to-[#d066fd] text-white font-bold rounded-2xl shadow-xl hover:shadow-purple-500/30 transition-all duration-200"
+                                className="mt-12 w-full py-4 bg-gradient-to-r from-[#816aff]/50 to-[#d066fd]/50 text-white font-bold rounded-2xl shadow-xl hover:shadow-purple-500/30 transition-all duration-200"
                             >
                                 Close
                             </button>

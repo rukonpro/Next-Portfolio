@@ -5,6 +5,8 @@ import {inter} from "@/app/utils/fonts/fonts";
 import { Analytics } from "@vercel/analytics/react";
 import AppSessionProvider from "./Context/AppSessionProvider";
 import CustomCursor from "@/app/components/ui/customCursor/CustomCursor";
+import BottomNav from "@/app/components/layout/bottomNav";
+import React from "react";
 export const metadata = {
   metadataBase: new URL("https://rukonpro.vercel.app"),
   title: {
@@ -41,6 +43,7 @@ export default function RootLayout({ children }) {
           <CustomCursor />
           <AppSessionProvider>
             {children}
+              <BottomNav />
           </AppSessionProvider>
           <Analytics />
         </main>

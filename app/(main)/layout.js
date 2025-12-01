@@ -7,7 +7,9 @@ const LayoutHome = ({children}) => {
     return (
         <div>
             <Navigation/>
-            {children}
+            <div  className="overflow-x-hidden">
+                {children}
+            </div>
             <Footer/>
             <BottomNav />
         </div>

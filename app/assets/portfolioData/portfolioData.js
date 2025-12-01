@@ -113,41 +113,60 @@ import Brand1 from "@/public/images/brand1.png";
 import Brand2 from "@/public/images/brand2.png";
 import Brand3 from "@/public/images/brand3.png";
 import Brand4 from "@/public/images/barnd4.png";
+import {BadgeCheck, FolderKanban, GraduationCap, HandPlatter, Home, Store} from "lucide-react";
 
 const portfolioData = {
     navLinks : [
         {
             title: "Home",
             path: "/home",
+            icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
         },
         {
             title: "About",
             path: "/about",
+            icon:<Store className="w-7 h-7" stroke="url(#navGradient)" />
         },
         {
             title: "Skills",
             path: "/skills",
+            icon:<GraduationCap className="w-7 h-7" stroke="url(#navGradient)" />
         },
         {
             title: "Services",
             path: "/services",
+            icon:<HandPlatter className="w-7 h-7" stroke="url(#navGradient)" />
         },
 
         {
             title: "Portfolio",
             path: "/portfolios",
+            icon:<BadgeCheck className="w-7 h-7" stroke="url(#navGradient)" />
         },
         {
             title: "Blogs",
             path: "/blogs",
+            icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
         },
         {
             title: "Pricing",
             path: "/price",
+            icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
         },
         {
             title: "Contact",
             path: "/contact",
+            icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
+        },
+        {
+            title: "Profile",
+            path: "/profile",
+            icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
+        },
+        {
+            title: "Dashboard",
+            path: "/dashboard",
+            icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
         },
     ],
     banner:[

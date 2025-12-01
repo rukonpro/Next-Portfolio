@@ -9,7 +9,7 @@ import {
     useTransform,
     useAnimation,
 } from "framer-motion";
-import { Home, FolderKanban, BadgeCheck, MoreHorizontal } from "lucide-react";
+import {MoreHorizontal } from "lucide-react";
 import portfolioData from "@/app/assets/portfolioData/portfolioData";
 
 // Global Gradient
@@ -62,16 +62,6 @@ export default function BottomNav() {
         }
     }, [open, y, controls]);
 
-    const menuItems = [
-        { name: "Services", href: "/services" },
-        { name: "Pricing", href: "/pricing" },
-        { name: "Blogs", href: "/blogs" },
-        { name: "About", href: "/about" },
-        { name: "Contact", href: "/contact" },
-        { name: "Dashboard", href: "/dashboard" },
-        { name: "Profile", href: "/profile" },
-        { name: "Settings", href: "/settings" },
-    ];
 
     return (
         <>
@@ -79,20 +69,16 @@ export default function BottomNav() {
 
             {/* Bottom Navigation Bar */}
             <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[92%] max-w-md bg-purple-500/20 backdrop-blur-2xl shadow-2xl border border-purple-300/30 rounded-3xl px-6 py-4 flex justify-around items-center z-50 md:hidden">
-                <Link href="/" className="flex flex-col items-center gap-1">
-                    <Home className="w-7 h-7" stroke="url(#navGradient)" />
-                    <span className="text-xs font-bold bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent">Home</span>
-                </Link>
 
-                <Link href="/portfolios" className="flex flex-col items-center gap-1">
-                    <FolderKanban className="w-7 h-7" stroke="url(#navGradient)" />
-                    <span className="text-xs font-bold bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent">Projects</span>
-                </Link>
-
-                <Link href="/skills" className="flex flex-col items-center gap-1">
-                    <BadgeCheck className="w-7 h-7" stroke="url(#navGradient)" />
-                    <span className="text-xs font-bold bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent">Skills</span>
-                </Link>
+                {portfolioData?.navLinks?.filter((item) => {
+                    const title = item.title.trim().toLowerCase();
+                    return ['home', 'skills', 'portfolio'].includes(title);
+                }).map((item) => (
+                    <Link href={item?.path} key={item?.title} className="flex flex-col items-center gap-1">
+                        {item.icon}
+                        <span className="text-xs font-bold bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent">{item?.title}</span>
+                    </Link>
+                ))}
 
                 {/* More Button → স্মুথলি খুলবে */}
                 <button onClick={openSheet} className="flex flex-col items-center gap-1">
@@ -102,67 +88,73 @@ export default function BottomNav() {
             </nav>
 
             {/* Super Smooth Bottom Sheet */}
-            <AnimatePresence>
-                {open && (
-                    <>
-                        {/* Backdrop */}
-                        <motion.div
-                            className="fixed inset-0 bg-black/50 z-[60]"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            style={{ opacity }}
-                            onClick={closeSheet}
-                        />
-
-                        {/* Sheet */}
-                        <motion.div
-                            drag="y"
-                            dragConstraints={{ top: 0 }}
-                            dragElastic={0.3}
-                            onDragEnd={onDragEnd}
-                            style={{ y, scale }}
-                            animate={controls}
-                            initial={{ y: "100%" }}
-                            exit={{ y: "100%" }}
-                            transition={{
-                                type: "spring",
-                                damping: 30,
-                                stiffness: 400,
-                                mass: 0.8,
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="fixed inset-x-0 bottom-0 backdrop-blur-2xl bg-gradient-to-r bg-purple-500/20 rounded-t-3xl p-8 pb-12 shadow-2xl cursor-grab active:cursor-grabbing z-[70]"
-                        >
-                            <div className="w-12 h-1.5 bg-gradient-to-r from-[#816aff] to-[#d066fd] rounded-full mx-auto mb-7" />
-
-                            <h2 className="text-2xl font-bold text-center mb-10 bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent">Menu</h2>
-
-                            <div className="grid grid-cols-2 gap-5">
-                                {portfolioData?.navLinks?.map((item) => (
-                                    <Link
-                                        key={item.title}
-                                        href={item.path}
-                                        onClick={closeSheet}
-                                        className="py-5 text-center  font-medium rounded-2xl bg-gradient-to-br from-[#816aff]/50 to-[#d066fd]/20 hover:from-[#816aff]/50 hover:to-[#d066fd]/50 transition-all duration-200"
-                                    >
-                                        <span className="bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent"> {item.title}</span>
-
-                                    </Link>
-                                ))}
-                            </div>
-
-                            {/* Close Button → স্মুথলি বন্ধ হবে */}
-                            <button
+            <div className="md:hidden">
+                <AnimatePresence>
+                    {open && (
+                        <>
+                            {/* Backdrop */}
+                            <motion.div
+                                className="fixed inset-0 bg-black/50 z-[60]"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                style={{ opacity }}
                                 onClick={closeSheet}
-                                className="mt-12 w-full py-4 bg-gradient-to-r from-[#816aff]/50 to-[#d066fd]/50 text-white font-bold rounded-2xl shadow-xl hover:shadow-purple-500/30 transition-all duration-200"
+                            />
+
+                            {/* Sheet */}
+                            <motion.div
+                                drag="y"
+                                dragConstraints={{ top: 0 }}
+                                dragElastic={0.3}
+                                onDragEnd={onDragEnd}
+                                style={{ y, scale }}
+                                animate={controls}
+                                initial={{ y: "100%" }}
+                                exit={{ y: "100%" }}
+                                transition={{
+                                    type: "spring",
+                                    damping: 30,
+                                    stiffness: 400,
+                                    mass: 0.8,
+                                }}
+                                onClick={(e) => e.stopPropagation()}
+                                className="fixed inset-x-0 bottom-0 backdrop-blur-2xl bg-gradient-to-r bg-purple-500/20 rounded-t-3xl p-8 pb-12 shadow-2xl cursor-grab active:cursor-grabbing z-[70]"
                             >
-                                Close
-                            </button>
-                        </motion.div>
-                    </>
-                )}
-            </AnimatePresence>
+                                <div className="w-12 h-1.5 bg-gradient-to-r from-[#816aff] to-[#d066fd] rounded-full mx-auto mb-7" />
+
+                                <h2 className="text-2xl font-bold text-center mb-10 bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent">Menu</h2>
+
+                                <div className="grid grid-cols-2 gap-5">
+                                    {portfolioData?.navLinks?.filter((item) => {
+                                        const title = item.title.trim().toLowerCase();
+                                        return !['home', 'skills', 'portfolio'].includes(title);
+                                    }).map((item) => (
+                                        <Link
+                                            key={item.title}
+                                            href={item.path}
+                                            onClick={closeSheet}
+                                            className="py-5 text-center  font-medium rounded-2xl bg-gradient-to-br from-[#816aff]/10 to-[#d066fd]/10 hover:from-[#816aff]/50 hover:to-[#d066fd]/50 transition-all duration-200"
+                                        >
+                                            <span className="bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent"> {item.title}</span>
+
+                                        </Link>
+                                    ))}
+                                </div>
+
+                                {/* Close Button → স্মুথলি বন্ধ হবে */}
+                                <button
+                                    onClick={closeSheet}
+                                    className="mt-12 w-full py-4 bg-gradient-to-r from-[#816aff]/50 to-[#d066fd]/50 text-white font-bold rounded-2xl shadow-xl hover:shadow-purple-500/30 transition-all duration-200"
+                                >
+                                    Close
+                                </button>
+                            </motion.div>
+                        </>
+                    )}
+                </AnimatePresence>
+            </div>
+
         </>
     );
 }

@@ -24,23 +24,13 @@ export const authOptions = {
             }
         })
     ],
-    // pages: {
-    //     home: "/",
-    //     signIn: '/auth/signin',
-    //     signOut: '/auth/signout',
-    //     error: '/auth/error',
-    //     verifyRequest: '/auth/verify-request',
-    //     newAccount: '/auth/new-account'
-    // },
+    pages: {
+        signIn: '/auth/signin',
+    },
     session: {
-        jwt: true,
-
+        strategy: "jwt",
     },
-    jwt: {
-        // Configure the signing key for the JWT.
-        // This is important for ensuring the JWT is secure.
-        secret: process.env.JWT_SECRET,
-    },
+    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
         async session({ session, token }) {
             session.user = token;

@@ -150,8 +150,8 @@ export default function Dropdown({ status, handleSignOut, setIsModalOpen }) {
                     )}
                 </div>
             ) : (
-                <button
-                    type="button"
+                <Link
+                    href="/auth/signin"
                     aria-label="Login"
                     className="bg-gradient-to-r from-[#5e2594ec] to-[#270257fd] px-5 py-1 rounded-lg animated-button tracking-[3px] text-[#fccdff] text-[16px] font-bold"
                     onClick={() => setIsModalOpen(true)}
@@ -159,7 +159,7 @@ export default function Dropdown({ status, handleSignOut, setIsModalOpen }) {
           <span className="bg-gradient-to-r from-[#816aff] to-[#d066fd] text-transparent bg-clip-text">
             Login
           </span>
-                </button>
+                </Link>
             )}
         </>
     );

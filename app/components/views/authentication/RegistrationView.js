@@ -20,7 +20,7 @@ const Registration = ({ setIsModalOpen,setIsLogin,isLogin }) => {
             await axios.post('/api/auth/register', { email, password, name: fname + " " + lname });
             setMessage("Register successfully")
             setIsModalOpen(false);
-            // router.push('/auth/signin');
+            // router.push('/auth/auth');
         } catch (error) {
             setError(error.response?.data?.error || 'An unexpected error occurred.');
         }

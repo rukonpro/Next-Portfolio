@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import {MoreHorizontal } from "lucide-react";
 import portfolioData from "@/app/assets/portfolioData/portfolioData";
+import { useSession } from "next-auth/react"; // Import useSession
 
 // Global Gradient
 const GradientDefs = () => (
@@ -26,6 +27,8 @@ const GradientDefs = () => (
 
 export default function BottomNav() {
     const [open, setOpen] = useState(false);
+    const { data: session, status } = useSession(); // Get session and status
+    const userRole = session?.user?.role;
 
     const y = useMotionValue(0);
     const controls = useAnimation();
@@ -62,6 +65,25 @@ export default function BottomNav() {
         }
     }, [open, y, controls]);
 
+    // Filter nav links based on authentication status and role
+    const allDisplayableLinks = portfolioData?.navLinks?.filter((item) => {
+        const title = item.title.trim().toLowerCase();
+
+
+        if (status === 'authenticated') {
+            if (userRole === 'ADMIN') {
+                // ADMIN: show all except 'login'
+                return title !== 'login';
+            } else {
+                // Regular USER: show all except 'login' and 'dashboard'
+                return !['login', 'dashboard'].includes(title);
+            }
+        } else {
+            // Not authenticated: show all except 'profile' and 'dashboard'
+            return !['profile', 'dashboard'].includes(title);
+        }
+    });
+
 
     return (
         <>
@@ -70,9 +92,9 @@ export default function BottomNav() {
             {/* Bottom Navigation Bar */}
             <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[92%] max-w-md bg-purple-500/20 backdrop-blur-2xl shadow-2xl border border-purple-300/30 rounded-3xl px-6 py-4 flex justify-around items-center z-40 md:hidden">
 
-                {portfolioData?.navLinks?.filter((item) => {
+                {allDisplayableLinks.filter((item) => {
                     const title = item.title.trim().toLowerCase();
-                    return ['home', 'skills', 'portfolio'].includes(title);
+                    return ['home', 'skills',"services","portfolio"].includes(title); // Only show home and skills here
                 }).map((item) => (
                     <Link href={item?.path} key={item?.title} className="flex flex-col items-center gap-1">
                         {item.icon}
@@ -126,9 +148,9 @@ export default function BottomNav() {
                                 <h2 className="text-2xl font-bold text-center mb-10 bg-gradient-to-r from-[#816aff] to-[#d066fd] bg-clip-text text-transparent">Menu</h2>
 
                                 <div className="grid grid-cols-2 gap-5">
-                                    {portfolioData?.navLinks?.filter((item) => {
+                                    {allDisplayableLinks.filter((item) => {
                                         const title = item.title.trim().toLowerCase();
-                                        return !['home', 'skills', 'portfolio'].includes(title);
+                                        return !['home', 'skills','services','portfolio'].includes(title); // Show everything else here
                                     }).map((item) => (
                                         <Link
                                             key={item.title}

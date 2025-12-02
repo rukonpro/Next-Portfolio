@@ -122,11 +122,7 @@ const portfolioData = {
             path: "/home",
             icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
         },
-        {
-            title: "About",
-            path: "/about",
-            icon:<Store className="w-7 h-7" stroke="url(#navGradient)" />
-        },
+
         {
             title: "Skills",
             path: "/skills",
@@ -167,6 +163,11 @@ const portfolioData = {
             title: "Dashboard",
             path: "/dashboard",
             icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
+        },
+        {
+            title: "About",
+            path: "/about",
+            icon:<Store className="w-7 h-7" stroke="url(#navGradient)" />
         },
         {
             title: "Login",

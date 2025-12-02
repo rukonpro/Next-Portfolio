@@ -68,7 +68,7 @@ export default function BottomNav() {
             <GradientDefs />
 
             {/* Bottom Navigation Bar */}
-            <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[92%] max-w-md bg-purple-500/20 backdrop-blur-2xl shadow-2xl border border-purple-300/30 rounded-3xl px-6 py-4 flex justify-around items-center z-50 md:hidden">
+            <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[92%] max-w-md bg-purple-500/20 backdrop-blur-2xl shadow-2xl border border-purple-300/30 rounded-3xl px-6 py-4 flex justify-around items-center z-40 md:hidden">
 
                 {portfolioData?.navLinks?.filter((item) => {
                     const title = item.title.trim().toLowerCase();

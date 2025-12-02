@@ -16,7 +16,7 @@ export default withAuth(
       req.nextUrl.pathname.startsWith("/dashboard") &&
       token?.role !== "ADMIN"
     ) {
-      return NextResponse.rewrite(new URL("/", req.url));
+      return NextResponse.redirect(new URL("/", req.url));
     }
   },
   {

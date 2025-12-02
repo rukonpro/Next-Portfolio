@@ -168,6 +168,11 @@ const portfolioData = {
             path: "/dashboard",
             icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
         },
+        {
+            title: "Login",
+            path: "/auth/signin",
+            icon:<Home className="w-7 h-7" stroke="url(#navGradient)" />
+        },
     ],
     banner:[
         { id: 1, content:  Banner1 },

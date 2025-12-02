@@ -18,7 +18,7 @@ export const authOptions = {
                 const user = await prisma.user.findUnique({ where: { email: credentials.email } });
 
                 if (user && credentials.password && await bcrypt.compare(credentials.password, user.password)) {
-                    return { id: user.id, email: user.email, name: user.name,role:user.role };
+                    return { id: user.id, email: user.email, name: user.name,role:user.role, createdAt: user.createdAt };
                 }
                 return null;
             }
@@ -41,6 +41,7 @@ export const authOptions = {
                 token.id = user.id;
                 token.email = user.email;
                 token.role = user.role;
+                token.createdAt = user.createdAt;
 
 
             }

@@ -35,7 +35,7 @@ const Certifications = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <desc
+                    <p
                         data-aos="fade-up"
                         data-aos-anchor-placement="bottom-bottom"
                         data-aos-duration="1000"
@@ -46,7 +46,7 @@ const Certifications = () => {
                         exceptional results. Whether you're seeking assurance of my capabilities or inspiration for your
                         own professional development, explore my certification showcase and witness the dedication and
                         passion I bring to every project.`}
-                    </desc>
+                    </p>
                 </div>
                 <div className="pt-10">
                     <Marquee

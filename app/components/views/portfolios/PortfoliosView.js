@@ -23,13 +23,13 @@ const Portfolios = () => {
                     </h1>
                 </div>
                 <div className="flex justify-center  mt-10 pb-10">
-                    <desc
+                    <p
                         data-aos="fade-up"
                         data-aos-anchor-placement="center-bottom"
                         data-aos-duration="2000"
                         className="max-w-4xl  font-bold  text-base text-slate-400 tracking-[2px] md:text-center text-justify">
                         {portfolioData?.portfolios?.description}
-                    </desc>
+                    </p>
                 </div>
 
                <Suspense fallback={"<h1>loading...</h1>"}>

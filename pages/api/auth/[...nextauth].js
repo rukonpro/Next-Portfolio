@@ -18,29 +18,19 @@ export const authOptions = {
                 const user = await prisma.user.findUnique({ where: { email: credentials.email } });
 
                 if (user && credentials.password && await bcrypt.compare(credentials.password, user.password)) {
-                    return { id: user.id, email: user.email, name: user.name,role:user.role };
+                    return { id: user.id, email: user.email, name: user.name,role:user.role, createdAt: user.createdAt };
                 }
                 return null;
             }
         })
     ],
-    // pages: {
-    //     home: "/",
-    //     signIn: '/auth/signin',
-    //     signOut: '/auth/signout',
-    //     error: '/auth/error',
-    //     verifyRequest: '/auth/verify-request',
-    //     newAccount: '/auth/new-account'
-    // },
+    pages: {
+        signIn: '/auth/signin',
+    },
     session: {
-        jwt: true,
-
+        strategy: "jwt",
     },
-    jwt: {
-        // Configure the signing key for the JWT.
-        // This is important for ensuring the JWT is secure.
-        secret: process.env.JWT_SECRET,
-    },
+    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
         async session({ session, token }) {
             session.user = token;
@@ -51,6 +41,7 @@ export const authOptions = {
                 token.id = user.id;
                 token.email = user.email;
                 token.role = user.role;
+                token.createdAt = user.createdAt;
 
 
             }

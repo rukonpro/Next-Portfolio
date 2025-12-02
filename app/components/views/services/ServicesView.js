@@ -26,12 +26,12 @@ const Services = () => {
                             </div>
                         </div>
                         <div className="flex justify-center px-5 mt-10 pb-10">
-                            <desc
+                            <p
                                 data-aos="fade-up"
                                 data-aos-anchor-placement="bottom-bottom"
                                 data-aos-duration="1000"
                                 data-aos-delay='0' suppressHydrationWarning
-                                className="max-w-4xl  font-bold  text-base text-slate-400 tracking-[2px] md:text-center text-justify">If you looking for a developer with expertise in a stack typically associated with web development, here a brief description of the MEAN stack, which is a popular choice</desc>
+                                className="max-w-4xl  font-bold  text-base text-slate-400 tracking-[2px] md:text-center text-justify">If you looking for a developer with expertise in a stack typically associated with web development, here a brief description of the MEAN stack, which is a popular choice</p>
                         </div>
 
                         <div className="lg:flex flex-none justify-center mt-10">

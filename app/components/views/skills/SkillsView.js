@@ -24,7 +24,7 @@ const Skills = () => {
                 </div>
 
                 <div className="flex justify-center  py-10">
-                    <desc
+                    <p
                         data-aos="fade-up"
                         data-aos-anchor-placement="bottom-bottom"
                         data-aos-duration="1000"
@@ -33,7 +33,7 @@ const Skills = () => {
                         user-friendly
                         web applications. With a strong foundation in MongoDB, Express.js, React, and Node.js, I
                         specialize in
-                        building seamless, responsive, and scalable solutions.</desc>
+                        building seamless, responsive, and scalable solutions.</p>
                 </div>
 
                 <ol className="mt-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2  pb-16">

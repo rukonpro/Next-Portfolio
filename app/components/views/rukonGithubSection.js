@@ -1,10 +1,11 @@
-// components/RukonGithubSection.jsx
+import Image from "next/image";
+
 export default function RukonGithubSection() {
   const username = "rukonpro";
 
   return (
     <section className="relative py-24 overflow-hidden">
-      {/* Background Gradient Blob */}
+      {/* Background Blobs */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-10 left-10 w-96 h-96 bg-purple-600/30 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -17,61 +18,81 @@ export default function RukonGithubSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
 
-          {/* Streak Card – Big */}
-          <div className="lg:col-span-7 bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
+          {/* Current Streak */}
+          <div className="lg:col-span-7 bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/30 transition-all">
             <h3 className="text-2xl font-bold text-purple-300 mb-6 text-center">Current Streak</h3>
-            <img
+            <Image
               src={`https://streak-stats.demolab.com?user=${username}&theme=transparent&background=00000000&border=7c3aed&stroke=a855f7&ring=a855f7&fire=a855f7&currStreakNum=fff&sideNums=a855f7&currStreakLabel=a855f7&sideLabels=fff&dates=8899ff&border_radius=24`}
-              alt="Streak"
+              alt="GitHub Streak"
+              width={900}
+              height={300}
               className="w-full rounded-2xl"
+              unoptimized={true}
+              priority
             />
           </div>
 
-          {/* Stats Card */}
-          <div className="lg:col-span-5 bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
+          {/* Overall Stats */}
+          <div className="lg:col-span-5 bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/30 transition-all">
             <h3 className="text-2xl font-bold text-cyan-300 mb-6 text-center">Overall Stats</h3>
-            <img
+            <Image
               src={`https://github-readme-stats.vercel.app/api?username=${username}&theme=transparent&bg_color=00000000&border_color=7c3aed&text_color=fff&title_color=a855f7&icon_color=a855f7&hide_border=false&show_icons=true&count_private=true&include_all_commits=true&border_radius=24`}
-              alt="Stats"
+              alt="GitHub Stats"
+              width={700}
+              height={300}
               className="w-full rounded-2xl"
+              unoptimized={true}
+              priority
             />
           </div>
 
-          {/* Top Languages – Donut */}
-          <div className="lg:col-span-5 bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500">
+          {/* Top Languages */}
+          <div className="lg:col-span-5 bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-cyan-500/30 transition-all">
             <h3 className="text-2xl font-bold text-pink-300 mb-6 text-center">Top Languages</h3>
-            <img
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=donut&theme=transparent&bg_color=00000000000&border_color=06b6d4&text_color=fff&title_color=06b6d4&hide_border=false&size_weight=0.5&count_weight=0.5&border_radius=24`}
-              alt="Languages"
+            <Image
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=donut&theme=transparent&bg_color=00000000&border_color=06b6d4&text_color=fff&title_color=06b6d4&hide_border=false&border_radius=24`}
+              alt="Top Languages"
+              width={700}
+              height={400}
               className="w-full rounded-2xl"
+              unoptimized={true}
+              priority
             />
           </div>
 
           {/* Trophy */}
-          <div className="lg:col-span-7 bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-pink-500/20 transition-all duration-500">
+          <div className="lg:col-span-7 bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-pink-500/30 transition-all">
             <h3 className="text-2xl font-bold text-pink-300 mb-6 text-center">Achievements</h3>
-            <img
+            <Image
               src={`https://github-profile-trophy.vercel.app/?username=${username}&theme=onestar&no-frame=true&margin-w=20&row=1&column=8`}
-              alt="Trophy"
+              alt="GitHub Trophy"
+              width={1000}
+              height={300}
               className="w-full rounded-2xl"
+              unoptimized={true}
+              priority
             />
           </div>
 
           {/* Snake Animation – Full Width */}
-          <div className="lg:col-span-12 bg-black/40 backdrop-blur-xl border border-gradient-to-r from-purple-500 to-cyan-500 rounded-3xl p-8 shadow-2xl overflow-hidden">
+          <div className="lg:col-span-12 bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 shadow-2xl">
             <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Contribution Snake
             </h3>
-            <img
-              src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg"
-              alt="Snake"
+            <Image
+              src="https://gh-snake.vercel.app/api/snake/dark/rukonpro"
+              alt="GitHub Contribution Snake"
+              width={1400}
+              height={600}
               className="w-full rounded-2xl border-4 border-purple-500/30"
+              unoptimized={true}
+              priority
             />
           </div>
 
         </div>
 
-        {/* Call to Action */}
+        {/* CTA Button */}
         <div className="text-center mt-16">
           <a
             href="https://github.com/rukonpro"

@@ -1,4 +1,6 @@
-import Image from "next/image";
+// Remove the 'import Image from "next/image";' line if you only use <img> tags now.
+// I kept it commented out here for clarity.
+// import Image from "next/image";
 
 export default function RukonGithubSection() {
   const username = "rukonpro";
@@ -18,75 +20,66 @@ export default function RukonGithubSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
 
-          {/* Current Streak */}
+          {/* Current Streak (Now using <img>) */}
           <div className="lg:col-span-7 bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/30 transition-all">
             <h3 className="text-2xl font-bold text-purple-300 mb-6 text-center">Current Streak</h3>
-            <Image
-              src={`https://streak-stats.demolab.com?user=${username}&theme=transparent&background=00000000&border=7c3aed&stroke=a855f7&ring=a855f7&fire=a855f7&currStreakNum=fff&sideNums=a855f7&currStreakLabel=a855f7&sideLabels=fff&dates=8899ff&border_radius=24`}
+            <img
+              src={`streak-stats.demolab.com{username}&theme=transparent&background=00000000&border=7c3aed&stroke=a855f7&ring=a855f7&fire=a855f7&currStreakNum=fff&sideNums=a855f7&currStreakLabel=a855f7&sideLabels=fff&dates=8899ff&border_radius=24`}
               alt="GitHub Streak"
               width={900}
               height={300}
               className="w-full rounded-2xl"
-              unoptimized={true}
-              priority
+              // priority is only for next/image, removed here
             />
           </div>
 
-          {/* Overall Stats */}
+          {/* Overall Stats (Now using <img>) */}
           <div className="lg:col-span-5 bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/30 transition-all">
             <h3 className="text-2xl font-bold text-cyan-300 mb-6 text-center">Overall Stats</h3>
-            <Image
-              src={`https://github-readme-stats.vercel.app/api?username=${username}&theme=transparent&bg_color=00000000&border_color=7c3aed&text_color=fff&title_color=a855f7&icon_color=a855f7&hide_border=false&show_icons=true&count_private=true&include_all_commits=true&border_radius=24`}
+            <img
+              src={`github-readme-stats.vercel.app{username}&theme=transparent&bg_color=00000000&border_color=7c3aed&text_color=fff&title_color=a855f7&icon_color=a855f7&hide_border=false&show_icons=true&count_private=true&include_all_commits=true&border_radius=24`}
               alt="GitHub Stats"
               width={700}
               height={300}
               className="w-full rounded-2xl"
-              unoptimized={true}
-              priority
             />
           </div>
 
-          {/* Top Languages */}
+          {/* Top Languages (Now using <img>) */}
           <div className="lg:col-span-5 bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-cyan-500/30 transition-all">
             <h3 className="text-2xl font-bold text-pink-300 mb-6 text-center">Top Languages</h3>
-            <Image
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=donut&theme=transparent&bg_color=00000000&border_color=06b6d4&text_color=fff&title_color=06b6d4&hide_border=false&border_radius=24`}
+            <img
+              src={`github-readme-stats.vercel.app{username}&layout=donut&theme=transparent&bg_color=00000000&border_color=06b6d4&text_color=fff&title_color=06b6d4&hide_border=false&border_radius=24`}
               alt="Top Languages"
               width={700}
               height={400}
               className="w-full rounded-2xl"
-              unoptimized={true}
-              priority
             />
           </div>
 
-          {/* Trophy */}
+          {/* Trophy (Now using <img>) */}
           <div className="lg:col-span-7 bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-8 shadow-2xl hover:shadow-pink-500/30 transition-all">
             <h3 className="text-2xl font-bold text-pink-300 mb-6 text-center">Achievements</h3>
-            <Image
-              src={`https://github-profile-trophy.vercel.app/?username=${username}&theme=onestar&no-frame=true&margin-w=20&row=1&column=8`}
+            <img
+              src={`github-profile-trophy.vercel.app{username}&theme=onestar&no-frame=true&margin-w=20&row=1&column=8`}
               alt="GitHub Trophy"
               width={1000}
               height={300}
               className="w-full rounded-2xl"
-              unoptimized={true}
-              priority
             />
           </div>
 
-          {/* Snake Animation – Full Width */}
+          {/* Snake Animation – Full Width (Now using <img>) */}
           <div className="lg:col-span-12 bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 shadow-2xl">
             <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Contribution Snake
             </h3>
-            <Image
-              src="https://gh-snake.vercel.app/api/snake/dark/rukonpro"
+            <img
+              src="gh-snake.vercel.app"
               alt="GitHub Contribution Snake"
               width={1400}
               height={600}
               className="w-full rounded-2xl border-4 border-purple-500/30"
-              unoptimized={true}
-              priority
             />
           </div>
 
@@ -95,7 +88,7 @@ export default function RukonGithubSection() {
         {/* CTA Button */}
         <div className="text-center mt-16">
           <a
-            href="https://github.com/rukonpro"
+            href="github.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 px-10 py-5 text-xl font-bold text-white bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full hover:from-purple-500 hover:to-cyan-500 transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50"

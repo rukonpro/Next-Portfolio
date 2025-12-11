@@ -7,6 +7,7 @@ import Header from "@/app/components/layout/header/header";
 import Counter from "@/app/components/views/counter/CounterView";
 import Navigation from "@/app/components/layout/navigation/navigation";
 import Services from "@/app/components/views/services/ServicesView";
+import RukonGithubSection from "@/app/components/rukonGithubSection
 import Footer from "@/app/components/layout/footer/footer";
 import Skills from "@/app/components/views/skills/SkillsView";
 import Portfolios from "@/app/components/views/portfolios/PortfoliosView";
@@ -50,6 +51,7 @@ export default async function Home() {
                 <About />
             </Suspense>
             <Counter />
+            <RukonGithubSection/>
             <Skills />
             <Suspense fallback={<AnimatedCodeBlockSkeleton />}>
                 <AnimatedCodeBlock/>

@@ -1,6 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,15 +12,19 @@ const nextConfig = {
     return config;
   },
   images: {
+    unoptimized: true,                    // এটা আগে থেকে আছে – সবচেয়ে জরুরি
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
+        port: '',
         pathname: '/**',
       },
     ],
-unoptimized: true,
+    // এই লাইনটা নতুন যোগ করো – github-readme-stats এর জন্য ম্যাজিক
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-}
+};
 
-module.exports = withBundleAnalyzer(nextConfig)
+module.exports = withBundleAnalyzer(nextConfig);

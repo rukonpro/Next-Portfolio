@@ -12,7 +12,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    unoptimized: true,                    // এটা আগে থেকে আছে – সবচেয়ে জরুরি
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -21,7 +21,7 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-    // এই লাইনটা নতুন যোগ করো – github-readme-stats এর জন্য ম্যাজিক
+    // These settings don't hurt, but the <img> tag bypasses them anyway
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },

@@ -21,9 +21,9 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-    // These settings don't hurt, but the <img> tag bypasses them anyway
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // এই লাইনটা পরিবর্তন করুন:
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox; img-src 'self' https://streak-stats.demolab.com https://github-readme-stats.vercel.app https://github-profile-trophy.vercel.app https://gh-snake.vercel.app;",
   },
 };
 

@@ -22,8 +22,8 @@ const nextConfig = {
       },
     ],
     dangerouslyAllowSVG: true,
-    // এই লাইনটা পরিবর্তন করুন:
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox; img-src 'self' https://streak-stats.demolab.com https://github-readme-stats.vercel.app https://github-profile-trophy.vercel.app https://gh-snake.vercel.app;",
+    // ✅ এই লাইনটা পরিবর্তন করা হয়েছে: raw.githubusercontent.com যোগ করা হয়েছে
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox; img-src 'self' https://streak-stats.demolab.com https://github-readme-stats.vercel.app https://github-profile-trophy.vercel.app https://raw.githubusercontent.com https://github.com;",
   },
 };
 

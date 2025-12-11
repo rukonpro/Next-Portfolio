@@ -7,7 +7,7 @@ import Header from "@/app/components/layout/header/header";
 import Counter from "@/app/components/views/counter/CounterView";
 import Navigation from "@/app/components/layout/navigation/navigation";
 import Services from "@/app/components/views/services/ServicesView";
-import RukonGithubSection from "@/app/components/views/rukonGithubSection
+import RukonGithubSection from "@/app/components/views/rukonGithubSection"
 import Footer from "@/app/components/layout/footer/footer";
 import Skills from "@/app/components/views/skills/SkillsView";
 import Portfolios from "@/app/components/views/portfolios/PortfoliosView";

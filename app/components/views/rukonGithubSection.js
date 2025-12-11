@@ -1,3 +1,4 @@
+"use client"
 // components/RukonGithubSection.jsx
 import { useState } from "react";
 

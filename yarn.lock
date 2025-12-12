@@ -4445,6 +4445,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fault@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "fault@npm:2.0.1"
+  dependencies:
+    format: ^0.2.0
+  checksum: c9b30f47d95769177130a9409976a899ed31eb598450fbad5b0d39f2f5f56d5f4a9ff9257e0bee8407cb0fc3ce37165657888c6aa6d78472e403893104329b72
+  languageName: node
+  linkType: hard
+
 "fb-watchman@npm:^2.0.0":
   version: 2.0.2
   resolution: "fb-watchman@npm:2.0.2"
@@ -5066,6 +5075,13 @@ __metadata:
   version: 10.7.3
   resolution: "highlight.js@npm:10.7.3"
   checksum: defeafcd546b535d710d8efb8e650af9e3b369ef53e28c3dc7893eacfe263200bba4c5fcf43524ae66d5c0c296b1af0870523ceae3e3104d24b7abf6374a4fea
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:~11.8.0":
+  version: 11.8.0
+  resolution: "highlight.js@npm:11.8.0"
+  checksum: d2578a57aee7315946ff19379053fd0a28b127baabf7617ab1d28d62cdc4eaf3d75053569cb8479a5afdc7a68f1ba9a6c1d612d8ae399b4b9aa43093b4fb6831
   languageName: node
   linkType: hard
 
@@ -6169,6 +6185,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lowlight@npm:^2.9.0":
+  version: 2.9.0
+  resolution: "lowlight@npm:2.9.0"
+  dependencies:
+    "@types/hast": ^2.0.0
+    fault: ^2.0.0
+    highlight.js: ~11.8.0
+  checksum: 6fa0c747018a5ba4d226121c1018a891249b2614c6a62ff135c6f32c0c3c3fa248f76c019c1bb8a79cdcf3fef034b508afc2827db94283b493f30702f5503ab7
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0":
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
@@ -6696,6 +6723,7 @@ __metadata:
     jsonwebtoken: ^9.0.2
     lodash: ^4.17.21
     loglevel: ^1.8.1
+    lowlight: ^2.9.0
     lucide-react: ^0.511.0
     moment: ^2.30.1
     mongodb: ^6.8.0

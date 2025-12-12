@@ -1,23 +1,10 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import axios from 'axios';
 import Image from 'next/image'; // Import Image component
 import Swal from 'sweetalert2'; // Import SweetAlert2
+import TipTapEditor from './TipTapEditor';
 
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
-
-const modules = {
-    toolbar: [
-        [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
-        [{ size: [] }],
-        ['bold', 'italic', 'underline', 'strike', 'blockquote',],
-        [{ 'list': 'ordered' }, { 'list': 'bullet' },
-        { 'indent': '-1' }, { 'indent': '+1' }],
-        ['link', 'image', 'video'],
-        ['clean'],
-    ]
-};
 
 export default function BlogForm({ initialData, isEditMode, onSuccess }) {
     const [title, setTitle] = useState('');
@@ -127,12 +114,9 @@ export default function BlogForm({ initialData, isEditMode, onSuccess }) {
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Content:</label>
-                    <ReactQuill
-                        value={content}
-                        theme="snow"
+                    <TipTapEditor
+                        initialContent={content}
                         onChange={setContent}
-                        modules={modules}
-                        className="mt-1"
                     />
                 </div>
 

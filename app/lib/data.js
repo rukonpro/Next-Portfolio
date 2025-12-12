@@ -8,10 +8,11 @@ export const getPricing = cache(async () => {
         if (!res.ok) {
             throw new Error('Failed to fetch pricing data');
         }
-        return await res.json();
+        const result = await res.json();
+        return result.data || [];
     } catch (error) {
         console.error("Error fetching pricing data:", error);
-        return { data: [] };
+        return [];
     }
 });
 

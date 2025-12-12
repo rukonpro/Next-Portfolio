@@ -33,6 +33,7 @@
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
     "loglevel": "^1.8.1",
+    "lowlight": "^2.9.0",
     "lucide-react": "^0.511.0",
     "moment": "^2.30.1",
     "mongodb": "^6.8.0",

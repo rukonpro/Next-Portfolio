@@ -1,3 +1,4 @@
+"use client";
 import Carousel from "./CarouselView";
 import BackButton from "@/app/components/ui/backButton/backButton";
 import React from "react";

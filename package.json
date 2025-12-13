@@ -2,7 +2,7 @@
   "name": "nextportfolio",
   "version": "0.1.0",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "private": true,
   "scripts": {
@@ -62,12 +62,12 @@
     "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^3.2.0",
-    "@graphql-codegen/client-preset": "4.2.5",
-    "@graphql-codegen/introspection": "4.0.3",
+    "@graphql-codegen/cli": "latest",
+    "@graphql-codegen/client-preset": "latest",
+    "@graphql-codegen/introspection": "latest",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "^14.1.4",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
     "postcss": "^8",
     "tailwindcss": "^3.2.0",
     "ts-node": "^10.9.2",

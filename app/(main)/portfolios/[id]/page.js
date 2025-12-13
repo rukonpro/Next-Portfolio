@@ -5,18 +5,50 @@ import Portfolio from "@/app/components/views/portfolios/PortfolioView";
 const Page = async ({ params }) => {
     const portfolio = portfolioData?.portfolios?.future?.find(data => data?.id === params?.id);
 
+    const serializableImage = (img) => {
+      if (!img) return null;
+      return {
+        src: img.src,
+        height: img.height,
+        width: img.width,
+        blurDataURL: img.blurDataURL,
+        blurWidth: img.blurWidth,
+        blurHeight: img.blurHeight,
+      };
+    };
+
+    const serializablePortfolio = portfolio ? {
+        ...portfolio,
+        logo: serializableImage(portfolio.logo),
+        images: portfolio.images.map(serializableImage),
+        links: {
+            ...portfolio.links,
+            fontEndCode: {
+                ...portfolio.links.fontEndCode,
+                icon: serializableImage(portfolio.links.fontEndCode.icon),
+            },
+            backEndCode: {
+                ...portfolio.links.backEndCode,
+                icon: serializableImage(portfolio.links.backEndCode.icon),
+            },
+            liveLink: {
+                ...portfolio.links.liveLink,
+                icon: serializableImage(portfolio.links.liveLink.icon),
+            },
+        },
+    } : null;
 
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Project',
         name: portfolio?.title,
-        image: portfolio?.images[0],
+        image: portfolio?.images[0]?.src,
         description: portfolio?.description,
     }
     return (
         <section className=" text-white portfolio-bg">
             <div className="max-w-[1200px] mx-auto py-28 px-5 z-10">
-                <Portfolio data={portfolio} />
+                <Portfolio data={serializablePortfolio} />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,6 +1,7 @@
 // app/components/ui/LazyImage/LazyImage.js
 "use client"
 import { useState } from "react";
+import Image from "next/image";
 
 export default function LazyImage({ src, fallbackSrc, alt, className = "" }) {
   const [loading, setLoading] = useState(true);
@@ -13,13 +14,14 @@ export default function LazyImage({ src, fallbackSrc, alt, className = "" }) {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-shimmer"></div>
         </div>
       )}
-      <img
+      <Image
         src={error && fallbackSrc ? fallbackSrc : src}
         alt={alt}
-        className={`w-full transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'} ${className}`}
-        onLoad={() => setLoading(false)}
+        className={`object-cover transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'} ${className}`}
+        onLoadingComplete={() => setLoading(false)}
         onError={() => { setLoading(false); setError(true); }}
         loading="lazy"
+        fill
       />
       <style jsx>{`
         @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }

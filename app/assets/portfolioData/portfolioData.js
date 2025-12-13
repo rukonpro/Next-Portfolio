@@ -47,7 +47,6 @@ import Kotlin from  "@/public/images/kotlin-2.svg";
 import Android from  "@/public/images/android-4.svg";
 import Git from  "@/public/images/git-icon.svg";
 import ReactHookForm from "@/public/images/react-hook-form-logo-only.png";
-import Github from  "@/public/images/github-icon-1.svg";
 import NPM from  "@/public/images/npm-icon.png";
 import Yarn from  "@/public/images/yarn.svg";
 import VisualStudioCode from  "@/public/images/visual-studio-code-1.svg";
@@ -113,7 +112,7 @@ import Brand1 from "@/public/images/brand1.png";
 import Brand2 from "@/public/images/brand2.png";
 import Brand3 from "@/public/images/brand3.png";
 import Brand4 from "@/public/images/barnd4.png";
-import {BadgeCheck, FolderKanban, GraduationCap, HandPlatter, Home, Store} from "lucide-react";
+import {BadgeCheck, FolderKanban, GraduationCap, HandPlatter, Home, Store, Github} from "lucide-react";
 
 const portfolioData = {
     navLinks : [
@@ -127,6 +126,11 @@ const portfolioData = {
             title: "Skills",
             path: "/skills",
             icon:<GraduationCap className="w-7 h-7" stroke="url(#navGradient)" />
+        },
+        {
+            title: "GitHub Stats",
+            path: "/github-stats",
+            icon: <Github className="w-7 h-7" stroke="url(#navGradient)" />
         },
         {
             title: "Services",
@@ -492,7 +496,7 @@ const portfolioData = {
                 {
                     "title": "GitHub",
                     "description": "Platform for code hosting and collaboration.",
-                    "logo": Github,
+                    "logo": GithubIcon,
                     "color": "rgba(255, 255, 255, 0.30)",
                     "link": "https://github.com/"
                 },
